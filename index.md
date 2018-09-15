@@ -33,9 +33,11 @@ Collabrators include:
 - Srimai Reddy Yanala: S531384@nwmissouri.edu , Spring 2018 , 3rd Semester
 - Vyshnavi Yalamareddy: S531383@nwmissouri.edu , Spring 2018 , 3rd semester
 - Sravya Kancharla: S531500@nwmissouri.edu, Spring 2018, 3rd Semester
+
 ## Project Purpose
 
-Creating Progressive Web Application for confidential codewords to each student in a course.
+- This project involves creating an app that issue confidential codewords to each student in a course.
+- Course instructors must not know what code word is given to each student.
 
 ## Benefits
 
