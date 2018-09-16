@@ -10,7 +10,6 @@
     <div class="form-group" :class="{invalid: $v.email.$error}">
         <input type="email" class="form-control" placeholder="Email" v-model.lazy="email" @blur="$v.email.$touch()">
         <p v-if="!$v.email.email">Please provide a valid email address.</p>
-        <p v-if="!$v.email.isUnique">This email id already registered</p>
     </div>
     <div class="form-group" :class="{invalid: $v.password.$error}">
         <input type="password" class="form-control" placeholder="Password" required="required" v-model.lazy="password" @blur="$v.password.$touch()">
@@ -51,21 +50,6 @@ export default {
     email: {
       required,
       email,
-      async isUnique (email) {
-        console.log('is uni')
-        if (email === '') return true
-        return axios({
-          method: 'post',
-          url: 'http://localhost:3000/codeword/validateUser',
-          data: {
-            email
-          }
-        }).then(res => {
-          console.log(res.data.message)
-          console.log(Object.keys(res.data).length)
-          return !res.data.message
-        })
-      }
     },
     fullname: {
       required
@@ -84,11 +68,12 @@ export default {
   methods: {
     OnRegister () {
       console.log('onregister clicked fullnaem', this.fullname)
-      axios.post('http://localhost:3000/codeword/signup', {
+      axios.post('localhost:3000/codeword/signup', {
         fullname: this.fullname,
         email: this.email,
         password: this.password
       }).then(res => {
+        console.log(res);
         if (res.data.message) {
           this.$router.push({path: '/signin'})
         }

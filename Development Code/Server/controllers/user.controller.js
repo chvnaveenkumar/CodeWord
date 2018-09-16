@@ -24,3 +24,26 @@ let signUp = (req,res) => {
     })
 }
 module.exports.signUp = signUp;
+
+let signIn = (req,res) => {
+    var body = _.pick(req.body,['email','password']);
+    SignUpModel.findOne({email: body.email}).then((result) => {
+        if(!result){
+            return res.json({ code: 200, message: 'Email id not registered!!'});
+        }
+        return bcrypt.compare(body.password,result.password,(err,result) => {
+            if(result){
+                var newToken = jwt.sign({email: body.email },'codewordnwmsu',{expiresIn:  122 * 10000 }).toString();
+                SignUpModel.updateOne({email: body.email},{$set: {token: newToken}}, (err) =>{
+                    if(err){
+                        return res.json({ code: 200, message: 'Unable to generate and update Token'});
+                    }
+                    return res.json({ code: 200, message: "User signin successful", token: newToken });
+                });
+            }else{
+                return res.json({ code: 200, message: "Password Wrong!!"});
+            }
+        });
+    });
+}
+module.exports.signIn = signIn;

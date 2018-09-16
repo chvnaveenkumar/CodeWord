@@ -10,6 +10,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.post('/singup', usersController.signUp);
+router.post('/signup', usersController.signUp);
+router.post('/signin', usersController.signIn);
 
 module.exports = router;

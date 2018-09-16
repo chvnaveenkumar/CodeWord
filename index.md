@@ -73,16 +73,17 @@ This application is used by students.
 
 This team is organized as follows.
 
-|                        | Primary                            | Secondary          | Content |
-| ---------------------- | ---------------------------------- | ------------------ |---------|
-| client manager         | Ujjwal Kumar                       |  Sreelekha Vijaya  | Team meetings,keeps notes,Contacting client  |
-| architectural team     | Naveen Chandaluri,Shivani Reddy    |  Sravya Kancharla  | Technical implementation decisions, responsible for choosing platform, tools, frameworks, libraries, and deployment |
-| project management team| Sreelekha Vijaya                   |   Shivani reddy  |  Team deadlines and progress is being made and reported to mentors and the client lead |
-| scrum masters          | Ujjwal Kumar, Anurag Kumar         |  Naveen Chandaluri | Making sure tasks are entered, assigned, completed, and tracked correctly in Jira |
-| UX design team         | Vyshnavi Yalamareddy,Srimai Yanala |  Shivani Reddy     | Choosing colors and branding for the app and verifying the look & feel with the client manager and/or NW website team  |
-| development team       | Anurag Kumar                       |  Naveen Kumar Nuggu|  To plan and perform the implementation |
-| marketing team| Sreelekha Vijaya,Anurag Kumar               |Srimai Reddy        | Advertising your app, your clients, and your team and periodically posting project-related progress and events on social media |
-| quality assurance and client acceptance| Chaithanya Cherukuru|Naveen Kumar Nuggu| Unit tests and perform critical testing |
+|                        | Primary   | Secondary   | Content |
+| ---------------------- | --------- | ----------- |---------|
+| client manager         |    Ujjwal Kumar |  Sreelekha Vijaya    |    |
+| architectural team              |    Naveen Chandaluri,Shivani Reddy |  Sravya Kancharla  |  |
+| project management team                   |  Sreelekha Vijaya|   Shivani reddy   |  |
+| scrum masters                     |  Ujjwal Kumar, Anurag Kumar  |    Naveen Chandaluri|  |
+| UX design team  | Vyshnavi Yalamareddy,Shivani Reddy |   Srimai Yanala |  |
+| development team|(Anurag Kumar, Naveen Kumar Nuggu, Vyshnavi Yalamareddy|Srimai Yanala, Naveen Chandaluri,Sravya Kancharla,Shivani Reddy|
+
+| marketing team| Sreelekha Vijaya,Anurag Kumar|Srimai Reddy|
+| quality assurance and client acceptance| Chaithanya Cherukuru|Naveen Kumar Nuggu|
 | Database| Cheruku Chaitanya|Naveen Kumar Nuggu|
 
 ## Scope
