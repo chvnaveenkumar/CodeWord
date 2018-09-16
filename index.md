@@ -75,11 +75,16 @@ This team is organized as follows.
 
 |                        | Primary   | Secondary   | Content |
 | ---------------------- | --------- | ----------- |---------|
-| Team Lead              |    Naveen |  Shivani    | Repo, intro, budget, schedule, risk, coordination   |
-| Architect              |    Naveen |  Chaitanya  | E-R diagram |
-| Data                   |  Chaitanya|   Naveen   | Sample data |
-| UX                     |  Shivani  |    Sreelekha| Sketches  |
-| Testing & Acceptance   | Sreelekha |   Shivani | Stories, acceptance criteria |
+| client manager         |    Ujjwal Kumar |  Sreelekha Vijaya    |    |
+| architectural team              |    Naveen Chandaluri,Shivani Reddy |  Sravya Kancharla  |  |
+| project management team                   |  Sreelekha Vijaya|   Shivani reddy   |  |
+| scrum masters                     |  Ujjwal Kumar, Anurag Kumar  |    Naveen Chandaluri|  |
+| UX design team  | Vyshnavi Yalamareddy,Shivani Reddy |   Srimai Yanala |  |
+| development team|(Anurag Kumar, Naveen Kumar Nuggu, Vyshnavi Yalamareddy|Srimai Yanala, Naveen Chandaluri,Sravya Kancharla,Shivani Reddy|
+
+| marketing team| Sreelekha Vijaya,Anurag Kumar|Srimai Reddy|
+| quality assurance and client acceptance| Chaithanya Cherukuru|Naveen Kumar Nuggu|
+| Database| Cheruku Chaitanya|Naveen Kumar Nuggu|
 
 ## Scope
 
