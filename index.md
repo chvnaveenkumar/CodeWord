@@ -28,11 +28,11 @@ Collabrators include:
 - Shivani Reddy Dodla, <S531496@nwmissouri.edu>
 - Sreelekha Vijaya, <S531382@nwmissouri.edu>
 - cherukuru Chaithanya, <S531495@nwmissouri.edu>
-- Ujjawal Kumar: S530473@nwmissouri.edu, Fall 2017, 4th Semester
-- Anurag Kumar: S531372@nwmissouri.edu , Spring 2018 , 3rd Semester
-- Srimai Reddy Yanala: S531384@nwmissouri.edu , Spring 2018 , 3rd Semester
-- Vyshnavi Yalamareddy: S531383@nwmissouri.edu , Spring 2018 , 3rd semester
-- Sravya Kancharla: S531500@nwmissouri.edu, Spring 2018, 3rd Semester
+- Ujjawal Kumar, <S530473@nwmissouri.edu>
+- Anurag Kumar, <S531372@nwmissouri.edu>
+- Srimai Reddy Yanala, <S531384@nwmissouri.edu >
+- Vyshnavi Yalamareddy, <S531383@nwmissouri.edu>
+- Sravya Kancharla, <S531500@nwmissouri.edu>
 
 ## Project Purpose
 
