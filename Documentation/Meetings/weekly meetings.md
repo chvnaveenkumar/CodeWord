@@ -3,6 +3,7 @@ For the frontend we discussed to use vue.js.
 For database we discussed to use MongoDb.
 For the backend we discussed to use Node.js and discussed the basics of these concepts.
 We discussed about the roles that we are taking and the tasks to be done.
+We had discussed about the all software we are going to use
 
 
 On 16 Sep I, Vyshnavi, sravya and Naveen Chandaluri had a meeting for 4 hours.
