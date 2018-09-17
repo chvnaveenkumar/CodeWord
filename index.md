@@ -30,7 +30,7 @@ Collabrators include:
 - cherukuru Chaithanya, <S531495@nwmissouri.edu>
 - Ujjawal Kumar, <S530473@nwmissouri.edu>
 - Anurag Kumar, <S531372@nwmissouri.edu>
-- Srimai Reddy Yanala, <S531384@nwmissouri.edu >
+- Srimai Reddy Yanala, <S531384@nwmissouri.edu>
 - Vyshnavi Yalamareddy, <S531383@nwmissouri.edu>
 - Sravya Kancharla, <S531500@nwmissouri.edu>
 
