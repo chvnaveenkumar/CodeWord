@@ -16,6 +16,7 @@
     "bootstrap-vue": "^2.0.0-rc.11",
     "dist": "^0.1.2",
     "jquery": "^3.3.1",
+    "route": "^0.2.5",
     "serve": "^10.0.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",

@@ -33,7 +33,33 @@
     </nav>
   </header>
 </template>
-
+<script>
+import axios from 'axios'
+import User from '@/../services/auth'
+export default {
+  data () {
+    return {
+      auth: false,
+      email: ''
+    }
+  },
+  mounted () {
+    this.auth = User.check()
+  },
+  methods: {
+    onLogout () {
+      localStorage.removeItem('token')
+      this.auth = User.check()
+      this.$router.push({ path: '/signin' })
+    }
+  },
+    watch: {
+      '$route' (to, from, next) {
+      this.auth = User.check()
+  }
+}
+}
+</script>
 <style scoped>
 #header {
   height: 56px;

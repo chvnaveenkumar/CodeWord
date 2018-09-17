@@ -21,7 +21,7 @@
                         <label for="inputPassword">Password</label>
                           <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Password">
                       </div>
-                    <button type="submit" class="btn btn-primary" @click.prevent="signIn">Sign In</button>
+                    <button type="submit" class="btn btn-primary" @click="signIn">Sign In</button>
                   </form>
                 </div>
               </div>
@@ -31,6 +31,43 @@
     </div>
   </div>
 </template>
+
+<script>
+import axios from 'axios'
+export default {
+  name: 'HomePage',
+  data () {
+    return {
+      msg: '',
+      signed: false
+    }
+  },
+  methods: {
+    signIn () {
+      this.msg = ''
+      let data = new FormData(document.querySelector('form'))
+      console.log(data.get('emailID'))
+      axios.post('http://localhost:3000/codeword/signin', {
+        email: data.get('emailID'),
+        password: data.get('password')
+      }).then(response => {
+        if (response.data.token) {
+          this.msg = 'Signed in successfully. Redirecting .'
+          this.signed = true
+          localStorage.setItem('token', response.data.token)
+          let _this = this
+          setTimeout(function () {
+            _this.$router.push({ path: '/dashboard' })
+          }, 1000)
+        } else {
+          this.msg = response.data.message
+          this.signed = false
+        }
+      })
+    }
+  }
+}
+</script>
 
 <style scoped>
 .card {
