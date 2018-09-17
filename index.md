@@ -110,13 +110,9 @@ This phase includes the development of:
 
 This phase includes the development of:
 
-- Initial acceptance criteria] (link)
-- [E-R diagram] (https://github.com/chvnaveenkumar/CodeWord/blob/Developer/Documentation/ErDiagram.png)
-- [Project Sketches]
-(https://github.com/chvnaveenkumar/CodeWord/blob/Developer/Documentation/Sketches/Sketches1.png)
-(https://github.com/chvnaveenkumar/CodeWord/blob/Developer/Documentation/Sketches/Sketches2.png)
-(https://github.com/chvnaveenkumar/CodeWord/blob/Developer/Documentation/Sketches/Sketches3.png)
-(https://github.com/chvnaveenkumar/CodeWord/blob/Developer/Documentation/Sketches/Sketches4.png)
+- Initial acceptance criteria] 
+- [E-R diagram](https://github.com/chvnaveenkumar/CodeWord/blob/Developer/Documentation/ErDiagram.png)
+- [Project Sketches](https://github.com/chvnaveenkumar/CodeWord/tree/Developer/Documentation/Sketches)
 - [RFP Document](https://github.com/profcase/rfp-codewords/blob/master/index.md)
 
 E-R Diagram:
