@@ -110,7 +110,7 @@ This phase includes the development of:
 
 This phase includes the development of:
 
-- Initial acceptance criteria] 
+- Initial acceptance criteria
 - [E-R diagram](https://github.com/chvnaveenkumar/CodeWord/blob/Developer/Documentation/ErDiagram.png)
 - [Project Sketches](https://github.com/chvnaveenkumar/CodeWord/tree/Developer/Documentation/Sketches)
 - [RFP Document](https://github.com/profcase/rfp-codewords/blob/master/index.md)
@@ -169,10 +169,10 @@ Instructor Table
 
 Sketches:
 
-![Sketches1](\Documentation\Sketches\Sketches1.png)
-![Sketches2](\Documentation\Sketches\Sketches2.png)
-![Sketches3](\Documentation\Sketches\Sketches3.png)
-![Sketches4](\Documentation\Sketches\Sketches4.png)
+![Sketches1](/Documentation/Sketches/Sketches1.png)
+![Sketches2](/Documentation/Sketches/Sketches2.png)
+![Sketches3](/Documentation/Sketches/Sketches3.png)
+![Sketches4](/Documentation/Sketches/Sketches4.png)
 
 ### Phase 2 - Definition and planning (Module 2 and 3)
 
