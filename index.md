@@ -108,17 +108,20 @@ Deliverables:
 
 This phase includes the development of:
 
-- Initial acceptance criteria (link)
-- [E-R diagram](https://github.com/chvnaveenkumar/project-charter-template/blob/master/Documentation/Entity%20Relationship%20Diagram%20for%20CodeWord%20Project.pdf)
-- [Sample Data](https://github.com/chvnaveenkumar/project-charter-template/blob/master/Documentation/Database%20Tables.xlsx)
-- [Project Sketches](https://github.com/chvnaveenkumar/project-charter-template/blob/master/Documentation/Sketches.pdf)
-- For each phase, initial scope, schedule, budget (included in this document)
+This phase includes the development of:
+
+- Initial acceptance criteria] (link)
+- [E-R diagram] (https://github.com/chvnaveenkumar/CodeWord/blob/Developer/Documentation/ErDiagram.png)
+- [Project Sketches]
+(https://github.com/chvnaveenkumar/CodeWord/blob/Developer/Documentation/Sketches/Sketches1.png)
+(https://github.com/chvnaveenkumar/CodeWord/blob/Developer/Documentation/Sketches/Sketches2.png)
+(https://github.com/chvnaveenkumar/CodeWord/blob/Developer/Documentation/Sketches/Sketches3.png)
+(https://github.com/chvnaveenkumar/CodeWord/blob/Developer/Documentation/Sketches/Sketches4.png)
 - [RFP Document](https://github.com/profcase/rfp-codewords/blob/master/index.md)
 
 E-R Diagram:
 
-![E-R Diagram](/Documentation/ErDiagram.png)
-
+- [E-R Diagram](https://github.com/chvnaveenkumar/CodeWord/blob/Developer/Documentation/ErDiagram.png)
 
 ## sample table
 
@@ -170,10 +173,10 @@ Instructor Table
 
 Sketches:
 
-![Sketches1](/Documentation/Sketches/Sketches1.png)
-![Sketches2](/Documentation/Sketches/Sketches2.png)
-![Sketches3](/Documentation/Sketches/Sketches3.png)
-![Sketches4](/Documentation/Sketches/Sketches4.png)
+![Sketches1](\Documentation\Sketches\Sketches1.png)
+![Sketches2](\Documentation\Sketches\Sketches2.png)
+![Sketches3](\Documentation\Sketches\Sketches3.png)
+![Sketches4](\Documentation\Sketches\Sketches4.png)
 
 ### Phase 2 - Definition and planning (Module 2 and 3)
 
@@ -271,13 +274,13 @@ Bill estimation:
 
 | Week | No of Hours Worked | Wage Rate | Bill for per Person | No of Persons | Total Bill |
 |------|--------------------|-----------|---------------------|---------------|------------|
-| 1    | 16                 | 70        | $ 1,120             | 4             | $ 4,480    |
-| 2    | 15                 | 70        | $ 1,050             | 4             | $ 4,200    |
-| 3    | 16                 | 70        | $ 1,120             | 4             | $ 4,480    |
-| 4    | 17                 | 70        | $ 1,190             | 4             | $ 4,760    |
-| 5    | 17                 | 70        | $ 1,190             | 4             | $ 4,760    |
-| 6    | 18                 | 70        | $ 1,260             | 4             | $ 5,040    |
-| 7    | 18                 | 70        | $ 1,260             | 4             | $ 5,040    |
+| 1    | 16                 | 70        | $ 1,120             | 10             | $ 11,200  |
+| 2    | 15                 | 70        | $ 1,050             | 10             | $ 10,500  |
+| 3    | 16                 | 70        | $ 1,120             | 10             | $ 11,200  |
+| 4    | 17                 | 70        | $ 1,190             | 10             | $ 11,900  |
+| 5    | 17                 | 70        | $ 1,190             | 10             | $ 11,900  |
+| 6    | 18                 | 70        | $ 1,260             | 10             | $ 12,600  |
+| 7    | 18                 | 70        | $ 1,260             | 10             | $ 12,600  |
 
 ## Risk
 
