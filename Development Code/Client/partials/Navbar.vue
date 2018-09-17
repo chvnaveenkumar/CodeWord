@@ -1,7 +1,7 @@
 <template>
   <header id="header">
     <div class="logo">
-      <router-link to="/">CodeWord</router-link>
+      <a class="active"><router-link to="/">CodeWord</router-link></a>
     </div>
     <nav>
       <ul>
@@ -72,5 +72,23 @@ li a {
   font: inherit;
   color: white;
   cursor: pointer;
+}
+.logo{
+    background-color: #0B3B39;
+    overflow: hidden;
+}
+
+.logo a:hover {
+    background-color: #848484;
+    color: black;
+}
+
+.logo a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 7.5px 10px;
+     text-shadow: 2px 2px #FF0000;
+    font-size: 17px;
 }
 </style>

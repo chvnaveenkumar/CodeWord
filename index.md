@@ -1,10 +1,10 @@
-# Project Charter: Code Word (Team C)
+# Project Charter: Code Word Project (Team C and Team D)
 
 This is the project charter for the Code Word.
 This application will be delivered as a web application. (e.g. web, iOS, Android)
 
-- [View Published Version](https://chvnaveenkumar.github.io/project-charter-template)
-- [Source Code](https://github.com/chvnaveenkumar/project-charter-template)
+- [View Published Version](https://chvnaveenkumar.github.io/CodeWord/)
+- [Source Code](https://github.com/chvnaveenkumar/CodeWord)
 
 Update the links above and add team name, year, semester, course, or other important project information
 
@@ -28,11 +28,11 @@ Collabrators include:
 - Shivani Reddy Dodla, <S531496@nwmissouri.edu>
 - Sreelekha Vijaya, <S531382@nwmissouri.edu>
 - cherukuru Chaithanya, <S531495@nwmissouri.edu>
-- Ujjawal Kumar: S530473@nwmissouri.edu, Fall 2017, 4th Semester
-- Anurag Kumar: S531372@nwmissouri.edu , Spring 2018 , 3rd Semester
-- Srimai Reddy Yanala: S531384@nwmissouri.edu , Spring 2018 , 3rd Semester
-- Vyshnavi Yalamareddy: S531383@nwmissouri.edu , Spring 2018 , 3rd semester
-- Sravya Kancharla: S531500@nwmissouri.edu, Spring 2018, 3rd Semester
+- Ujjawal Kumar, <S530473@nwmissouri.edu>
+- Anurag Kumar, <S531372@nwmissouri.edu>
+- Srimai Reddy Yanala, <S531384@nwmissouri.edu>
+- Vyshnavi Yalamareddy, <S531383@nwmissouri.edu>
+- Sravya Kancharla, <S531500@nwmissouri.edu>
 
 ## Project Purpose
 
@@ -72,7 +72,7 @@ This application is used by students.
 ## Team Organization
 
 This team is organized as follows.
-
+  
 |                        | Primary                            | Secondary          | Content |
 | ---------------------- | ---------------------------------- | ------------------ |---------|
 | client manager         | Ujjwal Kumar                       |  Sreelekha Vijaya  | Team meetings,keeps notes,Contacting client  |
@@ -81,7 +81,7 @@ This team is organized as follows.
 | scrum masters          | Ujjwal Kumar, Anurag Kumar         |  Naveen Chandaluri | Making sure tasks are entered, assigned, completed, and tracked correctly in Jira |
 | UX design team         | Vyshnavi Yalamareddy,Srimai Yanala |  Shivani Reddy     | Choosing colors and branding for the app and verifying the look & feel with the client manager and/or NW website team  |
 | development team       | Naveen Chandaluri, Naveen Kumar Nuggu, Vyshnavi Yalamareddy|Srimai Yanala, Anurag Kumar, Sravya Kancharla,Shivani Reddy                       To plan and perform the implementation |
-| marketing team| Sreelekha Vijaya,Anurag Kumar               |Srimai Reddy        | Advertising your app, your clients, and your team and periodically posting project-related progress and events on social media |
+| marketing team         | Sreelekha Vijaya,Anurag Kumar               |Srimai Reddy        | Advertising your app, your clients, and your team and periodically posting project-related progress and events on social media |
 | quality assurance and client acceptance| Chaithanya Cherukuru|Naveen Kumar Nuggu| Unit tests and perform critical testing 
 
 ## Scope
@@ -108,17 +108,16 @@ Deliverables:
 
 This phase includes the development of:
 
-- Initial acceptance criteria (link)
-- [E-R diagram](https://github.com/chvnaveenkumar/project-charter-template/blob/master/Documentation/Entity%20Relationship%20Diagram%20for%20CodeWord%20Project.pdf)
-- [Sample Data](https://github.com/chvnaveenkumar/project-charter-template/blob/master/Documentation/Database%20Tables.xlsx)
-- [Project Sketches](https://github.com/chvnaveenkumar/project-charter-template/blob/master/Documentation/Sketches.pdf)
-- For each phase, initial scope, schedule, budget (included in this document)
+This phase includes the development of:
+
+- Initial acceptance criteria
+- [E-R diagram](https://github.com/chvnaveenkumar/CodeWord/blob/Developer/Documentation/ErDiagram.png)
+- [Project Sketches](https://github.com/chvnaveenkumar/CodeWord/tree/Developer/Documentation/Sketches)
 - [RFP Document](https://github.com/profcase/rfp-codewords/blob/master/index.md)
 
 E-R Diagram:
 
-![E-R Diagram](/Documentation/ErDiagram.png)
-
+- [E-R Diagram](https://github.com/chvnaveenkumar/CodeWord/blob/Developer/Documentation/ErDiagram.png)
 
 ## sample table
 
@@ -271,13 +270,13 @@ Bill estimation:
 
 | Week | No of Hours Worked | Wage Rate | Bill for per Person | No of Persons | Total Bill |
 |------|--------------------|-----------|---------------------|---------------|------------|
-| 1    | 16                 | 70        | $ 1,120             | 4             | $ 4,480    |
-| 2    | 15                 | 70        | $ 1,050             | 4             | $ 4,200    |
-| 3    | 16                 | 70        | $ 1,120             | 4             | $ 4,480    |
-| 4    | 17                 | 70        | $ 1,190             | 4             | $ 4,760    |
-| 5    | 17                 | 70        | $ 1,190             | 4             | $ 4,760    |
-| 6    | 18                 | 70        | $ 1,260             | 4             | $ 5,040    |
-| 7    | 18                 | 70        | $ 1,260             | 4             | $ 5,040    |
+| 1    | 16                 | 70        | $ 1,120             | 10             | $ 11,200  |
+| 2    | 15                 | 70        | $ 1,050             | 10             | $ 10,500  |
+| 3    | 16                 | 70        | $ 1,120             | 10             | $ 11,200  |
+| 4    | 17                 | 70        | $ 1,190             | 10             | $ 11,900  |
+| 5    | 17                 | 70        | $ 1,190             | 10             | $ 11,900  |
+| 6    | 18                 | 70        | $ 1,260             | 10             | $ 12,600  |
+| 7    | 18                 | 70        | $ 1,260             | 10             | $ 12,600  |
 
 ## Risk
 
