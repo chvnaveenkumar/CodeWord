@@ -49,7 +49,7 @@ export default {
   validations: {
     email: {
       required,
-      email,
+      email
     },
     fullname: {
       required
@@ -73,7 +73,7 @@ export default {
         email: this.email,
         password: this.password
       }).then(res => {
-        console.log(res);
+        console.log(res)
         if (res.data.message) {
           this.$router.push({path: '/signin'})
         }
