@@ -47,7 +47,7 @@ export default {
       this.msg = ''
       let data = new FormData(document.querySelector('form'))
       console.log(data.get('emailID'))
-      axios.post('http://localhost:3000/codeword/signin', {
+      axios.post('https://gdpcodeword.herokuapp.com/codeword/signin', {
         email: data.get('emailID'),
         password: data.get('password')
       }).then(response => {
