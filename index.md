@@ -1,10 +1,10 @@
-# Project Charter: Code Word (Team C)
+# Project Charter: Code Word Project (Team C and Team D)
 
 This is the project charter for the Code Word.
 This application will be delivered as a web application. (e.g. web, iOS, Android)
 
-- [View Published Version](https://chvnaveenkumar.github.io/project-charter-template)
-- [Source Code](https://github.com/chvnaveenkumar/project-charter-template)
+- [View Published Version](https://chvnaveenkumar.github.io/CodeWord/)
+- [Source Code](https://github.com/chvnaveenkumar/CodeWord)
 
 Update the links above and add team name, year, semester, course, or other important project information
 
@@ -72,7 +72,7 @@ This application is used by students.
 ## Team Organization
 
 This team is organized as follows.
-
+  
 |                        | Primary                            | Secondary          | Content |
 | ---------------------- | ---------------------------------- | ------------------ |---------|
 | client manager         | Ujjwal Kumar                       |  Sreelekha Vijaya  | Team meetings,keeps notes,Contacting client  |
@@ -81,7 +81,7 @@ This team is organized as follows.
 | scrum masters          | Ujjwal Kumar, Anurag Kumar         |  Naveen Chandaluri | Making sure tasks are entered, assigned, completed, and tracked correctly in Jira |
 | UX design team         | Vyshnavi Yalamareddy,Srimai Yanala |  Shivani Reddy     | Choosing colors and branding for the app and verifying the look & feel with the client manager and/or NW website team  |
 | development team       | Naveen Chandaluri, Naveen Kumar Nuggu, Vyshnavi Yalamareddy|Srimai Yanala, Anurag Kumar, Sravya Kancharla,Shivani Reddy                       To plan and perform the implementation |
-| marketing team| Sreelekha Vijaya,Anurag Kumar               |Srimai Reddy        | Advertising your app, your clients, and your team and periodically posting project-related progress and events on social media |
+| marketing team         | Sreelekha Vijaya,Anurag Kumar               |Srimai Reddy        | Advertising your app, your clients, and your team and periodically posting project-related progress and events on social media |
 | quality assurance and client acceptance| Chaithanya Cherukuru|Naveen Kumar Nuggu| Unit tests and perform critical testing 
 
 ## Scope
