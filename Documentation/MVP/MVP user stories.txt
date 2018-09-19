@@ -23,16 +23,14 @@ As Student, if I log in with my credentials.i will redirect to my homepage which
 
 MVP 2
 
-Complete Instructor Roles:
-In Instructor login page if Instructor wants to know the list of students in that particular class then he can type there for course name or either course ID and he can generate the student list.
-If he wants to add any course he can add particular courses by using Add new courses tab.
-If Instructor wants to upload his own codeword sheet the he add upload it in the excel sheet format and he can submit it by entering the course name or course ID.
-If the Instructor wants to send the codewords to particular class of students then he can enter there course name or ID and he can upload excel sheet that has codewords that he wanted and simultaneously he wants to select an codeword there and he can submit so that all the students in that particular course can get the codewords.
-If an instructor was not teaching any course then he can delete that particular course by selecting course name or course ID.
-
-Student page:
-In Student page, if he entered any particular course name or course ID and if he clicks on get codeword then he gets the codeword of that specific course.
-
+As an Instructor, I want to know the list of students in that particular class then I can type there for course name or either course ID and I can generate the student list.
+As an Instructor, If I want to add any course then I can add particular courses by using Add new courses tab.
+As an Instructor, If I want to upload my own codeword sheet then i can upload it in the excel sheet format and i can submit it by entering the course name or course ID.
+As an Instructor, I want to send the codewords to particular class of students then I can enter there course name or ID and I can upload excel sheet that has codewords that i wanted and simultaneously I wants to select an codeword there and i can submit so that all the students in that particular course can get the codewords.
+As an Instructor, If I was not teaching any course then I can delete that particular course by selecting course name or course ID.
+As an Instructor, I want to know the percentage of students who got acceseed to their codewords.
+As an Instructor, I want to specify the set of code words to use, list of student emails, Survey URL link, start and end date for each course.
+As a Student, I want to get the codeword of particular course or if I already got accessed with the codeword then I need to get the codeword and that codewords should be accessable to that particular semister.
 
 MVP 3
 
