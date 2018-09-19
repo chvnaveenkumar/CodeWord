@@ -1,6 +1,7 @@
 <template>
   <header id="header">
     <div class="logo">
+    
       <a class="active"><router-link to="/">CodeWord</router-link></a>
     </div>
     <nav>
@@ -62,13 +63,18 @@ export default {
 </script>
 <style scoped>
 #header {
-  height: 56px;
+  height: 60px;
   display: flex;
   flex-flow: row;
   justify-content: space-between;
   align-items: center;
   background-color: #212529;
-  padding: 0 20px;
+  padding: 10px 50px;
+  font-weight: bold;
+  font-style: oblique;
+  font-variant: small-caps;
+  letter-spacing: 4px;
+  
 }
 nav {
   height: 100%;
@@ -100,21 +106,29 @@ li a {
   cursor: pointer;
 }
 .logo{
-    background-color: #0B3B39;
+    background-color: #FF9232;
     overflow: hidden;
+    
 }
 
 .logo a:hover {
-    background-color: #848484;
+    background-color: #FFFF00;
     color: black;
+     padding: 7px 25px; 
+     
+     
 }
 
 .logo a {
-    float: left;
+    float: center;
     color: #f2f2f2;
     text-align: center;
-    padding: 7.5px 10px;
+    padding: 0px 25px;
      text-shadow: 2px 2px #FF0000;
-    font-size: 17px;
+    font-size: 35px;
+    font:'Berkshire Swash', Helvetica, sans-serif;
+  color: #2b2b2b;
+  text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
 }
+a {text-decoration: none;} 
 </style>

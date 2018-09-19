@@ -84,6 +84,7 @@ export default {
 </script>
 
 <style>
+
   .form-group.invalid input {
     background-color: rgb(238, 169, 169);
   }
