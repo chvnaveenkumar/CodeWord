@@ -38,3 +38,6 @@ MVP 3
 Administrator has a capable to add an instructors.
 Administrator can add default codewords.
 Administrator will display the list of instructors.
+
+Next Semester
+We may discuss with cilent and update UI according to that.
