@@ -1,0 +1,283 @@
+[
+    {
+        "id": 1,
+        "CodeWordSetName": "American English Alphabet",
+        "Codeword": "A"
+        
+    },{
+        "id": 2,
+        "CodeWordSetName": "American English Alphabet",
+        "Codeword": "B"
+        
+    },{
+        "id": 3,
+        "CodeWordSetName": "American English Alphabet",
+        "Codeword": "C"
+        
+    },{
+        "id": 4,
+        "CodeWordSetName": "American English Alphabet",
+        "Codeword": "D"
+        
+    },{
+        "id": 5,
+        "CodeWordSetName": "American English Alphabet",
+        "Codeword": "E"
+        
+    },{
+        "id": 6,
+        "CodeWordSetName": "American English Alphabet",
+        "Codeword": "F"
+        
+    },{
+        "id": 7,
+        "CodeWordSetName": "American English Alphabet",
+        "Codeword": "G"
+        
+    },{
+        "id": 8,
+        "CodeWordSetName": "American English Alphabet",
+        "Codeword": "H"
+        
+    },{
+        "id": 9,
+        "CodeWordSetName": "American English Alphabet",
+        "Codeword": "I"
+        
+    },{
+        "id": 10,
+        "CodeWordSetName": "American English Alphabet",
+        "Codeword": "J"
+        
+    },{
+        "id": 11,
+        "CodeWordSetName": "American English Alphabet",
+        "Codeword": "K"
+        
+    },{
+        "id": 12,
+        "CodeWordSetName": "American English Alphabet",
+        "Codeword": "L"
+        
+    },{
+        "id": 13,
+        "CodeWordSetName": "American English Alphabet",
+        "Codeword": "M"
+        
+    },{
+        "id": 14,
+        "CodeWordSetName": "American English Alphabet",
+        "Codeword": "N"
+        
+    },{
+        "id": 15,
+        "CodeWordSetName": "American English Alphabet",
+        "Codeword": "O"
+        
+    },{
+        "id": 16,
+        "CodeWordSetName": "American English Alphabet",
+        "Codeword": "P"
+        
+    },{
+        "id": 17,
+        "CodeWordSetName": "American English Alphabet",
+        "Codeword": "Q"
+        
+    },{
+        "id": 18,
+        "CodeWordSetName": "American English Alphabet",
+        "Codeword": "R"
+        
+    },{
+        "id": 19,
+        "CodeWordSetName": "American English Alphabet",
+        "Codeword": "S"
+        
+    },{
+        "id": 20,
+        "CodeWordSetName": "American English Alphabet",
+        "Codeword": "T"
+        
+    },{
+        "id": 21,
+        "CodeWordSetName": "American English Alphabet",
+        "Codeword": "U"
+        
+    },{
+        "id": 22,
+        "CodeWordSetName": "American English Alphabet",
+        "Codeword": "V"
+        
+    },{
+        "id": 23,
+        "CodeWordSetName": "American English Alphabet",
+        "Codeword": "W"
+        
+    },{
+        "id": 24,
+        "CodeWordSetName": "American English Alphabet",
+        "Codeword": "X"
+        
+    },{
+        "id": 25,
+        "CodeWordSetName": "American English Alphabet",
+        "Codeword": "Y"
+        
+    },{
+        "id": 26,
+        "CodeWordSetName": "American English Alphabet",
+        "Codeword": "Z"
+        
+    },{
+        "id": 27,
+        "CodeWordSetName": "Small Set (20)",
+        "Codeword": "Apple"
+        
+    },{
+        "id": 28,
+        "CodeWordSetName": "Small Set (20)",
+        "Codeword": "Bearcat"
+        
+    },{
+        "id": 29,
+        "CodeWordSetName": "Small Set (20)",
+        "Codeword": "Cow"
+        
+    },{
+        "id": 30,
+        "CodeWordSetName": "Small Set (20)",
+        "Codeword": "Donkey"
+        
+    },{
+        "id": 31,
+        "CodeWordSetName": "Small Set (20)",
+        "Codeword": "Elephant"
+        
+    },{
+        "id": 32,
+        "CodeWordSetName": "Small Set (20)",
+        "Codeword": "Fish"
+        
+    },{
+        "id": 33,
+        "CodeWordSetName": "Small Set (20)",
+        "Codeword": "Giraffe"
+        
+    },{
+        "id": 34,
+        "CodeWordSetName": "Small Set (20)",
+        "Codeword": "Horse"
+        
+    },{
+        "id": 35,
+        "CodeWordSetName": "Small Set (20)",
+        "Codeword": "Ibis"
+        
+    },{
+        "id": 36,
+        "CodeWordSetName": "Small Set (20)",
+        "Codeword": "Jackel"
+        
+    },{
+        "id": 37,
+        "CodeWordSetName": "Small Set (20)",
+        "Codeword": "Kangaroo"
+        
+    },{
+        "id": 38,
+        "CodeWordSetName": "Small Set (20)",
+        "Codeword": "Llama"
+        
+    },{
+        "id": 39,
+        "CodeWordSetName": "Small Set (20)",
+        "Codeword": "Moose"
+        
+    },{
+        "id": 40,
+        "CodeWordSetName": "Small Set (20)",
+        "Codeword": "Nut"
+        
+    },{
+        "id": 41,
+        "CodeWordSetName": "Small Set (20)",
+        "Codeword": "Ostrich"
+        
+    },{
+        "id": 42,
+        "CodeWordSetName": "Small Set (20)",
+        "Codeword": "Puppy"
+        
+    },{
+        "id": 43,
+        "CodeWordSetName": "Small Set (20)",
+        "Codeword": "Quip"
+        
+    },{
+        "id": 44,
+        "CodeWordSetName": "Small Set (20)",
+        "Codeword": "Rooster"
+        
+    },{
+        "id": 45,
+        "CodeWordSetName": "Small Set (20)",
+        "Codeword": "Starfish"
+        
+    },{
+        "id": 46,
+        "CodeWordSetName": "Small Set (20)",
+        "Codeword": "Tiger"
+        
+    },{
+        "id": 47,
+        "CodeWordSetName": "Hoot Original Set (92)",
+        "Codeword": "Africa"
+        
+    },{
+        "id": 48,
+        "CodeWordSetName": "Hoot Original Set (92)",
+        "Codeword": "Almond"
+        
+    },{
+        "id": 49,
+        "CodeWordSetName": "Hoot Original Set (92)",
+        "Codeword": "Anger"
+        
+    },{
+        "id": 50,
+        "CodeWordSetName": "Hoot Original Set (92)",
+        "Codeword": "America"
+        
+    },{
+        "id": 51,
+        "CodeWordSetName": "Hoot Original Set (92)",
+        "Codeword": "Bravo"
+        
+    },{
+        "id": 52,
+        "CodeWordSetName": "Hoot Original Set (92)",
+        "Codeword": "Bank"
+        
+    },{
+        "id": 53,
+        "CodeWordSetName": "Hoot Original Set (92)",
+        "Codeword": "Bounce"
+        
+    },{
+        "id": 54,
+        "CodeWordSetName": "Hoot Original Set (92)",
+        "Codeword": "Bigger"
+        
+    },{
+        "id": 55,
+        "CodeWordSetName": "Hoot Original Set (92)",
+        "Codeword": "Computer"
+        
+    },{
+        "id": 56,
+        "CodeWordSetName": "Hoot Original Set (92)",
+        "Codeword": "Cancer"
+        
+    }
+]
