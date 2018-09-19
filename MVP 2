@@ -1,0 +1,8 @@
+Complete Instructor Roles:
+In Instructor login page if Instructor wants to know the list of students in that particular class then he can use the search bar for particular course with course name or either course ID and he can generate the student list.
+If he wants to add any course he can add particular courses by clicking on the plus symol.
+If Instructor wants to upload an extra codeword sheet the he add upload it in the excel sheet format and he can submit it by entering the course name or course ID.
+If an instructor was not teaching any course then he can delete that particular course by selecting course name or course ID.
+If an Instructor wants to generate code words for any class the he can enter the name of the code word list that he created and he can upload excel sheet of that particular code word list.
+Complete Student Page:
+In Student page, if he entered any particular course name or course ID and if he clicks on get codeword then he gets the codeword of that specific course.
