@@ -1,23 +1,23 @@
 MVP 1
 
 Registration page
-If the student or instructor didn't have an account with this page they can register and then can access account.
-We will get a temporary password to our registered email ID which is used to login for the first time and later we can change the password.
+As a student or instructor if I didn't have an account with this page I can register and then can access account.
+As a student or instructor, i get a temporary password to my registered email ID which is used to login for the first time and later I can change the password.
 
 Login page
-Once we are registered this page will help us to accesses into student or instructor account. 
-If we forget password we can just click forget password it will redirect to forget password page                                                                                                                                     if we forget password we can just click forget password it will redirect to forget password page
+As a student or instructor once I m registered this page will help me to accesses into student or instructor account.
+As a student or instructor, if I forget password I can just click forget password it will redirect to forget password page                                         
 
 Forget password (send a mail)
-If we got any problem with accessing the account by forgetting the password this page will help us to redirect to our account .
-In Forget password page it will ask for registered Email ID. After submission We will get a mail with temporary password.
+As a student or instructor if I got any problem with accessing the account by forgetting the password this page will help me to retrieve to my account.
+As student or instructor in Forget password page, I can enter my registered Email ID and submit it. After submission, I will get a mail with a temporary password.
 
 Instructor login Home 
-when instructor login with his credentials.he will redirect to his homepage which contains a selection of course.
-Get the list of students of the course selected in the drop down box.
+As an instructor, if I log in with my credentials.i will redirect to my homepage which contains a selection of course.
+Get the list of students of the course selected in the drop-down box.
 
 Student Login Home
-when Student login with his credentials.he will redirect to his homepage which contains his registered courses enrolled with respective code words.
+As Student, if I log in with my credentials.i will redirect to my homepage which contains my registered courses enrolled with respective codewords.
 
 
 MVP 2
@@ -35,9 +35,9 @@ In Student page, if he entered any particular course name or course ID and if he
 
 MVP 3
 
-Administrator has a capable to add an instructors.
-Administrator can add default codewords.
-Administrator will display the list of instructors.
+As an Administrator, I am capable to add instructors.
+As an Administrator, I can add default codewords.
+As an Administrator, I will display the list of instructors.
 
 Next Semester
 We may discuss with cilent and update UI according to that.
