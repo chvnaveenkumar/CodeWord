@@ -50,7 +50,7 @@ export default {
     onLogout () {
       localStorage.removeItem('token')
       this.auth = User.check()
-      this.$router.push({ path: '/signin' })
+      this.$router.push({ path: '/' })
     }
   },
     watch: {
