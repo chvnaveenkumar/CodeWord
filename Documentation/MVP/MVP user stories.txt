@@ -18,3 +18,8 @@ Get the list of students of the course selected in the drop down box.
 
 Student Login Home
 when Student login with his credentials.he will redirect to his homepage which contains his registered courses enrolled with respective code words.
+
+MPV 3
+Administrator has a capable to add an instructors.
+Administrator can add default codewords.
+Administrator will display the list of instructors.
