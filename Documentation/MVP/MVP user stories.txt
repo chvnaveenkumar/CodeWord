@@ -1,8 +1,8 @@
 MVP 1
 
 Registration page
-As a student or instructor if I didn't have an account with this page I can register and then can access account.
-As a student or instructor, i get a temporary password to my registered email ID which is used to login for the first time and later I can change the password.
+As a student or instructor if I didn't have an account this page will help me to register with my email ID and password and then I can access my account.
+As a student or instructor, i got an temporary password to my registered email ID which is used to login for the first time and later I can change the password.
 
 Login page
 As a student or instructor once I m registered this page will help me to accesses into student or instructor account.
@@ -10,14 +10,15 @@ As a student or instructor, if I forget password I can just click forget passwor
 
 Forget password (send a mail)
 As a student or instructor if I got any problem with accessing the account by forgetting the password this page will help me to retrieve to my account.
-As student or instructor in Forget password page, I can enter my registered Email ID and submit it. After submission, I will get a mail with a temporary password.
+As student or instructor in Forget password page, I can enter my registered Email ID and submit it. After submission, I will get a email with a temporary password.
 
 Instructor login Home 
-As an instructor, if I log in with my credentials.i will redirect to my homepage which contains a selection of course.
-Get the list of students of the course selected in the drop-down box.
+As an instructor, if I login with my credentials.i will redirect to my homepage which contains a selection of course and 
+i will get the list of students of the course selected in the drop-down box.
+As an instructor i need to upload excel sheet contains codewords 
 
 Student Login Home
-As Student, if I log in with my credentials.i will redirect to my homepage which contains my registered courses enrolled with respective codewords.
+As Student, if I log in with my credentials.i will redirect to my homepage which contains my registered courses enrolled and then i can generate codeword for respective course.
 
 
 MVP 2
