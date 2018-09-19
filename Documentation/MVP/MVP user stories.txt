@@ -1,0 +1,20 @@
+MVP 1
+
+Registration page
+If the student or instructor didn't have an account with this page they can register and then can access account.
+We will get a temporary password to our registered email ID which is used to login for the first time and later we can change the password.
+
+Login page
+Once we are registered this page will help us to accesses into student or instructor account. 
+If we forget password we can just click forget password it will redirect to forget password page                                                                                                                                     if we forget password we can just click forget password it will redirect to forget password page
+
+Forget password (send a mail)
+If we got any problem with accessing the account by forgetting the password this page will help us to redirect to our account .
+In Forget password page it will ask for registered Email ID. After submission We will get a mail with temporary password.
+
+Instructor login Home 
+when instructor login with his credentials.he will redirect to his homepage which contains a selection of course.
+Get the list of students of the course selected in the drop down box.
+
+Student Login Home
+when Student login with his credentials.he will redirect to his homepage which contains his registered courses enrolled with respective code words.
