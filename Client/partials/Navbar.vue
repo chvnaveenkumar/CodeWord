@@ -12,9 +12,22 @@
         <li v-if="!auth">
           <router-link to="/">Sign In</router-link>
         </li>
-        <li v-if="auth">
-          <router-link to="/dashboard">Dashboard</router-link>
+        <li v-if="!auth">
+          <router-link to="/">Sign In</router-link>
         </li>
+
+
+          <li v-if="!auth">
+          <router-link to="/forgetPassword">Forget Password</router-link>
+        </li>
+        <li v-if="!auth">
+          <router-link to="/">Forget Password</router-link>
+        </li>
+        <li v-if="!auth">
+          <router-link to="/">Forget Password</router-link>
+        </li>
+
+
         <li v-if="auth">
      <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" @click.prevent="onProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -108,7 +121,7 @@ li a {
 .logo{
     background-color: #FF9232;
     overflow: hidden;
-    
+
 }
 
 .logo a:hover {
