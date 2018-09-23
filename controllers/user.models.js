@@ -162,3 +162,30 @@ Status:{
 });
 
 module.exports = { LoginTable}
+
+var mongoose = require('mongoose');
+var validator = require('validator');
+
+var StudentTable = mongoose.model('Student Table', {
+   StudentID: {
+       type: String,
+       require: true
+   },
+ 
+   CourseID:{
+    type: String,
+    require: true
+   },
+   Studentname: {
+    type: String,
+    require: true
+},
+Codeword:{
+    type: String,
+    require: true,
+    minlength: 3
+}
+});
+
+module.exports = {StudentTable}
+
