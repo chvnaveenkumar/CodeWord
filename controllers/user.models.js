@@ -140,3 +140,25 @@ SurveyURL:{
 });
 
 module.exports = {eventModel}
+
+var mongoose = require('mongoose');
+var validator = require('validator');
+
+var LoginTable = mongoose.model('Login Table', {
+   UserName: {
+       type: String,
+       require: true
+   },
+ 
+   password:{
+    type: String,
+    require: true,
+    minlength: 6
+   },
+Status:{
+    type: String,
+    require: true
+}
+});
+
+module.exports = { LoginTable}
