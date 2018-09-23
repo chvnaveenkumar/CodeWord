@@ -1,0 +1,105 @@
+[
+    {
+        "id": 1,
+        "StudentEmailKey": "s531519@nwmissouri.edu",
+        "Fullname": "Yashwanth Reddy Bommineni",
+        "password": "password"
+    },
+    {
+        "id": 2,
+        "StudentEmailKey": "s530742@nwmissouri.edu",
+        "Fullname": "Naveen Kumar Chandaluri",
+        "password": "password"
+    },
+    {
+        "id": 3,
+        "StudentEmailKey": "s531495@nwmissouri.edu",
+        "Fullname": "Chaithanya Cherukurui",
+        "password": "password"
+    },
+    {
+        "id": 4,
+        "StudentEmailKey": "s531367@nwmissouri.edu",
+        "Fullname": "Sai Sirisha Devineni",
+        "password": "password"
+    },
+    {
+        "id": 5,
+        "StudentEmailKey": "s531496@nwmissouri.edu",
+        "Fullname": "Shivani Reddy Dodla",
+        "password": "password"
+    },{
+        "id": 6,
+        "StudentEmailKey": "s531369@nwmissouri.edu",
+        "Fullname": "Girish Guntuku",
+        "password": "password"
+    },{
+        "id": 7,
+        "StudentEmailKey": "s531499@nwmissouri.edu",
+        "Fullname": "Saicharan Gurudu",
+        "password": "password"
+    },
+    {
+        "id": 8,
+        "StudentEmailKey": "s531500@nwmissouri.edu",
+        "Fullname": "Sravya Kancharla",
+        "password": "password"
+    },{
+        "id": 9,
+        "StudentEmailKey": "s531372@nwmissouri.edu",
+        "Fullname": "Anurag Kumar",
+        "password": "password"
+    },{
+        "id": 10,
+        "StudentEmailKey": "s530473@nwmissouri.edu",
+        "Fullname": "Ujjawal Kumar",
+        "password": "password"
+    },{
+        "id": 11 ,
+        "StudentEmailKey": "s531439@nwmissouri.edu",
+        "Fullname": "Dattu Bhargav Medarametla",
+        "password": "password"
+    },{
+        "id": 12,
+        "StudentEmailKey": "s531503@nwmissouri.edu",
+        "Fullname": "Santosh Sekhar Muchkur Bogarajula",
+        "password": "password"
+    },{
+        "id": 13 ,
+        "StudentEmailKey": "s531373@nwmissouri.edu",
+        "Fullname": "Naveenkumar Nuggu",
+        "password": "password"
+    },
+    {
+        "id": 14 ,
+        "StudentEmailKey": "s531507@nwmissouri.edu",
+        "Fullname": "Vijay Kumar Tupakula",
+        "password": "password"
+    },
+    {
+        "id":15 ,
+        "StudentEmailKey": "s531508@nwmissouri.edu",
+        "Fullname": "Satya Sai Ram Vankina",
+        "password": "password"
+    },{
+        "id": 16 ,
+        "StudentEmailKey": "s531382@nwmissouri.edu",
+        "Fullname": "Sreelekha Vijaya",
+        "password": "password"
+    },{
+        "id": 17 ,
+        "StudentEmailKey": "mwoolery@nwmissouri.edu",
+        "Fullname": "Matthew Woolery",
+        "password": "password"
+    },{
+        "id": 18 ,
+        "StudentEmailKey": "s531383@nwmissouri.edu",
+        "Fullname": "Vyshnavi Yalamareddy",
+        "password": "password"
+    },{
+        "id": 19,
+        "StudentEmailKey": "s531384@nwmissouri.edu",
+        "Fullname": "Srimai Reddy Yanala",
+        "password": "password"
+    }
+]

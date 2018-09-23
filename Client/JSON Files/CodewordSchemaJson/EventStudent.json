@@ -1,0 +1,798 @@
+[
+    {
+        "id": 1,
+        "EventNameKey1": "2018 Fall 44-444-01",
+        "studentEmail": "s531519@nwmissouri.edu",
+        "CodeWord": "Africa",
+        "Acknowledged": 1
+    },
+    {
+        "id": 2,
+        "EventNameKey1": "2018 Fall 44-444-01",
+        "studentEmail": "s530742@nwmissouri.edu",
+        "CodeWord": "Almond",
+        "Acknowledged": 1
+    },
+    {
+        "id": 3,
+        "EventNameKey1": "2018 Fall 44-444-01",
+        "studentEmail": "s531495@nwmissouri.edu",
+        "CodeWord": "Anger",
+        "Acknowledged": 1
+    },
+    {
+        "id": 4,
+        "EventNameKey1": "2018 Fall 44-444-01",
+        "studentEmail": "s531367@nwmissouri.edu",
+        "CodeWord": "America",
+        "Acknowledged": 1
+    },
+    {
+        "id": 5,
+        "EventNameKey1": "2018 Fall 44-444-01",
+        "studentEmail": "s531496@nwmissouri.edu",
+        "CodeWord": "Bravo",
+        "Acknowledged": 0
+    },
+    {
+        "id": 6,
+        "EventNameKey1": "2018 Fall 44-444-01",
+        "studentEmail": "s531369@nwmissouri.edu",
+        "CodeWord": "Bank",
+        "Acknowledged": 0
+    },
+    {
+        "id": 7,
+        "EventNameKey1": "2018 Fall 44-444-01",
+        "studentEmail": "s531499@nwmissouri.edu",
+        "CodeWord": "Bounce",
+        "Acknowledged": 0
+    },
+    {
+        "id": 8,
+        "EventNameKey1": "2018 Fall 44-444-01",
+        "studentEmail": "s531500@nwmissouri.edu",
+        "CodeWord": "Bigger",
+        "Acknowledged": 0
+    },
+    {
+        "id": 9,
+        "EventNameKey1": "2018 Fall 44-444-01",
+        "studentEmail": "s531372@nwmissouri.edu",
+        "CodeWord": "Computer",
+        "Acknowledged": 1
+    },
+    {
+        "id": 10,
+        "EventNameKey1": "2018 Fall 44-444-01",
+        "studentEmail": "s530473@nwmissouri.edu",
+        "CodeWord": "Cancer",
+        "Acknowledged": 1
+    },
+    {
+        "id": 11,
+        "EventNameKey1": "2018 Fall 44-444-01",
+        "studentEmail": "s531439@nwmissouri.edu",
+        "CodeWord": "Chair",
+        "Acknowledged": 0
+    },
+    {
+        "id": 12,
+        "EventNameKey1": "2018 Fall 44-444-01",
+        "studentEmail": "s531503@nwmissouri.edu",
+        "CodeWord": "Center",
+        "Acknowledged": 1
+    },
+    {
+        "id": 13,
+        "EventNameKey1": "2018 Fall 44-444-01",
+        "studentEmail": "s531373@nwmissouri.edu",
+        "CodeWord": "Dagger",
+        "Acknowledged": 0
+    },
+    {
+        "id": 14,
+        "EventNameKey1": "2018 Fall 44-444-01",
+        "studentEmail": "s531507@nwmissouri.edu",
+        "CodeWord": "Desk",
+        "Acknowledged": 1
+    },
+    {
+        "id": 15,
+        "EventNameKey1": "2018 Fall 44-444-01",
+        "studentEmail": "s531508@nwmissouri.edu",
+        "CodeWord": "Dim",
+        "Acknowledged": 0
+    },
+    {
+        "id": 16,
+        "EventNameKey1": "2018 Fall 44-444-01",
+        "studentEmail": "s531382@nwmissouri.edu",
+        "CodeWord": "Dog",
+        "Acknowledged": 1
+    },
+    {
+        "id": 17,
+        "EventNameKey1": "2018 Fall 44-444-01",
+        "studentEmail": "mwoolery@nwmissouri.edu",
+        "CodeWord": "Echo",
+        "Acknowledged": 0
+    },
+    {
+        "id": 18,
+        "EventNameKey1": "2018 Fall 44-444-01",
+        "studentEmail": "s531383@nwmissouri.edu",
+        "CodeWord": "Elvis",
+        "Acknowledged": 1
+    },
+    {
+        "id": 19,
+        "EventNameKey1": "2018 Fall 44-444-01",
+        "studentEmail": "s531384@nwmissouri.edu",
+        "CodeWord": "Extra",
+        "Acknowledged": 0
+    },
+    {
+        "id": 20,
+        "EventNameKey1": "2018 Fall 44-691-05",
+        "studentEmail": "s531519@nwmissouri.edu",
+        "CodeWord": "Engage",
+        "Acknowledged": 1
+    },
+    {
+        "id": 21,
+        "EventNameKey1": "2018 Fall 44-691-05",
+        "studentEmail": "s530742@nwmissouri.edu",
+        "CodeWord": "France",
+        "Acknowledged": 0
+    },
+    {
+        "id": 22,
+        "EventNameKey1": "2018 Fall 44-691-05",
+        "studentEmail": "s531495@nwmissouri.edu",
+        "CodeWord": "Foxtrot",
+        "Acknowledged": 1
+    },
+    {
+        "id": 23,
+        "EventNameKey1": "2018 Fall 44-691-05",
+        "studentEmail": "s531367@nwmissouri.edu",
+        "CodeWord": "Fancy",
+        "Acknowledged": 1
+    },
+    {
+        "id": 24,
+        "EventNameKey1": "2018 Fall 44-691-05",
+        "studentEmail": "s531496@nwmissouri.edu",
+        "CodeWord": "Feline",
+        "Acknowledged": 0
+    },
+    {
+        "id": 25,
+        "EventNameKey1": "2018 Fall 44-691-05",
+        "studentEmail": "s531369@nwmissouri.edu",
+        "CodeWord": "Golf",
+        "Acknowledged": 0
+    },
+    {
+        "id": 26,
+        "EventNameKey1": "2018 Fall 44-691-05",
+        "studentEmail": "s531499@nwmissouri.edu",
+        "CodeWord": "Ginger",
+        "Acknowledged": 1
+    },
+    {
+        "id": 27,
+        "EventNameKey1": "2018 Fall 44-691-05",
+        "studentEmail": "s531500@nwmissouri.edu",
+        "CodeWord": "Globe",
+        "Acknowledged": 0
+    },
+    {
+        "id": 28,
+        "EventNameKey1": "2018 Fall 44-691-05",
+        "studentEmail": "s531372@nwmissouri.edu",
+        "CodeWord": "Germany",
+        "Acknowledged": 0
+    },
+    {
+        "id": 29,
+        "EventNameKey1": "2018 Fall 44-691-05",
+        "studentEmail": "s530473@nwmissouri.edu",
+        "CodeWord": "Hotel",
+        "Acknowledged": 0
+    },
+    {
+        "id": 30,
+        "EventNameKey1": "2018 Fall 44-691-05",
+        "studentEmail": "s531439@nwmissouri.edu",
+        "CodeWord": "Hanger",
+        "Acknowledged": 1
+    },
+    {
+        "id": 31,
+        "EventNameKey1": "2018 Fall 44-691-05",
+        "studentEmail": "s531503@nwmissouri.edu",
+        "CodeWord": "Helmet",
+        "Acknowledged": 1
+    },
+    {
+        "id": 32,
+        "EventNameKey1": "2018 Fall 44-691-05",
+        "studentEmail": "s531373@nwmissouri.edu",
+        "CodeWord": "Hidden",
+        "Acknowledged": 1
+    },
+    {
+        "id": 33,
+        "EventNameKey1": "2018 Fall 44-691-05",
+        "studentEmail": "s531507@nwmissouri.edu",
+        "CodeWord": "Ice",
+        "Acknowledged": 0
+    },
+    {
+        "id": 34,
+        "EventNameKey1": "2018 Fall 44-691-05",
+        "studentEmail": "s531508@nwmissouri.edu",
+        "CodeWord": "Inkspot",
+        "Acknowledged": 1
+    },
+    {
+        "id": 35,
+        "EventNameKey1": "2018 Fall 44-691-05",
+        "studentEmail": "s531382@nwmissouri.edu",
+        "CodeWord": "Impulse",
+        "Acknowledged": 0
+    },
+    {
+        "id": 36,
+        "EventNameKey1": "2018 Fall 44-691-05",
+        "studentEmail": "mwoolery@nwmissouri.edu",
+        "CodeWord": "Igor",
+        "Acknowledged": 1
+    },
+    {
+        "id": 37,
+        "EventNameKey1": "2018 Fall 44-691-05",
+        "studentEmail": "s531383@nwmissouri.edu",
+        "CodeWord": "Kilo",
+        "Acknowledged": 0
+    },
+    {
+        "id": 38,
+        "EventNameKey1": "2018 Fall 44-691-05",
+        "studentEmail": "s531384@nwmissouri.edu",
+        "CodeWord": "Kangaroo",
+        "Acknowledged": 1
+    },
+    {
+        "id": 39,
+        "EventNameKey1": "2018 Fall 44-542-02",
+        "studentEmail": "s531519@nwmissouri.edu",
+        "CodeWord": "Kennedy",
+        "Acknowledged": 1
+    },
+    {
+        "id": 40,
+        "EventNameKey1": "2018 Fall 44-542-02",
+        "studentEmail": "s530742@nwmissouri.edu",
+        "CodeWord": "Lemon",
+        "Acknowledged": 1
+    },
+    {
+        "id": 41,
+        "EventNameKey1": "2018 Fall 44-542-02",
+        "studentEmail": "s531495@nwmissouri.edu",
+        "CodeWord": "Lamp",
+        "Acknowledged": 0
+    },
+    {
+        "id": 42,
+        "EventNameKey1": "2018 Fall 44-542-02",
+        "studentEmail": "s531367@nwmissouri.edu",
+        "CodeWord": "London",
+        "Acknowledged": 0
+    },
+    {
+        "id": 43,
+        "EventNameKey1": "2018 Fall 44-542-02",
+        "studentEmail": "s531496@nwmissouri.edu",
+        "CodeWord": "Line",
+        "Acknowledged": 0
+    },
+    {
+        "id": 44,
+        "EventNameKey1": "2018 Fall 44-542-02",
+        "studentEmail": "s531369@nwmissouri.edu",
+        "CodeWord": "Mink",
+        "Acknowledged": 1
+    },
+    {
+        "id": 45,
+        "EventNameKey1": "2018 Fall 44-542-02",
+        "studentEmail": "s531499@nwmissouri.edu",
+        "CodeWord": "Mumbai",
+        "Acknowledged": 1
+    },
+    {
+        "id": 46,
+        "EventNameKey1": "2018 Fall 44-542-02",
+        "studentEmail": "s531500@nwmissouri.edu",
+        "CodeWord": "Money",
+        "Acknowledged": 0
+    },
+    {
+        "id": 47,
+        "EventNameKey1": "2018 Fall 44-542-02",
+        "studentEmail": "s531372@nwmissouri.edu",
+        "CodeWord": "Market",
+        "Acknowledged": 0
+    },
+    {
+        "id": 48,
+        "EventNameKey1": "2018 Fall 44-542-02",
+        "studentEmail": "s530473@nwmissouri.edu",
+        "CodeWord": "Native",
+        "Acknowledged": 1
+    },
+    {
+        "id": 49,
+        "EventNameKey1": "2018 Fall 44-542-02",
+        "studentEmail": "s531439@nwmissouri.edu",
+        "CodeWord": "Next",
+        "Acknowledged": 0
+    },
+    {
+        "id": 50,
+        "EventNameKey1": "2018 Fall 44-542-02",
+        "studentEmail": "s531503@nwmissouri.edu",
+        "CodeWord": "November",
+        "Acknowledged": 1
+    },
+    {
+        "id": 51,
+        "EventNameKey1": "2018 Fall 44-542-02",
+        "studentEmail": "s531373@nwmissouri.edu",
+        "CodeWord": "Nickel",
+        "Acknowledged": 0
+    },
+    {
+        "id": 52,
+        "EventNameKey1": "2018 Fall 44-542-02",
+        "studentEmail": "s531507@nwmissouri.edu",
+        "CodeWord": "Object",
+        "Acknowledged": 1
+    },
+    {
+        "id": 53,
+        "EventNameKey1": "2018 Fall 44-542-02",
+        "studentEmail": "s531508@nwmissouri.edu",
+        "CodeWord": "Option",
+        "Acknowledged": 1
+    },
+    {
+        "id": 54,
+        "EventNameKey1": "2018 Fall 44-542-02",
+        "studentEmail": "s531382@nwmissouri.edu",
+        "CodeWord": "Onion",
+        "Acknowledged": 0
+    },
+    {
+        "id": 55,
+        "EventNameKey1": "2018 Fall 44-542-02",
+        "studentEmail": "mwoolery@nwmissouri.edu",
+        "CodeWord": "Ogre",
+        "Acknowledged": 1
+    },
+    {
+        "id": 56,
+        "EventNameKey1": "2018 Fall 44-542-02",
+        "studentEmail": "s531383@nwmissouri.edu",
+        "CodeWord": "Papa",
+        "Acknowledged": 0
+    },
+    {
+        "id": 57,
+        "EventNameKey1": "2018 Fall 44-542-02",
+        "studentEmail": "s531384@nwmissouri.edu",
+        "CodeWord": "Pencil",
+        "Acknowledged": 0
+    },
+    {
+        "id": 58,
+        "EventNameKey1": "2018 Fall 44-563-04",
+        "studentEmail": "s531519@nwmissouri.edu",
+        "CodeWord": "Purple",
+        "Acknowledged":1
+    },
+    {
+        "id": 59,
+        "EventNameKey1": "2018 Fall 44-563-04",
+        "studentEmail": "s530742@nwmissouri.edu",
+        "CodeWord": "Pill",
+        "Acknowledged":0
+    },
+    {
+        "id": 60,
+        "EventNameKey1": "2018 Fall 44-563-04",
+        "studentEmail": "s531495@nwmissouri.edu",
+        "CodeWord": "Quick",
+        "Acknowledged":1
+    },
+    {
+        "id": 61,
+        "EventNameKey1": "2018 Fall 44-563-04",
+        "studentEmail": "s531367@nwmissouri.edu",
+        "CodeWord": "Quasar",
+        "Acknowledged":1
+    },
+    {
+        "id": 62,
+        "EventNameKey1": "2018 Fall 44-563-04",
+        "studentEmail": "s531496@nwmissouri.edu",
+        "CodeWord": "Quest",
+        "Acknowledged":1
+    },
+    {
+        "id": 63,
+        "EventNameKey1": "2018 Fall 44-563-04",
+        "studentEmail": "s531369@nwmissouri.edu",
+        "CodeWord": "Romance",
+        "Acknowledged":1
+    },
+    {
+        "id": 64,
+        "EventNameKey1": "2018 Fall 44-563-04",
+        "studentEmail": "s531499@nwmissouri.edu",
+        "CodeWord": "Redwood",
+        "Acknowledged":0
+    },
+    {
+        "id": 65,
+        "EventNameKey1": "2018 Fall 44-563-04",
+        "studentEmail": "s531500@nwmissouri.edu",
+        "CodeWord": "Rose",
+        "Acknowledged":1
+    },
+    {
+        "id": 66,
+        "EventNameKey1": "2018 Fall 44-563-04",
+        "studentEmail": "s531372@nwmissouri.edu",
+        "CodeWord": "Ring",
+        "Acknowledged":1
+    },
+    {
+        "id": 67,
+        "EventNameKey1": "2018 Fall 44-563-04",
+        "studentEmail": "s530473@nwmissouri.edu",
+        "CodeWord": "Steve",
+        "Acknowledged":1
+    },
+    {
+        "id": 68,
+        "EventNameKey1": "2018 Fall 44-563-04",
+        "studentEmail": "s531439@nwmissouri.edu",
+        "CodeWord": "Sender",
+        "Acknowledged":0
+    },
+    {
+        "id": 69,
+        "EventNameKey1": "2018 Fall 44-563-04",
+        "studentEmail": "s531503@nwmissouri.edu",
+        "CodeWord": "Saturn",
+        "Acknowledged":1
+    },
+    {
+        "id": 70,
+        "EventNameKey1": "2018 Fall 44-563-04",
+        "studentEmail": "s531373@nwmissouri.edu",
+        "CodeWord": "Singer",
+        "Acknowledged":1
+    },
+    {
+        "id": 71,
+        "EventNameKey1": "2018 Fall 44-563-04",
+        "studentEmail": "s531507@nwmissouri.edu",
+        "CodeWord": "Twilight",
+        "Acknowledged":0
+    },
+    {
+        "id": 72,
+        "EventNameKey1": "2018 Fall 44-563-04",
+        "studentEmail": "s531508@nwmissouri.edu",
+        "CodeWord": "Titanic",
+        "Acknowledged":1
+    },
+    {
+        "id": 73,
+        "EventNameKey1": "2018 Fall 44-563-04",
+        "studentEmail": "s531382@nwmissouri.edu",
+        "CodeWord": "Tower",
+        "Acknowledged":0
+    },
+    {
+        "id": 74,
+        "EventNameKey1": "2018 Fall 44-563-04",
+        "studentEmail": "mwoolery@nwmissouri.edu",
+        "CodeWord": "Tank",
+        "Acknowledged":1
+    },
+    {
+        "id": 75,
+        "EventNameKey1": "2018 Fall 44-563-04",
+        "studentEmail": "s531383@nwmissouri.edu",
+        "CodeWord": "Uniform",
+        "Acknowledged":0
+    },
+    {
+        "id": 76,
+        "EventNameKey1": "2018 Fall 44-563-04",
+        "studentEmail": "s531384@nwmissouri.edu",
+        "CodeWord": "Ultimate",
+        "Acknowledged":0
+    },{
+        "id": 77,
+        "EventNameKey1": "2018 Fall 44-563-06",
+        "studentEmail": "s531519@nwmissouri.edu",
+        "CodeWord": "Victory",
+        "Acknowledged": 0
+    },
+    {
+        "id": 78,
+        "EventNameKey1": "2018 Fall 44-563-06",
+        "studentEmail": "s530742@nwmissouri.edu",
+        "CodeWord": "Vagrant",
+        "Acknowledged": 1
+    },
+    {
+        "id": 79,
+        "EventNameKey1": "2018 Fall 44-563-06",
+        "studentEmail": "s531495@nwmissouri.edu",
+        "CodeWord": "Velvet",
+        "Acknowledged": 0
+    },
+    {
+        "id": 80,
+        "EventNameKey1": "2018 Fall 44-563-06",
+        "studentEmail": "s531367@nwmissouri.edu",
+        "CodeWord": "Voice",
+        "Acknowledged": 1
+    },
+    {
+        "id": 81,
+        "EventNameKey1": "2018 Fall 44-563-06",
+        "studentEmail": "s531496@nwmissouri.edu",
+        "CodeWord": "Whiskey",
+        "Acknowledged": 0
+    },
+    {
+        "id": 82,
+        "EventNameKey1": "2018 Fall 44-563-06",
+        "studentEmail": "s531369@nwmissouri.edu",
+        "CodeWord": "Witch",
+        "Acknowledged": 0
+    },
+    {
+        "id": 83,
+        "EventNameKey1": "2018 Fall 44-563-06",
+        "studentEmail": "s531499@nwmissouri.edu",
+        "CodeWord": "Water",
+        "Acknowledged":1
+    },
+    {
+        "id": 84,
+        "EventNameKey1": "2018 Fall 44-563-06",
+        "studentEmail": "s531500@nwmissouri.edu",
+        "CodeWord": "Well",
+        "Acknowledged":1
+    },
+    {
+        "id": 85,
+        "EventNameKey1": "2018 Fall 44-563-06",
+        "studentEmail": "s531372@nwmissouri.edu",
+        "CodeWord": "Xray",
+        "Acknowledged":0
+    },
+    {
+        "id": 86,
+        "EventNameKey1": "2018 Fall 44-563-06",
+        "studentEmail": "s530473@nwmissouri.edu",
+        "CodeWord": "Yankee",
+        "Acknowledged":1
+    },
+    {
+        "id": 87,
+        "EventNameKey1": "2018 Fall 44-563-06",
+        "studentEmail": "s531439@nwmissouri.edu",
+        "CodeWord": "Yesterday",
+        "Acknowledged":0
+    },
+    {
+        "id": 88,
+        "EventNameKey1": "2018 Fall 44-563-06",
+        "studentEmail": "s531503@nwmissouri.edu",
+        "CodeWord": "Young",
+        "Acknowledged":1
+    },
+    {
+        "id": 89,
+        "EventNameKey1": "2018 Fall 44-563-06",
+        "studentEmail": "s531373@nwmissouri.edu",
+        "CodeWord": "Zap",
+        "Acknowledged":1
+    },
+    {
+        "id": 90,
+        "EventNameKey1": "2018 Fall 44-563-06",
+        "studentEmail": "s531507@nwmissouri.edu",
+        "CodeWord": "Zulu",
+        "Acknowledged":0
+    },
+    {
+        "id": 91,
+        "EventNameKey1": "2018 Fall 44-563-06",
+        "studentEmail": "s531508@nwmissouri.edu",
+        "CodeWord": "Zombie",
+        "Acknowledged":0
+    },
+    {
+        "id": 92,
+        "EventNameKey1": "2018 Fall 44-563-06",
+        "studentEmail": "s531382@nwmissouri.edu",
+        "CodeWord": "Zebra",
+        "Acknowledged":0
+    },
+    {
+        "id": 93,
+        "EventNameKey1": "2018 Fall 44-563-06",
+        "studentEmail": "mwoolery@nwmissouri.edu",
+        "CodeWord": "Vagrant",
+        "Acknowledged":1
+    },
+    {
+        "id": 94,
+        "EventNameKey1": "2018 Fall 44-563-06",
+        "studentEmail": "s531383@nwmissouri.edu",
+        "CodeWord": "Helmet",
+        "Acknowledged":0
+    },
+    {
+        "id": 95,
+        "EventNameKey1": "2018 Fall 44-563-06",
+        "studentEmail": "s531384@nwmissouri.edu",
+        "CodeWord": "Computer",
+        "Acknowledged":1
+    },{
+        "id": 96,
+        "EventNameKey1": "2018 Fall 44-563-07",
+        "studentEmail": "s531519@nwmissouri.edu",
+        "CodeWord": "Cancer",
+        "Acknowledged": 0
+    },
+    {
+        "id": 97,
+        "EventNameKey1": "2018 Fall 44-563-07",
+        "studentEmail": "s530742@nwmissouri.edu",
+        "CodeWord": "Chair",
+        "Acknowledged": 1
+    },
+    {
+        "id": 98,
+        "EventNameKey1": "2018 Fall 44-563-07",
+        "studentEmail": "s531495@nwmissouri.edu",
+        "CodeWord": "Center",
+        "Acknowledged": 1
+    },
+    {
+        "id": 99,
+        "EventNameKey1": "2018 Fall 44-563-07",
+        "studentEmail": "s531367@nwmissouri.edu",
+        "CodeWord": "Dagger",
+        "Acknowledged": 1
+    },
+    {
+        "id": 100,
+        "EventNameKey1": "2018 Fall 44-563-07",
+        "studentEmail": "s531496@nwmissouri.edu",
+        "CodeWord": "Desk",
+        "Acknowledged": 0
+    },
+    {
+        "id": 101,
+        "EventNameKey1": "2018 Fall 44-563-07",
+        "studentEmail": "s531369@nwmissouri.edu",
+        "CodeWord": "Dim",
+        "Acknowledged": 0
+    },
+    {
+        "id": 102,
+        "EventNameKey1": "2018 Fall 44-563-07",
+        "studentEmail": "s531499@nwmissouri.edu",
+        "CodeWord": "Dog",
+        "Acknowledged":0
+    },
+    {
+        "id": 103,
+        "EventNameKey1": "2018 Fall 44-563-07",
+        "studentEmail": "s531500@nwmissouri.edu",
+        "CodeWord": "Echo",
+        "Acknowledged":0
+    },
+    {
+        "id": 104,
+        "EventNameKey1": "2018 Fall 44-563-07",
+        "studentEmail": "s531372@nwmissouri.edu",
+        "CodeWord": "Elvis",
+        "Acknowledged":0
+    },
+    {
+        "id": 105,
+        "EventNameKey1": "2018 Fall 44-563-07",
+        "studentEmail": "s530473@nwmissouri.edu",
+        "CodeWord": "Extra",
+        "Acknowledged":0
+    },
+    {
+        "id": 106,
+        "EventNameKey1": "2018 Fall 44-563-07",
+        "studentEmail": "s531439@nwmissouri.edu",
+        "CodeWord": "Engage",
+        "Acknowledged":1
+    },
+    {
+        "id": 107,
+        "EventNameKey1": "2018 Fall 44-563-07",
+        "studentEmail": "s531503@nwmissouri.edu",
+        "CodeWord": "France",
+        "Acknowledged":0
+    },
+    {
+        "id": 108,
+        "EventNameKey1": "2018 Fall 44-563-07",
+        "studentEmail": "s531373@nwmissouri.edu",
+        "CodeWord": "Foxtrot",
+        "Acknowledged":0
+    },
+    {
+        "id": 109,
+        "EventNameKey1": "2018 Fall 44-563-07",
+        "studentEmail": "s531507@nwmissouri.edu",
+        "CodeWord": "Fancy",
+        "Acknowledged":0
+    },
+    {
+        "id": 110,
+        "EventNameKey1": "2018 Fall 44-563-07",
+        "studentEmail": "s531508@nwmissouri.edu",
+        "CodeWord": "Feline",
+        "Acknowledged":0
+    },
+    {
+        "id": 111,
+        "EventNameKey1": "2018 Fall 44-563-07",
+        "studentEmail": "s531382@nwmissouri.edu",
+        "CodeWord": "Golf",
+        "Acknowledged":1
+    },
+    {
+        "id": 112,
+        "EventNameKey1": "2018 Fall 44-563-07",
+        "studentEmail": "mwoolery@nwmissouri.edu",
+        "CodeWord": "Ginger",
+        "Acknowledged":1
+    },
+    {
+        "id": 113,
+        "EventNameKey1": "2018 Fall 44-563-07",
+        "studentEmail": "s531383@nwmissouri.edu",
+        "CodeWord": "Globe",
+        "Acknowledged":1
+    },
+    {
+        "id": 114,
+        "EventNameKey1": "2018 Fall 44-563-07",
+        "studentEmail": "s531384@nwmissouri.edu",
+        "CodeWord": "Germany",
+        "Acknowledged":0
+    }
+]

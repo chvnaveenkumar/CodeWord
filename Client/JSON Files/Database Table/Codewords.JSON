@@ -1,0 +1,71 @@
+[
+    {
+      "_id": 1,
+      "CodeWord":"Africa"
+    },
+    {
+        "_id": 2,
+        "CodeWord":"Almond"
+      },
+      {
+        "_id": 3,
+        "CodeWord":"Anger"
+      },
+      {
+        "_id": 4,
+        "CodeWord":"America"
+      },
+      {
+        "_id": 5,
+        "CodeWord":"Bravo"
+      },
+      {
+        "_id": 6,
+        "CodeWord":"Bank"
+      },
+      {
+        "_id": 7,
+        "CodeWord":"Bounce"
+      },
+      {
+        "_id": 8,
+        "CodeWord":"Bigger"
+      },
+      {
+        "_id": 9,
+        "CodeWord":"Computer"
+      },
+      {
+        "_id": 10,
+        "CodeWord":"Cancer"
+      },
+      {
+        "_id": 11,
+        "CodeWord":"Chair"
+      },
+      {
+        "_id": 12,
+        "CodeWord":"Center"
+      },
+      {
+        "_id": 13,
+        "CodeWord":"Dagger"
+      },
+      {
+        "_id": 14,
+        "CodeWord":"Desk"
+      },
+      {
+        "_id": 15,
+        "CodeWord":"Dim"
+      },
+      {
+        "_id": 16,
+        "CodeWord":"Dog"
+      },
+      {
+        "_id": 17,
+        "CodeWord":"Echo"
+      }
+
+]
