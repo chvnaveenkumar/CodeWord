@@ -123,3 +123,20 @@ $(function()
         
       });	
 });
+
+checkAuth() 
+    var jwt = localStorage.getItem('id_token')
+    if(jwt) {
+      this.user.authenticated = true
+    }
+    else {
+      this.user.authenticated = false      
+    }
+
+
+
+  // The object to be passed as a header for authenticated requests
+  getAuthHeader() 
+    return {
+      'Authorization': 'Bearer ' + localStorage.getItem('access_token')
+    }
