@@ -63,51 +63,6 @@ var CodeWordSetModel = mongoose.model('CodeWordSetModel', {
 
 module.exports = {CodeWordSetModel}
 
-
-var mongoose = require('mongoose');
-var validator = require('validator');
-var eventModel = mongoose.model('eventModel', {
-   EventNameKey: {
-       type: String,
-       require: true
-   },
-   InstructorEmail: {
-    type: String,
-    required: true,
-    trim: true,
-    unique: true,
-    minlength: 4,
-    validate:{
-        validator: (value) =>{
-            return validator.isEmail(value);
-        }
-    }
-   },
- CodeWordSet:{
-       type: String,
-       require: true,
-       minlength: 5
-},
-Startdate:{
-       type: String,
-       require: true
-},
-Startdate:{
-       type: String,
-       require: true
-},
-Enddate:{
-       type: String,
-       require: true
-},
-SurveyURL:{
-       type: String,
-       require: true
-}
-});
-
-module.exports = {eventModel}
-
 var mongoose = require('mongoose');
 var validator = require('validator');
 
