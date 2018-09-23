@@ -79,3 +79,20 @@ var EventStudent = mongoose.model('EventStudent', {
 });
 
 module.exports = {EventStudent}
+
+var mongoose = require('mongoose');
+var validator = require('validator');
+
+var CodeWordSetModel = mongoose.model('CodeWordSetModel', {
+   CodeWordSetName: {
+    type: String,
+    required: true,
+    minlength:4
+        },
+   CalculatedCount:{
+   type: String,
+   reduired: true
+}
+});
+
+module.exports = {CodeWordSetModel}
