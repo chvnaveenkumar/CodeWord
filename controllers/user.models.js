@@ -49,6 +49,23 @@ module.exports.Codewords = CodeWords
 var mongoose = require('mongoose');
 var validator = require('validator');
 
+var CodeWordSetModel = mongoose.model('CodeWordSetModel', {
+   CodeWordSetName: {
+    type: String,
+    required: true,
+    minlength:4
+        },
+   CalculatedCount:{
+   type: String,
+   reduired: true
+}
+});
+
+module.exports = {CodeWordSetModel}
+
+var mongoose = require('mongoose');
+var validator = require('validator');
+
 var EventStudent = mongoose.model('EventStudent', {
   EventNameKey1: {
        type: String,
@@ -77,5 +94,4 @@ var EventStudent = mongoose.model('EventStudent', {
      require: true
 }
 });
-
 module.exports.EventStudent = EventStudent

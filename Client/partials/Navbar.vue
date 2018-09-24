@@ -14,7 +14,7 @@
         </li>
         <li v-if="auth">
           <router-link to="/dashboard">{{ email }}</router-link>
-        </li>
+          </li>
         <li v-if="auth">
      <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" @click.prevent="onProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -119,7 +119,7 @@ li a {
 .logo{
     background-color: #FF9232;
     overflow: hidden;
-    
+
 }
 
 .logo a:hover {
