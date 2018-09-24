@@ -12,27 +12,14 @@
         <li v-if="!auth">
           <router-link to="/">Sign In</router-link>
         </li>
-        <li v-if="!auth">
-          <router-link to="/">Sign In</router-link>
-        </li>
-
-
-          <li v-if="!auth">
-          <router-link to="/forgetPassword">Forget Password</router-link>
-        </li>
-        <li v-if="!auth">
-          <router-link to="/">Forget Password</router-link>
-        </li>
-        <li v-if="!auth">
-          <router-link to="/">Forget Password</router-link>
-        </li>
-
-
+        <li v-if="auth">
+          <router-link to="/dashboard">{{ email }}</router-link>
+          </li>
         <li v-if="auth">
      <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" @click.prevent="onProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         </button>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
         <a class="dropdown-item">Signed in as</a>
         <a class="dropdown-item">  {{ email }} </a>
         <b-dropdown-divider></b-dropdown-divider>
@@ -42,7 +29,7 @@
         <a class="dropdown-item" @click.prevent="onLogout" >Logout</a>
     </div>
 </div>
-        </li>
+      </li>
       </ul>
     </nav>
   </header>
@@ -50,6 +37,7 @@
 <script>
 import axios from 'axios'
 import User from '@/../services/auth'
+import Config from '@/../config/config'
 export default {
   data () {
     return {
@@ -59,6 +47,17 @@ export default {
   },
   mounted () {
     this.auth = User.check()
+    if(this.auth){
+    axios({
+        method: 'post',
+        url: Config.url + '/codeword/details',
+        headers:{
+          token: window.localStorage.getItem('token')
+        } 
+      }).then(result => {
+        this.email = result.data.email
+      })
+    }
   },
   methods: {
     onLogout () {
@@ -92,7 +91,6 @@ export default {
 nav {
   height: 100%;
 }
-
 ul {
   list-style: none;
   margin: 0;
