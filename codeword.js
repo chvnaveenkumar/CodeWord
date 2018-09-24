@@ -10,7 +10,6 @@ var tokencheck = require('./middleware/tokencheck');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
 // view engine setup
 app.set('views', path.join(__dirname, './Client/dist'));
 app.use(express.static(path.join(__dirname, './Client/dist')));
@@ -22,6 +21,5 @@ app.set('view engine', 'ejs');
 app.use(tokencheck.tokencheck);
 
 app.use('/codeword', userRouter);
-
 
 module.exports = app;

@@ -25,10 +25,7 @@ var SignUpModel = mongoose.model('SignUpModel', {
    }
 });
 
-module.exports = {SignUpModel}
-
-var mongoose = require('mongoose');
-var validator = require('validator');
+module.exports.SignUpModel = SignUpModel
 
 var CodeWords = mongoose.model('CodeWords', {
   CodeWordSetName: {
@@ -44,10 +41,21 @@ var CodeWords = mongoose.model('CodeWords', {
    }
 });
 
-module.exports = {CodeWords}
+module.exports.Codewords = CodeWords
 
-var mongoose = require('mongoose');
-var validator = require('validator');
+var CodeWordSetModel = mongoose.model('CodeWordSetModel', {
+   CodeWordSetName: {
+    type: String,
+    required: true,
+    minlength:4
+        },
+   CalculatedCount:{
+   type: String,
+   reduired: true
+}
+});
+
+module.exports.CodeWordSetModel = CodeWordSetModel
 
 var EventStudent = mongoose.model('EventStudent', {
   EventNameKey1: {
@@ -77,72 +85,7 @@ var EventStudent = mongoose.model('EventStudent', {
      require: true
 }
 });
-
-module.exports = {EventStudent}
-
-var mongoose = require('mongoose');
-var validator = require('validator');
-
-var CodeWordSetModel = mongoose.model('CodeWordSetModel', {
-   CodeWordSetName: {
-    type: String,
-    required: true,
-    minlength:4
-        },
-   CalculatedCount:{
-   type: String,
-   reduired: true
-}
-});
-
-module.exports = {CodeWordSetModel}
-
-var mongoose = require('mongoose');
-var validator = require('validator');
-var eventModel = mongoose.model('eventModel', {
-   EventNameKey: {
-       type: String,
-       require: true
-   },
-   InstructorEmail: {
-    type: String,
-    required: true,
-    trim: true,
-    unique: true,
-    minlength: 4,
-    validate:{
-        validator: (value) =>{
-            return validator.isEmail(value);
-        }
-    }
-   },
- CodeWordSet:{
-       type: String,
-       require: true,
-       minlength: 5
-},
-Startdate:{
-       type: String,
-       require: true
-},
-Startdate:{
-       type: String,
-       require: true
-},
-Enddate:{
-       type: String,
-       require: true
-},
-SurveyURL:{
-       type: String,
-       require: true
-}
-});
-
-module.exports = {eventModel}
-
-var mongoose = require('mongoose');
-var validator = require('validator');
+module.exports.EventStudent = EventStudent
 
 var LoginTable = mongoose.model('Login Table', {
    UserName: {
@@ -161,31 +104,9 @@ Status:{
 }
 });
 
-module.exports = { LoginTable}
+module.exports.LoginTable = LoginTable 
 
-var mongoose = require('mongoose');
-var validator = require('validator');
 
-var StudentTable = mongoose.model('Student Table', {
-   StudentID: {
-       type: String,
-       require: true
-   },
- 
-   CourseID:{
-    type: String,
-    require: true
-   },
-   Studentname: {
-    type: String,
-    require: true
-},
-Codeword:{
-    type: String,
-    require: true,
-    minlength: 3
-}
-});
 
-module.exports = {StudentTable}
+
 

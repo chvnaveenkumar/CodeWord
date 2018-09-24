@@ -14,7 +14,7 @@
         </li>
         <li v-if="auth">
           <router-link to="/dashboard">{{ email }}</router-link>
-        </li>
+          </li>
         <li v-if="auth">
      <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" @click.prevent="onProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -37,6 +37,7 @@
 <script>
 import axios from 'axios'
 import User from '@/../services/auth'
+import Config from '@/../config/config'
 export default {
   data () {
     return {
@@ -45,16 +46,18 @@ export default {
     }
   },
   mounted () {
-    this.auth = User.check(),
+    this.auth = User.check()
+    if(this.auth){
     axios({
         method: 'post',
-        url: 'http://localhost:3000/codeword/details',
+        url: 'https://gdpcodeword.herokuapp.com/codeword/details',
         headers:{
           token: window.localStorage.getItem('token')
         } 
       }).then(result => {
         this.email = result.data.email
       })
+    }
   },
   methods: {
     onLogout () {
@@ -116,7 +119,7 @@ li a {
 .logo{
     background-color: #FF9232;
     overflow: hidden;
-    
+
 }
 
 .logo a:hover {
