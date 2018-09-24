@@ -37,6 +37,7 @@
 <script>
 import axios from 'axios'
 import User from '@/../services/auth'
+import Config from '@/../config/config'
 export default {
   data () {
     return {
@@ -49,7 +50,7 @@ export default {
     if(this.auth){
     axios({
         method: 'post',
-        url: 'http://localhost:3000/codeword/details',
+        url: Config.url + '/codeword/details',
         headers:{
           token: window.localStorage.getItem('token')
         } 
