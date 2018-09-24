@@ -25,7 +25,7 @@ var SignUpModel = mongoose.model('SignUpModel', {
    }
 });
 
-module.exports = {SignUpModel}
+module.exports.SignUpModel = SignUpModel
 
 var mongoose = require('mongoose');
 var validator = require('validator');
@@ -44,7 +44,7 @@ var CodeWords = mongoose.model('CodeWords', {
    }
 });
 
-module.exports = {CodeWords}
+module.exports.Codewords = CodeWords
 
 var mongoose = require('mongoose');
 var validator = require('validator');
@@ -78,4 +78,4 @@ var EventStudent = mongoose.model('EventStudent', {
 }
 });
 
-module.exports = {EventStudent}
+module.exports.EventStudent = EventStudent

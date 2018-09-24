@@ -45,7 +45,8 @@ export default {
     }
   },
   mounted () {
-    this.auth = User.check(),
+    this.auth = User.check()
+    if(this.auth){
     axios({
         method: 'post',
         url: 'http://localhost:3000/codeword/details',
@@ -55,6 +56,7 @@ export default {
       }).then(result => {
         this.email = result.data.email
       })
+    }
   },
   methods: {
     onLogout () {

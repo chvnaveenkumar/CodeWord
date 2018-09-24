@@ -87,15 +87,18 @@ webpackJsonp([1],[
   mounted: function mounted() {
     var _this = this;
 
-    this.auth = __WEBPACK_IMPORTED_MODULE_1__services_auth__["a" /* default */].check(), __WEBPACK_IMPORTED_MODULE_0_axios___default()({
-      method: 'post',
-      url: 'http://localhost:3000/codeword/details',
-      headers: {
-        token: window.localStorage.getItem('token')
-      }
-    }).then(function (result) {
-      _this.email = result.data.email;
-    });
+    this.auth = __WEBPACK_IMPORTED_MODULE_1__services_auth__["a" /* default */].check();
+    if (this.auth) {
+      __WEBPACK_IMPORTED_MODULE_0_axios___default()({
+        method: 'post',
+        url: 'http://localhost:3000/codeword/details',
+        headers: {
+          token: window.localStorage.getItem('token')
+        }
+      }).then(function (result) {
+        _this.email = result.data.email;
+      });
+    }
   },
 
   methods: {
@@ -335,6 +338,27 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
   template: '<App/>'
 });
 
+function ImportFile() {
+  var excelUrl = "./test.xlsx";
+
+  var oReq = new XMLHttpRequest();
+  oReq.open('get', excelUrl, true);
+  oReq.responseType = 'blob';
+  oReq.onload = function () {
+    var blob = oReq.response;
+    excelIO.open(blob, LoadSpread, function (message) {
+      console.log(message);
+    });
+  };
+  oReq.send(null);
+}
+function LoadSpread(json) {
+  jsonData = json;
+  workbook.fromJSON(json);
+
+  workbook.setActiveSheet("Revenues (Sales)");
+}
+
 /***/ }),
 /* 20 */,
 /* 21 */,
@@ -388,7 +412,7 @@ var Component = normalizeComponent(
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Navbar_vue__ = __webpack_require__(9);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_8908277e_hasScoped_true_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Navbar_vue__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1dfe44df_hasScoped_true_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Navbar_vue__ = __webpack_require__(46);
 function injectStyle (ssrContext) {
   __webpack_require__(26)
 }
@@ -403,12 +427,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-8908277e"
+var __vue_scopeId__ = "data-v-1dfe44df"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Navbar_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_8908277e_hasScoped_true_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Navbar_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1dfe44df_hasScoped_true_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Navbar_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -700,4 +724,4 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 
 /***/ })
 ],[19]);
-//# sourceMappingURL=app.4979f3975cc9b0dc6b61.js.map
+//# sourceMappingURL=app.f50f09302e15c9b29955.js.map
