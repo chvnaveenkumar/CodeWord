@@ -22,7 +22,6 @@
                           <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Password">
                       </div>
                     <button type="submit" class="btn btn-primary" @click="signIn">Sign In</button>
-                    <button type="forgetPassword" class="btn btn-primary" @click="forwardPassword">Forward Password<button>
                   </form>
                 </div>
               </div>

@@ -27,9 +27,6 @@ var SignUpModel = mongoose.model('SignUpModel', {
 
 module.exports.SignUpModel = SignUpModel
 
-var mongoose = require('mongoose');
-var validator = require('validator');
-
 var CodeWords = mongoose.model('CodeWords', {
   CodeWordSetName: {
        type: String,
@@ -46,9 +43,6 @@ var CodeWords = mongoose.model('CodeWords', {
 
 module.exports.Codewords = CodeWords
 
-var mongoose = require('mongoose');
-var validator = require('validator');
-
 var CodeWordSetModel = mongoose.model('CodeWordSetModel', {
    CodeWordSetName: {
     type: String,
@@ -61,10 +55,7 @@ var CodeWordSetModel = mongoose.model('CodeWordSetModel', {
 }
 });
 
-module.exports = {CodeWordSetModel}
-
-var mongoose = require('mongoose');
-var validator = require('validator');
+module.exports.CodeWordSetModel = CodeWordSetModel
 
 var EventStudent = mongoose.model('EventStudent', {
   EventNameKey1: {
