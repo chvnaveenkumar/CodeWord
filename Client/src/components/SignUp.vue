@@ -68,7 +68,7 @@ export default {
   methods: {
     OnRegister () {
       console.log('onregister clicked fullnaem', this.fullname)
-      axios.post('https://localhost:3000/codeword/signup', {
+      axios.post('https://gdpcodeword.herokuapp.com/codeword/signup', {
         fullname: this.fullname,
         email: this.email,
         password: this.password

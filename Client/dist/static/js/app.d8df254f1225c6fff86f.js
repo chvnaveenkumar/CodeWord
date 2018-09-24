@@ -286,7 +286,7 @@ webpackJsonp([1],[
       var _this = this;
 
       console.log('onregister clicked fullnaem', this.fullname);
-      __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('https://localhost:3000/codeword/signup', {
+      __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('https://gdpcodeword.herokuapp.com/codeword/signup', {
         fullname: this.fullname,
         email: this.email,
         password: this.password
@@ -585,7 +585,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Signup_vue__ = __webpack_require__(16);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_24c15777_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Signup_vue__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_017ac611_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Signup_vue__ = __webpack_require__(80);
 function injectStyle (ssrContext) {
   __webpack_require__(55)
 }
@@ -605,7 +605,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Signup_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_24c15777_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Signup_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_017ac611_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Signup_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -714,4 +714,4 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 
 /***/ })
 ],[19]);
-//# sourceMappingURL=app.9550ad5497fe5ecd3b82.js.map
+//# sourceMappingURL=app.d8df254f1225c6fff86f.js.map
