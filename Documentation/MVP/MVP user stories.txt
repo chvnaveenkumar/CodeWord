@@ -1,24 +1,12 @@
 MVP 1
 
-Registration page
-As a student or instructor if I didn't have an account this page will help me to register with my email ID and password and then I can access my account.
-As a student or instructor, i got an temporary password to my registered email ID which is used to login for the first time and later I can change the password.
-
-Login page
-As a student or instructor once I m registered this page will help me to accesses into student or instructor account.
-As a student or instructor, if I forget password I can just click forget password it will redirect to forget password page                                         
-
-Forget password (send a mail)
-As a student or instructor if I got any problem with accessing the account by forgetting the password this page will help me to retrieve to my account.
-As student or instructor in Forget password page, I can enter my registered Email ID and submit it. After submission, I will get a email with a temporary password.
-
-Instructor login Home 
-As an instructor, if I login with my credentials.i will redirect to my homepage which contains a selection of course and 
-i will get the list of students of the course selected in the drop-down box.
-As an instructor i need to upload excel sheet contains codewords 
-
-Student Login Home
-As Student, if I log in with my credentials.i will redirect to my homepage which contains my registered courses enrolled and then i can generate codeword for respective course.
+As a user,  I want to register by providing my email ID and password so that I can access my account.
+As an instructor, I want to check an "Instructor?" box when I register so that I can distribute code words.
+As a student or instructor, if I forget my password I want to click forget password it will redirect to forget password page.
+As a student or instructor if I have any problem with accessing the account by forgetting the password this page will help me to retrieve to my account. I can enter my registered Email ID and submit it. After submission, I will get an email with a temporary password.
+As a student, if I log in with my credentials on my homepage which contains my registered courses I want to see/acknowledge/get my random codeword for respective course.
+As an instructor, once I'm registered, I want to see a list of my courses in which I am giving codewords.
+As an instructor, I want to upload an excel sheet contains a new set of codewords.
 
 
 MVP 2
@@ -34,9 +22,10 @@ As a Student, I want to get the codeword of particular course or if I already go
 
 MVP 3
 
-As an Administrator, I am capable to add instructors.
-As an Administrator, I can add default codewords.
-As an Administrator, I will display the list of instructors.
+ As an administrator, I want to add new instructors and see the list of instructors.
+ As an Administrator, I want to add the list of default codewords.
 
 Next Semester
-We may discuss with cilent and update UI according to that.
+
+As a user, I want to do CRUD operations like adding the set of codewords, courses and deleting existing courses and set of codewords.
+As a user, I want to navigate multiple pages(Home, New Course, Set of Codewords and Delete Course and Delete Codewords).
