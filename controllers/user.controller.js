@@ -4,6 +4,7 @@ var jwt = require('jsonwebtoken');
 var { SignUpModel } = require('./../controllers/user.models');
 var { mongoose } = require('./../config/database')
 
+
 let signUp = (req,res) => {
     var body = _.pick(req.body,['fullname','email','password']);
     var gen_token = jwt.sign({email: body.email },'codewordnwmsu',{expiresIn:  1* 300 }).toString();
@@ -47,7 +48,6 @@ let signIn = (req,res) => {
     })
 }
 module.exports.signIn = signIn;
-
 let details = (req,res) => {    
     console.log('email');
 
