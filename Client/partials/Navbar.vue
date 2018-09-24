@@ -1,4 +1,5 @@
 <template>
+
   <header id="header">
     <div class="logo">
     
@@ -33,6 +34,7 @@
       </ul>
     </nav>
   </header>
+  
 </template>
 <script>
 import axios from 'axios'
