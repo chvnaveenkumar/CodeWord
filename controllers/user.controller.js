@@ -6,7 +6,8 @@ var { mongoose } = require('./../config/database')
 
 
 let signUp = (req,res) => {
-    var body = _.pick(req.body,['fullname','email','password']);
+    console.log("SignUp");
+    var body = _.pick(req.body,['email','password','instructor']);
     var gen_token = jwt.sign({email: body.email },'codewordnwmsu',{expiresIn:  1* 300 }).toString();
     body.token = gen_token;
     console.log("test");
@@ -50,7 +51,6 @@ let signIn = (req,res) => {
 module.exports.signIn = signIn;
 let details = (req,res) => {    
     console.log('email');
-
     SignUpModel.findOne({_id: req.session.id}).then((user) => {
     if(!user){
         return  res.status(400).send("User details not found!!");
@@ -59,3 +59,18 @@ let details = (req,res) => {
     });
 }
 module.exports.details = details;
+
+let validateEmail = (req, res) => {
+    var body = _.pick(req.body,['email']);
+    SignUpModel.findOne({ email: body.email}).then((user) => {
+        if(!user){
+            return res.json({ code: 400, message: false});
+        }        
+        return new Promise((resolve, reject) =>{
+                if(resolve){
+                    return res.json({ code: 200, message: true});
+                }
+            });
+        });
+}
+module.exports.validateEmail = validateEmail;

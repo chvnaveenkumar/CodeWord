@@ -1,31 +1,28 @@
 MVP 1
 
 As a user,  I want to register by providing my email ID and password so that I can access my account.
-As an instructor, I want to check an "Instructor?" box when I register so that I can distribute code words.
-As a student or instructor, if I forget my password I want to click forget password it will redirect to forget password page.
-As a student or instructor if I have any problem with accessing the account by forgetting the password this page will help me to retrieve to my account. I can enter my registered Email ID and submit it. After submission, I will get an email with a temporary password.
+As a user, if I forget my password I want to click forget password it will redirect to forget password page.
+As a user, if I have any problem with accessing the account by forgetting the password this page will help me to retrieve to my account. I can enter my registered Email ID and submit it. After submission, I will get an email with a temporary password.
 As a student, if I log in with my credentials on my homepage which contains my registered courses I want to see/acknowledge/get my random codeword for respective course.
-As an instructor, once I'm registered, I want to see a list of my courses in which I am giving codewords.
-As an instructor, I want to upload an excel sheet contains a new set of codewords.
 
 
 MVP 2
 
-As an Instructor, I want to know the list of students in that particular class then I can type there for course name or either course ID and I can generate the student list.
-As an Instructor, If I want to add any course then I can add particular courses by using Add new courses tab.
-As an Instructor, If I want to upload my own codeword sheet then i can upload it in the excel sheet format and i can submit it by entering the course name or course ID.
-As an Instructor, I want to send the codewords to particular class of students then I can enter there course name or ID and I can upload excel sheet that has codewords that i wanted and simultaneously I wants to select an codeword there and i can submit so that all the students in that particular course can get the codewords.
-As an Instructor, If I was not teaching any course then I can delete that particular course by selecting course name or course ID.
-As an Instructor, I want to know the percentage of students who got acceseed to their codewords.
-As an Instructor, I want to specify the set of code words to use, list of student emails, Survey URL link, start and end date for each course.
-As a Student, I want to get the codeword of particular course or if I already got accessed with the codeword then I need to get the codeword and that codewords should be accessable to that particular semister.
+As an instructor, I want to see my home page with the list of courses in the drop-down. I want to select the course from the drop down then I want to see a list of students for the course selected.
+As an instructor, I want to see the list of students for the particular course and want to upload an excel sheet that contains a new set of codewords.
+As an instructor, I want to add any new course and I can add the new list of students with one set of codewords to the list.
+As an instructor, once I'm registered, I want to see a list of my courses in which I am giving codewords.
+As an instructor, I want to delete the existing course once it completed by end of the semester along with the old set of codewords.
+As an instructor, I want to know the percentage of students who got accessed to their codewords.
+As an instructor, I want to check an "Instructor?" box when I register so that I can distribute code words.
 
 MVP 3
 
- As an administrator, I want to add new instructors and see the list of instructors.
- As an Administrator, I want to add the list of default codewords.
+As an administrator, I want to add new instructors and see the list of instructors.
+As an Administrator, I want to add the list of default codewords.
 
-Next Semester
+Next Semester(GDP-2)
 
-As a user, I want to do CRUD operations like adding the set of codewords, courses and deleting existing courses and set of codewords.
-As a user, I want to navigate multiple pages(Home, New Course, Set of Codewords and Delete Course and Delete Codewords).
+As an instructor, I want to do CRUD operations for sets codewords.
+As an instructor, I want to do CRUD operations for courses.
+As a user, I want to navigate between multiple pages (Home, New Course, Set of Codewords and Delete Course and Delete Codewords).
