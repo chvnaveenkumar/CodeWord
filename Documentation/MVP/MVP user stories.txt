@@ -1,42 +1,24 @@
-MVP 1
+MVP 1 (Fri-28-Sep)
 
-Registration page
-As a student or instructor if I didn't have an account this page will help me to register with my email ID and password and then I can access my account.
-As a student or instructor, i got an temporary password to my registered email ID which is used to login for the first time and later I can change the password.
+As a user,  I want to register by providing my email ID and password so that I can access my account.
+As a user, I want to log in with my Email Id and password.
+As a user, if I forget the password, I want to retrieve my account by entering the registered Email ID and submit it. Later I can access my account with the temporary password provided.
+As a student, I want to see my courses and see/acknowledge/get my random codeword for the respective course on my home page.
 
-Login page
-As a student or instructor once I m registered this page will help me to accesses into student or instructor account.
-As a student or instructor, if I forget password I can just click forget password it will redirect to forget password page                                         
+MVP 2 (Fri-19-Oct)
 
-Forget password (send a mail)
-As a student or instructor if I got any problem with accessing the account by forgetting the password this page will help me to retrieve to my account.
-As student or instructor in Forget password page, I can enter my registered Email ID and submit it. After submission, I will get a email with a temporary password.
-
-Instructor login Home 
-As an instructor, if I login with my credentials.i will redirect to my homepage which contains a selection of course and 
-i will get the list of students of the course selected in the drop-down box.
-As an instructor i need to upload excel sheet contains codewords 
-
-Student Login Home
-As Student, if I log in with my credentials.i will redirect to my homepage which contains my registered courses enrolled and then i can generate codeword for respective course.
-
-
-MVP 2
-
-As an Instructor, I want to know the list of students in that particular class then I can type there for course name or either course ID and I can generate the student list.
-As an Instructor, If I want to add any course then I can add particular courses by using Add new courses tab.
-As an Instructor, If I want to upload my own codeword sheet then i can upload it in the excel sheet format and i can submit it by entering the course name or course ID.
-As an Instructor, I want to send the codewords to particular class of students then I can enter there course name or ID and I can upload excel sheet that has codewords that i wanted and simultaneously I wants to select an codeword there and i can submit so that all the students in that particular course can get the codewords.
-As an Instructor, If I was not teaching any course then I can delete that particular course by selecting course name or course ID.
-As an Instructor, I want to know the percentage of students who got acceseed to their codewords.
-As an Instructor, I want to specify the set of code words to use, list of student emails, Survey URL link, start and end date for each course.
-As a Student, I want to get the codeword of particular course or if I already got accessed with the codeword then I need to get the codeword and that codewords should be accessable to that particular semister.
-
-MVP 3
-
-As an Administrator, I am capable to add instructors.
-As an Administrator, I can add default codewords.
-As an Administrator, I will display the list of instructors.
-
-Next Semester
-We may discuss with cilent and update UI according to that.
+As an instructor, I want to check an "Instructor?" box when I register so that I can distribute code words.
+As an instructor, I want to see my list of courses, those are “active” today between the start and end date inclusively.
+As an instructor, I want to create a new set of code words by entering a unique name for the codeword set and uploading an Excel sheet that contains a new list of codewords.
+As an instructor, I want to see the unique name of the codeword set in parentheses and the calculated number of words in the set when selecting a codeword set from a drop-down box.
+As an instructor, I want the app to always have my “Hoot Original” codeword set (with ~90) and a second “Large Codeword Set” with 200 unique codewords and Do NOT allow instructors to delete codeword sets. 
+As an instructor, I want to create a new course by adding a list of students from the first sheet in an Excel file (containing emails and names in the first 2 columns), selecting a codeword set from a drop-down that shows the name of the set with the calculated count in parenthesis, and setting the start date (default to today) and end date (defaulted to 4 Months after then start date) for the course, and a pre-survey URL, and a post-survey URL. 
+As an instructor, if I click on “View Students” I want to see a list of students for the selected course (emails and names) and want to see the calculated count of students in that course.
+As an instructor, when I view my list of active courses, for each active course, I want to see:
+    a. The unique name,
+    b. The codeword set name with the calculated count of words,
+    c. The start date and the end date,
+    d. The pre-survey URL and the post-survey URL
+    e. An option to “View N Students”,
+    f. An option to “Edit”,
+    g. An option to “Delete” and active course (expired courses do not need to be deleted - they just won't appear.
