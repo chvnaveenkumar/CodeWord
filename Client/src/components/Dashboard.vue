@@ -1,10 +1,12 @@
 <template>
-    <p>Login Successfull</p>
+    <div>
+    <p id="message" >Login Successfull</p>
+    </div>
 </template>
 
 
 <style>
-p{
+#message{
     margin-top:5em;
 }
 </style>
