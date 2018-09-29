@@ -6,6 +6,7 @@
           <div class="col-md-4 col-xs-12 col-sm-12">
               <div class="card">
                 <div class="card-body">
+                  <h2> Login</h2>
                   <div class="alert alert-success" v-if="signed && msg" role="alert">
                       {{ msg }}
                   </div>
@@ -46,7 +47,7 @@ export default {
     signIn () {
       this.msg = ''
       let data = new FormData(document.querySelector('form'))
-      axios.post('https://gdpcodeword.herokuapp.com/codeword/signin', {
+      axios.post('http://localhost:3000/codeword/signin', {
         email: data.get('emailID'),
         password: data.get('password')
       }).then(response => {

@@ -1,41 +1,35 @@
 <template>
     <div class="row reg">
         <div class="col-md-4 col-xs-0 col-sm-0"></div>
-        <div class="col-md-4 col-xs-12 col-sm-12">
+        <div class="col-md-4 col-xs-12 col-sm-12" style="margin-top:5em">
             <div class="card">
                 <div class="card-body">
                     <form>
-                       
-                                <h2>Student Register</h2>
-                                <div class="form-group" :class="{invalid: $v.fullname.$error}">
-                                    <input type="text" class="form-control" placeholder="Full Name" v-model="fullname"
-                                        @blur="$v.fullname.$touch()" auto required="required">
-                                </div>
-                                <div class="form-group" :class="{invalid: $v.email.$error}">
-                                    <input type="email" class="form-control" placeholder="Email" v-model.lazy="email"
-                                        @blur="$v.email.$touch()">
-                                    <p v-if="!$v.email.email">Please provide a valid email address.</p>
-                                </div>
-                                <div class="form-group" :class="{invalid: $v.password.$error}">
+                       <div class="alert alert-success" v-if="signed && msg" role="alert">
+                      {{ msg }}
+                       </div>
+                          <h2> Register</h2>
+                              <div class="form-group" :class="{invalid: $v.email.$error}">
+                                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" required="required" pattern=".+@*.edu" v-model="email">
+                                  <p v-if="!$v.email.isUnique">This email id already registered!!</p>
+                              </div>
+                              <div class="form-group" :class="{invalid: $v.password.$error}">
                                     <input type="password" class="form-control" placeholder="Password" required="required"
                                         v-model.lazy="password" @blur="$v.password.$touch()">
-                                    <p v-if="!$v.password.minLength"> Password must have at least {{
-                                        $v.password.$params.minLength.min }} letters. </p>
-                                </div>
-                                <div class="form-group" :class="{invalid: $v.repeatPassword.$error}">
+                                    <p v-if="!$v.password.minLength"> Password must have at least {{ $v.password.$params.minLength.min }} letters. </p>
+                              </div>
+                              <div class="form-group" :class="{invalid: $v.repeatPassword.$error}">
                                     <input type="password" class="form-control" placeholder="Confirm Password" v-model="repeatPassword">
                                     <p v-if="!$v.repeatPassword.sameAsPassword"> Password must be identical. </p>
-                                </div>
-                                <div class="form-group" :class="{invalid: $v.terms.$invalid}">
-                                    <input type="checkbox" id="terms" @change="$v.terms.$touch()" v-model="terms">
-                                    <label for="terms">Accept Terms of Use</label>
-                                </div>
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-success btn-lg btn-block" :disabled="this.$v.$invalid"
-                                        @click="OnRegister">Register Now</button>
-                                </div>
-                                <div class="text-center">Already have an account? <a href="#">Sign in</a></div>
-                        
+                              </div>
+                              <div class="form-group">
+                                    <input type="checkbox" id="instructor" v-model="instructor">
+                                    <label for="terms">Instructor</label>
+                              </div>
+                              <div class="form-group">
+                                    <button type="submit" class="btn btn-success btn-lg btn-block" @click="OnRegister">Register Now</button>
+                              </div>
+                              <div class="text-center">Already have an account? <a href="#">Sign in</a></div>                        
                     </form>
                 </div>
             </div>
@@ -50,20 +44,33 @@ import {required, email, minLength, sameAs} from 'vuelidate/lib/validators'
 export default {
   data () {
     return {
-      fullname: '',
       email: '',
       password: '',
       repeatPassword: '',
-      terms: false
+      instructor: false,
+      msg: '',
+      signed: false
     }
   },
   validations: {
     email: {
       required,
-      email
-    },
-    fullname: {
-      required
+      email,
+      async isUnique (email) {
+        console.log('is uni')
+        if (email === '') return true
+        return axios({
+          method: 'post',
+          url: 'http://localhost:3000/codeword/validateEmail',
+          data: {
+            email
+          }
+        }).then(res => {
+          console.log(res.data.message)
+          console.log(Object.keys(res.data).length)
+          return !res.data.message
+        })
+      }
     },
     password: {
       required,
@@ -72,21 +79,25 @@ export default {
     repeatPassword: {
       sameAsPassword: sameAs('password')
     },
-    terms: {
+    instructor: {
       sameAs: sameAs(() => true)
     }
   },
   methods: {
     OnRegister () {
-      console.log('onregister clicked fullnaem', this.fullname)
-      axios.post('https://gdpcodeword.herokuapp.com/codeword/signup', {
+      console.log('onregister clicked fullnaem', this.email)
+      axios.post('http://localhost:3000/codeword/signup', {
         fullname: this.fullname,
         email: this.email,
         password: this.password
       }).then(res => {
-        console.log(res)
+        this.msg = 'Successfully Registered and Redirecting to SignIn Page.'
+        this.signed = true
+        let _this = this;
         if (res.data.message) {
-          this.$router.push({path: '/signin'})
+          setTimeout(function () {
+            _this.$router.push({ path: '/' })
+          }, 1000)
         }
       })
     }
