@@ -1,5 +1,7 @@
 <template>
-    <div class="row reg">
+  <div>
+    <div class="container ">
+        <div class="row">
         <div class="col-md-4 col-xs-0 col-sm-0"></div>
         <div class="col-md-4 col-xs-12 col-sm-12" style="margin-top:5em">
             <div class="card">
@@ -36,6 +38,8 @@
         </div>
         <div class="col-md-4 col-xs-0 col-sm-0"></div>
     </div>
+    </div>
+  </div>
 </template>
 <script>
 import axios from 'axios'
@@ -93,7 +97,7 @@ export default {
       }).then(res => {
         this.msg = 'Successfully Registered and Redirecting to SignIn Page.'
         this.signed = true
-        let _this = this;
+        let _this = this
         if (res.data.message) {
           setTimeout(function () {
             _this.$router.push({ path: '/' })

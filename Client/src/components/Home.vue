@@ -73,10 +73,8 @@ export default {
 .card {
   padding: 40px !important;
   margin-top: 5em;
-  border-radius: 7.35em;
-  border: 9px solid rgba(0, 0, 0, 0.125);
 }
 .btn{
-  margin-right: 180px;
+  margin-right: center;
 }
 </style>
