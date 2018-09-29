@@ -2,10 +2,6 @@ var mongoose = require('mongoose');
 var validator = require('validator');
 
 var SignUpModel = mongoose.model('SignUpModel', {
-   fullname: {
-       type: String,
-       require: true
-   },
    email: {
     type: String,
     required: true,
@@ -22,9 +18,12 @@ var SignUpModel = mongoose.model('SignUpModel', {
     type: String,
     require: true,
     minlength: 6
+   },
+   instructor: {
+       type:Boolean,
+       default: false
    }
 });
-
 module.exports.SignUpModel = SignUpModel
 
 var CodeWords = mongoose.model('CodeWords', {
