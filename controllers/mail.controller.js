@@ -8,8 +8,8 @@ nodemailer.createTestAccount((err, account) => {
         port: 587,
         secure: false, 
         auth: {
-            user: 's530742@nwmissouri.edu', 
-            pass: 'DhanaLakshmi9$'
+            user: 'servermailid', 
+            pass: 'password'
         }
     });
 
