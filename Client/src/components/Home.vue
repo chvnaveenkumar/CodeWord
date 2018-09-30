@@ -23,6 +23,7 @@
                           <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Password">
                       </div>
                     <button type="submit" class="btn btn-primary" @click="signIn">Sign In</button>
+                    <div class="text-right"><router-link to="/forgetpassword">Forget Password?</router-link></div>
                   </form>
                 </div>
               </div>
