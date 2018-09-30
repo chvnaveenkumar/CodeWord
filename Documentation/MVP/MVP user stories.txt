@@ -22,3 +22,23 @@ As an instructor, when I view my list of active courses, for each active course,
     e. An option to “View N Students”,
     f. An option to “Edit”,
     g. An option to “Delete” and active course (expired courses do not need to be deleted - they just won't appear.
+    
+    
+  MVP 3 (Fri-9-Nov)
+
+ As an instructor, I want one codeword from the specified set to be randomly assigned to only one student and each student must have a unique codeword in that course and each codeword can only be issued once in each course (or not used at all) when a course is created.
+ As an instructor, I want to be notified if the codeword set is too small. If the calculated count of codewords is less than the calculated count of students then I want to see a warning that says “You have n students, but the codeword set has only m words. Please select another set or click the + button next to the codeword dropdown to add a new, larger set of codewords" while creating or editing a course.
+ As an instructor, I want the codewords confidential and must not know or be able to see the code word each student gets.
+ As an instructor, I want to see the calculated count of students and codewords when I edit or view a course with the unique name, list of students, codeword set, start and end date.
+ As an instructor, I want to delete an existing course once it is completed. 
+ As an instructor, I want the percentage of students who have accessed their codewords in that course.
+As an instructor, I want to assign codewords for the concurrent survey in different courses.
+
+GDP2:
+
+As an administrator, I want to add new instructors, see the list of instructors and instructor surveys details.
+As an administrator, I want to be able to add new sets of codewords.
+As an instructor, I want to delete a student from a course (e.g. when they drop). 
+As an instructor, I want to add a student to a course (e.g. when a new student transfers in)
+As an instructor, I want to create a new course by adding a list of students from Excel, selecting a codeword set from a drop-down, and setting the start date and end date for the course. 
+As a user, I want to navigate between multiple pages (Home (list of active courses), + New Course, View a Set of Codewords and Confirm Delete Course).
