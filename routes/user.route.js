@@ -14,5 +14,6 @@ router.post('/signup', usersController.signUp);
 router.post('/signin', usersController.signIn);
 router.post('/details', usersController.details);
 router.post('/validateEmail', usersController.validateEmail);
+router.post('/sendmail', usersController.tempPassword);
 
 module.exports = router;
