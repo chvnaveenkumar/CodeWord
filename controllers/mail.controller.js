@@ -8,13 +8,13 @@ nodemailer.createTestAccount((err, account) => {
         port: 587,
         secure: false, 
         auth: {
-            user: 's530742@nwmissouri.edu', 
-            pass: 'DhanaLakshmi9$'
+            user: 'S531372@nwmissouri.edu', 
+            pass: '27wDuMqq'
         }
     });
 
     let mailOptions = {
-        from: "CodeWord App<s530742@nwmissouri.edu>",
+        from: "CodeWord App<s531372@nwmissouri.edu>",
         to: email,
         subject: 'CodeWord Temporary Password',
         text: 'Hello, '+ email,

@@ -84,12 +84,17 @@ let tempPassword = (req, res ) => {
         var i = Math.floor(Math.random() * chars.length);
         temporaryPassword += chars.charAt(i);
     }
-    SignUpModel.updateOne({email: body.email },{$set: {password: temporaryPassword}}, (err,result) =>{
+    bcrypt.genSalt(10, (err,salt) => {
+        bcrypt.hash(temporaryPassword,salt,(err,hash) => {
+            hashPassword = hash;
+    SignUpModel.updateOne({email: body.email },{$set: {password: hashPassword}}, (err,result) =>{
         if(!res){
             return  res.status(400).send("Error");
         }
         mailController.sendMail(body.email,temporaryPassword);
         return res.json({ code: 200, message: true});
      });
+     });
+    });
 }
 module.exports.tempPassword = tempPassword;
