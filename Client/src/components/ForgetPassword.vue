@@ -25,6 +25,10 @@
 
 <script>
 import axios from 'axios'
+<<<<<<< HEAD
+=======
+import {required, email, minLength, sameAs} from 'vuelidate/lib/validators'
+>>>>>>> 155213132c1c10d19417ca2b909d361383a7b935
 
 export default {
   name: 'ForgetPage',
