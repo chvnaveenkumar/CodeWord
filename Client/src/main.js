@@ -7,6 +7,12 @@ import BootstrapVue from 'bootstrap-vue/dist/bootstrap-vue.esm'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import Vuelidate from 'vuelidate'
+import axios from 'axios'
+
+window.axios = axios.create({
+  baseURL: process.env.URL,
+  timeout: 1000
+})
 
 Vue.use(BootstrapVue)
 require('bootstrap')

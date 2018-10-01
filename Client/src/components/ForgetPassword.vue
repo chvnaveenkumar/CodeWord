@@ -2,8 +2,9 @@
 <div class="container">
         <div class="row" style="margin-top: 7em">
             <div class="col-md-3 col-lg-3 col-xs-1 col-sm-1"></div>
-            <div class="card col-md-6 col-lg-6 col-xs-10 col-sm-10">
+            <div class="card col-md-4 col-lg-4 col-xs-12 col-sm-12">
             <div class="card-body">
+            <h3> Reset your password </h3>
             <div style="text-align: center">       
             </div>
             <div>
@@ -11,9 +12,9 @@
             <div class="alert alert-danger" v-else-if="!signed && msg" role="alert"> {{ msg }} </div>
             <form>
                 <div class="form-group">
-                  <input type="email" class="form-control" placeholder="Enter email" required="required" pattern=".+@*.edu" v-model="email" @blur="$v.email.$touch()">
+                  <input type="email" class="form-control" placeholder="Enter email" required="required" pattern=".+@*.edu" v-model="email" >
                 </div>
-                <button type="button" class="btn btn-primary btn-lg btn-block" @click="forget">Get Password</button>
+                <button type="button" class="btn btn-success btn-sm btn-block" @click="forget">Send password reset email</button>
             </form>
             </div>
             </div>
@@ -41,14 +42,14 @@ export default {
       let emailid = this.email
       axios({
         method: 'post',
-        url: 'https://gdpcodeword.herokuapp.com/codeword/validateEmail',
+        url: process.env.URL + 'codeword/validateEmail',
         data: {
-          emailid
+          email: emailid
         }
       }).then(res => {
         console.log(res.data.message)
-        if (res.data.message === false || res.data.message === 'false') {
-          axios.post('https://gdpcodeword.herokuapp.com/codeword/sendmail', {
+        if (res.data.message === true) {
+          axios.post(process.env.URL + 'codeword/sendmail', {
             email: emailid
           }).then(response => {
             this.msg = 'Sent temporary password to your email'

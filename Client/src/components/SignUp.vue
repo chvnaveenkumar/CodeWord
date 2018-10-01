@@ -10,10 +10,12 @@
                        <div class="alert alert-success" v-if="signed && msg" role="alert">
                       {{ msg }}
                        </div>
+                      <div class="alert alert-danger" v-else-if="!signed && msg" role="alert">
+                      {{ msg }}
+                      </div>
                           <h2> Register</h2>
-                              <div class="form-group" :class="{invalid: $v.email.$error}">
-                                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" required="required" pattern=".+@*.edu" v-model="email" @blur="$v.email.$touch()">
-                                  <p v-if="!$v.email.isUnique">This email id already registered!!</p>
+                              <div class="form-group">
+                                  <input type="email" class="form-control" placeholder="Enter email" required="required" pattern=".+@*.edu" v-model="email">
                               </div>
                               <div class="form-group" :class="{invalid: $v.password.$error}">
                                     <input type="password" class="form-control" placeholder="Password" required="required"
@@ -29,9 +31,9 @@
                                     <label for="terms">Instructor</label>
                               </div>
                               <div class="form-group">
-                                    <button type="submit" class="btn btn-success btn-lg btn-block" @click="OnRegister">Register Now</button>
+                                    <button type="submit" class="btn btn-success btn-sm btn-block" @click="OnRegister">Register Now</button>
                               </div>
-                              <div class="text-center">Already have an account? <a href="#">Sign in</a></div>                        
+                              <div class="text-center">Already have an account?<router-link to="/">Sign in</router-link></div>                        
                     </form>
                 </div>
             </div>
@@ -43,7 +45,7 @@
 </template>
 <script>
 import axios from 'axios'
-import {required, email, minLength, sameAs} from 'vuelidate/lib/validators'
+import {required, minLength, sameAs} from 'vuelidate/lib/validators'
 
 export default {
   data () {
@@ -57,25 +59,6 @@ export default {
     }
   },
   validations: {
-    email: {
-      required,
-      email,
-      async isUnique (email) {
-        console.log('is uni')
-        if (email === '') return true
-        return axios({
-          method: 'post',
-          url: 'https://gdpcodeword.herokuapp.com/codeword/validateEmail',
-          data: {
-            email
-          }
-        }).then(res => {
-          console.log(res.data.message)
-          console.log(Object.keys(res.data).length)
-          return !res.data.message
-        })
-      }
-    },
     password: {
       required,
       minLength: minLength(6)
@@ -89,72 +72,39 @@ export default {
   },
   methods: {
     OnRegister () {
-      console.log('onregister clicked fullnaem', this.email)
-      axios.post('https://gdpcodeword.herokuapp.com/codeword/signup', {
-        fullname: this.fullname,
-        email: this.email,
-        password: this.password
+      this.msg = ''
+      console.log(this.email)
+      let emailid = this.email
+      console.log(emailid)
+      axios({
+        method: 'post',
+        url: process.env.URL + 'codeword/validateEmail',
+        data: {
+          email: emailid
+        }
       }).then(res => {
-        this.msg = 'Successfully Registered and Redirecting to SignIn Page.'
-        this.signed = true
+        console.log(res.data.message)
         let _this = this
-        if (res.data.message) {
-          setTimeout(function () {
-            _this.$router.push({ path: '/' })
-          }, 1000)
+        if (res.data.message === false) {
+          console.log('onregister clicked fullnaem', this.email)
+          axios.post(process.env.URL + 'codeword/signup', {
+            email: this.email,
+            password: this.password
+          }).then(res => {
+            this.msg = 'Successfully Registered and Redirecting to SignIn Page.'
+            this.signed = true
+            if (res.data.message) {
+              setTimeout(function () {
+                _this.$router.push({ path: '/' })
+              }, 1000)
+            }
+          })
+        } else {
+          this.msg = 'This user registerd already!!'
+          this.signed = false
         }
       })
     }
   }
 }
 </script>
-
-<style>
-
-  .form-group.invalid input {
-    background-color: rgb(238, 169, 169);
-  }
-  .form-group.invalid label {
-    color: red
-  }
-body {
-  color: #fff;
-  font-family: "Roboto", sans-serif;
-}
-.signup-form {
-  width: 400px;
-  margin: 0 auto;
-  padding: 30px 0;
-}
-.signup-form h2 {
-  color: #636363;
-  margin: 0 0 5px;
-  position: relative;
-  text-align: center;
-}
-.signup-form h2:before,
-.signup-form h2:after {
-  content: "";
-  height: 2px;
-  width: 15%;
-  background: #d4d4d4;
-  position: absolute;
-  top: 50%;
-  z-index: 2;
-}
-.signup-form h2:before {
-  left: 0;
-}
-.signup-form h2:after {
-  right: 0;
-}
-.signup-form .btn {
-  font-size: 16px;
-  font-weight: bold;
-  min-width: 140px;
-  outline: none !important;
-}
-.reg{
-  margin-top:2em;
-}
-</style>
