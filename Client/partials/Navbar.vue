@@ -33,7 +33,6 @@
     </nav>
 </template>
 <script>
-import axios from "axios";
 import User from "@/../services/auth";
 import Config from "@/../config/config";
 export default {
@@ -48,7 +47,7 @@ export default {
     if (this.auth) {
       axios({
         method: "post",
-        url: "https://gdpcodeword.herokuapp.com/codeword/details",
+        url: "codeword/details",
         headers: {
           token: window.localStorage.getItem("token")
         }

@@ -41,14 +41,14 @@ export default {
       let emailid = this.email
       axios({
         method: 'post',
-        url: 'https://gdpcodeword.herokuapp.com/codeword/validateEmail',
+        url: 'codeword/validateEmail',
         data: {
           emailid
         }
       }).then(res => {
         console.log(res.data.message)
         if (res.data.message === false || res.data.message === 'false') {
-          axios.post('https://gdpcodeword.herokuapp.com/codeword/sendmail', {
+          axios.post('codeword/sendmail', {
             email: emailid
           }).then(response => {
             this.msg = 'Sent temporary password to your email'

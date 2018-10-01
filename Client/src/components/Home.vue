@@ -13,7 +13,7 @@
                   <div class="alert alert-danger" v-else-if="!signed && msg" role="alert">
                       {{ msg }}
                   </div>
-                  <form>
+                  <form @submit.prevent="signIn">
                       <div class="form-group row ">
                          <label for="inputEmail">Email address</label>
                           <input type="text" name="emailID" class="form-control" id="inputEmail" placeholder="Email ID">
@@ -22,7 +22,7 @@
                         <label for="inputPassword">Password</label>
                           <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Password">
                       </div>
-                    <button type="submit" class="btn btn-primary" @click="signIn">Sign In</button>
+                    <button type="submit" class="btn btn-primary">Sign In</button>
                     <div class="text-right"><router-link to="/forgetpassword">Forget Password?</router-link></div>
                   </form>
                 </div>
@@ -35,7 +35,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 export default {
   name: 'HomePage',
   data () {
@@ -48,8 +47,8 @@ export default {
     signIn () {
       this.msg = ''
       let data = new FormData(document.querySelector('form'))
-      console.log(data.get('password'))
-      axios.post('https://gdpcodeword.herokuapp.com/codeword/signin', {
+      /* global axios */
+      axios.post('codeword/signin', {
         email: data.get('emailID'),
         password: data.get('password')
       }).then(response => {
