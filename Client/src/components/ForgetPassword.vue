@@ -42,14 +42,14 @@ export default {
       let emailid = this.email
       axios({
         method: 'post',
-        url: process.env.URL + 'codeword/validateEmail',
+        url: 'codeword/validateEmail',
         data: {
           email: emailid
         }
       }).then(res => {
         console.log(res.data.message)
         if (res.data.message === true) {
-          axios.post(process.env.URL + 'codeword/sendmail', {
+          axios.post('codeword/sendmail', {
             email: emailid
           }).then(response => {
             this.msg = 'Sent temporary password to your email'

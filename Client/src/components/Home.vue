@@ -41,7 +41,8 @@ export default {
   data () {
     return {
       msg: '',
-      signed: false
+      signed: false,
+      email: ''
     }
   },
   mounted () {
@@ -55,7 +56,7 @@ export default {
       console.log(emailid)
       axios({
         method: 'post',
-        url: process.env.URL + 'codeword/validateEmail',
+        url: 'codeword/validateEmail',
         data: {
           email: emailid
         }

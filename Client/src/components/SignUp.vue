@@ -78,7 +78,7 @@ export default {
       console.log(emailid)
       axios({
         method: 'post',
-        url: process.env.URL + 'codeword/validateEmail',
+        url: 'codeword/validateEmail',
         data: {
           email: emailid
         }
@@ -87,7 +87,7 @@ export default {
         let _this = this
         if (res.data.message === false) {
           console.log('onregister clicked fullnaem', this.email)
-          axios.post(process.env.URL + 'codeword/signup', {
+          axios.post('codeword/signup', {
             email: this.email,
             password: this.password
           }).then(res => {
