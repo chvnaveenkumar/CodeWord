@@ -16,3 +16,6 @@ On 15th sep Anurag, Naveen Chanduluri and myself had a meeting for 2hours and we
 We discussed how to make a flyer and what tool we need to use for the flyer.
 We are going to use Adobe illustrator and adope photoshop for the flyer.
 We have gone through some training videos and decided to make a demo video in promoting the app.
+
+
+On 28th Sep Vyshnavi, Srimai and naveen Kumar Chandaluri had an meeting with Dr. Case for an hour and we showed Dr. Case the changes that we made, then there are some other changes that need to be done like In an homepage we can use the cards instead of dropdown, Instructor wants to display the start and end date of the course and Instructor wants to assign the some similar codewords to concurrent surveys in different courses.
