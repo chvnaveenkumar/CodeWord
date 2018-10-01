@@ -63,15 +63,17 @@ let details = (req,res) => {
 module.exports.details = details;
 
 let validateEmail = (req, res) => {
+   
     var body = _.pick(req.body,['email']);
     SignUpModel.findOne({ email: body.email}).then((user) => {
         if(!user){
             return res.json({ code: 400, message: false});
         }        
-        return new Promise((resolve, reject) =>{
+        return new Promise((resolve, err) =>{
                 if(resolve){
                     return res.json({ code: 200, message: true});
-                }else{
+                }
+                if(err){
                     return res.json({ code: 200, message: false});
                 }
             });

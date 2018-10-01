@@ -43,6 +43,9 @@ export default {
       signed: false
     }
   },
+  mounted () {
+    console.log(process.env.URL)
+  },
   methods: {
     signIn () {
       this.msg = ''

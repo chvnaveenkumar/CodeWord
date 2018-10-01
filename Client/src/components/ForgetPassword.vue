@@ -11,7 +11,7 @@
             <div class="alert alert-danger" v-else-if="!signed && msg" role="alert"> {{ msg }} </div>
             <form>
                 <div class="form-group">
-                  <input type="email" class="form-control" placeholder="Enter email" required="required" pattern=".+@*.edu" v-model="email" @blur="$v.email.$touch()">
+                  <input type="email" class="form-control" placeholder="Enter email" required="required" pattern=".+@*.edu" v-model="email" >
                 </div>
                 <button type="button" class="btn btn-primary btn-lg btn-block" @click="forget">Get Password</button>
             </form>
@@ -41,14 +41,14 @@ export default {
       let emailid = this.email
       axios({
         method: 'post',
-        url: 'codeword/validateEmail',
+        url: process.env.URL + 'codeword/validateEmail',
         data: {
-          emailid
+          email: emailid
         }
       }).then(res => {
         console.log(res.data.message)
-        if (res.data.message === false || res.data.message === 'false') {
-          axios.post('codeword/sendmail', {
+        if (res.data.message === true) {
+          axios.post(process.env.URL + 'codeword/sendmail', {
             email: emailid
           }).then(response => {
             this.msg = 'Sent temporary password to your email'

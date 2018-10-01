@@ -34,7 +34,6 @@
 </template>
 <script>
 import User from "@/../services/auth";
-import Config from "@/../config/config";
 export default {
   data() {
     return {
