@@ -47,24 +47,6 @@ export default {
           emailid
         }
       }).then(res => {
-        console.log(res.data.message)
-        if (res.data.message === false || res.data.message === 'false') {
-          axios.post('https://gdpcodeword.herokuapp.com/codeword/sendmail', {
-            email: emailid
-          }).then(response => {
-            this.msg = 'Sent temporary password to your email'
-            this.signed = true
-            let _this = this
-            setTimeout(function () {
-              _this.$router.push({ path: '/' })
-            }, 1000)
-          })
-        } else {
-          this.msg = 'This user not registered!!'
-          this.signed = false
-        }
-      })
-    }
   }
 }
 </script>
