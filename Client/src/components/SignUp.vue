@@ -12,7 +12,7 @@
                        </div>
                           <h2> Register</h2>
                               <div class="form-group" :class="{invalid: $v.email.$error}">
-                                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" required="required" pattern=".+@*.edu" v-model="email">
+                                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" required="required" pattern=".+@*.edu" v-model="email" @blur="$v.email.$touch()">
                                   <p v-if="!$v.email.isUnique">This email id already registered!!</p>
                               </div>
                               <div class="form-group" :class="{invalid: $v.password.$error}">
@@ -65,7 +65,7 @@ export default {
         if (email === '') return true
         return axios({
           method: 'post',
-          url: 'http://localhost:3000/codeword/validateEmail',
+          url: 'https://gdpcodeword.herokuapp.com/codeword/validateEmail',
           data: {
             email
           }
@@ -90,7 +90,7 @@ export default {
   methods: {
     OnRegister () {
       console.log('onregister clicked fullnaem', this.email)
-      axios.post('http://localhost:3000/codeword/signup', {
+      axios.post('https://gdpcodeword.herokuapp.com/codeword/signup', {
         fullname: this.fullname,
         email: this.email,
         password: this.password

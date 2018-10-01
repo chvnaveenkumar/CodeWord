@@ -29,10 +29,12 @@ module.exports.signUp = signUp;
 
 let signIn = (req,res) => {
     var body = _.pick(req.body,['email','password']);
+    console.log(body.email);
     SignUpModel.findOne({email: body.email}, function (err, User) {
         if(err){
             return res.json({ code: 200, message: 'Email id not registered!!'});
         }
+        console.log(User.password);
         return bcrypt.compare(body.password,User.password,(err,result) => {
             if(result){
                 var newToken = jwt.sign({email: body.email, id: User.id },'codewordnwmsu',{expiresIn:  10000 * 3000 }).toString();
@@ -69,6 +71,8 @@ let validateEmail = (req, res) => {
         return new Promise((resolve, reject) =>{
                 if(resolve){
                     return res.json({ code: 200, message: true});
+                }else{
+                    return res.json({ code: 200, message: false});
                 }
             });
         });
