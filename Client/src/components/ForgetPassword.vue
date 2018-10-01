@@ -2,8 +2,9 @@
 <div class="container">
         <div class="row" style="margin-top: 7em">
             <div class="col-md-3 col-lg-3 col-xs-1 col-sm-1"></div>
-            <div class="card col-md-6 col-lg-6 col-xs-10 col-sm-10">
+            <div class="card col-md-4 col-lg-4 col-xs-12 col-sm-12">
             <div class="card-body">
+            <h3> Reset your password </h3>
             <div style="text-align: center">       
             </div>
             <div>
@@ -13,7 +14,7 @@
                 <div class="form-group">
                   <input type="email" class="form-control" placeholder="Enter email" required="required" pattern=".+@*.edu" v-model="email" >
                 </div>
-                <button type="button" class="btn btn-primary btn-lg btn-block" @click="forget">Get Password</button>
+                <button type="button" class="btn btn-success btn-sm btn-block" @click="forget">Send password reset email</button>
             </form>
             </div>
             </div>

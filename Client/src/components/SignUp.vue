@@ -31,7 +31,7 @@
                                     <label for="terms">Instructor</label>
                               </div>
                               <div class="form-group">
-                                    <button type="submit" class="btn btn-success btn-lg btn-block" @click="OnRegister">Register Now</button>
+                                    <button type="submit" class="btn btn-success btn-sm btn-block" @click="OnRegister">Register Now</button>
                               </div>
                               <div class="text-center">Already have an account?<router-link to="/">Sign in</router-link></div>                        
                     </form>
