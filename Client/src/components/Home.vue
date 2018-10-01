@@ -23,6 +23,7 @@
                           <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Password">
                       </div>
                     <button type="submit" class="btn btn-primary" @click="signIn">Sign In</button>
+                    <div class="text-right"><router-link to="/forgetpassword">Forget Password?</router-link></div>
                   </form>
                 </div>
               </div>
@@ -47,7 +48,8 @@ export default {
     signIn () {
       this.msg = ''
       let data = new FormData(document.querySelector('form'))
-      axios.post('http://localhost:3000/codeword/signin', {
+      console.log(data.get('password'))
+      axios.post('https://gdpcodeword.herokuapp.com/codeword/signin', {
         email: data.get('emailID'),
         password: data.get('password')
       }).then(response => {

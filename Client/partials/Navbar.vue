@@ -48,7 +48,7 @@ export default {
     if (this.auth) {
       axios({
         method: "post",
-        url: "http://localhost:3000/codeword/details",
+        url: "https://gdpcodeword.herokuapp.com/codeword/details",
         headers: {
           token: window.localStorage.getItem("token")
         }

@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
 var { SignUpModel } = require('./../controllers/user.models');
 var { mongoose } = require('./../config/database')
-
+var mailController = require('../controllers/mail.controller')
 
 let signUp = (req,res) => {
     console.log("SignUp");
@@ -29,10 +29,12 @@ module.exports.signUp = signUp;
 
 let signIn = (req,res) => {
     var body = _.pick(req.body,['email','password']);
+    console.log(body.email);
     SignUpModel.findOne({email: body.email}, function (err, User) {
         if(err){
             return res.json({ code: 200, message: 'Email id not registered!!'});
         }
+        console.log(User.password);
         return bcrypt.compare(body.password,User.password,(err,result) => {
             if(result){
                 var newToken = jwt.sign({email: body.email, id: User.id },'codewordnwmsu',{expiresIn:  10000 * 3000 }).toString();
@@ -69,8 +71,34 @@ let validateEmail = (req, res) => {
         return new Promise((resolve, reject) =>{
                 if(resolve){
                     return res.json({ code: 200, message: true});
+                }else{
+                    return res.json({ code: 200, message: false});
                 }
             });
         });
 }
 module.exports.validateEmail = validateEmail;
+
+let tempPassword = (req, res ) => {
+    var body = _.pick(req.body,['email']);
+    console.log('Tempa'+ body.email);
+    var chars = "abcdefghijklmnopqrstuvwxyz!@#$%^&*()-+<>ABCDEFGHIJKLMNOP1234567890";
+    var temporaryPassword = "";
+    for (var x = 0; x < 5; x++) {
+        var i = Math.floor(Math.random() * chars.length);
+        temporaryPassword += chars.charAt(i);
+    }
+    bcrypt.genSalt(10, (err,salt) => {
+        bcrypt.hash(temporaryPassword,salt,(err,hash) => {
+            hashPassword = hash;
+    SignUpModel.updateOne({email: body.email },{$set: {password: hashPassword}}, (err,result) =>{
+        if(!res){
+            return  res.status(400).send("Error");
+        }
+        mailController.sendMail(body.email,temporaryPassword);
+        return res.json({ code: 200, message: true});
+     });
+     });
+    });
+}
+module.exports.tempPassword = tempPassword;

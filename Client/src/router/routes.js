@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import Signup from '@/components/Signup'
 import Dashboard from '@/components/Dashboard'
+import ForgetPassword from '@/components/ForgetPassword'
+
 Vue.use(Router)
 
 export default new Router({
@@ -21,6 +23,11 @@ export default new Router({
       path: '/dashboard',
       name: 'Dashboard',
       component: Dashboard
+    },
+    {
+      path: '/forgetpassword',
+      name: 'ForgetPassword',
+      component: ForgetPassword
     }
   ]
 })
