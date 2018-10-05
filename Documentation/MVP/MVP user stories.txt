@@ -41,6 +41,3 @@ GDP2:
 7.As a user, I want to navigate between multiple pages (Home (list of active courses), + New Course, view a Set of Codewords and Confirm Delete Course).
 8.As an instructor, I should be able to search for courses, ordering/sorting of courses.
 9.As an Instructor, If I fill the form and select a set of codeword to send those to students, if the number of students in that course is more than the number of codewords in the selected sets, then I should receive a pop up message with a reason to select different codeword set, and after selecting larger codeword set, I should not be asked to fill the previously filled details again.
-
-
-
