@@ -5,8 +5,7 @@ import Signup from '@/components/Signup'
 import InstructorDashboard from '@/components/InstructorDashboard'
 import ForgetPassword from '@/components/ForgetPassword'
 import ChangePassword from '@/components/ChangePassword'
-import DeleteCodeWordSet from '@/components/DeleteCodeWordSet'
-import CreateCodeWordSet from '@/components/CreateCodeWordSet'
+import CodeWordSet from '@/components/CodeWordSet'
 import StudentDashboard from '@/components/StudentDashboard'
 Vue.use(Router)
 
@@ -41,17 +40,9 @@ export default new Router({
       component: ChangePassword
     },
     {
-      path: '/createcodewordset',
-      name: 'CreateCodeWordSet',
-      component: CreateCodeWordSet,
-      meta: {
-        role: 'instructor'
-      }
-    },
-    {
-      path: '/deletecodewordset',
-      name: 'DeleteCodeWordSet',
-      component: DeleteCodeWordSet,
+      path: '/codewordset',
+      name: 'CodeWordSet',
+      component: CodeWordSet,
       meta: {
         role: 'instructor'
       }

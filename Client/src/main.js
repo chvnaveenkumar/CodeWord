@@ -8,7 +8,7 @@ import axios from 'axios'
 import 'bootstrap-css-only/css/bootstrap.min.css'
 import 'mdbvue/build/css/mdb.css'
 import {store} from './store'
-
+import 'font-awesome/css/font-awesome.min.css'
 window.axios = axios.create({
   baseURL: process.env.URL,
   timeout: 1000

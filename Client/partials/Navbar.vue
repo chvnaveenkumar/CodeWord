@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand " href="#page-top">Code Word</a>
+            <a class="navbar-brand" href="#page-top">Code Word</a>
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -16,12 +16,8 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto" v-if="auth">
-                    <li class="nav-item dropdown" v-if='this.$route.name != "ChangePassword"  && this.$route.name !== "StudentDashboard"'>
-                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Codewords</a>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" @click.prevent="createCodeWordSet" >Create CodeWord Set</a>
-                        <a class="dropdown-item" @click.prevent="deleteCodeWordSet" >Delete CodeWord Set</a>
-                      </div>
+                    <li class="navbar-brand ">
+                        <router-link to="/codewordset">CodeWord Set</router-link>
                     </li>
                       <li class="nav-item dropdown">
                       <div class="dropdown">
