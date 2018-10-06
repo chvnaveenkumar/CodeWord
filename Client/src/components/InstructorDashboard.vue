@@ -1,7 +1,8 @@
 <template>
-    <div class="container">
-      <div class="row">
-      <div class="col-md-4 col-lg-4 col-xs-8 col-sm-8" style="margin-top:5em">
+<div class="container">
+<div class="row">
+<div class="col-md-2 col-lg-2 col-xs-0 col-sm-0"></div>
+  <div class="col-md-8 col-lg-8 col-xs-12 col-sm-12" style="margin-top:5em">
   <div class="card">
     <div class="card-header deep-orange lighten-1 white-text">Course Name</div>
     <div class="card-body">
@@ -35,8 +36,17 @@
 <!-- Card -->
     </div></div>
 </template>
-
-
+<script>
+import {store} from './../store'
+export default {
+  name: 'HomePage',
+  data () {
+    return {
+      store
+    }
+  }
+}
+</script>
 <style>
 #message{
     margin-top:5em;

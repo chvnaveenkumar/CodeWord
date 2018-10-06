@@ -22,6 +22,10 @@
                         <label for="inputPassword">Password</label>
                           <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Password">
                       </div>
+                      <div class="form-group">
+                          <input type="checkbox" name="type" value="true" v-model="instructor">
+                          <label for="terms">Instructor</label>
+                     </div>
                     <button type="submit" class="btn btn-success  btn-sm btn-block">Sign In</button>
                     <div class="text-right forgetpassword"><router-link to="/forgetpassword">Forget Password?</router-link></div>
                     <div class="text-right"><p> New to CodeWord? <router-link to="/signup">Register</router-link> </p></div>
@@ -42,18 +46,14 @@ export default {
     return {
       msg: '',
       signed: false,
-      email: ''
+      email: '',
+      instructor: false
     }
-  },
-  mounted () {
-    console.log(process.env.URL)
   },
   methods: {
     signIn () {
       this.msg = ''
-      console.log(this.email)
       let emailid = this.email
-      console.log(emailid)
       axios({
         method: 'post',
         url: 'codeword/validateEmail',
@@ -61,7 +61,6 @@ export default {
           email: emailid
         }
       }).then(res => {
-        console.log(res.data.message)
         if (res.data.message === true) {
           this.msg = ''
           let data = new FormData(document.querySelector('form'))
@@ -76,7 +75,13 @@ export default {
               localStorage.setItem('token', response.data.token)
               let _this = this
               setTimeout(function () {
-                _this.$router.push({ path: '/dashboard' })
+                if (data.get('password').length === 6) {
+                  _this.$router.push({ name: 'ChangePassword', params: { loginrole: _this.instructor } })
+                } else if (_this.instructor === false) {
+                  _this.$router.push({ name: 'StudentDashboard' })
+                } else {
+                  _this.$router.push({ name: 'InstructorDashboard' })
+                }
               }, 1000)
             } else {
               this.msg = response.data.message
