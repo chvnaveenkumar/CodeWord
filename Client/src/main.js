@@ -3,26 +3,25 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router/routes'
-import BootstrapVue from 'bootstrap-vue/dist/bootstrap-vue.esm'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
 import Vuelidate from 'vuelidate'
 import axios from 'axios'
+import 'bootstrap-css-only/css/bootstrap.min.css'
+import 'mdbvue/build/css/mdb.css'
+import {store} from './store'
 
 window.axios = axios.create({
   baseURL: process.env.URL,
   timeout: 1000
 })
 
-Vue.use(BootstrapVue)
-require('bootstrap')
 Vue.use(Vuelidate)
 Vue.config.productionTip = false
-
+require('bootstrap')
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  store: store
 })

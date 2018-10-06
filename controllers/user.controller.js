@@ -92,8 +92,8 @@ let tempPassword = (req, res ) => {
     }
     bcrypt.genSalt(10, (err,salt) => {
         bcrypt.hash(temporaryPassword,salt,(err,hash) => {
-            hashPassword = hash;
-    SignUpModel.updateOne({email: body.email },{$set: {password: hashPassword}}, (err,result) =>{
+        hashPassword = hash;
+        SignUpModel.updateOne({email: body.email },{$set: {password: hashPassword}}, (err,result) =>{
         if(!res){
             return  res.status(400).send("Error");
         }
@@ -104,3 +104,13 @@ let tempPassword = (req, res ) => {
     });
 }
 module.exports.tempPassword = tempPassword;
+
+let changePassword = (req,res) => {    
+    SignUpModel.findOne({_id: req.session.id}).then((user) => {
+    if(!user){
+        return  res.status(400).send("User details not found!!");
+    }        
+    return res.json({ code: 200, message: true});
+    });
+}
+module.exports.changePassword = changePassword;

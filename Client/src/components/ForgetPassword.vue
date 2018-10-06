@@ -25,7 +25,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 export default {
   name: 'ForgetPage',
   data () {
@@ -38,8 +37,8 @@ export default {
   methods: {
     forget () {
       this.msg = ''
-      console.log(this.email)
       let emailid = this.email
+      /* global axios */
       axios({
         method: 'post',
         url: 'codeword/validateEmail',

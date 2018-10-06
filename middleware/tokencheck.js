@@ -3,6 +3,7 @@ const _ = require('lodash');
 
 var tokencheck = (req,res,next) => {
     var token = req.header('token') || req.body.token ;
+    console.log(token+"token")
     if(token)
     {
      jwt.verify(token, 'codewordnwmsu', (err, decoded) =>{
