@@ -1,7 +1,15 @@
-'Password doesn’t match' needs to be paraphrased.
-'User is not register' also needs to be paraphrased
-Make sure not to give any reason for the login failure
-Make a cw icon which represents codeword
-Add a + button to add a course
-Warning screen should stay bit longer
-Instructor ability to create a course needs to be added.
+#On Friday 5th oct 2018 I(Anurag) and Sreelekha had a client meeting with Dr. Hoot and he has suggested following changes in the presence of Dr.Case.
+- 'Password doesn’t match' needs to be paraphrased.
+- 'User is not register' also needs to be paraphrased
+- Make sure not to give any reason for the login failure
+- Make a cw icon which represents codeword
+- Add a + button to add a course
+- Warning screen should stay bit longer
+- Instructor ability to create a course needs to be added.
+- Email address should not be case sensitive
+- Logout should be easy without going through many steps
+- There should be an icon for logout
+- Need to add a search icon
+- In student Interface, Create or delete codeword set should be removed
+- It is not auto filling the details like email ID
+- CRN needs to be removed
