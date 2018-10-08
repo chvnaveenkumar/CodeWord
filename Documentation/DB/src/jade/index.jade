@@ -1,0 +1,126 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+    title=title
+    style
+      include site.css
+    link(rel="stylesheet", href="./dist/native-toast.css?t=#{time}")
+  body
+    include github.html
+    .main
+      h1.site-name Native Toast
+      .control
+        label
+          input(type="checkbox" id="switch-edge-mode")
+          | Edge mode (show on the edge)
+        label
+          input(type="checkbox" id="switch-debug-mode")
+          | debug mode (do not self-destruct)
+        label
+          input(type="checkbox" id="switch-close-on-click-mode")
+          | Close on click
+      .buttons
+        .buttons-group
+          button.md-button.click-button(onclick="fromPosition('north')") North
+          button.md-button.click-button(onclick="fromPosition('north-west')") North West
+          button.md-button.click-button(onclick="fromPosition('north-east')") North East
+          button.md-button.click-button(onclick="fromPosition('south')") South
+          button.md-button.click-button(onclick="fromPosition('south-west')") South West
+          button.md-button.click-button(onclick="fromPosition('south-east')") South East
+          button.md-button.click-button(onclick="fromPosition('center')") Center
+          button.md-button.click-button(onclick="fromPosition('west')") West
+          button.md-button.click-button(onclick="fromPosition('east')") East
+          button.md-button.click-button(onclick="rounded()") Rounded
+          button.md-button.click-button(onclick="largeText()") Large Text
+        .buttons-group
+          button.md-button.click-button(onclick="error()") Error
+          button.md-button.click-button(onclick="warning()") Warning
+          button.md-button.click-button(onclick="success()") Success
+          button.md-button.click-button(onclick="info()") Info
+    script(src="./dist/native-toast.js?t=#{time}")
+    script.
+      var useEdge = false
+      var useDebug = false
+      var closeOnClick = false
+      function fromPosition(position) {
+        nativeToast({
+          message: `No more posts`,
+          position: position,
+          edge: useEdge,
+          debug: useDebug,
+          closeOnClick: closeOnClick
+        })
+      }
+      function rounded() {
+        nativeToast({
+          message: 'No more posts',
+          rounded: true,
+          edge: useEdge,
+          debug: useDebug,
+          closeOnClick: closeOnClick
+        })
+      }
+      function largeText() {
+        nativeToast({
+          message: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+          edge: useEdge,
+          debug: useDebug,
+          closeOnClick: closeOnClick
+        })
+      }
+      function error() {
+        nativeToast({
+          message: 'Something bad happened!',
+          type: 'error',
+          edge: useEdge,
+          debug: useDebug,
+          closeOnClick: closeOnClick
+        })
+      }
+      function info() {
+        nativeToast({
+          message: 'Some information!',
+          type: 'info',
+          edge: useEdge,
+          debug: useDebug,
+          closeOnClick: closeOnClick
+        })
+      }
+      function warning() {
+        nativeToast.warning({
+          message: 'Something warning!',
+          type: 'warning',
+          edge: useEdge,
+          debug: useDebug,
+          closeOnClick: closeOnClick
+        })
+      }
+      function success() {
+        nativeToast({
+          message: 'Success message!',
+          type: 'success',
+          edge: useEdge,
+          debug: useDebug,
+          closeOnClick: closeOnClick
+        })
+      }
+      function edge() {
+        nativeToast({
+          message: 'Bottom edge!',
+          edge: useEdge,
+          debug: useDebug,
+          closeOnClick: closeOnClick
+        })
+      }
+      document.getElementById('switch-edge-mode').addEventListener('change', function (e) {
+        useEdge = e.target.checked
+      })
+      document.getElementById('switch-debug-mode').addEventListener('change', function (e) {
+        useDebug = e.target.checked
+      })
+      document.getElementById('switch-close-on-click-mode').addEventListener('change', function (e) {
+        closeOnClick = e.target.checked
+      })

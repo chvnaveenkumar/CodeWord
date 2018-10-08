@@ -25,7 +25,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 export default {
   name: 'ForgetPage',
   data () {
@@ -38,18 +37,18 @@ export default {
   methods: {
     forget () {
       this.msg = ''
-      console.log(this.email)
       let emailid = this.email
+      /* global axios */
       axios({
         method: 'post',
-        url: process.env.URL + 'codeword/validateEmail',
+        url: 'codeword/validateEmail',
         data: {
           email: emailid
         }
       }).then(res => {
         console.log(res.data.message)
         if (res.data.message === true) {
-          axios.post(process.env.URL + 'codeword/sendmail', {
+          axios.post('codeword/sendmail', {
             email: emailid
           }).then(response => {
             this.msg = 'Sent temporary password to your email'
