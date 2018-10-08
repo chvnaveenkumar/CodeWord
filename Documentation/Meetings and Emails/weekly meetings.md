@@ -19,3 +19,8 @@ We have gone through some training videos and decided to make a demo video in pr
 
 
 On 28th Sep Vyshnavi, Srimai and naveen Kumar Chandaluri had an meeting with Dr. Case for an hour and we showed Dr. Case the changes that we made, then there are some other changes that need to be done like In an homepage we can use the cards instead of dropdown, Instructor wants to display the start and end date of the course and Instructor wants to assign the some similar codewords to concurrent surveys in different courses.
+
+On 2nd October, we all discussed about creating codewords and have selected the names for the codewords. 
+We also decided to create individual dashboards for student and instructor.
+We have divided tasks among ourselves which needs to be completed for this week.
+
