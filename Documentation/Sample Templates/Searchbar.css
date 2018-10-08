@@ -1,0 +1,44 @@
+
+.topnav {
+    overflow:hidden;
+    background-color:#7FFFD4;
+}
+.topnav first {
+    float:centre;
+    display:block;
+    font-size: 25px;
+    color:black;
+    padding: 20px 35px;
+    text-align:right;
+}
+.topnav first:hover {
+    background-color:#FFEBCD;
+    margin:0;
+    color:white;
+}
+.topnav first.active {
+    background-color:#FFF8DC;
+    color:black;
+}
+.topnav second[type=text] {
+    float:left;
+    padding:12px;
+    margin-right:20px;
+    margin-top:14px;
+    font-size:12px;
+    background-color:#2F4F4F;
+}
+@media screen and (max-width: 600px) {
+    .topnav first, .topnav second[type=text] {
+        float:right;
+        display: block;
+        margin:5px;
+        padding:20px;
+        text-align: centre;
+        width:100;
+        color:white;
+    }
+    .topnav second[type=text] {
+        border: 1px solid #A9A9A9;
+    }
+}
