@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form action="/action_page.php" autocomplete="on">
+  E-mail: <input type="email" name="email" autocomplete="on"><br>
+  <input type="submit">
+</form>
+</body>
+</html>
