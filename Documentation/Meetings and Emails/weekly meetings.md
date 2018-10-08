@@ -16,3 +16,7 @@ On 15th sep Anurag, Naveen Chanduluri and myself had a meeting for 2hours and we
 We discussed how to make a flyer and what tool we need to use for the flyer.
 We are going to use Adobe illustrator and adope photoshop for the flyer.
 We have gone through some training videos and decided to make a demo video in promoting the app.
+
+
+On 2nd Oct, we held a team meeting to decide the work and had shown up some interests towards work and assigned tasks.
+On 5th Oct, we held a team meeting for updates of work done for this week.
