@@ -24,3 +24,5 @@ On 2nd October, we all discussed about creating codewords and have selected the 
 We also decided to create individual dashboards for student and instructor.
 We have divided tasks among ourselves which needs to be completed for this week.
 
+On 5th October, we all had discussion about few changes suggested by Dr Hoot regarding adding search bar for user pages, email address should be case sensitive,adding a new course,logout option to should be simple and direct instead of going through many step and should contain icon to logout button and removing crn and create add/delete codeword set option from student interface.
+
