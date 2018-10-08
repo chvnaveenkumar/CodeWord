@@ -75,7 +75,7 @@ export default {
               localStorage.setItem('token', response.data.token)
               let _this = this
               setTimeout(function () {
-                if (data.get('password').length === 6) {
+                if (data.get('password').length === 5) {
                   _this.$router.push({ name: 'ChangePassword', params: { loginrole: _this.instructor } })
                 } else if (_this.instructor === false) {
                   _this.$router.push({ name: 'StudentDashboard' })

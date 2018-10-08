@@ -16,8 +16,11 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto" v-if="auth">
-                    <li class="navbar-brand ">
-                        <router-link to="/codewordset">CodeWord Set</router-link>
+                    <li class="nav-item" v-if='this.$route.name != "StudentDashboard"'>
+                        <router-link to="/instructordashboard">Dashboard</router-link>
+                    </li>
+                    <li class="nav-item" v-if='this.$route.name != "StudentDashboard" || this.$router.name === "ChangePassword"'>
+                        <router-link to="/codewordset">CodeWord</router-link>
                     </li>
                       <li class="nav-item dropdown">
                       <div class="dropdown">
@@ -87,5 +90,4 @@ li a {
   color: white;
   padding-left: 1em;
 }
-
 </style>

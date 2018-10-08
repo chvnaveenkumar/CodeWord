@@ -7,15 +7,8 @@
          </h1>
         </div>
       <div class="row">
-        
       <div class="col-md-2 col-lg-2 col-xs-0 col-sm-0">
-      
-
-
       <i class="fas fa-plus-circle fa-3x  tooltip-test"   title="create CodeWord Set"   data-toggle="modal" data-target="#createCodeWordSet"  style="color:green; margin-left: 1em"></i>
-
-
-<!-- Modal -->
 <div class="modal fade" id="createCodeWordSet" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -41,13 +34,13 @@
     </div>
   </div>
 </div>
-
       </div>
     </div>
+      </div>
     <div class="col-md-8 col-lg-8 col-xs-12 col-sm-12" >
-        
       </div>
       <div class="col-md-2 col-lg-2 col-xs-0 col-sm-0"></div>
+    </div>
 </template>
 
 
