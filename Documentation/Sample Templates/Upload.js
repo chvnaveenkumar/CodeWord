@@ -84,3 +84,53 @@ if ('files' in x) {
     }
 } 
 document.getElementById ("demo").innerHTML = txt;
+
+
+
+function getData() {
+  if (window.XMLHttpRequest)
+        {// code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+        }
+      else
+        {// code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+      xmlhttp.onreadystatechange=function()
+        {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200)
+          {
+          user_data = xmlhttp.responseText;
+          window.user_data = user_data;
+          processdata();
+          }
+        }
+      xmlhttp.open("GET","http://localhost:8888/g_dta.php",true);
+      xmlhttp.send();
+  }
+  
+  getData();
+  
+  function processdata() {
+    var downdata = user_data.split('|||||');
+    var installedthemes = downdata[0];
+    var currenttheme = downdata[1].toString();
+    window.currenttheme = currenttheme;
+    click();
+    }
+  
+  function click(e) { 
+        function setCSS() {
+            chrome.tabs.insertCSS(null, {file:currenttheme + ".css"});
+            }
+        setTimeout(function(){setCSS()}, 1250);
+        document.getElementById('iFrameLocation').innerHTML = "<iframe src='http://localhost:8888/wr_dta.php?newid="+e.target.id+"'></iframe>";
+        getData();
+  }
+  
+  document.addEventListener('DOMContentLoaded', function () {
+    var divs = document.querySelectorAll('div');
+    for (var i = 0; i < divs.length; i++) {
+      divs[i].addEventListener('click', click);
+    }
+  });
