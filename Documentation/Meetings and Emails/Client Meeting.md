@@ -14,7 +14,7 @@
 - It is not auto filling the details like email ID
 - CRN needs to be removed
 
-# We had a Client meeting on Oct, 10th with Dr. hoot along with me(Ujjawal), Anurag, Naveen Nuggu and Shravya and we demonstrated our app. Following was his suggestions after viewing everything meticulously:
+# We had a Client meeting on Oct, 10th with Dr. hoot along with me(Ujjawal), Anurag, Naveen Nuggu and Sravya and we demonstrated our app. Following was his suggestions after viewing everything meticulously:
 
 ## Client Coments:
 -	Application must be light weight. So using image and storing it might slow the application.
