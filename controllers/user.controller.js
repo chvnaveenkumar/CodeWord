@@ -44,7 +44,7 @@ let signIn = (req,res) => {
                     if(err){
                         return res.json({ code: 200, message: 'Unable to generate and update Token'});
                     }
-                    return res.json({ code: 200, message: "User signin successful", token: newToken });
+                    return res.json({ code: 200, message: 'Signed in successfully. Redirecting.', token: newToken });
                 })
             }else{
                 return res.json({ code: 200, message: "Password Wrong!!"})
@@ -107,13 +107,22 @@ let tempPassword = (req, res ) => {
 }
 module.exports.tempPassword = tempPassword;
 
-let changePassword = (req,res) => {    
-    SignUpModel.findOne({_id: req.session.id}).then((user) => {
-    if(!user){
-        return  res.status(400).send("User details not found!!");
-    }        
-    return res.json({ code: 200, message: true});
+let changePassword = (req,res) => { 
+    var body = _.pick(req.body,['password']);
+    console.log("change password:"+ req.session.id+" Change Password:"+body.password); 
+    var hashPassword="";
+    bcrypt.genSalt(10, (err,salt) => {
+    bcrypt.hash(body.password,salt,(err,hash) => {
+        hashPassword = hash;
+    
+    SignUpModel.updateOne({_id: req.session.id },{$set: {password: hashPassword}}, (err,result) =>{
+        if(!res){
+            return  res.status(400).send("Unable to change Password!!");
+        }
+        return res.json({ code: 200, message: true});
+     });
     });
+   });
 }
 module.exports.changePassword = changePassword;
 

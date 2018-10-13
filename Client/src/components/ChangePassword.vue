@@ -64,7 +64,8 @@ export default {
         method: 'post',
         url: 'codeword/changepassword',
         data: {
-          token: window.localStorage.getItem('token')
+          token: window.localStorage.getItem('token'),
+          password: this.newpassword
         }
       }).then(res => {
         var _this = this
