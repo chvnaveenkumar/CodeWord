@@ -4,8 +4,7 @@ var jwt = require('jsonwebtoken');
 var { SignUpModel } = require('./../controllers/user.models');
 var { mongoose } = require('./../config/database')
 var mailController = require('../controllers/mail.controller')
-let csv = require('fast-csv');
-let fs = require('fs')
+let XLSX = require('xlsx')
 
 let signUp = (req,res) => {
     console.log("SignUp");
@@ -127,16 +126,12 @@ let changePassword = (req,res) => {
 module.exports.changePassword = changePassword;
 
 let uploadfile = (req,res) => {
-    console.log(fs.createReadStream(new Buffer(req.file.buffer)))
-    fs.createReadStream(new Buffer(req.file.buffer))
-    var csvStream = csv()
-    .on("data", function(data){
-         console.log(data);
-    })
-    .on("end", function(){
-         console.log("done");
-    });
-    
+    var data = []
+    var workbook = XLSX.read(req.file.buffer, {type:"buffer"})
+    _.each(XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]]), function(ele,index,list){
+    data.push(ele.Test1)
+  })
+  res.json({ data })
 }
 
 module.exports.uploadfile = uploadfile
