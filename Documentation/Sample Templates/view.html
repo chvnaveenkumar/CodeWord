@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- JSExEvent.html -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Example: User-defined function and onclick Event Handler</title>
+  <script>
+    function openNewWindow() {
+      open("JSExAlertWrite.html");
+    }
+  </script>
+</head>
+<body>
+  <h2>Example on event and user-defined function</h2>
+  <input type="button" value="Click me to open a new window"
+         onclick="openNewWindow()">
+</body>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Example: Separating HTML, CSS and JavaScript</title>
+  <link rel="stylesheet" href="JSExFiles.css">
+  <script src="JSExFiles.js"></script>
+</head>
+<body>
+  <p>"Hello" alert Box appears <em>after</em> the page is loaded.</p>
+  <p id="magic">Point your mouse pointer here!!!</p>
+</body>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Example: Modifying the Content of HTML Elements</title>
+  <script src="JSExInnerHtml.js" ></script>
+</head>
+<body>
+  <h1 id="heading1">Heading 1</h1>
+  <h2>Heading 2</h2>
+  <h2>Heading 2</h2>
+  <p class="para">Paragraph 1</p>
+  <p class="para">Paragraph 2</p>
+  <p class="para">Paragraph 3</p>
+  <input type="button" id="btn1" value="Change Heading 1" />
+  <input type="button" id="btn2" value="Change Heading 2" />
+  <input type="button" id="btn3" value="Change Paragraph" />
+</body>
+</html>
+
+</html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Example: Intercept an Hyperlink</title>
+    <script src="JSExLink.js" ></script>
+  </head>
+  <body>
+    <a href="JSExAlertWrite.html" id="myLink">JavaScript Example 1</a>
+  </body>
+  <title>Function Demo</title>
+<script>
+  function add(item1, item2) {             // Take two numbers or strings
+     return Number(item1) + Number(item2); // Simply item1 + item2 concatenate strings
+  }
+</script>
+</head>
+<body>
+<script>
+  var number1 = prompt('Enter the first integer:');  // returns a string
+  var number2 = prompt('Enter the second integer:'); // returns a string
+  alert('The sum is ' + add(number1, number2));
+</script>
+</body>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Event Demo</title>
+    <script>
+      function say(message) {
+         alert(message);
+      }
+    </script>
+    </head>
+    <body>
+      <h2 onmouseover="this.style.color='red'"
+          onmouseout="this.style.color=''">Hello</h2>
+      <input type="button" value="click me to say Hello" onclick="say('Hello')">
+      <p onclick="say('Hi')">This paragraph can say Hi...</p>
+    </body>
+</html>
+
+
+
+
