@@ -2,13 +2,9 @@
     <div class="container-fluid" style="margin-top:5em" >
       <div class="row">
        <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12"> 
-         <h1>
-           CodeWord Set
-         </h1>
-        </div>
-      <div class="row">
-      <div class="col-md-10 col-lg-10 col-xs-0 col-sm-0">
-      <i class="fas fa-plus-circle fa-2x"   title="Create CodeWord Set"   data-toggle="modal" data-target="#createCodeWordSet"  style="color:green; margin-left: 1em">Add Codeword Set</i>
+         
+      
+      <i class="fas fa-plus-circle fa-2x"   title="Create CodeWord Set"   data-toggle="modal" data-target="#createCodeWordSet"  style="color:green; margin-left: 1em; float: left">Add Codeword Set</i>
 <div class="modal fade" id="createCodeWordSet" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -37,10 +33,8 @@
       </div>
     </div>
       </div>
-    <div class="col-md-8 col-lg-8 col-xs-12 col-sm-12" >
-      </div>
-      <div class="col-md-2 col-lg-2 col-xs-0 col-sm-0"></div>
-    </div>
+    
+    
 </template>
 <script>
 export default {
@@ -52,7 +46,8 @@ export default {
   },
   methods: {
     create () {
-      console.log(this.codewordName)
+      document.getElementById("formGroupExampleInput");
+      console.log(document.getElementById("formGroupExampleInput"))
     }
   }
 }
