@@ -2,6 +2,7 @@ const _ = require('lodash');
 const bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
 var { SignUpModel } = require('./../controllers/user.models');
+var { CodeWordSetModel } = require('./../controllers/user.models')
 var { mongoose } = require('./../config/database')
 var mailController = require('../controllers/mail.controller')
 let XLSX = require('xlsx')
@@ -131,7 +132,18 @@ let uploadfile = (req,res) => {
     _.each(XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]]), function(ele,index,list){
     data.push(ele.Test1)
   })
-  res.json({ data })
+    var codeWordSetModel = new CodeWordSetModel({
+         CodeWordSetName: req.body.codeWordFileName,
+         CodeWords:data,
+         instructorEmail: req.session.email,
+         codeWordSize: data.length
+    });
+    codeWordSetModel.save().then((user) => {
+        if(user)
+        return res.json({ code: 200, message: true});           
+    }).catch((e) => {
+        console.log(e);
+        return res.json({ code: 400, message: e});        
+    })
 }
-
 module.exports.uploadfile = uploadfile

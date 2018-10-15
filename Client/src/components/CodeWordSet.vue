@@ -55,13 +55,15 @@ export default {
     codewordFileUpload () {
       console.log('inside codeword file' + this.file)
       let formData = new FormData()
+      console.log(this.codeWordFileName)
       formData.append('codeWordFileName', this.codeWordFileName)
       formData.append('file', this.file)
       /* global axios */
       axios.post('codeword/codeWordFile',
         formData, {
           headers: {
-            'Content-Type': 'multipart/form-data'
+            'Content-Type': 'multipart/form-data',
+            token: window.localStorage.getItem('token')
           }
         }).then(res => {
         console.log('sent success full')
