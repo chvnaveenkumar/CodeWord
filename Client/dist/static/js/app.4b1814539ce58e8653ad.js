@@ -586,13 +586,30 @@ webpackJsonp([1],[
   name: 'CreateCodeWordPage',
   data: function data() {
     return {
-      codewordName: ''
+      codeWordFileName: '',
+      file: ''
     };
   },
 
   methods: {
-    create: function create() {
-      console.log(this.codewordName);
+    codewordFileUpload: function codewordFileUpload() {
+      console.log('inside codeword file' + this.file);
+      var formData = new FormData();
+      formData.append('codeWordFileName', this.codeWordFileName);
+      formData.append('file', this.file);
+      /* global axios */
+      axios.post('codeword/codeWordFile', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      }).then(function (res) {
+        console.log('sent success full');
+      }).catch(function () {
+        console.log('Failure');
+      });
+    },
+    handleFileUpload: function handleFileUpload() {
+      this.file = this.$refs.file.files[0];
     }
   }
 });
@@ -965,7 +982,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5f6566a6_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_InstructorDashboard_vue__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_b1ba5a3e_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_InstructorDashboard_vue__ = __webpack_require__(64);
 function injectStyle (ssrContext) {
   __webpack_require__(63)
 }
@@ -984,7 +1001,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __vue_script__,
-  __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5f6566a6_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_InstructorDashboard_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_b1ba5a3e_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_InstructorDashboard_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -1114,7 +1131,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_CodeWordSet_vue__ = __webpack_require__(16);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_f8f05da4_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CodeWordSet_vue__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_92e2228c_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CodeWordSet_vue__ = __webpack_require__(72);
 function injectStyle (ssrContext) {
   __webpack_require__(71)
 }
@@ -1134,7 +1151,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_CodeWordSet_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_f8f05da4_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CodeWordSet_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_92e2228c_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CodeWordSet_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -1155,8 +1172,8 @@ var Component = normalizeComponent(
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container-fluid",staticStyle:{"margin-top":"5em"}},[_c('div',{staticClass:"row"},[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-md-10 col-lg-10 col-xs-0 col-sm-0"},[_c('i',{staticClass:"fas fa-plus-circle fa-2x",staticStyle:{"color":"green","margin-left":"1em"},attrs:{"title":"Create CodeWord Set","data-toggle":"modal","data-target":"#createCodeWordSet"}},[_vm._v("Add Codeword Set")]),_vm._v(" "),_c('div',{staticClass:"modal fade",attrs:{"id":"createCodeWordSet","tabindex":"-1","role":"dialog","aria-labelledby":"exampleModalLabel","aria-hidden":"true"}},[_c('div',{staticClass:"modal-dialog",attrs:{"role":"document"}},[_c('div',{staticClass:"modal-content"},[_vm._m(1),_vm._v(" "),_c('div',{staticClass:"modal-body"},[_c('form',[_c('div',{staticClass:"form-group"},[_c('label',{staticStyle:{"float":"left"},attrs:{"for":"formGroupExampleInput"}},[_vm._v("CodeWord Set Name")]),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.codewordsetName),expression:"codewordsetName"}],staticClass:"form-control",attrs:{"type":"text","id":"formGroupExampleInput","placeholder":"Enter CodeWord Set Name"},domProps:{"value":(_vm.codewordsetName)},on:{"input":function($event){if($event.target.composing){ return; }_vm.codewordsetName=$event.target.value}}})]),_vm._v(" "),_vm._m(2)])]),_vm._v(" "),_vm._m(3)])])])])])]),_vm._v(" "),_c('div',{staticClass:"col-md-8 col-lg-8 col-xs-12 col-sm-12"}),_vm._v(" "),_c('div',{staticClass:"col-md-2 col-lg-2 col-xs-0 col-sm-0"})])}
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col-md-12 col-lg-12 col-xs-12 col-sm-12"},[_c('h1',[_vm._v("\n           CodeWord Set\n         ")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"modal-header"},[_c('h5',{staticClass:"modal-title",attrs:{"id":"exampleModalLabel"}},[_vm._v("Add New CodeWord")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-group"},[_c('label',{staticStyle:{"float":"left"},attrs:{"for":"exampleFormControlFile1"}},[_vm._v("Upload CodeWord Set(Excel)")]),_vm._v(" "),_c('input',{staticClass:"form-control-file",attrs:{"type":"file","id":"exampleFormControlFile1"}})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"modal-footer"},[_c('button',{staticClass:"btn btn-warning",attrs:{"type":"button","data-dismiss":"modal"}},[_vm._v("CANCEL")]),_vm._v(" "),_c('button',{staticClass:"btn btn-primary",attrs:{"type":"button","onclick":"create()"}},[_vm._v("CREATE")])])}]
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container-fluid",staticStyle:{"margin-top":"5em"}},[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-md-4 col-lg-4 col-xs-0 col-sm-0"},[_c('i',{staticClass:"fas fa-plus-circle fa-2x",staticStyle:{"color":"green","margin-left":"1em"},attrs:{"title":"Create CodeWord Set","data-toggle":"modal","data-target":"#createCodeWordSet"}},[_vm._v("Add CodeWord Set")]),_vm._v(" "),_c('div',{staticClass:"modal fade",attrs:{"id":"createCodeWordSet","tabindex":"-1","role":"dialog","aria-labelledby":"exampleModalLabel","aria-hidden":"true"}},[_c('div',{staticClass:"modal-dialog",attrs:{"role":"document"}},[_c('div',{staticClass:"modal-content"},[_vm._m(1),_vm._v(" "),_c('div',{staticClass:"modal-body"},[_c('form',[_c('div',{staticClass:"form-group"},[_c('label',{staticStyle:{"float":"left"},attrs:{"for":"formGroupExampleInput"}},[_vm._v("CodeWord Set Name")]),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.codeWordFileName),expression:"codeWordFileName"}],staticClass:"form-control",attrs:{"type":"text","id":"formGroupExampleInput","placeholder":"Enter CodeWord Set Name"},domProps:{"value":(_vm.codeWordFileName)},on:{"input":function($event){if($event.target.composing){ return; }_vm.codeWordFileName=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"form-group"},[_c('label',{staticStyle:{"float":"left"},attrs:{"for":"exampleFormControlFile1"}},[_vm._v("Upload CodeWord Set(Excel)")]),_vm._v(" "),_c('input',{ref:"file",staticClass:"form-control-file",attrs:{"type":"file","id":"file"},on:{"change":function($event){_vm.handleFileUpload()}}})])])]),_vm._v(" "),_c('div',{staticClass:"modal-footer"},[_c('button',{staticClass:"btn btn-warning",attrs:{"type":"button","data-dismiss":"modal"}},[_vm._v("CANCEL")]),_vm._v(" "),_c('button',{staticClass:"btn btn-primary",attrs:{"type":"button"},on:{"click":function($event){_vm.codewordFileUpload()}}},[_vm._v("CREATE")])])])])])])]),_vm._v(" "),_c('div',{staticClass:"col-md-8 col-lg-8 col-xs-12 col-sm-12"}),_vm._v(" "),_c('div',{staticClass:"col-md-2 col-lg-2 col-xs-0 col-sm-0"})])}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_c('div',{staticClass:"col-md-12 col-lg-12 col-xs-12 col-sm-12"},[_c('h1',[_vm._v("\n           CodeWord Set\n         ")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"modal-header"},[_c('h5',{staticClass:"modal-title",attrs:{"id":"exampleModalLabel"}},[_vm._v("Add New CodeWord")])])}]
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
@@ -1263,4 +1280,4 @@ var store = new __WEBPACK_IMPORTED_MODULE_1_Vuex__["a" /* default */].Store({
 
 /***/ })
 ],[22]);
-//# sourceMappingURL=app.126031735f99ec7e2e35.js.map
+//# sourceMappingURL=app.4b1814539ce58e8653ad.js.map
