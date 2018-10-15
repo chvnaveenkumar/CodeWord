@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>Hyperlink Example</title>
+      <base href = "https://www.tutorialspoint.com/">
+   </head>
+	
+   <body>
+      <p>Click following link</p>
+      <a href = "/html/index.htm" target = "_blank">HTML Tutorial</a>
+   </body>
+   
+   <head>
+      <title>Hyperlink Example</title>
+      <base href = "https://www.tutorialspoint.com/">
+   </head>
+	
+   <body alink = "#54A250" link = "#040404" vlink = "#F40633">
+      <p>Click following link</p>
+      <a href = "/html/index.htm" target = "_blank" >HTML Tutorial</a>
+   </body>
+   
+</html>
+
+
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset=utf-8>
+        <meta http-equiv=X-UA-Compatible content="IE=edge">
+        <meta name=viewport content="width=device-width,initial-scale=1">
+        <title>codeword</title>
+        <link rel=icon type=image/png sizes=32x32 href=/static/img/icons/logo.png>
+        <link rel=icon type=image/png sizes=16x16 href=/static/img/icons/logo.png>
+        <!--[if IE]><link rel="shortcut icon" href="/static/img/icons/favicon.ico"><![endif]-->
+        <link rel=manifest href=/static/manifest.json>
+        <meta name=theme-color content=#4DBA87>
+        <link rel=stylesheet href=https://use.fontawesome.com/releases/v5.3.1/css/all.css integrity=sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU crossorigin=anonymous>
+ 
+        <link rel=apple-touch-icon href=/static/img/icons/logo.png>
+        <link rel=mask-icon href=/static/img/icons/safari-pinned-tab.svg color=#4DBA87>
+        <meta name=msapplication-TileImage content=/static/img/icons/logo.png>
+        <meta name=msapplication-TileColor content=#000000>
+ 
+        <link href=/static/css/app.440abd88b35ac61b975d9ed680968178.css rel=stylesheet>
+    </head><body>
+        <noscript>This is your fallback content in case JavaScript fails to load.</noscript>
+        <div id=app></div>
+        <script>
+        !function(){"use strict";var o=Boolean("localhost"===window.location.hostname||"[::1]"===window.location.hostname||window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/));
+        window.addEventListener("load",function(){"serviceWorker"in navigator&&("https:"===window.location.protocol||o)&&navigator.serviceWorker.register("service-worker.js").then(function(o){o.onupdatefound=function()
+        {
+            if(navigator.serviceWorker.controller){var n=o.installing;n.onstatechange=function()
+            {
+                switch(n.state)
+                {case"installed":break;case"redundant":throw new Error("The installing service worker became redundant.")}}}}}).catch(function(o){console.error("Error during service worker registration:",o)})})}();
+                </script><script type=text/javascript src=/static/js/manifest.2ae2e69a05c33dfc65f8.js></script>
+                <script type=text/javascript src=/static/js/vendor.5a4cf3d191d37d44ae38.js></script>
+                <script type=text/javascript src=/static/js/app.5294ae5ccdd3472e537b.js></script></body></html>
+
+
+                <template>
+                        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+                              <div class="container">
+                                  <a class="navbar-brand" href="#page-top">Code Word</a>
+                                  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                                      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                                      <span class="navbar-toggler-icon"></span>
+                                  </button>
+                                   <div class="navbar-collapse collapse" id="navbarResponsive">
+                                      <ul class="navbar-nav ml-auto" v-if="!auth">
+                                          <li class="nav-item">
+                                              <router-link to="/signup">Sign Up</router-link>
+                                          </li>
+                                          <li class="nav-item">
+                                              <router-link to="/">Sign In</router-link>
+                                          </li>
+                                      </ul>
+                                      <ul class="navbar-nav ml-auto" v-if="auth">
+                                          <li class="nav-item" v-if='this.$route.name != "StudentDashboard"'>
+                                              <router-link to="/instructordashboard">Dashboard</router-link>
+                                          </li>
+                                          <li class="nav-item" v-if='this.$route.name != "StudentDashboard" || this.$router.name === "ChangePassword"'>
+                                              <router-link to="/codewordset">CodeWord</router-link>
+                                          </li>
+                                            <li class="nav-item dropdown">
+                                            <div class="dropdown">
+                                            <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            {{ email }}
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" @click.prevent="changePassword" >Change Password</a>
+                                                <a class="dropdown-item" @click.prevent="onLogout" >Logout</a>
+                                            </div>
+                                            </div>
+                                            </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                          </nav>
+                      </template>
+                      <script>
+                      import User from "@/../services/auth";
+                      export default {
+                        data() {
+                          return {
+                            auth: false,
+                            email: ""
+                          };
+                        },
+                        mounted () {
+                          console.log('meta'+ this.$route.name )
+                          this.auth = User.check();
+                          if (this.auth) {
+                            axios({
+                              method: "post",
+                              url: "codeword/details",
+                              headers: {
+                                token: window.localStorage.getItem("token")
+                              }
+                            }).then(result => {
+                              this.email = result.data.email;
+                            });
+                          }
+                        },
+                        methods: {
+                          onLogout() {
+                            localStorage.removeItem("token");
+                            this.auth = User.check();
+                            this.$router.push({ path: "/" });
+                          },
+                          changePassword() {
+                            this.$router.push({ path: "/changePassword" });
+                          },
+                          createCodeWordSet() {
+                            this.$router.push({ path: "/createcodewordset" });
+                          },
+                           deleteCodeWordSet() {
+                            this.$router.push({ path: "/deletecodewordset" });
+                          }
+                        },
+                        watch: {
+                          $route(to, from, next) {
+                            this.auth = User.check();
+                          }
+                        }
+                      };
+                      </script>
+                      <style>
+                      li a {
+                        color: white;
+                        padding-left: 1em;
+                      }
+                      #dropdownMenuButton{
+                        color: white
+                      }
+                      </style>
+                      
