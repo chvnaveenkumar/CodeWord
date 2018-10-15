@@ -20,3 +20,7 @@ We have gone through some training videos and decided to make a demo video in pr
 
 On 2nd Oct, we held a team meeting to decide the work and had shown up some interests towards work and assigned tasks.
 On 5th Oct, we held a team meeting for updates of work done for this week.
+
+
+On 9th Oct, we held a team meeting to decide the work and had shown up some interests towards work and assigned tasks.
+On 11th Oct, we held a team meeting for updates of work done for this week.
