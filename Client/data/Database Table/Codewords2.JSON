@@ -1,81 +1,5 @@
 
     [{
-        "Codeword": "KANGAROOING",
-        "CodeWord_Set":"Android",
-        "Instructor":"false"
-      },{
-        "Codeword": "KNEEHOLE",
-        "CodeWord_Set":"Android",
-        "Instructor":"false"
-      },{
-        "Codeword": "KUANTAN",
-        "CodeWord_Set":"Android",
-        "Instructor":"false"
-      },{
-        "Codeword": "KEYSTONE",
-        "CodeWord_Set":"Android",
-        "Instructor":"false"
-      },{
-        "Codeword": "KIELBASA",
-        "CodeWord_Set":"Android",
-        "Instructor":"false"
-      },{
-        "Codeword": "KOPEISK",
-        "CodeWord_Set":"Android",
-        "Instructor":"false"
-      },{
-        "Codeword": "KAMPYLITE",
-        "CodeWord_Set":"Android",
-        "Instructor":"false"
-      },{
-        "Codeword": "KEYHOLE",
-        "CodeWord_Set":"Android",
-        "Instructor":"false"
-      },{
-        "Codeword": "KIRMAN",
-        "CodeWord_Set":"Android",
-        "Instructor":"false"
-      },{
-        "Codeword": "KICHISABURO",
-        "CodeWord_Set":"Android",
-        "Instructor":"false"
-      },{
-        "Codeword": "KAROL",
-        "CodeWord_Set":"Android",
-        "Instructor":"false"
-      },{
-        "Codeword": "KINDREDNESS",
-        "CodeWord_Set":"Android",
-        "Instructor":"false"
-      },{
-        "Codeword": "KABOB",
-        "CodeWord_Set":"Android",
-        "Instructor":"false"
-      },{
-        "Codeword": "KINDHEARTEDLY",
-        "CodeWord_Set":"Android",
-        "Instructor":"false"
-      },{
-        "Codeword": "KEDAR",
-        "CodeWord_Set":"Android",
-        "Instructor":"false"
-      },{
-        "Codeword": "KIDDY  ",
-        "CodeWord_Set":"Android",
-        "Instructor":"false"
-      },{
-        "Codeword": "KONAKRY",
-        "CodeWord_Set":"Android",
-        "Instructor":"false"
-      },{
-        "Codeword": "KABEIRI",
-        "CodeWord_Set":"Android",
-        "Instructor":"false"
-      },{
-        "Codeword": "KHUSKHUS",
-        "CodeWord_Set":"Android",
-        "Instructor":"false"
-      },{
         "Codeword": "KENNELED",
         "CodeWord_Set":"Android",
         "Instructor":"false"
@@ -416,6 +340,22 @@
         "CodeWord_Set":"Android",
         "Instructor":"false"
       },{
+        "Codeword": "KANGAROOING",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "KNEEHOLE",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "KUANTAN",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "KEYSTONE",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
         "Codeword": "HAT",
         "CodeWord_Set":"Android",
         "Instructor":"false"
@@ -444,7 +384,7 @@
         "CodeWord_Set":"Android",
         "Instructor":"false"
       },{
-        "Codeword": "ICE-CREAM",
+        "Codeword": "CREAM",
         "CodeWord_Set":"Android",
         "Instructor":"false"
       },{
@@ -452,7 +392,7 @@
         "CodeWord_Set":"Android",
         "Instructor":"false"
       },{
-        "Codeword": "JET FIGHTER",
+        "Codeword": "JET",
         "CodeWord_Set":"Android",
         "Instructor":"false"
       },{
@@ -829,6 +769,135 @@
         "Instructor":"false"
       },{
         "Codeword": "TELESCOPE",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      }
+      ,{
+        "Codeword": "TELEVISION",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "RACQUET",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "THERMOMETER",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "TIGER",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "TOILET",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "TONGUE",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "TORCH",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "TORPEDO",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "TRAIN",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "TREADMILL",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "TRIANGLE",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "TUNNEL",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "TYPEWRITER",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "UMBRELLA",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "VACUUM",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "VAMPIRE",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "VIDEOTAPE",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "KIELBASA",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "KOPEISK",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "KAMPYLITE",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "KEYHOLE",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "KIRMAN",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "KICHISABURO",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "KAROL",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "KINDREDNESS",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "KABOB",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "KINDHEARTEDLY",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "KEDAR",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "KIDDY  ",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "KONAKRY",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "KABEIRI",
+        "CodeWord_Set":"Android",
+        "Instructor":"false"
+      },{
+        "Codeword": "KHUSKHUS",
         "CodeWord_Set":"Android",
         "Instructor":"false"
       }]
