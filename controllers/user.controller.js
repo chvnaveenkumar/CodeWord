@@ -142,8 +142,18 @@ let uploadfile = (req,res) => {
         if(user)
         return res.json({ code: 200, message: true});           
     }).catch((e) => {
-        console.log(e);
         return res.json({ code: 400, message: e});        
     })
 }
 module.exports.uploadfile = uploadfile
+
+
+let getCodewordSet = (req, res) =>{
+    CodeWordSetModel.find({instructorEmail: req.session.email}, function (err, CodeWordSet) {
+        if(err){
+            return res.json({ code: 200, message: 'Email id not registered!!'});
+        }
+        return res.json(CodeWordSet);
+    });
+}
+module.exports.getCodewordSet = getCodewordSet
