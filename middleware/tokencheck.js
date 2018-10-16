@@ -12,6 +12,8 @@ var tokencheck = (req,res,next) => {
           return res.status(400).json({message: 'Unauthorized User.' });
         }
         req.session = decoded;
+        console.log("_id:"+ req.session.id);
+        console.log("email:"+req.session.email);
         next();
      });
     } else{

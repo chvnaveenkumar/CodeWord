@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var usersController = require('../controllers/user.controller')
 const bodyParser = require('body-parser');
+let multer = require('multer')
 
 router.use(bodyParser.json());
 
@@ -16,4 +17,7 @@ router.post('/details', usersController.details);
 router.post('/validateEmail', usersController.validateEmail);
 router.post('/sendmail', usersController.tempPassword);
 router.post('/changepassword', usersController.changePassword);
+router.post('/codeWordFile', multer().single('file'), usersController.uploadfile);
+router.get('/getCodeWordSet', usersController.getCodewordSet);
+
 module.exports = router;

@@ -2,8 +2,10 @@ const _ = require('lodash');
 const bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
 var { SignUpModel } = require('./../controllers/user.models');
+var { CodeWordSetModel } = require('./../controllers/user.models')
 var { mongoose } = require('./../config/database')
 var mailController = require('../controllers/mail.controller')
+let XLSX = require('xlsx')
 
 let signUp = (req,res) => {
     console.log("SignUp");
@@ -42,7 +44,7 @@ let signIn = (req,res) => {
                     if(err){
                         return res.json({ code: 200, message: 'Unable to generate and update Token'});
                     }
-                    return res.json({ code: 200, message: "User signin successful", token: newToken });
+                    return res.json({ code: 200, message: 'Signed in successfully. Redirecting.', token: newToken });
                 })
             }else{
                 return res.json({ code: 200, message: "Password Wrong!!"})
@@ -105,12 +107,53 @@ let tempPassword = (req, res ) => {
 }
 module.exports.tempPassword = tempPassword;
 
-let changePassword = (req,res) => {    
-    SignUpModel.findOne({_id: req.session.id}).then((user) => {
-    if(!user){
-        return  res.status(400).send("User details not found!!");
-    }        
-    return res.json({ code: 200, message: true});
+let changePassword = (req,res) => { 
+    var body = _.pick(req.body,['password']);
+    console.log("change password:"+ req.session.id+" Change Password:"+body.password); 
+    var hashPassword="";
+    bcrypt.genSalt(10, (err,salt) => {
+    bcrypt.hash(body.password,salt,(err,hash) => {
+        hashPassword = hash;
+    
+    SignUpModel.updateOne({_id: req.session.id },{$set: {password: hashPassword}}, (err,result) =>{
+        if(!res){
+            return  res.status(400).send("Unable to change Password!!");
+        }
+        return res.json({ code: 200, message: true});
+     });
     });
+   });
 }
 module.exports.changePassword = changePassword;
+
+let uploadfile = (req,res) => {
+    var data = []
+    var workbook = XLSX.read(req.file.buffer, {type:"buffer"})
+    _.each(XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]]), function(ele,index,list){
+    data.push(ele.Test1)
+  })
+    var codeWordSetModel = new CodeWordSetModel({
+         CodeWordSetName: req.body.codeWordFileName,
+         CodeWords:data,
+         instructorEmail: req.session.email,
+         codeWordSize: data.length
+    });
+    codeWordSetModel.save().then((user) => {
+        if(user)
+        return res.json({ code: 200, message: true});           
+    }).catch((e) => {
+        return res.json({ code: 400, message: e});        
+    })
+}
+module.exports.uploadfile = uploadfile
+
+
+let getCodewordSet = (req, res) =>{
+    CodeWordSetModel.find({instructorEmail: req.session.email}, function (err, CodeWordSet) {
+        if(err){
+            return res.json({ code: 200, message: 'Email id not registered!!'});
+        }
+        return res.json(CodeWordSet);
+    });
+}
+module.exports.getCodewordSet = getCodewordSet

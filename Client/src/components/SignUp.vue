@@ -44,7 +44,6 @@
   </div>
 </template>
 <script>
-import axios from 'axios'
 import {required, minLength, sameAs} from 'vuelidate/lib/validators'
 
 export default {
@@ -73,9 +72,8 @@ export default {
   methods: {
     OnRegister () {
       this.msg = ''
-      console.log(this.email)
       let emailid = this.email
-      console.log(emailid)
+      /* global axios */
       axios({
         method: 'post',
         url: 'codeword/validateEmail',
@@ -83,14 +81,16 @@ export default {
           email: emailid
         }
       }).then(res => {
-        console.log(res.data.message)
+        console.log('validate' + res.data.message)
         let _this = this
         if (res.data.message === false) {
+        /* global axios */
           console.log('onregister clicked fullnaem', this.email)
-          axios.post('codeword/signup', {
-            email: this.email,
-            password: this.password
-          }).then(res => {
+          axios.post('codeword/signup',
+            {
+              email: this.email,
+              password: this.password
+            }).then(res => {
             this.msg = 'Successfully Registered and Redirecting to SignIn Page.'
             this.signed = true
             if (res.data.message) {
