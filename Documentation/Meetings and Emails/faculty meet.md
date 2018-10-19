@@ -26,3 +26,14 @@ I have met Dr. Case and suggested few things.
 - Other than that she suggested to give link to developer's personal website.
 - Asked to remove the logo so that it can be used by professor of other university.
 
+## General Mentor comments
+1.	Excellent bulleted list. Outstanding work by your team!
+2.	Please number items so we can refer to them easily.
+3.	Which user stories are you presenting? Follow the plan.
+4.	Where are the UI sketches? We must show sketches and get feedback before we begin doing screens.
+5.	Next week, show client/mentor UI sketches for each MVP 2 required screen. Incorporate current comments.
+6.	Read all comments carefully, and make sure changes are reflected – especially in the GDP 2 user stories and requirements. 
+7.	By Wednesday, assign one person to each item – that person is responsible for ensuring the item has been incorporated into the project plan. Put their name in brackets at the beginning of each item as illustrated below (I just randomly assigned [Naveen] to the first two items.  
+8.	As you address our comments and incorporate them into the plan, please mark them DONE (the information has been applied to the project) See the first item for an example. 
+9.	Please check spelling and use proper capitalization and formatting. 
+
