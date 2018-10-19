@@ -6,14 +6,14 @@
           <div class="col-md-4 col-xs-12 col-sm-12">
               <div class="card">
                 <div class="card-body">
-                  <h2> Login</h2>
+                  <form @submit.prevent="signIn">
                   <div class="alert alert-success" v-if="signed && msg" role="alert">
                       {{ msg }}
                   </div>
                   <div class="alert alert-danger" v-else-if="!signed && msg" role="alert">
                       {{ msg }}
                   </div>
-                  <form @submit.prevent="signIn">
+                  <h2> Login</h2>
                       <div class="form-group row ">
                          <label for="inputEmail">Email address</label>
                           <input type="text" name="emailID" class="form-control" id="inputEmail" placeholder="Email ID" v-model='email'>
@@ -89,7 +89,7 @@ export default {
             }
           })
         } else {
-          this.msg = 'User not registered!!'
+          this.msg = 'User is not registered!!'
           this.signed = false
         }
       })
@@ -100,7 +100,7 @@ export default {
 
 <style scoped>
 .card {
-  padding: 40px !important;
+  padding: 5px !important;
   margin-top: 5em;
 }
 .btn{

@@ -26,23 +26,29 @@ var SignUpModel = mongoose.model('SignUpModel', {
 });
 module.exports.SignUpModel = SignUpModel
 
-var CodeWords = mongoose.model('CodeWords', {
+var CodeWordSetModel = mongoose.model('CodeWordSetModel', {
   CodeWordSetName: {
        type: String,
        require: true,
-       length: 25
-
+       minlength: 3
    },
-
-   Codeword:{
-    type: String,
+   CodeWords:{
+    type: Array,
     require: true,
+   },
+   instructorEmail: {
+    type: String,
+    require: true
+   },
+   codeWordSize: {
+       type: Number,
+       require: true
    }
 });
 
-module.exports.Codewords = CodeWords
+module.exports.CodeWordSetModel = CodeWordSetModel
 
-var CodeWordSetModel = mongoose.model('CodeWordSetModel', {
+var CodeWordSetChooseModel = mongoose.model('CodeWordSetChooseModel', {
    CodeWordSetName: {
     type: String,
     required: true,
@@ -54,7 +60,7 @@ var CodeWordSetModel = mongoose.model('CodeWordSetModel', {
 }
 });
 
-module.exports.CodeWordSetModel = CodeWordSetModel
+module.exports.CodeWordSetChooseModel = CodeWordSetChooseModel
 
 var EventStudent = mongoose.model('EventStudent', {
   EventNameKey1: {

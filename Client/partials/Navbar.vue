@@ -24,9 +24,9 @@
                     </li>
                       <li class="nav-item dropdown">
                       <div class="dropdown">
-                      <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       {{ email }}
-                      </button>
+                      </a>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                           <a class="dropdown-item" @click.prevent="changePassword" >Change Password</a>
                           <a class="dropdown-item" @click.prevent="onLogout" >Logout</a>
@@ -89,5 +89,8 @@ export default {
 li a {
   color: white;
   padding-left: 1em;
+}
+#dropdownMenuButton{
+  color: white
 }
 </style>
