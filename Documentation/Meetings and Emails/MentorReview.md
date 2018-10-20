@@ -1,6 +1,5 @@
 ## On Friday 5th oct 2018 I(Anurag) and Sreelekha had a client meeting with Dr. Hoot and he has suggested following changes in the presence of Dr. Case.
 
-Client comments (with mentor review)
 | ID | Mentor's Comments                                                                                                                                        | Developer Working on It | Status | Comments |
 |----|----------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|--------|----------|
 | 1  | 'Password doesn’t match' needs to be paraphrased. "Passwords do not match."                                                                              | Naveen                  | Done   |          |
