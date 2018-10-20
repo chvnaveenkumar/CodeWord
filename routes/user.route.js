@@ -18,6 +18,6 @@ router.post('/validateEmail', usersController.validateEmail);
 router.post('/sendmail', usersController.tempPassword);
 router.post('/changepassword', usersController.changePassword);
 router.post('/codeWordFile', multer().single('file'), usersController.uploadfile);
-router.get('/getCodeWordSet', usersController.getCodewordSet);
-
+router.get('/getAllCodeWordSet', usersController.getAllCodewordSet);
+router.get('/getUserCodeWordSet', usersController.getUserCodewordSet);
 module.exports = router;

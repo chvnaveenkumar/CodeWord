@@ -5,9 +5,6 @@
          <!-- Button trigger modal -->
 
   <i class="fas fa-plus-circle fa-2x  tooltip-test"   title="Add Course"   data-toggle="modal" data-target="#addcourse"  style="color:green; float: left; margin-left:1em">Add Course</i>
-
-
-
 <!-- modal -->
 <div class="modal fade" id="addcourse" tabindex="-1" role="dialog" aria-labelledby="addcourseLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -94,8 +91,7 @@
   </div>
 </div>
 </div> -->
-      </div>
-      </div>      
+      </div>    
 </template>
 
 

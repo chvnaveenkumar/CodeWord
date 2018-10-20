@@ -147,13 +147,22 @@ let uploadfile = (req,res) => {
 }
 module.exports.uploadfile = uploadfile
 
+let getAllCodewordSet = (req, res) =>{
+    CodeWordSetModel.find({instructorEmail: req.session.email }, function (err, CodeWordSetAll) {
+        if(err){
+            return res.json({ code: 200, message: 'Email id not registered!!'});
+        }
+        return res.json(CodeWordSetAll);
+    });
+}
+module.exports.getAllCodewordSet = getAllCodewordSet
 
-let getCodewordSet = (req, res) =>{
-    CodeWordSetModel.find({instructorEmail: req.session.email}, function (err, CodeWordSet) {
+let getUserCodewordSet = (req, res) =>{
+    CodeWordSetModel.find({instructorEmail: req.session.email }, function (err, CodeWordSet) {
         if(err){
             return res.json({ code: 200, message: 'Email id not registered!!'});
         }
         return res.json(CodeWordSet);
     });
 }
-module.exports.getCodewordSet = getCodewordSet
+module.exports.getUserCodewordSet = getUserCodewordSet
