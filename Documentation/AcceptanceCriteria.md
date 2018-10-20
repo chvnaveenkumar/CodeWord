@@ -67,6 +67,51 @@
 | Once clicking on that Code-word dropdown arrow symbol, he/she should be able to view “Create Code-word Set” and “Delete Code-word Set” option                                                                 |        |          |
 | After clicking on “Create Code-word Set” from the drop-down list, he/she should be redirected to Code-Word set page where they should be able to view Basic Small and Basic Large code-word sets inthe dropdown list but they should not have any acces to delete those code-word sets                                                 |        |          |
 
+## 2.05 - As an instructor, I want to create a new course by adding a list of students (containing one *.edu email & one name field for each student), selecting a codeword set from a drop-down that shows the name of the set with the calculated count in parenthesis, and setting the start date (default to today) and end date (defaulted to 4 Months after then start date) for the course, and a pre-survey URL, and a post-survey URL. Team: implement either cut & paste a tab or comma separated list of students OR offer to import by selecting a csv file or Excel file in the proper format). 
 
+|                             Acceptance Criteria                            | Yes/No | Comments |
+|:--------------------------------------------------------------------------:|--------|----------|
+| User should be able to add students lists by uploading names and Email Id. |        |          |
+| User should be able to select codeword set from dropdown list .            |        |          |
+| User should be able to add new course                                      |        |          |
+| And also able to set start date and end date for the course                |        |          |
+| User should able to enter Survey Start URL                                 |        |          |
+| User should able to enter Survey End URL                                   |        |          |
 
+## 2.06 - As an instructor, if I click on “View Students” I want to see a list of students for the selected course (emails and names) and want to see the calculated count of students in that course.
+|                                        Acceptance Criteria                                       | Yes/No | Comments |
+|:------------------------------------------------------------------------------------------------:|--------|----------|
+| If user clicks on “View Students”, list of students for the selected course should be displayed. |        |          |
+| Email address and names should be included while displaying the list of students.                |        |          |
+| User can see the calculated count of the students in the selected course.                        |        |          |
 
+## 2.07 - As an instructor, when I view my list of active courses, for each active course, I want to see:
+    a. The unique name,
+
+    b. The codeword set name with the calculated count of words,
+
+    c. The start date and the end date,
+
+    d. The pre-survey URL and the post-survey URL
+
+    e. An option to “View N Students”,
+
+    f. An option to “Edit”,
+
+    g. An option to “Delete” an active course (expired courses will be not appear)
+    
+|                                                   Acceptance Criteria                                                  | Yes/No | Comments |
+|:----------------------------------------------------------------------------------------------------------------------:|--------|----------|
+| User should be able to see a unique name for the codeword set.                                                         |        |          |
+| User should be able to see the codeword set name which is selected from dropdown list.                                 |        |          |
+| User should also able to see the calculated count of words in the set by  selecting a code word set from dropdown box. |        |          |
+| User should be able to see the Start date and End date for courses                                                     |        |          |
+| User must be able to see pre-survey URL and the post-survey URL                                                        |        |          |
+| User must able to see the calculated count of the students in the  selected course                                     |        |          |
+| User must be able to see the edit option to edit the student names  and Email ID                                       |        |          |
+| User must be able to see delete option to delete an active course.                                                     |        |          |
+## 2.08 - As an instructor, I want one codeword from the specified set to be randomly assigned to only one student and each student must have a unique codeword in that course and each codeword can only be issued once in each course (or not used at all) when a course is created.
+|                                  Acceptance Criteria                                  | Yes/No | Comments |
+|:-------------------------------------------------------------------------------------:|--------|----------|
+| User should be able to see the unique codeword for each student in every course       |        |          |
+| when course is created user should be able to see the unique codeword in each course. |        |          |
