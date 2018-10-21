@@ -18,8 +18,8 @@
     <input type="text" class="form-control" id="formGroupExampleInput" v-model="codeWordFileName" placeholder="Enter CodeWord Set Name">
   </div>
   <div class="form-group">
-    <label for="exampleFormControlFile1" style="float:left" >Upload CodeWord Set(Excel)</label>
     <input type="file" class="form-control-file" id="file" ref="file" v-on:change="handleFileUpload()">
+    Upload CodeWord Set(Excel)
   </div>
 </form>
       </div>
