@@ -272,8 +272,9 @@ var store = new __WEBPACK_IMPORTED_MODULE_1_Vuex__["a" /* default */].Store({
     return {
       msg: '',
       signed: false,
-      email: '',
-      instructor: false
+      emailid: '',
+      instructor: false,
+      pass: ''
     };
   },
 
@@ -281,47 +282,54 @@ var store = new __WEBPACK_IMPORTED_MODULE_1_Vuex__["a" /* default */].Store({
     signIn: function signIn() {
       var _this2 = this;
 
+      var data = new FormData(document.querySelector('form'));
+      this.emailid = data.get('emailID');
+      this.pass = data.get('password');
       this.msg = '';
-      var emailid = this.email;
-      axios({
-        method: 'post',
-        url: 'codeword/validateEmail',
-        data: {
-          email: emailid
-        }
-      }).then(function (res) {
-        if (res.data.message === true) {
-          _this2.msg = '';
-          var data = new FormData(document.querySelector('form'));
-          /* global axios */
-          axios.post('codeword/signin', {
-            email: data.get('emailID'),
-            password: data.get('password')
-          }).then(function (response) {
-            if (response.data.token) {
-              _this2.msg = 'Signed in successfully. Redirecting .';
-              _this2.signed = true;
-              localStorage.setItem('token', response.data.token);
-              var _this = _this2;
-              setTimeout(function () {
-                if (data.get('password').length === 5) {
-                  _this.$router.push({ name: 'ChangePassword', params: { loginrole: _this.instructor } });
-                } else if (_this.instructor === false) {
-                  _this.$router.push({ name: 'StudentDashboard' });
-                } else {
-                  _this.$router.push({ name: 'InstructorDashboard' });
-                }
-              }, 1000);
-            } else {
-              _this2.msg = response.data.message;
-              _this2.signed = false;
-            }
-          });
-        } else {
-          _this2.msg = 'User is not registered!!';
-          _this2.signed = false;
-        }
-      });
+      if (this.emailid === null) {
+        this.msg = 'Email ID cannot be empty';
+        this.signed = false;
+      } else {
+        axios({
+          method: 'post',
+          url: 'codeword/validateEmail',
+          data: {
+            email: this.emailid
+          }
+        }).then(function (res) {
+          if (res.data.message === true) {
+            _this2.msg = '';
+            var _data = new FormData(document.querySelector('form'));
+            /* global axios */
+            axios.post('codeword/signin', {
+              email: _this2.emailid,
+              password: _this2.pass
+            }).then(function (response) {
+              if (response.data.token) {
+                _this2.msg = 'Signed in successfully. Redirecting .';
+                _this2.signed = true;
+                localStorage.setItem('token', response.data.token);
+                var _this = _this2;
+                setTimeout(function () {
+                  if (_data.get('password').length === 5) {
+                    _this.$router.push({ name: 'ChangePassword', params: { loginrole: _this.instructor } });
+                  } else if (_this.instructor === false) {
+                    _this.$router.push({ name: 'StudentDashboard' });
+                  } else {
+                    _this.$router.push({ name: 'InstructorDashboard' });
+                  }
+                }, 1000);
+              } else {
+                _this2.msg = response.data.message;
+                _this2.signed = false;
+              }
+            });
+          } else {
+            _this2.msg = 'User is not registered!!';
+            _this2.signed = false;
+          }
+        });
+      }
     }
   }
 });
@@ -1082,7 +1090,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].use(__WEBPACK_IMPORTED_MODU
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Home_vue__ = __webpack_require__(24);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_4641ed06_hasScoped_true_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Home_vue__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5cf2c6a1_hasScoped_true_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Home_vue__ = __webpack_require__(60);
 function injectStyle (ssrContext) {
   __webpack_require__(59)
 }
@@ -1097,12 +1105,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-4641ed06"
+var __vue_scopeId__ = "data-v-5cf2c6a1"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Home_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_4641ed06_hasScoped_true_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Home_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5cf2c6a1_hasScoped_true_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Home_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -1182,7 +1190,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5fa8f5d2_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_InstructorDashboard_vue__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_4fae8ac1_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_InstructorDashboard_vue__ = __webpack_require__(88);
 function injectStyle (ssrContext) {
   __webpack_require__(87)
 }
@@ -1201,7 +1209,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __vue_script__,
-  __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5fa8f5d2_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_InstructorDashboard_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_4fae8ac1_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_InstructorDashboard_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -1225,7 +1233,7 @@ var Component = normalizeComponent(
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container-fluid",staticStyle:{"margin-top":"5em"}},[_c('div',{staticClass:"col-md-4 col-lg-4 col-xs-0 col-sm-0"},[_c('button',{staticClass:"btn btn-success",attrs:{"type":"button","title":"Create CodeWord Set","data-toggle":"modal","data-target":"#addcourse"}},[_c('span',{staticClass:"fa fa-plus"}),_vm._v(" Add Course\n          ")]),_vm._v(" "),_c('div',{staticClass:"modal fade",attrs:{"id":"addcourse","tabindex":"-1","role":"dialog","aria-labelledby":"addcourseLabel","aria-hidden":"true"}},[_c('div',{staticClass:"modal-dialog",attrs:{"role":"document"}},[_c('div',{staticClass:"modal-content",staticStyle:{"width":"fit-content"}},[_c('div',{staticClass:"modal-header"},[_c('h5',{staticClass:"modal-title",attrs:{"id":"addcourseLabel"}},[_vm._v("Add Course")]),_vm._v(" "),_c('button',{staticClass:"close",attrs:{"type":"button","data-dismiss":"modal","aria-label":"Close"}},[_c('span',{attrs:{"aria-hidden":"true"}},[_vm._v("×")])])]),_vm._v(" "),_c('div',{staticClass:"modal-body"},[_c('form',[_c('div',{staticClass:"form-group"},[_c('input',{staticClass:"form-control",attrs:{"type":"text","id":"formGroupExampleInput","placeholder":"Enter Course Name","data-toggle":"tooltip","data-placement":"bottom","title":"Enter Course Name"}})]),_vm._v(" "),_c('div',{staticClass:"form-group"},[_c('input',{staticClass:"form-control",attrs:{"type":"text","id":"formGroupExampleInput2","placeholder":"Enter Section Number","data-toggle":"tooltip","data-placement":"bottom","title":"Enter Section Number"}})]),_vm._v(" "),_c('form',[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col tooltip-test",attrs:{"title":"Start Date"}},[_vm._v("\n      StartDate:\n      "),_c('input',{staticClass:"form-control",attrs:{"type":"date","placeholder":"Start Date"}})]),_vm._v(" "),_c('div',{staticClass:"col tooltip-test",attrs:{"title":"End Date"}},[_vm._v("\n      EndDate:\n      "),_c('input',{staticClass:"form-control",attrs:{"type":"date","placeholder":"End Date"}})])]),_vm._v(" "),_c('div',{staticClass:"form-group"},[_c('input',{staticClass:"form-control-file",staticStyle:{"margin-top":"1em"},attrs:{"type":"file","id":"exampleFormControlFile1"}}),_vm._v("\n    Upload Student Details(Excel)\n  ")]),_vm._v(" "),_c('div',{staticClass:"form-group"},[_c('select',{staticClass:"form-control form-control-sm"},[_c('option',[_vm._v("Select Codeword set")])])]),_vm._v(" "),_c('div',{staticClass:"form-group"},[_c('input',{staticClass:"form-control",attrs:{"type":"text","id":"formGroupExampleInput","placeholder":"Enter Survey Start URL","data-toggle":"tooltip","data-placement":"bottom","title":"Enter Survey Start URL"}})]),_vm._v(" "),_c('div',{staticClass:"form-group"},[_c('input',{staticClass:"form-control",attrs:{"type":"text","id":"formGroupExampleInput","placeholder":"Enter Survey End URL","data-toggle":"tooltip","data-placement":"bottom","title":"Enter Survey End URL"}})])])])]),_vm._v(" "),_c('div',{staticClass:"modal-footer"},[_c('button',{staticClass:"btn btn-warning",attrs:{"type":"button","data-dismiss":"modal"}},[_vm._v("Cancel")]),_vm._v(" "),_c('button',{staticClass:"btn btn-primary",attrs:{"type":"button"}},[_vm._v("Add")])])])])])])])}]
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container-fluid",staticStyle:{"margin-top":"5em"}},[_c('div',{staticClass:"col-md-4 col-lg-4 col-xs-0 col-sm-0"},[_c('button',{staticClass:"btn btn-success",attrs:{"type":"button","title":"Create CodeWord Set","data-toggle":"modal","data-target":"#addcourse"}},[_c('span',{staticClass:"fa fa-plus"}),_vm._v(" Add Course\r\n                ")]),_vm._v(" "),_c('div',{staticClass:"modal fade",attrs:{"id":"addcourse","tabindex":"-1","role":"dialog","aria-labelledby":"addcourseLabel","aria-hidden":"true"}},[_c('div',{staticClass:"modal-dialog",attrs:{"role":"document"}},[_c('div',{staticClass:"modal-content",staticStyle:{"width":"fit-content"}},[_c('div',{staticClass:"modal-header"},[_c('h5',{staticClass:"modal-title",attrs:{"id":"addcourseLabel"}},[_vm._v("Add Course")]),_vm._v(" "),_c('button',{staticClass:"close",attrs:{"type":"button","data-dismiss":"modal","aria-label":"Close"}},[_c('span',{attrs:{"aria-hidden":"true"}},[_vm._v("×")])])]),_vm._v(" "),_c('div',{staticClass:"modal-body"},[_c('form',[_c('div',{staticClass:"form-group"},[_c('input',{staticClass:"form-control",attrs:{"type":"text","id":"formGroupExampleInput","placeholder":"Enter Course Name","data-toggle":"tooltip","data-placement":"bottom","title":"Enter Course Name"}})]),_vm._v(" "),_c('div',{staticClass:"form-group"},[_c('input',{staticClass:"form-control",attrs:{"type":"text","id":"formGroupExampleInput2","placeholder":"Enter Section Number","data-toggle":"tooltip","data-placement":"bottom","title":"Enter Section Number"}})]),_vm._v(" "),_c('form',[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col tooltip-test",attrs:{"title":"Start Date"}},[_vm._v("\r\n                                                StartDate:\r\n                                                "),_c('input',{staticClass:"form-control",attrs:{"type":"date","placeholder":"Start Date"}})]),_vm._v(" "),_c('div',{staticClass:"col tooltip-test",attrs:{"title":"End Date"}},[_vm._v("\r\n                                                EndDate:\r\n                                                "),_c('input',{staticClass:"form-control",attrs:{"type":"date","placeholder":"End Date"}})])]),_vm._v(" "),_c('div',{staticClass:"form-group"},[_c('input',{staticClass:"form-control-file",staticStyle:{"margin-top":"1em"},attrs:{"type":"file","id":"exampleFormControlFile1"}}),_vm._v("\r\n                                            Upload Student Details(Excel)\r\n                                        ")]),_vm._v(" "),_c('div',{staticClass:"form-group"},[_c('select',{staticClass:"form-control form-control-sm"},[_c('option',[_vm._v("Select Codeword set")])])]),_vm._v(" "),_c('div',{staticClass:"form-group"},[_c('input',{staticClass:"form-control",attrs:{"type":"text","id":"formGroupExampleInput","placeholder":"Enter Survey Start URL","data-toggle":"tooltip","data-placement":"bottom","title":"Enter Survey Start URL"}})]),_vm._v(" "),_c('div',{staticClass:"form-group"},[_c('input',{staticClass:"form-control",attrs:{"type":"text","id":"formGroupExampleInput","placeholder":"Enter Survey End URL","data-toggle":"tooltip","data-placement":"bottom","title":"Enter Survey End URL"}})])])])]),_vm._v(" "),_c('div',{staticClass:"modal-footer"},[_c('button',{staticClass:"btn btn-warning",attrs:{"type":"button","data-dismiss":"modal"}},[_vm._v("Cancel")]),_vm._v(" "),_c('button',{staticClass:"btn btn-primary",attrs:{"type":"button"}},[_vm._v("Add")])])])])])]),_vm._v(" "),_c('div',{staticClass:"card",staticStyle:{"width":"20rem","margin-left":"3em","background-color":"#41f4b2"}},[_c('div',{staticClass:"card-body"},[_c('h5',{staticClass:"card-title"},[_vm._v("Mobile Computing - Android")]),_vm._v(" "),_c('h6',{staticClass:"card-subtitle mb-2 text-muted"},[_vm._v("44644-01")]),_vm._v(" "),_c('pre',[_vm._v("10/21/2018      12/21/2018")]),_vm._v(" "),_c('a',{staticClass:"card-link",attrs:{"href":"#"}},[_vm._v("Survey Start URL")]),_vm._v(" "),_c('a',{staticClass:"card-link",attrs:{"href":"#"}},[_vm._v("Survey End URL")]),_vm._v(" "),_c('a',{staticClass:"card-link",attrs:{"href":"#"}},[_c('i',{staticClass:"fas fa-eye"})]),_vm._v(" "),_c('a',{staticClass:"card-link",attrs:{"href":"#"}},[_c('i',{staticClass:"fas fa-trash"})])])])])}]
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
@@ -1379,4 +1387,4 @@ var Component = normalizeComponent(
 /***/ })
 
 },[46]);
-//# sourceMappingURL=app.623170a47a58d23e4426.js.map
+//# sourceMappingURL=app.47b357433274d0211b57.js.map

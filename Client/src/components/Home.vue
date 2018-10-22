@@ -46,53 +46,61 @@ export default {
     return {
       msg: '',
       signed: false,
-      email: '',
-      instructor: false
+      emailid: '',
+      instructor: false,
+      pass: ''
     }
   },
   methods: {
     signIn () {
+      let data = new FormData(document.querySelector('form'))
+      this.emailid = data.get('emailID')
+      this.pass = data.get('password')
       this.msg = ''
-      let emailid = this.email
-      axios({
-        method: 'post',
-        url: 'codeword/validateEmail',
-        data: {
-          email: emailid
-        }
-      }).then(res => {
-        if (res.data.message === true) {
-          this.msg = ''
-          let data = new FormData(document.querySelector('form'))
-          /* global axios */
-          axios.post('codeword/signin', {
-            email: data.get('emailID'),
-            password: data.get('password')
-          }).then(response => {
-            if (response.data.token) {
-              this.msg = 'Signed in successfully. Redirecting .'
-              this.signed = true
-              localStorage.setItem('token', response.data.token)
-              let _this = this
-              setTimeout(function () {
-                if (data.get('password').length === 5) {
-                  _this.$router.push({ name: 'ChangePassword', params: { loginrole: _this.instructor } })
-                } else if (_this.instructor === false) {
-                  _this.$router.push({ name: 'StudentDashboard' })
-                } else {
-                  _this.$router.push({ name: 'InstructorDashboard' })
-                }
-              }, 1000)
-            } else {
-              this.msg = response.data.message
-              this.signed = false
-            }
-          })
-        } else {
-          this.msg = 'User is not registered!!'
-          this.signed = false
-        }
-      })
+      if (this.emailid === null) {
+        this.msg = 'Email ID cannot be empty'
+        this.signed = false
+      } else {
+        axios({
+          method: 'post',
+          url: 'codeword/validateEmail',
+          data: {
+            email: this.emailid
+          }
+        }).then(res => {
+          if (res.data.message === true) {
+            this.msg = ''
+            let data = new FormData(document.querySelector('form'))
+            /* global axios */
+            axios.post('codeword/signin', {
+              email: this.emailid,
+              password: this.pass
+            }).then(response => {
+              if (response.data.token) {
+                this.msg = 'Signed in successfully. Redirecting .'
+                this.signed = true
+                localStorage.setItem('token', response.data.token)
+                let _this = this
+                setTimeout(function () {
+                  if (data.get('password').length === 5) {
+                    _this.$router.push({ name: 'ChangePassword', params: { loginrole: _this.instructor } })
+                  } else if (_this.instructor === false) {
+                    _this.$router.push({ name: 'StudentDashboard' })
+                  } else {
+                    _this.$router.push({ name: 'InstructorDashboard' })
+                  }
+                }, 1000)
+              } else {
+                this.msg = response.data.message
+                this.signed = false
+              }
+            })
+          } else {
+            this.msg = 'User is not registered!!'
+            this.signed = false
+          }
+        })
+      }
     }
   }
 }
