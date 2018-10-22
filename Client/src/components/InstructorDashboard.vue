@@ -70,6 +70,38 @@
       <!-- <div class="row">
       <div class="col-md-4 col-lg-4 col-xs-6 col-sm-6" >
 
+      <div class="card">
+  <img src="img_avatar.png" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>John</b></h4> 
+    <p>Java</p> 
+  </div>
+</div>
+
+<div class="card">
+  <img src="img_avatar.png" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Shawn</b></h4> 
+    <p>Software Development and Design</p> 
+  </div>
+</div>
+
+<div class="card">
+  <img src="img_avatar.png" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Micheals</b></h4> 
+    <p>Big Data Analysis</p> 
+  </div>
+</div>
+
+<div class="card">
+  <img src="img_avatar.png" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Doe</b></h4> 
+    <p>Human Computer Interaction</p> 
+  </div>
+</div>
+
         <div class="card" style="width: 18rem; margin-left:2em;margin-top:2em; margin-right:20em">
   <img class="card-img-top" src="./android.jpg" alt="Card image cap">
   <div class="card-body">
@@ -98,6 +130,20 @@
 <style>
 #message{
     margin-top:5em;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 2px 16px;
 }
 </style>
 
