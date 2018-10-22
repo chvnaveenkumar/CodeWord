@@ -14,6 +14,7 @@ window.axios = axios.create({
   baseURL: process.env.URL,
   timeout: 1000
 })
+window.$ = require('jquery')
 Vue.use(VueSweetalert2)
 Vue.use(Vuelidate)
 Vue.config.productionTip = false

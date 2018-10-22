@@ -25,7 +25,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-warning" data-dismiss="modal">CANCEL</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" v-on:click="codewordFileUpload()">CREATE</button>
+        <button type="button" class="btn btn-primary" v-on:click="codewordFileUpload()">CREATE</button>
       </div>
     </div>
   </div>
@@ -157,7 +157,7 @@ export default {
       let formData = new FormData()
       formData.append('codeWordFileName', this.codeWordFileName)
       formData.append('file', this.file)
-      /* global axios */
+      /* global axios $ */
       axios.post('codeword/codeWordFile',
         formData, {
           headers: {
@@ -165,9 +165,11 @@ export default {
             token: window.localStorage.getItem('token')
           }
         }).then(res => {
+        $('#createCodeWordSet').modal('hide')
       })
         .catch(() => {
           console.log('Failure')
+          $('#createCodeWordSet').modal('hide')
         })
     },
     handleFileUpload () {
