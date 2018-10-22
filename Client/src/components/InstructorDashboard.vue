@@ -15,16 +15,12 @@
                             </div>
                             <div class="modal-body">
                                 <form>
-                                    <div class="form-group" >
-
+                                    <div class="form-group">
                                         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Course Name" data-toggle="tooltip" data-placement="bottom" title="Enter Course Name"   >
                                     </div>
-
                                     <div class="form-group">
-
                                         <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter Section Number" data-toggle="tooltip" data-placement="bottom" title="Enter Section Number" >
                                     </div>
-                                    <form>
                                         <div class="row">
                                             <div class="col tooltip-test"   title="Start Date">
                                                 StartDate:
@@ -46,11 +42,9 @@
                                             </select>
                                         </div>
                                         <div class="form-group" >
-
                                             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Survey Start URL"  data-toggle="tooltip" data-placement="bottom" title="Enter Survey Start URL" >
                                         </div>
                                         <div class="form-group" >
-
                                             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Survey End URL"  data-toggle="tooltip" data-placement="bottom" title="Enter Survey End URL" >
                                         </div>
 
@@ -150,8 +144,6 @@
           
         </div>
       </div></div>
-            
-
 </template>
 
 

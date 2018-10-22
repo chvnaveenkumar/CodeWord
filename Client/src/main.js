@@ -9,11 +9,13 @@ import 'bootstrap-css-only/css/bootstrap.min.css'
 import 'mdbvue/build/css/mdb.css'
 import {store} from './store'
 import 'font-awesome/css/font-awesome.min.css'
+import VueSweetalert2 from 'vue-sweetalert2'
 window.axios = axios.create({
   baseURL: process.env.URL,
   timeout: 1000
 })
-
+window.$ = require('jquery')
+Vue.use(VueSweetalert2)
 Vue.use(Vuelidate)
 Vue.config.productionTip = false
 require('bootstrap')

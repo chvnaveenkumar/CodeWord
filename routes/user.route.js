@@ -20,4 +20,5 @@ router.post('/changepassword', usersController.changePassword);
 router.post('/codeWordFile', multer().single('file'), usersController.uploadfile);
 router.get('/getAllCodeWordSet', usersController.getAllCodewordSet);
 router.get('/getUserCodeWordSet', usersController.getUserCodewordSet);
+router.get('/deleteUserCodeWordSet', usersController.deleteUserCodeWordSet);
 module.exports = router;

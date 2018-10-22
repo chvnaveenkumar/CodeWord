@@ -50,7 +50,7 @@
       </div>
       <div class="modal-body">
    <form>
-  <select v-model="selected">
+  <select>
   <option v-for="element of codeWordSetUser" :key="element.CodeWordSetName">{{ element.CodeWordSetName }} </option>
 </select>
 </form>
@@ -154,11 +154,10 @@ export default {
         })
     },
     codewordFileUpload () {
-      console.log('inside codeword file' + this.file)
       let formData = new FormData()
       formData.append('codeWordFileName', this.codeWordFileName)
       formData.append('file', this.file)
-      /* global axios */
+      /* global axios $ */
       axios.post('codeword/codeWordFile',
         formData, {
           headers: {
@@ -166,10 +165,11 @@ export default {
             token: window.localStorage.getItem('token')
           }
         }).then(res => {
-        console.log('sent success full')
+        $('#createCodeWordSet').modal('hide')
       })
         .catch(() => {
           console.log('Failure')
+          $('#createCodeWordSet').modal('hide')
         })
     },
     handleFileUpload () {
