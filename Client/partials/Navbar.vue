@@ -28,8 +28,8 @@
                       {{ email }}
                       </a>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" @click.prevent="changePassword" >Change Password</a>
-                          <a class="dropdown-item" @click.prevent="onLogout" >Logout</a>
+                          <a class="dropdown-item" @click.prevent="changePassword" >Change Password</a>                                            
+                          <a class="dropdown-item" @click.prevent="onLogout" >   Logout <img id="bg"src="https://cdn3.iconfinder.com/data/icons/basic-colored/1024/shutdown-128.png" style="width:50px;height:30px" > </a>
                       </div>
                       </div>
                       </li>
@@ -89,7 +89,17 @@ export default {
 li a {
   color: white;
   padding-left: 1em;
+  
 }
+#bg{
+  position: absolute;
+    bottom: 50px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 2em;
+    padding: 20px;
+}
+
 #dropdownMenuButton{
   color: white
 }
