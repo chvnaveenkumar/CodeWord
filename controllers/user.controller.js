@@ -130,7 +130,9 @@ let uploadfile = (req,res) => {
     var data = []
     var workbook = XLSX.read(req.file.buffer, {type:"buffer"})
     _.each(XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]]), function(ele,index,list){
-    data.push(ele.Test1)
+    for(firstKey in ele)
+    data.push(ele[firstKey])
+    console.log(ele[firstKey])
   })
     var codeWordSetModel = new CodeWordSetModel({
          CodeWordSetName: req.body.codeWordFileName,
@@ -148,7 +150,9 @@ let uploadfile = (req,res) => {
 module.exports.uploadfile = uploadfile
 
 let getAllCodewordSet = (req, res) =>{
-    CodeWordSetModel.find({instructorEmail: req.session.email }, function (err, CodeWordSetAll) {
+    console.log(req.session.email);
+    console.log('getallcodewordset');
+    CodeWordSetModel.find({instructorEmail: { $in: [req.session.email, "largecodewordset","smallcodewordset"] } }, function (err, CodeWordSetAll) {
         if(err){
             return res.json({ code: 200, message: 'Email id not registered!!'});
         }
@@ -166,3 +170,9 @@ let getUserCodewordSet = (req, res) =>{
     });
 }
 module.exports.getUserCodewordSet = getUserCodewordSet
+
+let deleteUserCodeWordSet = (req, res) => {
+
+}
+module.exports.deleteUserCodeWordSet = deleteUserCodeWordSet
+

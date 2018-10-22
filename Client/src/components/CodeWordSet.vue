@@ -25,7 +25,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-warning" data-dismiss="modal">CANCEL</button>
-        <button type="button" class="btn btn-primary" v-on:click="codewordFileUpload()">CREATE</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" v-on:click="codewordFileUpload()">CREATE</button>
       </div>
     </div>
   </div>
@@ -50,7 +50,7 @@
       </div>
       <div class="modal-body">
    <form>
-  <select v-model="selected">
+  <select>
   <option v-for="element of codeWordSetUser" :key="element.CodeWordSetName">{{ element.CodeWordSetName }} </option>
 </select>
 </form>
@@ -154,7 +154,6 @@ export default {
         })
     },
     codewordFileUpload () {
-      console.log('inside codeword file' + this.file)
       let formData = new FormData()
       formData.append('codeWordFileName', this.codeWordFileName)
       formData.append('file', this.file)
@@ -166,7 +165,6 @@ export default {
             token: window.localStorage.getItem('token')
           }
         }).then(res => {
-        console.log('sent success full')
       })
         .catch(() => {
           console.log('Failure')
