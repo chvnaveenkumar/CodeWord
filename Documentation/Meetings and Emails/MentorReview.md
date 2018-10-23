@@ -66,3 +66,34 @@
 1. Rules for creating codewords" are part of GDP 2 - use the discussions to begin building your GDP 2 requirements and user stories.
 2. This semester, record all details you can get about "rules for creating codewords" and maintain the associated user stories and requirements in your GDP 2 plan (which is due this semester).
 3. Part of the team can work on developing these requirements, but be sure to keep your focus on MVP2 and MVP3 design/sketch and development. We need to get the critical behaviors implemented fully first - and then tune appearance and additional features, etc. Create Codewords Client Comments
+
+______________________________
+
+
+### Codewords MVC implementation & responsible parties
+
+| ID                | Folder/type               | Resource (the file names will depend on the folder/type) | Responsible Party        | Task Status | Comments |
+|-------------------|---------------------------|----------------------------------------------------------|--------------------------|-------------|----------|
+|    1.             |    model                  |    User                                                  |    Naveen Chandaluri     |             |          |
+|    2.             |    model                  |    Course                                                |    Sravya                |             |          |
+|    3.             |    model                  |    CourseStudent                                         |    Vyshnavi              |             |          |
+|    4.             |    model                  |    CodewordSet                                           |    Srimai                |             |          |
+|    5.             |    model                  |    Codeword                                              |    Sreelekha             |             |          |
+|    6.             |    data                   |    User                                                  |    Ujjawal               |             |          |
+|    7.             |    data                   |    Course                                                |    Sravya                |             |          |
+|    8.             |    data                   |    CourseStudent                                         |    Vyshnavi              |             |          |
+|    9.             |    data                   |    CodewordSet                                           |    Srimai                |             |          |
+|    10.            |    data                   |    Codeword                                              |    Sreelekha             |             |          |
+|    11.            |    utils/seeder.js        |    (all)                                                 |    Anurag                |             |          |
+|    12.            |    utils/logger.js        |    (all)                                                 |    Chaitanya             |             |          |
+|    13.            |    controller             |    User                                                  |    Naveen Chandaluri     |             |          |
+|    14.            |    controller             |    Course                                                |    Sravya                |             |          |
+|    15.            |    controller             |    CourseStudent                                         |    Vyshnavi              |             |          |
+|    16.            |    controller             |    CodewordSet                                           |    Srimai                |             |          |
+|    17.            |    controller             |    Codeword                                              |    Sreelekha             |             |          |
+|    18.            |    views/user             |    User                                                  |    Naveen Chandaluri     |             |          |
+|    19.            |    views/course           |    Course                                                |    Chaitanya             |             |          |
+|    20.            |    views/coursestudent    |    CourseStudent                                         |    Anurag                |             |          |
+|    21.            |    views/codewordset      |    CodewordSet                                           |    Ujjawal               |             |          |
+|    22.            |    views/codeword         |    Codeword                                              |    Naveenkumar Nuggu     |             |          |
+|    23.            |    codeword rules         |    sets & codewords                                      |    Naveenkumar  Nuggu    |             |          |
