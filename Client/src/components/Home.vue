@@ -54,7 +54,7 @@ export default {
   methods: {
     signIn () {
       let data = new FormData(document.querySelector('form'))
-      this.emailid = data.get('emailID')
+      this.emailid = data.get('emailID').toLowerCase()
       this.pass = data.get('password')
       this.msg = ''
       if (this.emailid === null) {

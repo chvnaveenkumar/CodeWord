@@ -1,0 +1,129 @@
+
+[
+    {
+        "EmailKey": "s531519@nwmissouri.edu",
+        "Fullname": "Yashwanth Reddy Bommineni",
+        "Password": "password",
+        "IsInstructor": false
+    },
+    {
+        "EmailKey": "s530742@nwmissouri.edu",
+        "Fullname": "Naveen Kumar Chandaluri",
+        "Password": "password",
+        "IsInstructor": false
+    },
+    {
+        "EmailKey": "s531495@nwmissouri.edu",
+        "Fullname": "Chaithanya Cherukuru",
+        "Password": "password",
+        "IsInstructor": false
+    },
+    {
+        "EmailKey": "s531367@nwmissouri.edu",
+        "Fullname": "Sai Sirisha Devineni",
+        "Password": "password",
+        "IsInstructor": false
+    },
+    {
+        "EmailKey": "s531496@nwmissouri.edu",
+        "Fullname": "Shivani Reddy Dodla",
+        "Password": "password",
+        "IsInstructor": false
+    },
+    {
+        "EmailKey": "s531369@nwmissouri.edu",
+        "Fullname": "Girish Guntuku",
+        "Password": "password",
+        "IsInstructor": false
+    },
+    {
+        "EmailKey": "s531499@nwmissouri.edu",
+        "Fullname": "Saicharan Gurudu",
+        "Password": "password",
+        "IsInstructor": false
+    },
+    {
+        "EmailKey": "s531500@nwmissouri.edu",
+        "Fullname": "Sravya Kancharla",
+        "Password": "password",
+        "IsInstructor": false
+    },
+    {
+        "EmailKey": "s531372@nwmissouri.edu",
+        "Fullname": "Anurag Kumar",
+        "Password": "password",
+        "IsInstructor": false
+    },
+    {
+        "EmailKey": "s530473@nwmissouri.edu",
+        "Fullname": "Ujjawal Kumar",
+        "Password": "password",
+        "IsInstructor": false
+    },
+    {
+        "EmailKey": "s531439@nwmissouri.edu",
+        "Fullname": "Dattu Bhargav Medarametla",
+        "Password": "password",
+        "IsInstructor": false
+    },
+    {
+        "EmailKey": "s531503@nwmissouri.edu",
+        "Fullname": "Santosh Sekhar Muchkur Bogarajula",
+        "Password": "password",
+        "IsInstructor": false
+    },
+    {
+        "EmailKey": "s531373@nwmissouri.edu",
+        "Fullname": "Naveenkumar Nuggu",
+        "Password": "password",
+        "IsInstructor": false
+    },
+    {
+        "EmailKey": "s531507@nwmissouri.edu",
+        "Fullname": "Vijay Kumar Tupakula",
+        "Password": "password",
+        "IsInstructor": false
+    },
+    {
+        "EmailKey": "s531508@nwmissouri.edu",
+        "Fullname": "Satya Sai Ram Vankina",
+        "Password": "password",
+        "IsInstructor": false
+    },
+    {
+        "EmailKey": "s531382@nwmissouri.edu",
+        "Fullname": "Sreelekha Vijaya",
+        "Password": "password",
+        "IsInstructor": false
+    },
+    {
+        "EmailKey": "mwoolery@nwmissouri.edu",
+        "Fullname": "Matthew Woolery",
+        "Password": "password",
+        "IsInstructor": false
+    },
+    {
+        "EmailKey": "s531383@nwmissouri.edu",
+        "Fullname": "Vyshnavi Yalamareddy",
+        "Password": "password",
+        "IsInstructor": false
+    },
+    {
+        "EmailKey": "s531384@nwmissouri.edu",
+        "Fullname": "Srimai Reddy Yanala",
+        "Password": "password",
+        "IsInstructor": false
+    },
+    {
+        "EmailKey": "hoot@nwmissouri.edu",
+        "Fullname": "Charles Hoot",
+        "Password": "password",
+        "IsInstructor": true
+    },
+    {
+        "EmailKey": "dcase@nwmissouri.edu",
+        "Fullname": "Denise Case",
+        "Password": "password",
+        "IsInstructor": true
+    }
+]
