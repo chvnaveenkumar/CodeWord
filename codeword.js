@@ -13,8 +13,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 // view engine setup
-app.set('views', path.join(__dirname, './Client/dist'));
-app.use(express.static(path.join(__dirname, './Client/dist')));
+app.set('views', path.join(__dirname, './views/dist'));
+app.use(express.static(path.join(__dirname, './views/dist')));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

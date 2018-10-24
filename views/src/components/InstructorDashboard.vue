@@ -47,7 +47,6 @@
                                         <div class="form-group" >
                                             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Survey End URL"  data-toggle="tooltip" data-placement="bottom" title="Enter Survey End URL" >
                                         </div>
-
                                     </form>
                             </div>
                             <div class="modal-footer">

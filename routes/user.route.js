@@ -17,8 +17,4 @@ router.post('/details', usersController.details);
 router.post('/validateEmail', usersController.validateEmail);
 router.post('/sendmail', usersController.tempPassword);
 router.post('/changepassword', usersController.changePassword);
-router.post('/codeWordFile', multer().single('file'), usersController.uploadfile);
-router.get('/getAllCodeWordSet', usersController.getAllCodewordSet);
-router.get('/getUserCodeWordSet', usersController.getUserCodewordSet);
-router.get('/deleteUserCodeWordSet', usersController.deleteUserCodeWordSet);
 module.exports = router;

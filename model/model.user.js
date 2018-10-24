@@ -1,3 +1,7 @@
+/**
+ * @author Naveen Kumar Chandaluri <S530742@nwmissouri.edu>
+ */
+
 var mongoose = require('mongoose');
 var validator = require('validator');
 

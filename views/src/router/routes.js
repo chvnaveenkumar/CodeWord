@@ -1,11 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/Home'
-import Signup from '@/components/Signup'
+import Home from '@/components/User/Home'
+import Signup from '@/components/User/Signup'
 import InstructorDashboard from '@/components/InstructorDashboard'
-import ForgetPassword from '@/components/ForgetPassword'
-import ChangePassword from '@/components/ChangePassword'
-import CodeWordSet from '@/components/CodeWordSet'
+import ForgetPassword from '@/components/User/ForgetPassword'
+import ChangePassword from '@/components/User/ChangePassword'
 import StudentDashboard from '@/components/StudentDashboard'
 Vue.use(Router)
 
@@ -38,14 +37,6 @@ export default new Router({
       path: '/changepassword/:loginrole',
       name: 'ChangePassword',
       component: ChangePassword
-    },
-    {
-      path: '/codewordset',
-      name: 'CodeWordSet',
-      component: CodeWordSet,
-      meta: {
-        role: 'instructor'
-      }
     },
     {
       path: '/studentdashboard',

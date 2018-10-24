@@ -1,3 +1,6 @@
+/**
+ * @author Naveen Kumar Chandaluri <S530742@nwmissouri.edu>
+ */
 const nodemailer = require('nodemailer');
 const _ = require('lodash');
 var sendMail = function (email, temp_password) {
