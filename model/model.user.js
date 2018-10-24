@@ -6,7 +6,7 @@ var mongoose = require('mongoose');
 var validator = require('validator');
 
 var UserModel = mongoose.model('UserModel', {
-   email: {
+   emailKey: {
     type: String,
     required: true,
     trim: true,
@@ -18,12 +18,16 @@ var UserModel = mongoose.model('UserModel', {
         }
     }
    },
+   fullName: {
+    type: String,
+    minlength: 4
+   },
    password:{
     type: String,
     require: true,
     minlength: 6
    },
-   instructor: {
+   isInstructor: {
        type:Boolean,
        default: false
    }
