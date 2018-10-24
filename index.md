@@ -306,7 +306,8 @@ The organization-mandated risk management framework is reviewed and tailored to 
 - The Senior User/Project Executive has to be signed off on user acceptance testing.
 - For each story, enumerate and clearly describe the acceptance criteria.
 - Be specific - your client may have a very different definition of vague words.
-How to run our Project?
+
+How to run our Project :
 
 git clone https://github.com/chvnaveenkumar/CodeWord.git
 Now open our project in Visual Studio and
@@ -325,7 +326,21 @@ Now open chrome and use localhost:8080
 
 Screenshots:
 
+![Screenshot1](/Documentation/ProjectRun/Capture1.PNG)
 
+![Screenshot2](/Documentation/ProjectRun/Capture2.png)
+
+Resloving the issues :
+
+To kill the process currently using a port on localhost in windows
+
+https://stackoverflow.com/questions/39632667/how-to-kill-the-process-currently-using-a-port-on-localhost-in-windows
+
+Screenshots:
+
+![Screenshot3](/Documentation/ProjectRun/capture3.png)
+![Screenshot4](/Documentation/ProjectRun/capture4.png)
+![Screenshot5](/Documentation/ProjectRun/capture5.png)
 
 
 © 2018 GitHub, Inc.
