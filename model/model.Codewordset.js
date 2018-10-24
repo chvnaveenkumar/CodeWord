@@ -1,10 +1,12 @@
-//Srimai is responsibe for this course model.
+/**
+ *  @author Srimai Reddy Yanala <s531384@nwmissouri.edu>
+  */ 
 
 
 var mongoose = require('mongoose');
 var validator = require('validator');
 
-var CourseModel = mongoose.model('Codewordset', {
+var CodeWordSet = mongoose.model('Codewordset', {
     
     
 CodeWordSetName:{
@@ -13,4 +15,6 @@ CodeWordSetName:{
         minlength: 5,
         unique:true
        }
-    }
+
+    });
+    module.exports.CodeWordSet = CodeWordSet
