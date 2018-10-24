@@ -1,0 +1,113 @@
+<!-- main  -->
+<div class=row>
+    <div class="col col-xs-12">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" value="<%= puppy.name %>" required>
+      </div>
+      <div class="form-group">
+        <label for="breed">Breed</label>
+        <input type="text" class="form-control" id="breed" name="breed" value="<%= puppy.breed %>">
+      </div>
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input onchange="onAgeChange()" type="number" class="form-control" id="age" name="age" value="<%= puppy.age %>" required>
+      </div>
+    </div>
+  </div>
+  <hr>
+  
+  <!-- parents  -->
+  <p></p>
+  <div id="parentList">
+    <% const origParentCount = puppy.parents.length;  %>
+      <span id="parentCount">
+        <%=origParentCount%>
+      </span> Parent Entries
+      <% for (var iEntry=1; iEntry <= origParentCount; iEntry++) {  parent = puppy.parents[iEntry-1];  %>
+        <div id="oneEntry">
+          <p></p>
+          <div class=row>
+            <div class="col col-xs-4">
+              <div class="form-group">
+                <label for="parentName" name="parentNameLabel">Parent Name </label>
+                <input type="text" class="form-control" id="parentName<%=iEntry%>" name="parentName" value="<%= parent.parentName %>">
+              </div>
+            </div>
+            <div class="col col-xs-4">
+              <div class="form-group">
+                <label for="parentBreed" name="parentBreedLabel">Parent Breed</label>
+                <input type="text" class="form-control" id="parentBreed<%=iEntry%>" name="parentBreed" value="<%= parent.parentBreed %>">
+              </div>
+            </div>
+            <div class="col col-xs-4">
+              <div class="form-group">
+                <label for="parentAge" name="ageLabel">Parent Age (yrs)</label>
+                <input type="number" class="form-control" id="parentAge<%=iEntry%>" value="<%= parent.parentAge %>" name="parentAge" min="1"
+                  max=30>
+              </div>
+            </div>
+          </div>
+          <p></p>
+        </div>
+        <%  }  %>
+  </div>
+  <br/>
+  <h4>
+    Puppy Cost =
+    <span id="puppyCost"></span>
+  </h4>
+  <hr>
+  <br/>
+  <br/>
+  
+  <!-- PUT CLIENT SIDE CODE HERE -->
+  <script>  
+  
+    // function toCurrency(amount) 
+  
+    // https://gist.github.com/kylefox/780065
+    function toCurrency(amount) {
+      return "$" + amount.toFixed(2);
+    };
+  
+    // function toCurrencyInt(amount) 
+    function toCurrencyInt(amount) {
+      return "$" + amount.toFixed(0);
+    };
+  
+    // Add  .toCurrency() method to all Numbers
+    Number.prototype.toCurrency = function () {
+      return toCurrency(this);
+    };
+  
+    // Add  .toCurrencyInt() method to all Numbers
+    Number.prototype.toCurrencyInt = function () {
+      return toCurrencyInt(this);
+    };
+  
+    function onAgeChange() {
+      const newAge = parseFloat($("input[name=age]").val());
+      let price = 75
+      if (newAge == 1) {
+        price = 100
+      }
+      $("#puppyCost").html(price.toCurrencyInt());
+    }
+  
+    // window.onload = a function that will call all update functions to display calculated values
+    window.onload = function () {
+      onAgeChange();
+    }
+  
+    // prevent submission when hitting enter key - optional, but user-friendly 
+    document.forms[0].onkeypress = function (e) {
+      var key = e.charCode || e.keyCode || 0;
+      if (key == 13) {
+        e.preventDefault();
+      }
+    }
+  
+  // END CLIENT SIDE CODE  (close the script tag)
+  </script>
+  

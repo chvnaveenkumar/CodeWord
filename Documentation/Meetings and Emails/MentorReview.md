@@ -8,7 +8,7 @@
 | 4  | Make a CW icon which represents codeword - yes -   and replace in the upper left corner of the navbar.   Add a new user story to MVP 3{?).               | Anurag                  |        |          |
 | 5  | Add a + button to add a course                                                                                                                           | Naveen Nuggu            | Done   |          |
 | 6  | Warning screen should stay  bit longer - how long?  add this requirement and your delay in seconds to the user story.                                    | Ujjawal                 |        |          |
-| 7  | Instructor ability to create a course needs to be added.  Yes - but is not a part of our current MVP                                                     | Ujjawal                 |        |          |
+| 7  | Instructor ability to create a course needs to be added.  Yes - but is not a part of our current MVP                                                     |                  |        |          |
 | 8  | Email address should not be case sensitive – true, add to list of requirements for MVP 2.                                                                | Chaithanya              |        |          |
 | 9  | Logout should be easy without going through many steps -  add an "exit door" icon to the top level navbar (MVP 3?)                                       | Sravya                  |        |          |
 | 10 | There should be an icon for logout - yes - see above.                                                                                                    | Chaithanya              |        |          |
