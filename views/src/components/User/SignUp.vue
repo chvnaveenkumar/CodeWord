@@ -84,11 +84,11 @@ export default {
         console.log('validate' + res.data.message)
         let _this = this
         if (res.data.message === false) {
-        /* global axios */
+          /* global axios */
           console.log('onregister clicked fullnaem', this.email)
           axios.post('codeword/signup',
             {
-              email: this.email,
+              email: this.email.toLowerCase(),
               password: this.password
             }).then(res => {
             this.msg = 'Successfully Registered and Redirecting to SignIn Page.'

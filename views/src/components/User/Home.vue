@@ -16,7 +16,7 @@
                   <h2> Login</h2>
                       <div class="form-group row ">
                          <label for="inputEmail">Email address</label>
-                          <input type="text" name="emailID" class="form-control" id="inputEmail" placeholder="Email ID" v-model='email'>
+                          <input type="text" name="emailID" class="form-control" id="inputEmail" placeholder="Email ID">
                       </div>
                       <div class="form-group row">
                         <label for="inputPassword">Password</label>
