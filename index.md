@@ -326,7 +326,7 @@ Now open chrome and use localhost:8080
 
 Screenshots:
 
-![Screenshot1](/Documentation/ProjectRun/Capture1.PNG)
+![Screenshot1](/Documentation/ProjectRun/Capture1.png)
 
 ![Screenshot2](/Documentation/ProjectRun/Capture2.png)
 
@@ -338,9 +338,9 @@ https://stackoverflow.com/questions/39632667/how-to-kill-the-process-currently-u
 
 Screenshots:
 
-![Screenshot3](/Documentation/ProjectRun/capture3.png)
-![Screenshot4](/Documentation/ProjectRun/capture4.png)
-![Screenshot5](/Documentation/ProjectRun/capture5.png)
+![Screenshot3](/Documentation/ProjectRun/Capture3.png)
+![Screenshot4](/Documentation/ProjectRun/Capture4.png)
+![Screenshot5](/Documentation/ProjectRun/Capture5.png)
 
 
 © 2018 GitHub, Inc.
