@@ -306,3 +306,26 @@ The organization-mandated risk management framework is reviewed and tailored to 
 - The Senior User/Project Executive has to be signed off on user acceptance testing.
 - For each story, enumerate and clearly describe the acceptance criteria.
 - Be specific - your client may have a very different definition of vague words.
+How to run our Project?
+
+git clone https://github.com/chvnaveenkumar/CodeWord.git
+Now open our project in Visual Studio and
+
+Use npm install if node.js is already installed. if node.js is not installed go to this link(https://nodejs.org/en/) and install node.js and hit the command
+
+After step 2 set path to client (cd ..\Client) and use npm install command to install all the dependency modules in the project which is used in package.json.
+
+In Client use command cd '.\build.js' hit npm run build to run the project.
+
+And get back use cd .. command to get back.
+
+Now start the Server using npm start
+
+Now open chrome and use localhost:8080
+
+Screenshots:
+
+
+
+
+© 2018 GitHub, Inc.
