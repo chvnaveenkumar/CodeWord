@@ -5,33 +5,26 @@ const nodemailer = require('nodemailer');
 const _ = require('lodash');
 var sendMail = function (email, temp_password) {
     var jwt = require('jsonwebtoken');
-
-nodemailer.createTestAccount((err, account) => {
-
     var decodedvalue = "";
     var decodeJson="";
-    //var newToken = jwt.sign({email: "S530742@nwmissouri.edu" , password: "Suvarna2$" },'donttry',{expiresIn:  100000000000 * 3000 }).toString();
-    var newToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlM1MzA3NDJAbndtaXNzb3VyaS5lZHUiLCJwYXNzd29yZCI6IlN1dmFybmEyJCIsImlhdCI6MTU0MDQ5ODAzNywiZXhwIjozMDAwMDE1NDA0OTgwMzd9.Hg_KAaryme6youc8SCnQFtNdzn2dV-x97BJuQhKJkLw";
-    console.log(newToken);
-    jwt.verify(newToken, 'donttry', (err, decoded) =>{
+    nodemailer.createTestAccount((err, account) => {
+    var newToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlM1MzA3NDJAbndtaXNzb3VyaS5lZHUiLCJwYXNzd29yZCI6IlN1dmFybmE5JCIsImlhdCI6MTU0MDUwMTAxOSwiZXhwIjoxNTcyMDM3MDE5fQ.Z1RJF2noETqetSDvivi004vp27iMnt2uoCARPqS_6yc';
+
+    jwt.verify(newToken, 'donttry', (err, decoded, res) =>{
         if(err)
         {
-          return res.status(400).json({message: 'Unauthorized User.' });
+            console.log(err);
         }
         decodedvalue = JSON.stringify(decoded);
         decodeJson = JSON.parse(decodedvalue);
-        console.log("decoded"+ decodedvalue);
-        console.log("email"+decodeJson.email);
-
-        console.log("email"+decodeJson.password);
         
         let transporter = nodemailer.createTransport({
             host: 'smtp.office365.com',
             port: 587,
             secure: false, 
             auth: {
-                user: 'S530742@nwmissouri.edu', 
-                pass: 'Suvarna9$'
+                user: decodeJson.email,
+                pass: decodeJson.password
             }
         });
     
