@@ -19,12 +19,15 @@
                     <li class="nav-item" v-if='this.$route.name != "StudentDashboard"'>
                         <router-link to="/instructordashboard">Dashboard</router-link>
                     </li>
+                    <li class="nav-item" v-if='this.$route.name != "StudentDashboard"'>
+                        <router-link to="/coursestudent">Course Student</router-link>
+                    </li>
                     <li class="nav-item" v-if='this.$route.name != "StudentDashboard" || this.$router.name === "ChangePassword"'>
                         <router-link to="/codewordset">CodeWord</router-link>
                     </li>
                       <li class="nav-item dropdown">
                       <div class="dropdown">
-                      <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown">
                       {{ email }}
                       </a>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -47,8 +50,7 @@ export default {
       email: ""
     };
   },
-  mounted () {
-    console.log('meta'+ this.$route.name )
+  created () {
     this.auth = User.check();
     if (this.auth) {
       axios({
@@ -58,7 +60,7 @@ export default {
           token: window.localStorage.getItem("token")
         }
       }).then(result => {
-        this.email = result.data.email;
+        this.email = result.data.emailKey;
       });
     }
   },

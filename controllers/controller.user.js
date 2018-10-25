@@ -17,7 +17,11 @@ let signUp = (req,res) => {
     bcrypt.genSalt(10, (err,salt) => {
         bcrypt.hash(body.password,salt,(err,hash) => {
             body.password = hash;
-            var userModel = new UserModel(body);
+            var userModel = new UserModel({
+                emailKey: body.email,
+                password: body.password,
+                isInstructor: body.instructor
+            });
             userModel.save().then((user) => {
                 if(user)
                 return res.json({ code: 200, message: true});           
@@ -33,7 +37,7 @@ module.exports.signUp = signUp;
 let signIn = (req,res) => {
     var body = _.pick(req.body,['email','password']);
     console.log(body.email);
-    UserModel.findOne({email: body.email}, function (err, User) {
+    UserModel.findOne({emailKey: body.email}, function (err, User) {
         if(err){
             return res.json({ code: 200, message: 'Email id not registered!!'});
         }
@@ -41,7 +45,7 @@ let signIn = (req,res) => {
         return bcrypt.compare(body.password,User.password,(err,result) => {
             if(result){
                 var newToken = jwt.sign({email: body.email, id: User.id },'codewordnwmsu',{expiresIn:  10000 * 3000 }).toString();
-                UserModel.updateOne({email: body.email},{$set: {token: newToken}}, (err) =>{
+                UserModel.updateOne({emailKey: body.email},{$set: {token: newToken}}, (err) =>{
                     if(err){
                         return res.json({ code: 200, message: 'Unable to generate and update Token'});
                     }
@@ -54,12 +58,14 @@ let signIn = (req,res) => {
     })
 }
 module.exports.signIn = signIn;
+
 let details = (req,res) => {    
-    console.log('email');
+    console.log('email'+ req.session.id);
     UserModel.findOne({_id: req.session.id}).then((user) => {
     if(!user){
         return  res.status(400).send("User details not found!!");
-    }        
+    }
+    console.log('user'+user);        
     return res.send(user);
     });
 }
@@ -68,7 +74,7 @@ module.exports.details = details;
 let validateEmail = (req, res) => {
    
     var body = _.pick(req.body,['email']);
-    UserModel.findOne({ email: body.email}).then((user) => {
+    UserModel.findOne({ emailKey: body.email}).then((user) => {
         if(!user){
             return res.json({ code: 400, message: false});
         }        
@@ -96,7 +102,7 @@ let tempPassword = (req, res ) => {
     bcrypt.genSalt(10, (err,salt) => {
         bcrypt.hash(temporaryPassword,salt,(err,hash) => {
         hashPassword = hash;
-        UserModel.updateOne({email: body.email },{$set: {password: hashPassword}}, (err,result) =>{
+        UserModel.updateOne({emailKey: body.email },{$set: {password: hashPassword}}, (err,result) =>{
         if(!res){
             return  res.status(400).send("Error");
         }

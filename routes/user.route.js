@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var usersController = require('../controllers/user.controller')
+var usersController = require('../controllers/controller.user')
 const bodyParser = require('body-parser');
 let multer = require('multer')
 
