@@ -6,7 +6,7 @@ const bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
 var { UserModel } = require('../model/model.user');
 var { mongoose } = require('./../config/database')
-var mailController = require('../controllers/mail.controller')
+var mailController = require('../config/user.mail.js')
 let XLSX = require('xlsx')
 
 let signUp = (req,res) => {
@@ -74,6 +74,7 @@ module.exports.details = details;
 let validateEmail = (req, res) => {
    
     var body = _.pick(req.body,['email']);
+    console.log(body.email);
     UserModel.findOne({ emailKey: body.email}).then((user) => {
         if(!user){
             return res.json({ code: 400, message: false});
@@ -106,6 +107,7 @@ let tempPassword = (req, res ) => {
         if(!res){
             return  res.status(400).send("Error");
         }
+        console.log(body.email+"   "+temporaryPassword);
         mailController.sendMail(body.email,temporaryPassword);
         return res.json({ code: 200, message: true});
      });

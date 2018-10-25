@@ -1,3 +1,6 @@
+/**
+ * @author Naveen Kumar Chandaluri <S530742@nwmissouri.edu>
+ */
 var jwt = require('jsonwebtoken');
 const _ = require('lodash');
 

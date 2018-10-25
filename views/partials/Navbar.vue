@@ -16,13 +16,13 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto" v-if="auth">
-                    <li class="nav-item" v-if='this.$route.name != "StudentDashboard"'>
+                    <li class="nav-item" v-if='this.$route.name != "StudentDashboard" && this.$route.name !== "ChangePassword"'>
                         <router-link to="/instructordashboard">Dashboard</router-link>
                     </li>
-                    <li class="nav-item" v-if='this.$route.name != "StudentDashboard"'>
+                    <li class="nav-item" v-if='this.$route.name != "StudentDashboard" && this.$route.name !== "ChangePassword"'>
                         <router-link to="/coursestudent">Course Student</router-link>
                     </li>
-                    <li class="nav-item" v-if='this.$route.name != "StudentDashboard" || this.$router.name === "ChangePassword"'>
+                    <li class="nav-item" v-if='this.$route.name != "StudentDashboard" && this.$route.name !== "ChangePassword"'>
                         <router-link to="/codewordset">CodeWord</router-link>
                     </li>
                       <li class="nav-item dropdown">

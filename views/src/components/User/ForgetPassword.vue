@@ -37,7 +37,7 @@ export default {
   methods: {
     forget () {
       this.msg = ''
-      let emailid = this.email
+      let emailid = this.email.toLowerCase()
       /* global axios */
       axios({
         method: 'post',
@@ -56,7 +56,7 @@ export default {
             let _this = this
             setTimeout(function () {
               _this.$router.push({ path: '/' })
-            }, 1000)
+            }, 2000)
           })
         } else {
           this.msg = 'User is not registered!!'
