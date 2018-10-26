@@ -1,6 +1,6 @@
 ## MVP 1:
 
-## 1.01 [Naveen Chandaluri] As a user,  I want to register by providing my email ID and password so that I can access my account.
+## 1.01 [Naveen Chandaluri, Ujjawal(Data_User)] As a user,  I want to register by providing my email ID and password so that I can access my account.
 
 | Acceptance Criteria                                                                         | Yes/No | Comments |
 |---------------------------------------------------------------------------------------------|--------|----------|
@@ -57,7 +57,7 @@
 | Once clicking on that Code-word dropdown arrow symbol, he/she should be able to view “Create Code-word Set” and “Delete Code-word Set” option                                                                 |        |          |
 | After clicking on “Create Code-word Set” from the drop-down list, he/she should be redirected to Code-Word set page where they should be able to set a unique name for that set and fill the data in that codeword set by uploading the list of codeword from Basic Small or Basic Large file from the dropdown                       |        |          |
 
- ## 2.04 [Sreelekha(Modal,Data and Controller), Naveen Nuggu (views, rules - codewords)] - As an instructor, I want the app to always have my Basic small codeword set (with 90 unique codewords) and a second Large Codeword Set (with 200 unique codewords) and instructors are not allowed to delete them.
+ ## 2.04 [Sreelekha(Modal,Data and Controller), Naveen Nuggu (views, rules - codewords), Ujjawal(View_cordwordset)] - As an instructor, I want the app to always have my Basic small codeword set (with 90 unique codewords) and a second Large Codeword Set (with 200 unique codewords) and instructors are not allowed to delete them.
 
 | Acceptance Criteria                                                                         | Yes/No | Comments |
 |---------------------------------------------------------------------------------------------|--------|----------|
