@@ -23,7 +23,7 @@ This document is organized by roles:
 
 ### 1.02 Login
 
-Responsible party: 
+Responsible party: Sreelekha Vijaya
 
 Embed sketch here
 
@@ -33,7 +33,7 @@ Links:
 
 ### 1.03 Forgot Password
 
-Responsible party: 
+Responsible party: Naveen Kumar Chandaluri
 
 Embed sketch here
 
@@ -43,7 +43,7 @@ Links:
 
 ### 2.01 Register
 
-Responsible party: 
+Responsible party:
 
 Embed sketch
 
