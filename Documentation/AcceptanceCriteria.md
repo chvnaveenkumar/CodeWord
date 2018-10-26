@@ -42,7 +42,7 @@
 |---------------------------------------------------------------------------------------------|--------|----------|
 | After filling information in Sign In page and clicking on Sign In button, he/she should be able to view a message “Sign In successful. Redirecting to Instructor’s Dashboard”                                   |        |          |
 | After successful Sign In, he/she should be able to view Instructor’s dashboard where they can view all the coursed he/she are added to along with list of active courses.                                                                                         |        |          |
-| After clicking on courses, instructor should be able to view course details like CRN-Section, Course Name and Code-words assigned for respective course|        |          |
+| After clicking on courses, instructor should be able to view course details like Coursenumber-Section, Course Name and Code-words assigned for respective course|        |          |
 
 
 
