@@ -41,19 +41,17 @@
 
 | Acceptance Criteria                                                                         | Yes/No | Comments |
 |---------------------------------------------------------------------------------------------|--------|----------|
-| Should be able to View the Login page                                                       |        |          |
-| Should be able to Click on Sign Up/Register and should be able to view the Registration page|        |          |
-| Register himself/herself by filling information like Name, Email id, Password, Confirm password and checking the Instructor checkbox                                                                           |        |          |
-| After clicking on “Register Now” button, he/she should be able to view a message “Successfully Registered and Redirecting to Sign In page”                                                                  |        |          |
+| After filling information in Sign In page and clicking on Sign In button, he/she should be able to view a message “Sign In successful. Redirecting to Instructor’s Dashboard”                                   |        |          |
+| After successful Sign In, he/she should be able to view Instructor’s dashboard where they can view all the coursed he/she are added to along with list of active courses.                                                                                         |        |          |
+| After clicking on courses, instructor should be able to view course details like CRN-Section, Course Name and Code-words assigned for respective course|        |          |
+
 
 
 ## 2.03 - As an instructor, I want to create a new set of code words by entering a unique name for the codeword set and uploading a plain text file that contains a new list of codewords.
 
 | Acceptance Criteria                                                                         | Yes/No | Comments |
 |---------------------------------------------------------------------------------------------|--------|----------|
-| After filling information in Sign In page and clicking on Sign In button, he/she should be able to view a message “Sign In successful. Redirecting to Instructor’s Dashboard”                                   |        |          |
-| After successful Sign In, he/she should be able to view Instructor’s dashboard where they can view all the coursed he/she are added to along with course details like CRN-Section, Course Name and Code-words assigned for respective course                                                                                        |        |          |
-| He/she should be able to view his/her Email Id (used for signing in) on top right corner of navigation bar along with dropdown arrow symbol and also Code-word menu along with dropdown arrow symbol.          |        |          |
+| After successfull login, he/she should be able to view his/her Email Id (used for signing in) on top right corner of navigation bar along with dropdown arrow symbol and also Code-word menu along with dropdown arrow symbol.          |        |          |
 | Once clicking on that Code-word dropdown arrow symbol, he/she should be able to view “Create Code-word Set” and “Delete Code-word Set” option                                                                 |        |          |
 | After clicking on “Create Code-word Set” from the drop-down list, he/she should be redirected to Code-Word set page where they should be able to set a unique name for that set and fill the data in that codeword set by uploading the list of codeword from Basic Small or Basic Large file from the dropdown                       |        |          |
 
@@ -61,11 +59,9 @@
 
 | Acceptance Criteria                                                                         | Yes/No | Comments |
 |---------------------------------------------------------------------------------------------|--------|----------|
-| After filling information in Sign In page and clicking on Sign In button, he/she should be able to view a message “Sign In successful. Redirecting to Instructor’s Dashboard”                                   |        |          |
-| After successful Sign In, he/she should be able to view Instructor’s dashboard where they can view all the coursed he/she are added to along with course details like CRN-Section, Course Name and Code-words assigned for respective course                                                                                        |        |          |
-| He/she should be able to view his/her Email Id (used for signing in) on top right corner of navigation bar along with dropdown arrow symbol and also Code-word menu along with dropdown arrow symbol.          |        |          |
-| Once clicking on that Code-word dropdown arrow symbol, he/she should be able to view “Create Code-word Set” and “Delete Code-word Set” option                                                                 |        |          |
-| After clicking on “Create Code-word Set” from the drop-down list, he/she should be redirected to Code-Word set page where they should be able to view Basic Small and Basic Large code-word sets inthe dropdown list but they should not have any acces to delete those code-word sets                                                 |        |          |
+| After logging In as Instructor, he/she should be able to have all the Instructor's privilages and view all the options related to Instructor's dashboard.                                   |        |          |
+| After successful Sign In of Instructor, he/she should be able to select the codeword set from the codeword set dropdown menu.                                                                 |        |          |
+| At the time of codeword selection, Instructor should be able to view Basic Small and Basic Large code-word sets in the dropdown list but they should not have any acces to delete those code-word sets                                                 |        |          |
 
 ## 2.05 - As an instructor, I want to create a new course by adding a list of students (containing one *.edu email & one name field for each student), selecting a codeword set from a drop-down that shows the name of the set with the calculated count in parenthesis, and setting the start date (default to today) and end date (defaulted to 4 Months after then start date) for the course, and a pre-survey URL, and a post-survey URL. Team: implement either cut & paste a tab or comma separated list of students OR offer to import by selecting a csv file or Excel file in the proper format). 
 
