@@ -43,7 +43,7 @@ Links:
 
 ### 2.01 Register
 
-Responsible party:
+Responsible party: Srimai Reddy Yanala
 
 Embed sketch
 
