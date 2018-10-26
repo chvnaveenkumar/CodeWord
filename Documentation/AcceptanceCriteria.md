@@ -1,6 +1,6 @@
-# MVP 1:
+## MVP 1:
 
-## 1.01- As a user,  I want to register by providing my email ID and password so that I can access my account.
+## 1.01 [Naveen Chandaluri] As a user,  I want to register by providing my email ID and password so that I can access my account.
 
 | Acceptance Criteria                                                                         | Yes/No | Comments |
 |---------------------------------------------------------------------------------------------|--------|----------|
@@ -10,7 +10,7 @@
 | User clicks on ‘Register Now’ button in the registration screen                             |        |          |
 | User should be able to redirect to the Login page                                           |        |          |
 
-## 1.02 - As a user, I want to log in with my Email Id and password.
+## 1.02 [Naveen Chandaluri] As a user, I want to log in with my Email Id and password.
 
 | Acceptance Criteria                                                | Yes/No | Comments |
 |--------------------------------------------------------------------|--------|----------|
@@ -18,7 +18,7 @@
 | User click on ‘Sign in’ button in the login screen                 |        |          |
 | User should be able to see the home screen with codewords          |        |          |
 
-## 1.03 - As a user, if I forget the password, I want to retrieve my account by entering the registered Email ID and submit it. Later I can access my account with the temporary password provided.
+## [Naveen Chandaluri] 1.03 - As a user, if I forget the password, I want to retrieve my account by entering the registered Email ID and submit it. Later I can access my account with the temporary password provided.
 
 | Acceptance Criteria                                                                      | Yes/No | Comments |
 |------------------------------------------------------------------------------------------|--------|----------|
@@ -27,7 +27,7 @@
 
 # MVP 2:
 
-## 2.01 - As an instructor, I want to check an "Instructor?" box when I register so that I can distribute code words.
+## 2.01 [Naveen Chandaluri] As an instructor, I want to check an "Instructor?" box when I register so that I can distribute code words.
 
 
 | Acceptance Criteria                                                                         | Yes/No | Comments |
@@ -35,9 +35,9 @@
 | Should be able to View the Login page                                                       |        |          |
 | Should be able to Click on Sign Up/Register and should be able to view the Registration page|        |          |
 | Register himself/herself by filling information like Name, Email id, Password, Confirm password and checking the Instructor checkbox                                                                           |        |          |
-| After clicking on “Register Now” button, he/she should be able to view a message “Successfully Registered and Redirecting to Sign In page”                                                                  |        |          |
- 
-## 2.02 - As an instructor, I want to see my list of active courses
+| After clicking on “Register Now” button, he/she should be able to view a message “Successfully Registered and Redirecting to Sign In page”                                                               |        |          |
+
+## 2.02 [Shivani Dodla] - As an instructor, I want to see my list of active courses
 
 | Acceptance Criteria                                                                         | Yes/No | Comments |
 |---------------------------------------------------------------------------------------------|--------|----------|
@@ -57,7 +57,7 @@
 | Once clicking on that Code-word dropdown arrow symbol, he/she should be able to view “Create Code-word Set” and “Delete Code-word Set” option                                                                 |        |          |
 | After clicking on “Create Code-word Set” from the drop-down list, he/she should be redirected to Code-Word set page where they should be able to set a unique name for that set and fill the data in that codeword set by uploading the list of codeword from Basic Small or Basic Large file from the dropdown                       |        |          |
 
-## 2.04 - As an instructor, I want the app to always have my Basic small codeword set (with 90 unique codewords) and a second Large Codeword Set (with 200 unique codewords) and instructors are not allowed to delete them.
+ ## 2.04 [Sreelekha(Modal,Data and Controller), Naveen Nuggu (views, rules - codewords)] - As an instructor, I want the app to always have my Basic small codeword set (with 90 unique codewords) and a second Large Codeword Set (with 200 unique codewords) and instructors are not allowed to delete them.
 
 | Acceptance Criteria                                                                         | Yes/No | Comments |
 |---------------------------------------------------------------------------------------------|--------|----------|
@@ -78,14 +78,14 @@
 | User should able to enter Survey Start URL                                 |        |          |
 | User should able to enter Survey End URL                                   |        |          |
 
-## 2.06 - As an instructor, if I click on “View Students” I want to see a list of students for the selected course (emails and names) and want to see the calculated count of students in that course.
+## 2.06 [Shivani Dodla] - As an instructor, if I click on “View Students” I want to see a list of students for the selected course (emails and names) and want to see the calculated count of students in that course.
 |                                        Acceptance Criteria                                       | Yes/No | Comments |
 |:------------------------------------------------------------------------------------------------:|--------|----------|
 | If user clicks on “View Students”, list of students for the selected course should be displayed. |        |          |
 | Email address and names should be included while displaying the list of students.                |        |          |
 | User can see the calculated count of the students in the selected course.                        |        |          |
 
-## 2.07 - As an instructor, when I view my list of active courses, for each active course, I want to see:
+## 2.07 [Shivani Dodla] - As an instructor, when I view my list of active courses, for each active course, I want to see:
     a. The unique name,
 
     b. The codeword set name with the calculated count of words,
