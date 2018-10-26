@@ -53,14 +53,27 @@ Links:
 ## STUDENT ROLE
 
 
-### NN Student Dashboard - what STORY does this fulfill?
+### NN Student Dashboard 
 
 Responsible party: 
 
-Embed image
+User Story: As a student, I want to see my courses and see/acknowledge/get my random codeword for the respective course on my home page.
 
-Links:
-- <http://gdpcodeword.herokuapp.com/?#/studentdashboard>
+Client: I do not want to see headings - just the information about each course. This can be a panel and you can use <Link to Presurvey>
+
+Example URL: <https://www.surveymonkey.com/r/webappsF18_pre>
+
+Hoot Android F18 Sec 01  
+Elephant
+Pre
+Post
+
+F18 Webapps Sec 04
+"Get Code"
+Pre
+Post
+
+Link <http://gdpcodeword.herokuapp.com/?#/studentdashboard>
 
 ## INSTRUCTOR ROLE
 

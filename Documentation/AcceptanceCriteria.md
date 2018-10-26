@@ -110,3 +110,38 @@
 |:-------------------------------------------------------------------------------------:|--------|----------|
 | User should be able to see the unique codeword for each student in every course       |        |          |
 | when course is created user should be able to see the unique codeword in each course. |        |          |
+
+
+# MVP 3 (Fri-9-Nov)
+
+ As a student, I want to see my courses and see/acknowledge/get my random codeword for the respective course on my home page.
+
+
+
+
+As an instructor, I want to see my list of courses, those are “active” today between the start and end date inclusively.
+
+
+ As an instructor, I want to be notified if the codeword set is too small. If the calculated count of codewords is less than the calculated count of students then I want to see a warning that says “You have n students, but the codeword set has only m words. Please select another set or click the + button next to the codeword dropdown to add a new, larger set of codewords" while creating or editing a course.
+ As an instructor, I want the codewords confidential and must not know or be able to see the code word each student gets.
+
+
+ As an instructor, I want to see the calculated count of students and codewords when I edit or view a course with the unique name, list of students, codeword set, start and end date.
+ As an instructor, I want to delete an existing course once it is completed. 
+ As an instructor, I want the percentage of students who have accessed their codewords in that course.
+As an instructor, I want to assign codewords for the concurrent survey in different courses.
+
+
+As a user, I want to navigate between multiple pages (Home (list of active courses), + New Course, View a Set of Codewords and Confirm Delete Course).
+
+
+Additional Requirements
+
+Instructors are limited to no more than 10 active courses. (Verified with client)
+
+Each course is limited to no more than 1000 students.  (Verified with client)
+
+Each codeword set limited to no more than 1200 codewords.  (Verified with client)
+
+Registration is limited to 25 teachers.  (Verified with client)
+
