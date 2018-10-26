@@ -5,7 +5,7 @@
 var mongoose = require('mongoose');
 var validator = require('validator');
 
-var courseModel = mongoose.model('courseModel', {
+var CourseModel = mongoose.model('courseModel', {
     courseNameKey: {
     type: String,
     required: true,
@@ -40,4 +40,4 @@ var courseModel = mongoose.model('courseModel', {
     type: String
    }
 });
-module.exports.courseModel = courseModel
+module.exports.CourseModel = CourseModel

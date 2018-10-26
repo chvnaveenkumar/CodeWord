@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var usersController = require('../controllers/controller.user')
+var courseController = require('../controllers/controller.course')
 const bodyParser = require('body-parser');
 let multer = require('multer')
 
@@ -17,4 +18,5 @@ router.post('/details', usersController.details);
 router.post('/validateEmail', usersController.validateEmail);
 router.post('/sendmail', usersController.tempPassword);
 router.post('/changepassword', usersController.changePassword);
+router.post('/addnewCourse', courseController.addCourse);
 module.exports = router;
