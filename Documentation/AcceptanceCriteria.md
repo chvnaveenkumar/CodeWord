@@ -1,6 +1,6 @@
 ## MVP 1:
 
-## 1.01 [Naveen Chandaluri, Ujjawal(Data_User)] As a user,  I want to register by providing my email ID and password so that I can access my account.
+## 1.01 [Naveen Chandaluri(Views, Controllers, models), Ujjawal(Data_User)] As a user,  I want to register by providing my email ID and password so that I can access my account.
 
 | Acceptance Criteria                                                                         | Yes/No | Comments |
 |---------------------------------------------------------------------------------------------|--------|----------|
@@ -10,7 +10,7 @@
 | User clicks on ‘Register Now’ button in the registration screen                             |        |          |
 | User should be able to redirect to the Login page                                           |        |          |
 
-## 1.02 [Naveen Chandaluri] As a user, I want to log in with my Email Id and password.
+## 1.02 [Naveen Chandaluri(Views, Controllers, models)] As a user, I want to log in with my Email Id and password.
 
 | Acceptance Criteria                                                | Yes/No | Comments |
 |--------------------------------------------------------------------|--------|----------|
@@ -18,7 +18,7 @@
 | User click on ‘Sign in’ button in the login screen                 |        |          |
 | User should be able to see the home screen with codewords          |        |          |
 
-## [Naveen Chandaluri] 1.03 - As a user, if I forget the password, I want to retrieve my account by entering the registered Email ID and submit it. Later I can access my account with the temporary password provided.
+## [Naveen Chandaluri(Views, Controllers, models)] 1.03 - As a user, if I forget the password, I want to retrieve my account by entering the registered Email ID and submit it. Later I can access my account with the temporary password provided.
 
 | Acceptance Criteria                                                                      | Yes/No | Comments |
 |------------------------------------------------------------------------------------------|--------|----------|
@@ -27,8 +27,7 @@
 
 # MVP 2:
 
-## 2.01 [Naveen Chandaluri] As an instructor, I want to check an "Instructor?" box when I register so that I can distribute code words.
-
+## 2.01 [Naveen Chandaluri(Views)] As an instructor, I want to check an "Instructor?" box when I register so that I can distribute code words.
 
 | Acceptance Criteria                                                                         | Yes/No | Comments |
 |---------------------------------------------------------------------------------------------|--------|----------|
@@ -37,7 +36,7 @@
 | Register himself/herself by filling information like Name, Email id, Password, Confirm password and checking the Instructor checkbox                                                                           |        |          |
 | After clicking on “Register Now” button, he/she should be able to view a message “Successfully Registered and Redirecting to Sign In page”                                                               |        |          |
 
-## 2.02 [Shivani Dodla] - As an instructor, I want to see my list of active courses
+## 2.02 [Shivani Dodla(views, controllers, models)] - As an instructor, I want to see my list of active courses
 
 | Acceptance Criteria                                                                         | Yes/No | Comments |
 |---------------------------------------------------------------------------------------------|--------|----------|
