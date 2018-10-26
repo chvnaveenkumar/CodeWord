@@ -13,7 +13,7 @@ let signUp = (req,res) => {
     var body = _.pick(req.body,['email','password','instructor']);
     var gen_token = jwt.sign({email: body.email },'codewordnwmsu',{expiresIn:  1* 300 }).toString();
     body.token = gen_token;
-    console.log("test");
+    console.log("controller signup"+ body.email+" "+body.password);
     bcrypt.genSalt(10, (err,salt) => {
         bcrypt.hash(body.password,salt,(err,hash) => {
             body.password = hash;
@@ -36,12 +36,12 @@ module.exports.signUp = signUp;
 
 let signIn = (req,res) => {
     var body = _.pick(req.body,['email','password']);
-    console.log(body.email);
+    console.log(body.email+"Controller user signin");
     UserModel.findOne({emailKey: body.email}, function (err, User) {
         if(err){
             return res.json({ code: 200, message: 'Email id not registered!!'});
         }
-        console.log(User.password);
+        console.log(User.isInstructor+"Instructor status signIn controller user");
         return bcrypt.compare(body.password,User.password,(err,result) => {
             if(result){
                 var newToken = jwt.sign({email: body.email, id: User.id },'codewordnwmsu',{expiresIn:  10000 * 3000 }).toString();
@@ -49,10 +49,10 @@ let signIn = (req,res) => {
                     if(err){
                         return res.json({ code: 200, message: 'Unable to generate and update Token'});
                     }
-                    return res.json({ code: 200, message: 'Signed in successfully. Redirecting.', token: newToken });
+                    return res.json({ code: 200, message: 'Signed in successfully. Redirecting.', token: newToken, isInstructor: User.isInstructor });
                 })
             }else{
-                return res.json({ code: 200, message: "Password Wrong!!"})
+                return res.json({ code: 200, message: "Invalid User!!"})
             }
         })
     })
@@ -72,9 +72,8 @@ let details = (req,res) => {
 module.exports.details = details;
 
 let validateEmail = (req, res) => {
-   
     var body = _.pick(req.body,['email']);
-    console.log(body.email);
+    console.log(body.email+"controller validateEmail");
     UserModel.findOne({ emailKey: body.email}).then((user) => {
         if(!user){
             return res.json({ code: 400, message: false});
@@ -83,7 +82,7 @@ let validateEmail = (req, res) => {
                 if(resolve){
                     return res.json({ code: 200, message: true});
                 }
-                if(err){
+                if(err){                    
                     return res.json({ code: 200, message: false});
                 }
             });

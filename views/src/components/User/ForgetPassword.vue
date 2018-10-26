@@ -59,7 +59,7 @@ export default {
             }, 2000)
           })
         } else {
-          this.msg = 'User is not registered!!'
+          this.msg = 'Invalid User!!'
           this.signed = false
         }
       })

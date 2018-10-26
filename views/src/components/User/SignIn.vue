@@ -15,17 +15,13 @@
                   </div>
                   <h2> Login</h2>
                       <div class="form-group row ">
-                         <label for="inputEmail">Email address</label>
+                         <label for="inputEmail">Email Address</label>
                           <input type="text" name="emailID" class="form-control" id="inputEmail" placeholder="Email ID">
                       </div>
                       <div class="form-group row">
                         <label for="inputPassword">Password</label>
                           <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Password">
                       </div>
-                      <div class="form-group">
-                          <input type="checkbox" name="type" value="true" v-model="instructor">
-                          <label for="terms">Instructor</label>
-                     </div>
                     <button type="submit" class="btn btn-success  btn-sm btn-block">Sign In</button>
                     <div class="text-right forgetpassword"><router-link to="/forgetpassword">Forget Password?</router-link></div>
                     <div class="text-right"><p> New to CodeWord? <router-link to="/signup">Register</router-link> </p></div>
@@ -47,7 +43,6 @@ export default {
       msg: '',
       signed: false,
       emailid: '',
-      instructor: false,
       pass: ''
     }
   },
@@ -81,7 +76,6 @@ export default {
                 this.signed = true
                 localStorage.setItem('token', response.data.token)
                 let _this = this
-                console.log('signIn' + response.data.isInstructor)
                 setTimeout(function () {
                   if (data.get('password').length === 5) {
                     _this.$router.push({ name: 'ChangePassword', params: { loginrole: response.data.isInstructor } })
@@ -97,7 +91,7 @@ export default {
               }
             })
           } else {
-            this.msg = 'User is not registered!!'
+            this.msg = 'Invalid Login!!'
             this.signed = false
           }
         })

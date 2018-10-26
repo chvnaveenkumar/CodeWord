@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/User/Home'
+import SignIn from '@/components/User/SignIn'
 import Signup from '@/components/User/Signup'
 import InstructorDashboard from '@/components/InstructorDashboard'
 import ForgetPassword from '@/components/User/ForgetPassword'
@@ -14,8 +14,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
-      component: Home
+      name: 'SignIn',
+      component: SignIn
     },
     {
       path: '/signup',
