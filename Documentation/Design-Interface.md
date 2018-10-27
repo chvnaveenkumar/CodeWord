@@ -88,7 +88,7 @@ Links:
 
 ### 2.05 Create Course
 
-Responsible party:
+Responsible party: Anurag Kumar
 
 Embed sketch
 
