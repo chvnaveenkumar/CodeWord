@@ -79,7 +79,7 @@ Link <http://gdpcodeword.herokuapp.com/?#/studentdashboard>
 
 ### 2.02 Instructor Course List
 
-Responsible party: 
+Responsible party: Vyshnavi Yalamareddy
 
 Embed sketch with defaults
 
