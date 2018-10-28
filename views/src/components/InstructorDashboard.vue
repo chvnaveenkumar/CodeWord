@@ -57,16 +57,20 @@
                     </div>
                 </div>
             </div>
+               <div class="row">
+                    <div class="column">
             <div class="card" style="width: 20rem; margin-left: 1em;background-color:#41f4b2">
+            
         <div class="card-body">
           <h5 class="card-title">Mobile Computing - Android</h5>
-          <h6 class="card-subtitle mb-2 text-muted">44644-01</h6>
-          <pre>10/21/2018      12/21/2018</pre>          
+          <br>
+          
+         <p> <pre>10/21/2018             12/21/2018</pre></p>          
           <a href="#" class="card-link">Survey Start URL</a>
           <a href="#" class="card-link">Survey End URL</a>
           <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Viewcoursemodal">
-  <i class="fas fa-eye"></i>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Viewcoursemodal">View students
+ 
 </button>
 
 <!-- Modal -->
@@ -116,9 +120,11 @@
   </div>
 </div>
 <!-- Button trigger modal -->
+<p align="right">
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   <i class="fas fa-trash"></i>
 </button>
+</p>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -190,22 +196,30 @@
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
                                 <button type="button" class="btn btn-primary">Add</button>
+                                </div>
+                                </div>
+                               
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            
+               
+            <div class="column">
+           
             <div class="card" style="width: 20rem; margin-left: 1em;background-color:#41f4b2">
         <div class="card-body">
-          <h5 class="card-title">Mobile Computing - Android</h5>
-          <h6 class="card-subtitle mb-2 text-muted">44644-01</h6>
-          <pre>10/21/2018      12/21/2018</pre>          
+          <h5 class="card-title">Java Programming</h5>
+          <br>
+        
+          <pre>10/29/2018            12/22/2018</pre>          
           <a href="#" class="card-link">Survey Start URL</a>
           <a href="#" class="card-link">Survey End URL</a>
           <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Viewcoursemodal">
-  <i class="fas fa-eye"></i>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Viewcoursemodal">View Students
+  
 </button>
+
 
 <!-- Modal -->
 <div class="modal fade" id="Viewcoursemodal" tabindex="-1" role="dialog" aria-labelledby="#ViewcoursemodalLabel" aria-hidden="true">
@@ -254,9 +268,11 @@
   </div>
 </div>
 <!-- Button trigger modal -->
+<p align="right">
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   <i class="fas fa-trash"></i>
 </button>
+</p>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -274,14 +290,19 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-warning" data-dismiss="modal">Yes</button>
         <button type="button" class="btn btn-primary">No</button>
+        </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
           
         </div>
 
       </div></div>
+      
+    
 </template>
 
 
