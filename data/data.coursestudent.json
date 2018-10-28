@@ -1,3 +1,686 @@
 [
-    
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531519@nwmissouri.edu",
+        "Codeword":"Africa",
+        "Acknowledged":true
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s530742@nwmissouri.edu",
+        "Codeword":"Almond",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531495@nwmissouri.edu",
+        "Codeword":"Anger",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531367@nwmissouri.edu",
+        "Codeword":"America",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531496@nwmissouri.edu",
+        "Codeword":"Bravo",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531369@nwmissouri.edu",
+        "Codeword":"Bank",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531499@nwmissouri.edu",
+        "Codeword":"Bounce",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531500@nwmissouri.edu",
+        "Codeword":"Bigger",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531372@nwmissouri.edu",
+        "Codeword":"Computer",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s530473@nwmissouri.edu",
+        "Codeword":"Cancer",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531439@nwmissouri.edu",
+        "Codeword":"Chair",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531503@nwmissouri.edu",
+        "Codeword":"Center",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531373@nwmissouri.edu",
+        "Codeword":"Dagger",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531507@nwmissouri.edu",
+        "Codeword":"Desk",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531508@nwmissouri.edu",
+        "Codeword":"Dim",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531382@nwmissouri.edu",
+        "Codeword":"Dog",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"mwoolery@nwmissouri.edu",
+        "Codeword":"Echo",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531383@nwmissouri.edu",
+        "Codeword":"Elvis",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531384@nwmissouri.edu",
+        "Codeword":"Extra",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531519@nwmissouri.edu",
+        "Codeword":"Engage",
+        "Acknowledged":true
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s530742@nwmissouri.edu",
+        "Codeword":"France",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531495@nwmissouri.edu",
+        "Codeword":"Foxtrot",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531367@nwmissouri.edu",
+        "Codeword":"Fancy",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531496@nwmissouri.edu",
+        "Codeword":"Feline",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531369@nwmissouri.edu",
+        "Codeword":"Golf",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531499@nwmissouri.edu",
+        "Codeword":"Ginger",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531500@nwmissouri.edu",
+        "Codeword":"Globe",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531372@nwmissouri.edu",
+        "Codeword":"Germany",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s530473@nwmissouri.edu",
+        "Codeword":"Hotel",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531439@nwmissouri.edu",
+        "Codeword":"Hanger",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531503@nwmissouri.edu",
+        "Codeword":"Helmet",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531373@nwmissouri.edu",
+        "Codeword":"Hidden",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531507@nwmissouri.edu",
+        "Codeword":"Ice",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531508@nwmissouri.edu",
+        "Codeword":"Inkspot",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531382@nwmissouri.edu",
+        "Codeword":"Impulse",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"mwoolery@nwmissouri.edu",
+        "Codeword":"Igor",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531383@nwmissouri.edu",
+        "Codeword":"Kilo",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531384@nwmissouri.edu",
+        "Codeword":"Kangaroo",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531519@nwmissouri.edu",
+        "Codeword":"Kennedy",
+        "Acknowledged":true
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s530742@nwmissouri.edu",
+        "Codeword":"Lemon",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531495@nwmissouri.edu",
+        "Codeword":"Lamp",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531367@nwmissouri.edu",
+        "Codeword":"London",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531496@nwmissouri.edu",
+        "Codeword":"Line",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531369@nwmissouri.edu",
+        "Codeword":"Mink",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531499@nwmissouri.edu",
+        "Codeword":"Mumbai",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531500@nwmissouri.edu",
+        "Codeword":"Money",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531372@nwmissouri.edu",
+        "Codeword":"Market",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s530473@nwmissouri.edu",
+        "Codeword":"Native",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531439@nwmissouri.edu",
+        "Codeword":"Next",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531503@nwmissouri.edu",
+        "Codeword":"November",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531373@nwmissouri.edu",
+        "Codeword":"Nickel",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531507@nwmissouri.edu",
+        "Codeword":"Object",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531508@nwmissouri.edu",
+        "Codeword":"Option",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531382@nwmissouri.edu",
+        "Codeword":"Onion",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"mwoolery@nwmissouri.edu",
+        "Codeword":"Ogre",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531383@nwmissouri.edu",
+        "Codeword":"Papa",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531384@nwmissouri.edu",
+        "Codeword":"Pencil",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531519@nwmissouri.edu",
+        "Codeword":"Purple",
+        "Acknowledged":true
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s530742@nwmissouri.edu",
+        "Codeword":"Pill",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531495@nwmissouri.edu",
+        "Codeword":"Quick",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531367@nwmissouri.edu",
+        "Codeword":"Quasar",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531496@nwmissouri.edu",
+        "Codeword":"Quest",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531369@nwmissouri.edu",
+        "Codeword":"Romance",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531499@nwmissouri.edu",
+        "Codeword":"Redwood",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531500@nwmissouri.edu",
+        "Codeword":"Rose",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531372@nwmissouri.edu",
+        "Codeword":"Ring",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s530473@nwmissouri.edu",
+        "Codeword":"Steve",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531439@nwmissouri.edu",
+        "Codeword":"Sender",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531503@nwmissouri.edu",
+        "Codeword":"Saturn",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531373@nwmissouri.edu",
+        "Codeword":"Singer",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531507@nwmissouri.edu",
+        "Codeword":"Twilight",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531508@nwmissouri.edu",
+        "Codeword":"Titanic",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531382@nwmissouri.edu",
+        "Codeword":"Tower",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"mwoolery@nwmissouri.edu",
+        "Codeword":"Tank",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531383@nwmissouri.edu",
+        "Codeword":"Uniform",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531384@nwmissouri.edu",
+        "Codeword":"Ultimate",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531519@nwmissouri.edu",
+        "Codeword":"Victory",
+        "Acknowledged":false
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s530742@nwmissouri.edu",
+        "Codeword":"Vagrant",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531495@nwmissouri.edu",
+        "Codeword":"Velvet",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531367@nwmissouri.edu",
+        "Codeword":"Voice",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531496@nwmissouri.edu",
+        "Codeword":"Whiskey",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531369@nwmissouri.edu",
+        "Codeword":"Witch",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531499@nwmissouri.edu",
+        "Codeword":"Water",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531500@nwmissouri.edu",
+        "Codeword":"Well",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531372@nwmissouri.edu",
+        "Codeword":"Xray",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s530473@nwmissouri.edu",
+        "Codeword":"Yankee",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531439@nwmissouri.edu",
+        "Codeword":"Yesterday",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531503@nwmissouri.edu",
+        "Codeword":"Young",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531373@nwmissouri.edu",
+        "Codeword":"Zap",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531507@nwmissouri.edu",
+        "Codeword":"Zulu",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531508@nwmissouri.edu",
+        "Codeword":"Zombie",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531382@nwmissouri.edu",
+        "Codeword":"Zebra",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"mwoolery@nwmissouri.edu",
+        "Codeword":"Vagrant",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531383@nwmissouri.edu",
+        "Codeword":"Helmet",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531384@nwmissouri.edu",
+        "Codeword":"Computer",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531519@nwmissouri.edu",
+        "Codeword":"Cancer",
+        "Acknowledged":false
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s530742@nwmissouri.edu",
+        "Codeword":"Chair",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531495@nwmissouri.edu",
+        "Codeword":"Center",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531367@nwmissouri.edu",
+        "Codeword":"Dagger",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531496@nwmissouri.edu",
+        "Codeword":"Desk",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531369@nwmissouri.edu",
+        "Codeword":"Dim",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531499@nwmissouri.edu",
+        "Codeword":"Dog",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531500@nwmissouri.edu",
+        "Codeword":"Echo",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531372@nwmissouri.edu",
+        "Codeword":"Elvis",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s530473@nwmissouri.edu",
+        "Codeword":"Extra",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531439@nwmissouri.edu",
+        "Codeword":"Engage",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531503@nwmissouri.edu",
+        "Codeword":"France",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531373@nwmissouri.edu",
+        "Codeword":"Foxtrot",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531507@nwmissouri.edu",
+        "Codeword":"Fancy",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531508@nwmissouri.edu",
+        "Codeword":"Feline",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531382@nwmissouri.edu",
+        "Codeword":"Golf",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"mwoolery@nwmissouri.edu",
+        "Codeword":"Ginger",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531383@nwmissouri.edu",
+        "Codeword":"Globe",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531384@nwmissouri.edu",
+        "Codeword":"Germany",
+        "Acknowledged":false 
+    }
 ]
