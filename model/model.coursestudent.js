@@ -10,10 +10,16 @@ var CoursestudentModel = mongoose.model('CoursestudentModel', {
     trim: true,
     minlength: 6
    },
-   EmailKey:{
+   EmailKey: {
     type: String,
-    require: true,
-    minlength: 7
+    required: true,
+    trim: true,
+    minlength:4,
+    validate:{
+        validator: (value) =>{
+            return validator.isEmail(value);
+        }
+    }
    },
    Codeword:{
     type: String,
@@ -21,8 +27,9 @@ var CoursestudentModel = mongoose.model('CoursestudentModel', {
     minlength: 3
    },
    Acknowledged: {
-    type: Number,
+    type: Boolean,
     require: true,
+    default: false,
     minlength:1
    }
 });
