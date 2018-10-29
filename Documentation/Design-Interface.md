@@ -64,7 +64,7 @@ Links:
 
 ### NN Student Dashboard 
 
-Responsible party: 
+Responsible party: Shivani Dodla
 
 User Story: As a student, I want to see my courses and see/acknowledge/get my random codeword for the respective course on my home page.
 
