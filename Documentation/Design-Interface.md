@@ -93,7 +93,10 @@ Responsible party: Vyshnavi Yalamareddy
 Embed sketch with defaults
 
 Links:
-- Link to "Sketches-InstructorCourseList.md"
+
+
+![Sketch1](/Documentation/Sketches/Instructorcourselist1.PNG)
+![sketch2](/Documentation/Sketches/Instructorcourselist2.PNG)
 
 ### 2.05 Create Course
 
