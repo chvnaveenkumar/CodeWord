@@ -61,10 +61,10 @@ Responsible party: Sravya Kancharla
 
 This entity is required by the following user stories:
 
-- first story here....
+- Here Instructor can add new Codeword Set by uploading the excel sheet containing codewords.
 
 
-Responsible party: 
+Responsible party: Srimai Reddy Yanala
 
 
 
