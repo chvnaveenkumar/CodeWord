@@ -37,6 +37,9 @@ Responsible party: Naveen Kumar Chandaluri
 
 Embed sketch here
 
+![InvalidUser](/Documentation/Sketches/InvalidUser_ForgetPassword.PNG)
+![ForgetPassword](/Documentation/Sketches/TempPassword_ForgetPassword.PNG)
+
 Links:
 - Link to Markdown Sketches with feedback (one document just for this screen)
 
