@@ -162,6 +162,10 @@ Course:
 | 2018 Fall 44-563-06 | dcase@nwmissouri.edu | Hoot Original set | 8/27/2018 |
 | 2018 Fall 44-563-07 | dcase@nwmissouri.edu | Hoot Original set | 8/27/2018 |
 
+Course.js:
+
+https://github.com/chvnaveenkumar/CodeWord/blob/Developer/model/model.course.js
+
 CourseStudents:
 
 | CourseNameKey         | EmailKey                | Codeword  | Acknowledged |
@@ -281,12 +285,20 @@ CourseStudents:
 | 2018   Fall 44-563-07 | s531383@nwmissouri.edu  | Globe     | 1            |
 | 2018   Fall 44-563-07 | s531384@nwmissouri.edu  | Germany   | 0            |
 
+Coursestudent.js:
+
+https://github.com/chvnaveenkumar/CodeWord/blob/Developer/model/model.coursestudent.js
+
 CodewordSet:
 
 | CodeWordSetName  (must be unique) |
 |-----------------------------------|
 | Hoot Original set                 |
 | Large set                         |
+
+CodewordSet.js:
+
+https://github.com/chvnaveenkumar/CodeWord/blob/Developer/model/model.codewordset.js
 
 Codeword:
 
@@ -404,6 +416,14 @@ Codeword:
 | Hoot Original set | Zulu      |
 | Hoot Original set | Zombie    |
 | Hoot Original set | Zebra     |
+
+hootoriginal.js:
+
+https://github.com/chvnaveenkumar/CodeWord/blob/Developer/model/model.hootoriginal.js
+
+largeset.js:
+
+https://github.com/chvnaveenkumar/CodeWord/blob/Developer/model/model.largeset.js
 
 Sketches:
 
