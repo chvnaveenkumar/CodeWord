@@ -106,4 +106,8 @@ Embed sketch
 
 Links:
 - <http://gdpcodeword.herokuapp.com/?#/signup>
-- Link to Markdown Sketches with feedback (one document just for this screen).
+![Sketch1](/Documentation/Sketches/1.PNG)
+![sketch2](/Documentation/Sketches/2.PNG)
+![Sketch1](/Documentation/Sketches/3.PNG)
+![sketch2](/Documentation/Sketches/4.PNG)
+![sketch2](/Documentation/Sketches/5.PNG)
