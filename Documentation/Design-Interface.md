@@ -48,7 +48,12 @@ Responsible party: Srimai Reddy Yanala
 Embed sketch
 
 Links:
-- Link to "Sketches-Register.md"
+- 
+![Sketches1](/Documentation/Sketches/Register.PNG)
+
+![Sketches1](/Documentation/Sketches/Register2.PNG)
+![Sketches1](/Documentation/Sketches/Register3.PNG)
+
 
 ## STUDENT ROLE
 
