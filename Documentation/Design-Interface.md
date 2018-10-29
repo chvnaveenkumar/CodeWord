@@ -27,6 +27,10 @@ Responsible party: Sreelekha Vijaya
 
 Embed sketch here
 
+![Sketches](/Documentation/Sketches/Screenshot (167).png)
+![Sketches](/Documentation/Sketches/Screenshot (169).png)
+![Sketches](/Documentation/Sketches/Screenshot (171).png)
+
 Links:
 - Link to Markdow page with error handling.
 
