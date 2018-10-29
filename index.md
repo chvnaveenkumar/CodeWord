@@ -153,14 +153,14 @@ https://github.com/chvnaveenkumar/CodeWord/blob/Developer/model/model.user.js
 
 Course:
 
-| CourseNameKey       | EmailKey             | CodeWordSet       | Startdate |
-|---------------------|----------------------|-------------------|-----------|
-| 2018 Fall 44-444-01 | hoot@nwmissouri.edu  | Hoot Original set | 8/27/2018 |
-| 2018 Fall 44-691-05 | dcase@nwmissouri.edu | Hoot Original set | 8/27/2018 |
-| 2018 Fall 44-542-02 | hoot@nwmissouri.edu  | Hoot Original set | 8/27/2018 |
-| 2018 Fall 44-563-04 | dcase@nwmissouri.edu | Hoot Original set | 8/27/2018 |
-| 2018 Fall 44-563-06 | dcase@nwmissouri.edu | Hoot Original set | 8/27/2018 |
-| 2018 Fall 44-563-07 | dcase@nwmissouri.edu | Hoot Original set | 8/27/2018 |
+| CourseNameKey       | EmailKey             | CodeWordSet       | Startdate | Enddate    | PreSurveyURL | PostSurveyURL |
+|---------------------|----------------------|-------------------|-----------|------------|--------------|---------------|
+| 2018 Fall 44-444-01 | hoot@nwmissouri.edu  | Hoot Original set | 8/27/2018 | 12/28/2018 |              |               |
+| 2018 Fall 44-691-05 | dcase@nwmissouri.edu | Hoot Original set | 8/27/2018 | 12/28/2018 |              |               |
+| 2018 Fall 44-542-02 | hoot@nwmissouri.edu  | Hoot Original set | 8/27/2018 | 12/28/2018 |              |               |
+| 2018 Fall 44-563-04 | dcase@nwmissouri.edu | Hoot Original set | 8/27/2018 | 12/28/2018 |              |               |
+| 2018 Fall 44-563-06 | dcase@nwmissouri.edu | Hoot Original set | 8/27/2018 | 12/28/2018 |              |               |
+| 2018 Fall 44-563-07 | dcase@nwmissouri.edu | Hoot Original set | 8/27/2018 | 12/28/2018 |              |               |
 
 Course.js:
 
