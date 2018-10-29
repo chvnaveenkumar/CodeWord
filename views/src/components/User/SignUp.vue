@@ -1,3 +1,6 @@
+/**
+ * @author Naveen Kumar Chandaluri <S530742@nwmissouri.edu>
+ */
 <template>
   <div>
     <div class="container ">
