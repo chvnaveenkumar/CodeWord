@@ -27,6 +27,10 @@ Responsible party: Sreelekha Vijaya
 
 Embed sketch here
 
+![Sketches](/Documentation/Sketches/Screenshot (167).png)
+![Sketches](/Documentation/Sketches/Screenshot (169).png)
+![Sketches](/Documentation/Sketches/Screenshot (171).png)
+
 Links:
 - Link to Markdow page with error handling.
 
@@ -84,6 +88,7 @@ Post
 
 Link <http://gdpcodeword.herokuapp.com/?#/studentdashboard>
 
+![Sketch1](/Documentation/Sketches/gdp1234.png)
 ## INSTRUCTOR ROLE
 
 ### 2.02 Instructor Course List
