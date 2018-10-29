@@ -14,7 +14,7 @@
 | 10 | There should be an icon for logout - yes - see above.                                                                                                    | Chaithanya              |        |          |
 | 11 | Need to add a search icon - NEW FUNCTIONALITY - need to add a GDP 2 user story.  Talk to client - and get more details                                   | Srimai                  | Done      |   Add to gdp userStories       |
 | 12 | In student Interface, Create or delete codeword set should be removed - true -  where is our sketch of the student view?                                 | Srimai                  |  Done      |   Removed      |
-| 13 | It is not auto filling the details like email ID - NEW NON-CRITCAL FUNCTIONALITY -  if client wants autofill, please add user story to GDP 2.            | Vyashnavi               |        |          |
+| 13 | It is not auto filling the details like email ID - NEW NON-CRITCAL FUNCTIONALITY -  if client wants autofill, please add user story to GDP 2.            | Vyshnavi               | Done       | Added to Userstories         |
 | 14 | CRN needs to be removed - true. CRN is not in any user story.  Use our sample data - where is our sketch of the instructor view?                         | Naveen Nuggu            | Done   |          |
 
 
