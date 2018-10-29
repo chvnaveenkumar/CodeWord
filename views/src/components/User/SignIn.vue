@@ -1,7 +1,4 @@
-/**
- * @author Naveen Kumar Chandaluri <S530742@nwmissouri.edu>
- */
-
+<!-- @author Naveen Kumar Chandaluri <S530742@nwmissouri.edu> -->
 <template>
   <div>
     <div class="container ">
@@ -79,6 +76,7 @@ export default {
                 this.msg = 'Signed in successfully. Redirecting .'
                 this.signed = true
                 localStorage.setItem('token', response.data.token)
+                localStorage.setItem('status', response.data.isInstructor)
                 let _this = this
                 setTimeout(function () {
                   if (data.get('password').length === 5) {

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import SignIn from '@/components/User/SignIn'
-import Signup from '@/components/User/Signup'
+import Signup from '@/components/User/SignUp'
 import InstructorDashboard from '@/components/InstructorDashboard'
 import ForgetPassword from '@/components/User/ForgetPassword'
 import ChangePassword from '@/components/User/ChangePassword'
@@ -14,6 +14,18 @@ export default new Router({
   routes: [
     {
       path: '/',
+      beforeEnter (to, from, next) {
+        let logged = localStorage.getItem('status')
+        console.log(logged + 'logged status')
+        if (logged !== null) {
+          if (logged) {
+            next('/instructordashboard')
+          } else {
+            next('/studentdashboard')
+          }
+        }
+        next()
+      },
       name: 'SignIn',
       component: SignIn
     },
