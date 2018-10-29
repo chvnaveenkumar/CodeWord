@@ -108,12 +108,12 @@ Links:
 - <http://gdpcodeword.herokuapp.com/?#/signup>
 
 
-![ Sketch1 ](/Documentation/Sketches/Addcourse1.PNG)
+![ Sketch1 ](/Documentation/Sketches/Addcourse1.png)
 
-![ sketch2 ](/Documentation/Sketches/Addcourse2.PNG)
+![ sketch2 ](/Documentation/Sketches/Addcourse2.png)
 
-![ Sketch3 ](/Documentation/Sketches/Addcourse3.PNG)
+![ Sketch3 ](/Documentation/Sketches/Addcourse3.png)
 
-![ sketch4 ](/Documentation/Sketches/Addcourse4.PNG)
+![ sketch4 ](/Documentation/Sketches/Addcourse4.png)
 
-![ sketch5 ](/Documentation/Sketches/Addcourse5.PNG)
+![ sketch5 ](/Documentation/Sketches/Addcourse5.png)
