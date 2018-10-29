@@ -12,8 +12,8 @@
 | 8  | Email address should not be case sensitive – true, add to list of requirements for MVP 2.                                                                | Chaithanya              |        |          |
 | 9  | Logout should be easy without going through many steps -  add an "exit door" icon to the top level navbar (MVP 3?)                                       | Sravya                  |        |          |
 | 10 | There should be an icon for logout - yes - see above.                                                                                                    | Chaithanya              |        |          |
-| 11 | Need to add a search icon - NEW FUNCTIONALITY - need to add a GDP 2 user story.  Talk to client - and get more details                                   | Srimai                  |        |          |
-| 12 | In student Interface, Create or delete codeword set should be removed - true -  where is our sketch of the student view?                                 | Srimai                  |        |          |
+| 11 | Need to add a search icon - NEW FUNCTIONALITY - need to add a GDP 2 user story.  Talk to client - and get more details                                   | Srimai                  | Done      |   Add to gdp userStories       |
+| 12 | In student Interface, Create or delete codeword set should be removed - true -  where is our sketch of the student view?                                 | Srimai                  |  Done      |   Removed      |
 | 13 | It is not auto filling the details like email ID - NEW NON-CRITCAL FUNCTIONALITY -  if client wants autofill, please add user story to GDP 2.            | Vyashnavi               |        |          |
 | 14 | CRN needs to be removed - true. CRN is not in any user story.  Use our sample data - where is our sketch of the instructor view?                         | Naveen Nuggu            | Done   |          |
 
@@ -77,19 +77,19 @@ ______________________________
 |    1.             |    model                  |    User                                                  |    Naveen Chandaluri     |             |          |
 |    2.             |    model                  |    Course                                                |    Sravya                |    In progress         |  Working on Adding new course of section number details for adding new course.      |
 |    3.             |    model                  |    CourseStudent                                         |    Vyshnavi              |             |          |
-|    4.             |    model                  |    CodewordSet                                           |    Srimai                |             |          |
+|    4.             |    model                  |    CodewordSet                                           |    Srimai                |   Done          |          |
 |    5.             |    model                  |    Codeword                                              |    Sreelekha             |             |          |
 |    6.             |    data                   |    User                                                  |    Ujjawal               |             |          |
 |    7.             |    data                   |    Course                                                |    Sravya                |             |          |
 |    8.             |    data                   |    CourseStudent                                         |    Vyshnavi              |             |          |
-|    9.             |    data                   |    CodewordSet                                           |    Srimai                |             |          |
+|    9.             |    data                   |    CodewordSet                                           |    Srimai                |    Done         |          |
 |    10.            |    data                   |    Codeword                                              |    Sreelekha             |             |          |
 |    11.            |    utils/seeder.js        |    (all)                                                 |    Anurag                |             |          |
 |    12.            |    utils/logger.js        |    (all)                                                 |    Chaitanya             |             |          |
 |    13.            |    controller             |    User                                                  |    Naveen Chandaluri     |             |          |
 |    14.            |    controller             |    Course                                                |    Sravya                |             |          |
 |    15.            |    controller             |    CourseStudent                                         |    Vyshnavi              |             |          |
-|    16.            |    controller             |    CodewordSet                                           |    Srimai                |             |          |
+|    16.            |    controller             |    CodewordSet                                           |    Srimai                |    In progress         |  few issues working on it        |
 |    17.            |    controller             |    Codeword                                              |    Sreelekha             |             |          |
 |    18.            |    views/user             |    User                                                  |    Naveen Chandaluri     |             |          |
 |    19.            |    views/course           |    Course                                                |    Chaitanya             |             |          |
