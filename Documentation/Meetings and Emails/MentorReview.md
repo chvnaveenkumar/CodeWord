@@ -75,7 +75,7 @@ ______________________________
 | ID                | Folder/type               | Resource (the file names will depend on the folder/type) | Responsible Party        | Task Status | Comments |
 |-------------------|---------------------------|----------------------------------------------------------|--------------------------|-------------|----------|
 |    1.             |    model                  |    User                                                  |    Naveen Chandaluri     |             |          |
-|    2.             |    model                  |    Course                                                |    Sravya                |             |          |
+|    2.             |    model                  |    Course                                                |    Sravya                |    In progress         |  Working on Adding new course of section number details for adding new course.      |
 |    3.             |    model                  |    CourseStudent                                         |    Vyshnavi              |             |          |
 |    4.             |    model                  |    CodewordSet                                           |    Srimai                |             |          |
 |    5.             |    model                  |    Codeword                                              |    Sreelekha             |             |          |
