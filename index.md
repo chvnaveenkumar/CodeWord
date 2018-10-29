@@ -147,6 +147,10 @@ User:
 | hoot@nwmissouri.edu     | Charles Hoot                      | password | 1            |
 | dcase@nwmissouri.edu    | Denise Case                       | password | 1            |
 
+User.js:
+
+https://github.com/chvnaveenkumar/CodeWord/blob/Developer/model/model.user.js
+
 Course:
 
 | CourseNameKey       | EmailKey             | CodeWordSet       | Startdate |
