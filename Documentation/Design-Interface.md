@@ -106,8 +106,14 @@ Embed sketch
 
 Links:
 - <http://gdpcodeword.herokuapp.com/?#/signup>
-![Sketch1](/Documentation/Sketches/1.PNG)
-![sketch2](/Documentation/Sketches/2.PNG)
-![Sketch1](/Documentation/Sketches/3.PNG)
-![sketch2](/Documentation/Sketches/4.PNG)
-![sketch2](/Documentation/Sketches/5.PNG)
+
+
+![ Sketch1 ](/Documentation/Sketches/Addcourse1.PNG)
+
+![ sketch2 ](/Documentation/Sketches/Addcourse2.PNG)
+
+![ Sketch3 ](/Documentation/Sketches/Addcourse3.PNG)
+
+![ sketch4 ](/Documentation/Sketches/Addcourse4.PNG)
+
+![ sketch5 ](/Documentation/Sketches/Addcourse5.PNG)
