@@ -46,7 +46,7 @@
 
 
 
-## 2.03 [ Sravya Kancharla ]- As an instructor, I want to create a new set of code words by entering a unique name for the codeword set and uploading a plain text file that contains a new list of codewords.
+## 2.03 [ Ujjawal Kumar ]- As an instructor, I want to create a new set of code words by entering a unique name for the codeword set and uploading a plain text file that contains a new list of codewords.
 
 | Acceptance Criteria                                                                         | Yes/No | Comments |
 |---------------------------------------------------------------------------------------------|--------|----------|
