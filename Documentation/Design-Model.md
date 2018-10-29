@@ -49,7 +49,12 @@ This entity is required by the following user stories:
 
 - first story here....
 
-Responsible party: 
+    Course Student:
+    Here Instructor will add new course by adding Course number, Course name, Course Start and End date, File upload for Student details, codeword set for students to get codewords, pre and post survey urls.
+
+    Intructor will be able to send link to students so that students will be able to access that and generate codeword.
+
+Responsible party: Sravya Kancharla
 
 
 ## CodewordSet
