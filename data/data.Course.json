@@ -1,7 +1,7 @@
 [
   {
     "courseNameKey": "2018 Fall 44-444-01",
-    "email": "hoot@nwmissouri.edu",
+    "emailKey": "hoot@nwmissouri.edu",
     "codeWordSet": "Hoot Original set",
     "Startdate": "8/27/2018",
     "Enddate": "12/28/2018",
@@ -10,7 +10,7 @@
   },
   {
     "courseNameKey": "2018 Fall 44-691-05",
-    "email": "dcase@nwmissouri.edu",
+    "emailKey": "dcase@nwmissouri.edu",
     "codeWordSet": "Hoot Original set",
     "Startdate": "8/27/2018",
     "Enddate": "12/28/2018",
@@ -19,7 +19,7 @@
   },
   {
     "courseNameKey": "2018 Fall 44-542-02",
-    "email": "hoot@nwmissouri.edu",
+    "emailKey": "hoot@nwmissouri.edu",
     "codeWordSet": "Hoot Original set",
     "Startdate": "8/27/2018",
     "Enddate": "12/28/2018",
@@ -28,7 +28,7 @@
   },
   {
     "courseNameKey": "2018 Fall 44-563-04",
-    "email": "dcase@nwmissouri.edu",
+    "emailKey": "dcase@nwmissouri.edu",
     "codeWordSet": "Hoot Original set",
     "Startdate": "8/27/2018",
     "Enddate": "12/28/2018",
@@ -37,7 +37,7 @@
   },
   {
     "courseNameKey": "2018 Fall 44-563-06",
-    "email": "dcase@nwmissouri.edu",
+    "emailKey": "dcase@nwmissouri.edu",
     "codeWordSet": "Hoot Original set",
     "Startdate": "8/27/2018",
     "Enddate": "12/28/2018",
@@ -46,7 +46,7 @@
   },
   {
     "courseNameKey": "2018 Fall 44-563-06",
-    "email": "dcase@nwmissouri.edu",
+    "emailKey": "dcase@nwmissouri.edu",
     "codeWordSet": "Hoot Original set",
     "Startdate": "8/27/2018",
     "Enddate": "12/28/2018",

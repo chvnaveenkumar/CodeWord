@@ -13,7 +13,7 @@ var CourseModel = mongoose.model('courseModel', {
     unique: true,
     minlength: 5
    },
-   email:{
+   emailKey:{
     type: String,
     require: true,
     minlength: 5

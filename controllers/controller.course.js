@@ -22,7 +22,7 @@ let addCourse = (req,res) => {
 
     var courseModel = new CourseModel({
 courseNameKey : body.courseNameKey,
-email: body.email,
+emailKey: body.email,
 codeWordSet: body.codeWordSet,
 Startdate: body.Startdate,
 Enddate: body.Enddate,
