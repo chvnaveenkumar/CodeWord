@@ -14,7 +14,12 @@ CodeWordSetName:{
         require: true,
         minlength: 5,
         unique:true
-       }
+       },
 
+emailKey:{
+        type: String,
+        required: true,
+        minlength:4
+}
     });
     module.exports.CodeWordSet = CodeWordSet
