@@ -13,7 +13,7 @@ let XLSX = require('xlsx')
 let addCourse = (req,res) => {
     console.log("Add Course");
     var body = _.pick(req.body,['courseNameKey','email',
-    'codeWordSetName','Startdate','Enddate','PreSurveyURL','PostSurveyURL']);
+    'codeWordSetName','startDate','endDate','preSurveyURL','postSurveyURL']);
     console.log(body.courseNameKey+"course name key");
     //console.log(req.body.courseName);
     console.log(body.email);
