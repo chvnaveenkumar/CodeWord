@@ -16,24 +16,31 @@
                             <div class="modal-body">
                                 <form>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Enter CordwordSet Name" data-toggle="tooltip" data-placement="top" title="Enter CordwordSet Name">
+                                        <input type="text" class="form-control" placeholder="Enter CordwordSet Name" data-toggle="tooltip" data-placement="top" title="Enter CordwordSet Name" required>
                                     </div>
-                                    <div class="form-group">
-                                        <input type="number" class="form-control" id="replyNumber" data-bind="value:replyNumber" placeholder="Enter Number of Codewords" data-toggle="tooltip" data-placement="top" title="Enter Number of Codewords">
-                                    </div>
+                                    <!-- <div class="form-group">
+                                        <input type="number" class="form-control" id="replyNumber" data-bind="value:replyNumber" placeholder="Enter Number of Codewords" data-toggle="tooltip" data-placement="top" title="Enter Number of Codewords" required>
+                                    </div> -->
                                     <div class="form-group text-left">
                                             Upload Cordword Set(Excel)
-                                            <input type="file" class="form-control-file" id="exampleFormControlFile1" style="margin-top:1em">
-                                        </div>
-                                    
+                                            <input type="file" class="form-control-file" id="exampleFormControlFile1" style="margin-top:.2em" required>
+                                    </div>
+                                    <!-- <div class="form-group text-left">
+                                        Number of Codewords in the uploaded set
+                                        <input type="text" class="form-control" placeholder="Enter CordwordSet Name" style="margin-top:.2em" data-toggle="tooltip" data-placement="top" title="Enter CordwordSet Name" required>
+                                    </div> -->
+                                    <div class="alert alert-info">
+                                        <strong>Info!</strong> There are 50 codewords in the Uploaded set.
+                                    </div>
+                                    <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-success">Create Codeword Set</button>
+                            </div>
                                     
                                 </form>
 
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-success">Create Codeword Set</button>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -72,6 +79,10 @@
       
     
 </template>
+
+<script>
+
+</script>
 
 
 <style>
