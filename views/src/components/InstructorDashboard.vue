@@ -82,7 +82,7 @@ export default {
       this.endDate = data.get('endDate')
       this.startSurveyurl = data.get('startSurveyurl')
       this.endSurveyurl = data.get('endSurveyurl')
-      /* global axios */
+      /* global axios $ */
       axios({
         method: 'post',
         url: 'codeword/addnewCourse',
@@ -94,6 +94,7 @@ export default {
           postSurveyURL: this.endSurveyurl
         }
       }).then(res => {
+        $('#addcourse').modal('hide')
         console.log(res)
       })
     }
