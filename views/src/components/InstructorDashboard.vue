@@ -1,3 +1,4 @@
+<!-- @author Shivani Dodla <S531496@nwmissouri.edu> -->
 <template>
 <div class="container-fluid" style="margin-top:5em" >
   <div class="col-md-4 col-lg-4 col-xs-0 col-sm-0">
@@ -34,8 +35,8 @@
               <input type="text" class="form-control" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip" data-placement="bottom" title="Enter Course Name">
             </div>
             <div class="row">
-                <div class="col tooltip-test" title="Start Date"> StartDate:<input   type="date" class="form-control" placeholder="Start Date"></div>
-                <div class="col tooltip-test" title="End Date"> EndDate:<input type="date" class="form-control" placeholder="End Date"></div>
+                <div class="col tooltip-test" title="Start Date"> StartDate:<input  type="date" class="form-control" name="startDate" placeholder="Start Date"></div>
+                <div class="col tooltip-test" title="End Date"> EndDate:<input type="date" class="form-control" name="endDate" placeholder="End Date"></div>
             </div>
             <div class="form-group">
                 <input type="file" class="form-control-file" id="exampleFormControlFile1" style="margin-top:1em">
@@ -47,10 +48,10 @@
                 </select>
             </div>
             <div class="form-group" >
-              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Survey Start URL"  data-toggle="tooltip" data-placement="bottom" title="Enter Survey Start URL" >
+              <input type="text" class="form-control" placeholder="Enter Survey Start URL" name="startSurveyurl" data-toggle="tooltip" data-placement="bottom" title="Enter Survey Start URL" >
             </div>
             <div class="form-group" >
-              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Survey End URL"  data-toggle="tooltip" data-placement="bottom" title="Enter Survey End URL" >
+              <input type="text" class="form-control" placeholder="Enter Survey End URL"  name="endSurveyurl" data-toggle="tooltip" data-placement="bottom" title="Enter Survey End URL" >
             </div>
             </form>
             </div>
@@ -67,7 +68,9 @@ export default {
     return {
       courseName: '',
       startDate: '',
-      endDate: ''
+      endDate: '',
+      startSurveyurl: '',
+      endSurveyurl: ''
     }
   },
   methods: {
@@ -75,13 +78,20 @@ export default {
       console.log('Create Course')
       let data = new FormData(document.querySelector('form'))
       this.courseName = data.get('courseName').toLowerCase()
+      this.startDate = data.get('startDate')
+      this.endDate = data.get('endDate')
+      this.startSurveyurl = data.get('startSurveyurl')
+      this.endSurveyurl = data.get('endSurveyurl')
       /* global axios */
       axios({
         method: 'post',
         url: 'codeword/addnewCourse',
         data: {
           courseNameKey: this.courseName,
-          email: 'test@gmail.com'
+          startDate: this.startDate,
+          endDate: this.endDate,
+          preSurveyURL: this.startSurveyurl,
+          postSurveyURL: this.endSurveyurl
         }
       }).then(res => {
         console.log(res)
@@ -101,4 +111,3 @@ export default {
   background-color:#41f4b2;
 }
 </style>
-
