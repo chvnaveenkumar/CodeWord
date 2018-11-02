@@ -29,11 +29,9 @@
             </div>
             <div class="modal-body">
             <form>
+            <!-- Retrive the course name from input field -->
             <div class="form-group">
               <input type="text" class="form-control" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip" data-placement="bottom" title="Enter Course Name">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Enter Section Number" data-toggle="tooltip" data-placement="bottom" title="Enter Section Number" >
             </div>
             <div class="row">
                 <div class="col tooltip-test" title="Start Date"> StartDate:<input   type="date" class="form-control" placeholder="Start Date"></div>
