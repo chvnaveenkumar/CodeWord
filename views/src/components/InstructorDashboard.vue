@@ -35,7 +35,7 @@
             </div>
             <div class="row">
                 <div class="col tooltip-test" title="Start Date"> StartDate:<input   type="date" class="form-control" placeholder="Start Date"></div>
-                <div class="col tooltip-test"   title="End Date"> EndDate:<input type="date" class="form-control" placeholder="End Date"></div>
+                <div class="col tooltip-test" title="End Date"> EndDate:<input type="date" class="form-control" placeholder="End Date"></div>
             </div>
             <div class="form-group">
                 <input type="file" class="form-control-file" id="exampleFormControlFile1" style="margin-top:1em">

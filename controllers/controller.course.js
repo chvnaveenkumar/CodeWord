@@ -1,4 +1,6 @@
-
+/**
+ * @author Sravya Kancharla <S531500@nwmissouri.edu>
+ */
 const _ = require('lodash');
 const bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
