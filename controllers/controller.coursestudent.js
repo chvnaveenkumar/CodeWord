@@ -1,14 +1,14 @@
 
+
 const _ = require('lodash');
 const bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
-var { CourseModel } = require('../model/model.coursestudent');
+var { CourseStudentModel } = require('../model/model.coursestudent');
 var { mongoose } = require('./../config/database')
-var mailController = require('../config/user.mail.js')
-let XLSX = require('xlsx')
-let addCourseStudent = (req,res) => {
+
+let getCourseStudent = (req,res) => {
     var body = _.pick(req.body,['CourseNameKey','EmailKey',
-    'Codeword','Acknowledged']); 
+    'Acknowledged']); 
     var courseStudentModel = new CoursestudentModel({
         CourseNameKey: body.CourseNameKey,
         EmailKey:body.EmailKey,
