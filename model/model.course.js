@@ -18,7 +18,7 @@ var CourseModel = mongoose.model('courseModel', {
     require: true,
     minlength: 5
    },
-   codeWordSet:{
+   codeWordSetName:{
     type: String,
     require: true,
     minlength: 5

@@ -8,9 +8,9 @@
     <div class="col-md-4 col-lg-4 col-xs-0 col-sm-0">
       <div class="card coursecard" >
         <div class="card-body">
-          <h5 class="card-title">Mobile Computing - Android</h5>
+          <h5 class="card-title">{{ courseName }}</h5>
           <br>          
-          <p> <pre>10/21/2018             12/21/2018</pre></p>          
+          <p> <pre>{{ startDate }}            {{ endDate }}</pre></p>          
           <a href="#" class="card-link">Survey Start URL</a>
           <a href="#" class="card-link">Survey End URL</a>
           <button type="button" class="btn btn-primary">View students</button>
@@ -30,7 +30,7 @@
             <div class="modal-body">
             <form>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Enter Course Name" data-toggle="tooltip" data-placement="bottom" title="Enter Course Name"   >
+              <input type="text" class="form-control" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip" data-placement="bottom" title="Enter Course Name">
             </div>
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Enter Section Number" data-toggle="tooltip" data-placement="bottom" title="Enter Section Number" >
@@ -58,11 +58,39 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
-              <button type="button" class="btn btn-primary">Add</button>
+              <button type="button" class="btn btn-primary" v-on:click="CreateCourse" >Create Course</button>
             </div></div></div></div>  
   </div>
 </template>
 <script>
+export default {
+  name: 'InstructorDashboard',
+  data () {
+    return {
+      courseName: '',
+      startDate: '',
+      endDate: ''
+    }
+  },
+  methods: {
+    CreateCourse () {
+      console.log('Create Course')
+      let data = new FormData(document.querySelector('form'))
+      this.courseName = data.get('courseName').toLowerCase()
+      /* global axios */
+      axios({
+        method: 'post',
+        url: 'codeword/addnewCourse',
+        data: {
+          courseNameKey: this.courseName,
+          email: 'test@gmail.com'
+        }
+      }).then(res => {
+        console.log(res)
+      })
+    }
+  }
+}
 </script>
 <style>
 #message{

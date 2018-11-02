@@ -9,9 +9,10 @@ let XLSX = require('xlsx')
 
 
 let addCourse = (req,res) => {
+    console.log("Add Course");
     var body = _.pick(req.body,['courseNameKey','email',
-    'codeWordSet','Startdate','Enddate','PreSurveyURL','PostSurveyURL']);
-    console.log(body.courseNameKey);
+    'codeWordSetName','Startdate','Enddate','PreSurveyURL','PostSurveyURL']);
+    console.log(body.courseNameKey+"course name key");
     //console.log(req.body.courseName);
     console.log(body.email);
     console.log(body.codeWordSet);
@@ -22,12 +23,12 @@ let addCourse = (req,res) => {
 
     var courseModel = new CourseModel({
 courseNameKey : body.courseNameKey,
-emailKey: body.email,
-codeWordSet: body.codeWordSet,
-Startdate: body.Startdate,
-Enddate: body.Enddate,
-PreSurveyURL: body.PreSurveyURL,
-PostSurveyURL: body.PostSurveyURL
+emailKey: 'test@gmail.com',
+codeWordSetName: 'Large Codeword Set',
+Startdate: Date().now,
+Enddate: Date().now,
+PreSurveyURL: 'survey url',
+PostSurveyURL: 'survey post url'
     });
     courseModel.save().then((user) => {
         if(user)
