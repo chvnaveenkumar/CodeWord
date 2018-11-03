@@ -22,4 +22,5 @@ router.post('/sendmail', usersController.tempPassword);
 router.post('/changepassword', usersController.changePassword);
 router.post('/addnewCourse', courseController.addCourse);
 router.post('/addcodewordset',codewordsetController.addcodewordset)
+router.post('/getdataxlsx',codewordsetController.getDataFromXLS)
 module.exports = router;
