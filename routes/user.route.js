@@ -3,6 +3,7 @@ var router = express.Router();
 var usersController = require('../controllers/controller.user')
 var courseController = require('../controllers/controller.course')
 var codewordsetController = require('../controllers/controller.codewordset')
+var codewordController = require('../controllers/controller.codeword')
 
 const bodyParser = require('body-parser');
 let multer = require('multer')
@@ -23,4 +24,7 @@ router.post('/changepassword', usersController.changePassword);
 router.post('/addnewCourse', courseController.addCourse);
 router.post('/addcodewordset',codewordsetController.addcodewordset)
 router.post('/getdataxlsx',codewordsetController.getDataFromXLS)
+router.post('/addnewcodewords', codewordController.addcodewords)
+router.post('/getcodewords', codewordController.getcodewords)
+
 module.exports = router;
