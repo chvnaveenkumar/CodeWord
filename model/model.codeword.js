@@ -1,8 +1,7 @@
 var mongoose = require('mongoose');
 var validator = require('validator');
+
 var CodeWord = mongoose.model('codeword', {
-
-
     CodeWordSetName: {
         type: String,
         require: true,
@@ -17,4 +16,4 @@ var CodeWord = mongoose.model('codeword', {
     }
 
 });
-module.exports.codeword = codeword
+module.exports.CodeWord = CodeWord
