@@ -1,153 +1,176 @@
-<style>
-.grid-container {
-  display: grid;
-  grid-gap: 10px;
- 
-  padding: 10px;
-}
-.grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: 15px;
-  font-size: 17px;
-}
-.item1 {
-  grid-column: 1/spam 3;
-  grid-row: 2;
-}
-.item2 {
-  grid-column: 3/span 3;
-  grid-row:1;
-}
-.item3{
-grid-column: 1;
-  grid-row: 3;
-  }
-  .item4{
-grid-column: 2;
-  grid-row: 3;
-  }
-    .item5{
-grid-column: 3;
-  grid-row: 3;
-  }
-   .item6{
-grid-column: 1/spam 2;
-  grid-row: 4;
-  }
-  .item7{
-grid-column: 2;
-  grid-row: 5;
-  }
-</style>
 <template>
-<div class="grid-container">
-  
-  <div class="grid-item item1">Enter Course Name/No:
-      <input type="text" placeholder="Enter the Course Name" id="myText" ></div>
-      <div class="grid-item item2">Instructure name</div>
-  <div class="grid-item item3"><gc-spread-sheets [hostStyle]="hostStyle" (workbookInitialized)="workbookInit($event)">
-        </gc-spread-sheets><input type="file" name="files[]" multiple id="jsonFile" accept=".xlsx" (change)="onFileChange($event)" /></div>
-        <div class="grid-item item4">
-            <button (click)="onClickMe($event)">Save Excel!</button></div>  
-   <div class ="grid-item item5">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</template>
-<style>
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<button type="button" class="close" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+<!-- <div class="container">
 
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
-}
+        <div class="row">
+          <div class="col"></div>
+          
+          <div class="col"></div>
+          <div class="w-100"></div>
+          
+              
+        </div>
 
-#myInput {
-    border-box: box-sizing;
-    background-image: url('searchicon.png');
-    background-position: 14px 12px;
-    background-repeat: no-repeat;
-    font-size: 16px;
-    padding: 14px 20px 12px 45px;
-    border: none;
-    border-bottom: 1px solid #ddd;
-}
+      </div> -->
+      <div class="d-flex flex-column"><div class="align-self-center"><div class="col">
+            <div class="h-50 p-3"><p class="font-weight-bold"><h3>Add Course</h3> </p></div></div></div></div>
+<!--      
+            <div class="mx-auto" style="width: 200px;">
+                    <h5>Add Course</h5>
+                  </div> -->
 
-#myInput:focus {outline: 3px solid #ddd;}
+                  <!-- <p class="text-xl-center"></p> -->
+                  <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-outline-success">ADD</button>
+<button type="button" class="btn btn-outline-danger">Cancle</button>
+</div>
+<div class="card text-center">
+        <div class="card-header">
+                <button type="button" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                <p class="font-weight-bold"><h3>Add Course</h3> </p>
+        </div>
+        <div class="card-body">
+                <form>
+                        <div class="form-group">
+                <!-- <p><input class="form-control" type="text" placeholder="Enter the Course Name"></p> -->
+                        
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f6f6f6;
-    min-width: 230px;
-    overflow: auto;
-    border: 1px solid #ddd;
-    z-index: 1;
-}
+              <p> <form autocomplete="off" action="/action_page.php">
+                    <div class="autocomplete">
+                      <input class="form-control" id="myInput" type="text" name="myCountry" placeholder="Enter the Course Name">
+                    </div>
+                                      </form></p> 
 
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
 
-.dropdown a:hover {background-color: #ddd;}
+               <p> <input class="form-control" type="text" placeholder="Enter the Section Number"></p>
+            </div>
+        </form>
+        <div class="input-group mb-3">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="inputGroupFile02">
+                  <label class="custom-file-label" data-toggle="Upload excel sheet with SID and Name of the student" for="inputGroupFile02">Choose file</label>
+                </div>
+                <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button">Upload</button>
+                      </div>
+                      
+              </div>
+              <label for="basic-url">Hint:Upload excel sheet with SID and Names of the students</label>
+              <p><input class="form-control" type="text" placeholder="Enter the Survay Start URL"></p>
+              <p> <input class="form-control" type="text" placeholder="Enter the Survay End URL"></p>
+      
 
-.show {display: block;}
-</style>
-<template>
 
-<div class="dropdown">
-<button onclick="myFunction()" class="dropbtn">Select The Code Word</button>
-  <div id="myDropdown" class="dropdown-content">
-    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-    <a href="#">Excel 1</a>
-    <a href="#">Excel 2</a>
-    <a href="#">Excel 3</a>
+        </div>
+        <div class="card-footer text-muted">
+                <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-outline-success">ADD</button>
+      <button type="button" class="btn btn-outline-danger">Cancle</button>
       </div>
-</div>
+        </div>
+        
+      </div>
 </template>
+      <script>
+            function autocomplete(inp, arr) {
+               var currentFocus;
+              inp.addEventListener("input", function(e) {
+                  var a, b, i, val = this.value;
+                   closeAllLists();
+                  if (!val) { return false;}
+                  currentFocus = -1;
+                  a = document.createElement("DIV");
+                  a.setAttribute("id", this.id + "autocomplete-list");
+                  a.setAttribute("class", "autocomplete-items");
+                  this.parentNode.appendChild(a);
+                  for (i = 0; i < arr.length; i++) {
+                    
+                    if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                      
+                      b = document.createElement("DIV");
+                      
+                      b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                      b.innerHTML += arr[i].substr(val.length);
+                      
+                      b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                      
+                      b.addEventListener("click", function(e) {
+                          
+                          inp.value = this.getElementsByTagName("input")[0].value;
+                         
+                          closeAllLists();
+                      });
+                      a.appendChild(b);
+                    }
+                  }
+              });
+              
+              inp.addEventListener("keydown", function(e) {
+                  var x = document.getElementById(this.id + "autocomplete-list");
+                  if (x) x = x.getElementsByTagName("div");
+                  if (e.keyCode == 40) {
+                    
+                    currentFocus++;
+                    
+                    addActive(x);
+                  } else if (e.keyCode == 38) { //up
+                    
+                    currentFocus--;
+                    
+                    addActive(x);
+                  } else if (e.keyCode == 13) {
+                    
+                    e.preventDefault();
+                    if (currentFocus > -1) {
+                    
+                      if (x) x[currentFocus].click();
+                    }
+                  }
+              });
+              function addActive(x) {
+                
+                if (!x) return false;
+               
+                removeActive(x);
+                if (currentFocus >= x.length) currentFocus = 0;
+                if (currentFocus < 0) currentFocus = (x.length - 1);
+                
+                x[currentFocus].classList.add("autocomplete-active");
+              }
+              function removeActive(x) {
+               
+                for (var i = 0; i < x.length; i++) {
+                  x[i].classList.remove("autocomplete-active");
+                }
+              }
+              function closeAllLists(elmnt) {
+                
+                var x = document.getElementsByClassName("autocomplete-items");
+                for (var i = 0; i < x.length; i++) {
+                  if (elmnt != x[i] && elmnt != inp) {
+                    x[i].parentNode.removeChild(x[i]);
+                  }
+                }
+              }
+              /*execute a function when someone clicks in the document:*/
+              document.addEventListener("click", function (e) {
+                  closeAllLists(e.target);
+              });
+            }
+            
+            
+            var countries = ["Object Oriented Programming","Mobile Computing"]
+            autocomplete(document.getElementById("myInput"), countries);
+            </script>
+            
 
-<script>
-
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-
-function filterFunction() {
-    var input, filter, ul, li, a, i;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    div = document.getElementById("myDropdown");
-    a = div.getElementsByTagName("a");
-    for (i = 0; i < a.length; i++) {
-        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
-            a[i].style.display = "";
-        } else {
-            a[i].style.display = "none";
-        }
-    }
-}
-</script>
-<template>
-<div class="grid-item item6">Hint: Upload excel sheet with SID and Name of the student</div> 
-<div class="grid-item item7">
-    
-        <input type="submit" value="Submit" class="btn btn-primary" />
-    
-</div>
-</div>
-</p>
-</template>
-
+      
