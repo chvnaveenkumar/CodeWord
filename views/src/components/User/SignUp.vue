@@ -74,6 +74,10 @@ export default {
     OnRegister () {
       this.msg = ''
       let emailid = this.email
+      if (this.emailid == null) {
+        this.msg = 'Invalid Details'
+        this.signed = false
+      }
       /* global axios */
       axios({
         method: 'post',

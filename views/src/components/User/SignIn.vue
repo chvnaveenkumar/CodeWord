@@ -54,7 +54,7 @@ export default {
       this.pass = data.get('password')
       this.msg = ''
       if (this.emailid === null) {
-        this.msg = 'Email ID cannot be empty'
+        this.msg = 'Login Invalid'
         this.signed = false
       } else {
         axios({
