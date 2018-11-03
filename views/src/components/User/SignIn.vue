@@ -38,7 +38,7 @@
 
 <script>
 export default {
-  name: 'HomePage',
+  name: 'SignInPage',
   data () {
     return {
       msg: '',

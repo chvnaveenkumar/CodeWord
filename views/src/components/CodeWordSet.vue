@@ -25,10 +25,7 @@
                                             Upload Cordword Set(Excel)
                                             <input type="file" class="form-control-file" id="exampleFormControlFile1" style="margin-top:.2em" required>
                                     </div>
-                                    <!-- <div class="form-group text-left">
-                                        Number of Codewords in the uploaded set
-                                        <input type="text" class="form-control" placeholder="Enter CordwordSet Name" style="margin-top:.2em" data-toggle="tooltip" data-placement="top" title="Enter CordwordSet Name" required>
-                                    </div> -->
+                                    <!-- s -->
                                     <div class="alert alert-info">
                                         <strong>Info!</strong> There are 50 codewords in the Uploaded set.
                                     </div>

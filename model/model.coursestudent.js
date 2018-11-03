@@ -21,6 +21,10 @@ var CoursestudentModel = mongoose.model('CoursestudentModel', {
         }
     }
    },
+   Name:{
+    type: String,
+    require: true,
+   },
    Codeword:{
     type: String,
     require: true,
