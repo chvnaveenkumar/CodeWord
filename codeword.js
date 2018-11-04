@@ -2,7 +2,7 @@ var express = require('express');
 var path = require('path');
 var cors = require('cors');
 require('./config/database');
-const formidable = require('express-formidable');
+//const formidable = require('express-formidable');
 var userRouter = require('./routes/user.route');
 var app = express();
 const bodyParser = require('body-parser');
