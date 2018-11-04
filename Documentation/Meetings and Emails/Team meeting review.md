@@ -16,3 +16,4 @@
      2. Srimai and Sreelekha also learnt how to do controller and we all worked on Sketeches. 
      3. We also discussed about the comments from MVP2 Presentation.
 |  30/10/2018 (5PM to 7PM) | Chandaluri, Naveen Kumar, Kancharla, Sravya, Yanala, Srimai Reddy, Vyshnavi Yallamareddy had a meeting for 2 hours. We all worked on data and models for tasks. All of worked on testing of our project got some unaccepted work. We worked on sending data to database from user and discussed about the tasks.
+|  02/11/2018 (5PM to 7:30PM) | Chandaluri, Naveen Kumar, Kancharla, Sravya, Yanala, Srimai Reddy, Vijaya, Sreelekha, Shivani Reddy Dodla had a meeting for 2 hours. We discussed about the updates what we have done this week and worked on validations for sign Up and for password. We helped each other to write code. All of worked on testing of our project. We worked on sending data to database from user and discussed about the tasks.
