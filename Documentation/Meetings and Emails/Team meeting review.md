@@ -15,3 +15,4 @@
      1. We had discussed about controllers. Naveen explained how to do controllers and Sravya created course controller in meeting.
      2. Srimai and Sreelekha also learnt how to do controller and we all worked on Sketeches. 
      3. We also discussed about the comments from MVP2 Presentation.
+|  30/10/2018 (5PM to 7PM) | Chandaluri, Naveen Kumar, Kancharla, Sravya, Yanala, Srimai Reddy, Vyshnavi Yallamareddy had a meeting for 2 hours. We all worked on data and models for tasks. All of worked on testing of our project got some unaccepted work. We worked on sending data to database from user and discussed about the tasks.
