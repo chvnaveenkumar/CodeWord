@@ -30,3 +30,26 @@ let addcodewords = (req, res) => {
 }
 module.exports.addcodewords = addcodewords;
 
+let getcodewords = (req, res) => {
+    // console.log("Get Codewords");
+    var body = _.pick(req.body,['CodeWordSetName','codeword']);
+    codeword.findOne({CodeWordSetName: body.CodeWordSetName}, function (err, codeword) {
+        if(err){
+            return res.json({ code: 200, message: 'No codeword Set'});
+        }
+        return bcrypt.compare(body.codeword,CodeWordSetName.codeword,(err,result) => {
+            if(result){
+                var newToken = jwt.sign({CodeWordSetName: body.CodeWordSetName, codeword : CodeWordSetName.codeword });
+                codeword.updateOne({CodeWordSetName: body.CodeWordSetName},{$set: {token: newToken}}, (err) =>{
+                    if(err){
+                        return res.json({ code: 200, message: 'Unable to generate and update Token'});
+                    }
+                    return res.json({ code: 200, message: 'Codewords are initialized. Redirecting..'});
+                })
+            }
+            else{
+                return res.json({ code: 200, message: "Invalid User!!"})
+            }
+        })
+    })
+module.exports.getcodewords = getcodewords;
