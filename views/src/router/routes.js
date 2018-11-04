@@ -8,6 +8,7 @@ import ChangePassword from '@/components/User/ChangePassword'
 import StudentDashboard from '@/components/StudentDashboard'
 import CourseStudent from '@/components/CourseStudent'
 import CodeWordSet from '@/components/CodeWordSet'
+import CodeWord from '@/components/CodeWord'
 Vue.use(Router)
 
 export default new Router({
@@ -61,6 +62,11 @@ export default new Router({
       path: '/codewordset',
       name: 'CodeWordSet',
       component: CodeWordSet
+    },
+    {
+      path: '/codeword',
+      name: 'CodeWord',
+      component: CodeWord
     },
     {
       path: '/studentdashboard',
