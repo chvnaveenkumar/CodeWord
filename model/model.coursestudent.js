@@ -3,7 +3,7 @@
  */
 var mongoose = require('mongoose');
 var validator = require('validator');
-var CoursestudentModel = mongoose.model('CoursestudentModel', {
+var CourseStudentModel = mongoose.model('CourseStudentModel', {
     CourseNameKey: {
     type: String,
     required: true,
@@ -21,7 +21,7 @@ var CoursestudentModel = mongoose.model('CoursestudentModel', {
         }
     }
    },
-   Name:{
+   StudentName:{
     type: String,
     require: true,
    },
@@ -37,4 +37,4 @@ var CoursestudentModel = mongoose.model('CoursestudentModel', {
     minlength:1
    }
 });
-module.exports.CoursestudentModel = CoursestudentModel
+module.exports.CourseStudentModel = CourseStudentModel
