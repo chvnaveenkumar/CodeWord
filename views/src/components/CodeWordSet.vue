@@ -11,7 +11,7 @@
                         <h5 class="modal-title" id="addcourseLabel">Create CodewordSet</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
-                                </button>
+                        </button>
                     </div>
                     <div class="modal-body">
                         <form>
@@ -19,17 +19,18 @@
                                 <input name="dataSetName" type="text" class="form-control" placeholder="Enter CordwordSet Name" data-toggle="tooltip" data-placement="top" title="Enter CordwordSet Name"
                                     required>
                             </div>
-                            <!-- <div class="form-group">
-                                        <input type="number" class="form-control" id="replyNumber" data-bind="value:replyNumber" placeholder="Enter Number of Codewords" data-toggle="tooltip" data-placement="top" title="Enter Number of Codewords" required>
-                                    </div> -->
+                            
                             <div class="form-group text-left">
                                 Upload Cordword Set(Excel)
                                 <input type="file"  name="file" ref="myFile" @change="previewFiles" class="form-control-file" id="exampleFormControlFile1" style="margin-top:.2em"
                                     required>
                             </div>
-                            <!-- s -->
+                            
                             <div class="alert alert-info">
-                                <strong>Info!</strong> There are {{ count }} codewords in the Uploaded set.
+                                 <p v-if="count == 0">                          
+                                 No File is uploaded. Waiting for user to upload the CodeWord Set.</p>
+                                <p v-else>
+                                    <strong>Info!</strong> There are {{ count }} codewords in the Uploaded set.</p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
@@ -71,17 +72,11 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Hoot Original set</td>
-                <td>80</td>
+            <tr v-for="(code,index) in codeWordSetData" :key="code._id">
+                 <th scope="row">{{ index + 1 }}</th>
+                <td> {{ code.CodeWordSetName }} </td>
+                <td> {{ code.emailKey.length }} </td>
                 <td>hoot@nwmissouri.edu</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Large set</td>
-                <td>200</td>
-                <td>dcase@nwmissouri.edu</td>
             </tr>
 
         </tbody>
@@ -97,30 +92,49 @@ export default {
   data () {
     return {
       files: '',
+      tcodeWordSetData: [],
       codeWordSetData: [],
       count: 0
     }
   },
+
   methods: {
+    // Getting the data from uploaded xls file
     previewFiles () {
       this.files = this.$refs.myFile
       let data = new FormData(document.querySelector('form'))
       axios.post('http://localhost:3000/codeword/getdataxlsx', data).then(response => {
         console.log(response.data.data)
-        this.codeWordSetData = response.data.data
-        this.count = this.codeWordSetData.length
+        this.tcodeWordSetData = response.data.data
+        this.count = this.tcodeWordSetData.length
       })
     },
+
+    // Calling API of codeWordSet controller and sending xls data in form of json
     saveCodeWordData () {
       let data = new FormData(document.querySelector('form'))
       let sendData = {
-        name: data.get('dataSetName'),
-        data: this.codeWordSetData
+        codeWordSetName: data.get('dataSetName'),
+        emailKeySet: this.tcodeWordSetData
       }
       axios.post('http://localhost:3000/codeword/addcodewordset', sendData).then(response => {
         console.log(response.data.data)
+        this.getCodeWordData()
+      })
+    },
+    getCodeWordData () {
+      axios.get('http://localhost:3000/codeword/getcodewordset').then(response => {
+        this.codeWordSetData = response.data.data
       })
     }
+    // resetForm: function (e) {
+    //   e.preventDefault()
+    //   this.name = ''
+    //   this.data = ''
+    // }
+  },
+  mounted () {
+    this.getCodeWordData()
   }
 }
 </script>
