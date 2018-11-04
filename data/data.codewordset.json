@@ -5,7 +5,7 @@
     },
     {
     "CodeWordSetName": "Large set",
-    "emailKey": "dcase@nwmissouri.edu"
+    "emailKey": ["dcase@nwmissouri.edu", "asdasd"]
     }
 
 ]

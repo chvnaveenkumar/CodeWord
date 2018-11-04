@@ -13,7 +13,9 @@
     "debug": "~2.6.9",
     "ejs": "~2.5.7",
     "express": "~4.16.0",
+    "express-formidable": "^1.2.0",
     "fast-csv": "^2.4.1",
+    "formidable": "^1.2.1",
     "http-errors": "~1.6.2",
     "jsonwebtoken": "^8.3.0",
     "lodash": "^4.17.11",
@@ -23,7 +25,8 @@
     "nodemailer": "^4.6.8",
     "path": "^0.12.7",
     "validator": "^10.7.1",
-    "xlsx": "^0.14.0"
+    "xlsx": "^0.14.0",
+    "xlsx2json": "^1.0.0"
   },
   "description": "[Template for a Project Charter](https://profcase.github.io/project-charter-template) document used to formalize project understanding.",
   "main": "codeword.js",
