@@ -26,7 +26,7 @@ router.post('/addnewCourse', courseController.addCourse);
 router.post('/addcodewordset',codewordsetController.addcodewordset);
 router.post('/getdataxlsx',codewordsetController.getDataFromXLS);
 router.post('/addnewcodewords', codewordController.addcodewords);
-router.post('/addcoursestudent', courseStudentController.addCourseStudent);
+router.post('/addcoursestudent',multer().single('file'), courseStudentController.addCourseStudent);
 // router.post('/getcodewords', codewordController.getcodewords)
 
 module.exports = router;
