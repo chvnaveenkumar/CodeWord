@@ -168,7 +168,6 @@ export default {
         this.codeWordSetData = response.data.data
       })
     }
-    
     // resetForm: function (e) {
     //   e.preventDefault()
     //   this.name = ''
@@ -180,4 +179,3 @@ export default {
   }
 }
 </script>
-
