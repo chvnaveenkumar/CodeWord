@@ -109,7 +109,21 @@
 </template>
 
 
+<style>
+#message {
+  margin-top: 5em;
+}
 
+#myProgress {
+    width: 100%;
+    background-color: grey;
+}
+#myBar {
+    width: 50%;
+    height: 30px;
+    background-color: green;
+}
+</style>
 
 <script>
 import axios from 'axios'
@@ -166,22 +180,4 @@ export default {
   }
 }
 </script>
-
-
-
-<style>
-#message {
-  margin-top: 5em;
-}
-
-#myProgress {
-    width: 100%;
-    background-color: grey;
-}
-#myBar {
-    width: 50%;
-    height: 30px;
-    background-color: green;
-}
-</style>
 
