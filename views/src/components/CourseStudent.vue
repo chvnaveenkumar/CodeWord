@@ -98,14 +98,8 @@
     </tr>
     
   </tbody>
-</table>      
-  
-        </div>
-
-      </div>
-      </div>
-      
-    
+</table>
+</div>    
 </template>
 
 
@@ -125,3 +119,52 @@
 }
 </style>
 
+<script>
+import axios from 'axios'
+
+export default {
+  name: 'CodeWordSet',
+  data () {
+    return {
+      files: '',
+      tcodeWordSetData: [],
+      codeWordSetData: [],
+      count: 0
+    }
+  },
+
+  methods: {
+    // Getting the data from uploaded xls file
+    previewFiles () {
+      this.files = this.$refs.myFile
+      let data = new FormData(document.querySelector('form'))
+      axios.post('http://localhost:3000/codeword/getdataxlsx', data).then(response => {
+        console.log(response.data.data)
+        this.tcodeWordSetData = response.data.data
+        this.count = this.tcodeWordSetData.length
+      })
+    },
+
+    // Calling API of codeWordSet controller and sending xls data in form of json
+    saveCodeWordData () {
+      let data = new FormData(document.querySelector('form'))
+      let sendData = {
+        codeWordSetName: data.get('dataSetName'),
+        emailKeySet: this.tcodeWordSetData
+      }
+      axios.post('http://localhost:3000/codeword/addcodewordset', sendData).then(response => {
+        console.log(response.data.data)
+        this.getCodeWordData()
+      })
+    },
+    getCodeWordData () {
+      axios.get('http://localhost:3000/codeword/getcodewordset').then(response => {
+        this.codeWordSetData = response.data.data
+      })
+    }
+  },
+  mounted () {
+    this.getCodeWordData()
+  }
+}
+</script>

@@ -10,20 +10,16 @@ var mailController = require('../config/user.mail.js')
 let XLSX = require('xlsx')
 
 let addCourse = (req,res) => {
-    console.log("Add Course");
-    var body = _.pick(req.body,['courseNameKey','email',
+    var body = _.pick(req.body,['courseNameKey',
     'codeWordSetName','startDate','endDate','preSurveyURL','postSurveyURL']);
-    console.log(body.courseNameKey+"course name key");
-    console.log(body.email+"req.session.id"+ req.session.id);
-
     var courseModel = new CourseModel({
 courseNameKey : body.courseNameKey,
-emailKey: req.session.id,
+emailKey: req.session.email,
 codeWordSetName: 'Large Codeword Set',
-Startdate: body.Startdate,
-Enddate: body.Enddate,
-PreSurveyURL: body.PreSurveyURL,
-PostSurveyURL: body.PostSurveyURL 
+Startdate: body.startDate,
+Enddate: body.endDate,
+PreSurveyURL: body.preSurveyURL,
+PostSurveyURL: body.postSurveyURL 
 });
     courseModel.save().then((user) => {
         if(user)

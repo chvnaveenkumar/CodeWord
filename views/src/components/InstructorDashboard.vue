@@ -1,4 +1,3 @@
-<!-- @author Shivani Dodla <S531496@nwmissouri.edu> -->
 <template>
 <div class="container-fluid" style="margin-top:5em" >
   <div class="col-md-4 col-lg-4 col-xs-0 col-sm-0">
@@ -87,6 +86,7 @@ export default {
         method: 'post',
         url: 'codeword/addnewCourse',
         data: {
+          token: window.localStorage.getItem('token'),
           courseNameKey: this.courseName,
           startDate: this.startDate,
           endDate: this.endDate,

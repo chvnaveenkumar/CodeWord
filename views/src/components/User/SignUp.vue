@@ -16,11 +16,11 @@
                       </div>
                           <h2> Register</h2>
                               <div class="form-group">
-                                  <input type="email" class="form-control" placeholder="Enter email" required="required" pattern=".+@*.edu" v-model="email">
+                                  <input type="email" class="form-control" placeholder="Enter email" required="required" pattern=".+@nwmissouri.edu" v-model="email">
                               </div>
                               <div class="form-group" :class="{invalid: $v.password.$error}">
                                     <input type="password" class="form-control" placeholder="Password" required="required"
-                                        v-model.lazy="password" @blur="$v.password.$touch()">
+                                        v-model.lazy="password" @blur="$v.password.$touch()" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter">
                                     <p v-if="!$v.password.minLength"> Password must have at least {{ $v.password.$params.minLength.min }} letters. </p>
                               </div>
                               <div class="form-group" :class="{invalid: $v.repeatPassword.$error}">
@@ -77,38 +77,42 @@ export default {
       if (this.emailid == null) {
         this.msg = 'Invalid Details'
         this.signed = false
+      } else if (this.password == null) {
+        this.msg = 'Invalid Details'
+        this.signed = false
+      } else {
+        /* global axios */
+        axios({
+          method: 'post',
+          url: 'codeword/validateEmail',
+          data: {
+            email: emailid
+          }
+        }).then(res => {
+          console.log('validate' + res.data.message)
+          let _this = this
+          if (res.data.message === false) {
+            /* global axios */
+            console.log('onregister clicked fullnaem', this.email)
+            axios.post('codeword/signup',
+              {
+                email: this.email.toLowerCase(),
+                password: this.password
+              }).then(res => {
+              this.msg = 'Successfully Registered and Redirecting to SignIn Page.'
+              this.signed = true
+              if (res.data.message) {
+                setTimeout(function () {
+                  _this.$router.push({ path: '/' })
+                }, 1000)
+              }
+            })
+          } else {
+            this.msg = 'This user registerd already!!'
+            this.signed = false
+          }
+        })
       }
-      /* global axios */
-      axios({
-        method: 'post',
-        url: 'codeword/validateEmail',
-        data: {
-          email: emailid
-        }
-      }).then(res => {
-        console.log('validate' + res.data.message)
-        let _this = this
-        if (res.data.message === false) {
-          /* global axios */
-          console.log('onregister clicked fullnaem', this.email)
-          axios.post('codeword/signup',
-            {
-              email: this.email.toLowerCase(),
-              password: this.password
-            }).then(res => {
-            this.msg = 'Successfully Registered and Redirecting to SignIn Page.'
-            this.signed = true
-            if (res.data.message) {
-              setTimeout(function () {
-                _this.$router.push({ path: '/' })
-              }, 1000)
-            }
-          })
-        } else {
-          this.msg = 'This user registerd already!!'
-          this.signed = false
-        }
-      })
     }
   }
 }
