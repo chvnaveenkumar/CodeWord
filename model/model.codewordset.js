@@ -23,6 +23,10 @@ var codeWordSetSchema = new Schema({
                 type: [String],
                 required: true,
                 minlength: 4
+        },
+        codeWordCreator: {
+                type: String,
+                required: true,
         }
 });
 

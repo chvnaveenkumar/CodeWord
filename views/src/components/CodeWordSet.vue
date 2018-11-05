@@ -76,7 +76,7 @@
                  <th scope="row">{{ index + 1 }}</th>
                 <td> {{ code.CodeWordSetName }} </td>
                 <td> {{ code.emailKey.length }} </td>
-                <td>hoot@nwmissouri.edu</td>
+                <td> {{ code.codeWordCreator }} </td>
             </tr>
 
         </tbody>
@@ -117,7 +117,14 @@ export default {
         codeWordSetName: data.get('dataSetName'),
         emailKeySet: this.tcodeWordSetData
       }
-      axios.post('http://localhost:3000/codeword/addcodewordset', sendData).then(response => {
+      axios({
+        method: 'post',
+        url: 'http://localhost:3000/codeword/addcodewordset',
+        data: sendData,
+        headers: {
+          token: window.localStorage.getItem('token')
+        }
+      }).then(response => {
         console.log(response.data.data)
         this.getCodeWordData()
       })
@@ -127,11 +134,6 @@ export default {
         this.codeWordSetData = response.data.data
       })
     }
-    // resetForm: function (e) {
-    //   e.preventDefault()
-    //   this.name = ''
-    //   this.data = ''
-    // }
   },
   mounted () {
     this.getCodeWordData()

@@ -59,7 +59,8 @@ let addcodewordset = (req, res) => {
     // Upper code was not working so I(Ujjawal) added the below code
     var codewordset = new Codewordset({
         CodeWordSetName: req.body.codeWordSetName,
-        emailKey: _.map(req.body.emailKeySet, 'codeword')
+        emailKey: _.map(req.body.emailKeySet, 'codeword'),
+        codeWordCreator: req.session.email
     });
     codewordset.save().then((codes) => {
         return res.json({ code: 200, data: codes });
