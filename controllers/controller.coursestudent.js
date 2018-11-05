@@ -6,6 +6,8 @@ var { mongoose } = require('./../config/database')
 var { CodeWord } = require('../model/model.codeword')
 let XLSX = require('xlsx')
 
+module.exports.addCourseStudent = addCourseStudent;
+
 let addCourseStudent = (req,res) => {
     var codewordslist = [];
     var studentIDList = [];
@@ -40,6 +42,21 @@ let addCourseStudent = (req,res) => {
     console.log("studentName"+studentNameList);
     console.log(codewordslist);
 
+    var shuffleCodeWords = shuffle(codewordslist);
+
+    // convert xlsx to json
+        var server = http.createServer(function(request, response) {
+        var XLSX = require('xlsx');
+        var workbook = XLSX.readFile('file.xlsx');
+        var sheet_name_list = workbook.SheetNames;
+        var testList = XLSX.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]])
+        console.log(typeof testList)
+        for (var i in testList){
+            testList[i].fileName = "file.xlsx"
+        }  
+        console.log(testList)
+    })
+
     // var courseStudentModel = new CourseStudentModel({
     //     CourseNameKey: body.CourseNameKey,
     //     EmailKey:body.EmailKey,
@@ -56,5 +73,18 @@ let addCourseStudent = (req,res) => {
     //     return res.json({ code: 400, message : e});
     // })
 }
-module.exports.addCourseStudent = addCourseStudent;
 
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    while (0 !== currentIndex) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+    return array;
+  }
+
+
+  
