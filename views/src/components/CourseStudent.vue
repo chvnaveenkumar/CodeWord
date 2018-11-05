@@ -98,14 +98,8 @@
     </tr>
     
   </tbody>
-</table>      
-  
-        </div>
-
-      </div>
-      </div>
-      
-    
+</table>
+</div>    
 </template>
 
 
@@ -168,11 +162,6 @@ export default {
         this.codeWordSetData = response.data.data
       })
     }
-    // resetForm: function (e) {
-    //   e.preventDefault()
-    //   this.name = ''
-    //   this.data = ''
-    // }
   },
   mounted () {
     this.getCodeWordData()

@@ -52,4 +52,5 @@ let getcodewords = (req, res) => {
             }
         })
     })
+}
 module.exports.getcodewords = getcodewords;
