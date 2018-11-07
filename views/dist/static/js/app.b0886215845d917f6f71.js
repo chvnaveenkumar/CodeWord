@@ -887,7 +887,14 @@ webpackJsonp([1],[
         codeWordSetName: data.get('dataSetName'),
         emailKeySet: this.tcodeWordSetData
       };
-      __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('http://localhost:3000/codeword/addcodewordset', sendData).then(function (response) {
+      __WEBPACK_IMPORTED_MODULE_0_axios___default()({
+        method: 'post',
+        url: 'http://localhost:3000/codeword/addcodewordset',
+        data: sendData,
+        headers: {
+          token: window.localStorage.getItem('token')
+        }
+      }).then(function (response) {
         console.log(response.data.data);
         _this2.getCodeWordData();
       });
@@ -899,12 +906,6 @@ webpackJsonp([1],[
         _this3.codeWordSetData = response.data.data;
       });
     }
-    // resetForm: function (e) {
-    //   e.preventDefault()
-    //   this.name = ''
-    //   this.data = ''
-    // }
-
   },
   mounted: function mounted() {
     this.getCodeWordData();
@@ -1429,7 +1430,7 @@ var Component = normalizeComponent(
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_294c4546_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_StudentDashboard_vue__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0e31f311_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_StudentDashboard_vue__ = __webpack_require__(72);
 var normalizeComponent = __webpack_require__(2)
 /* script */
 var __vue_script__ = null
@@ -1445,7 +1446,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __vue_script__,
-  __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_294c4546_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_StudentDashboard_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0e31f311_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_StudentDashboard_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -1461,7 +1462,7 @@ var Component = normalizeComponent(
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container",staticStyle:{"margin-top":"5em"}},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-md-2 col-lg-2 col-xs-0 col-sm-0"}),_vm._v(" "),_c('div',{staticClass:"table-responsive col-md-8 col-lg-8 col-xs-12 col-sm-12"},[_c('h2',[_vm._v("CodWords")]),_vm._v(" "),_c('table',{staticClass:"table col-md-12 col-lg-12 col-xs-12 col-sm-12 table-striped table-bordered table-hover"},[_c('thead',[_c('tr',[_c('th',[_vm._v("CRN-Section")]),_vm._v(" "),_c('th',[_vm._v("Course Name")]),_vm._v(" "),_c('th',[_vm._v("Codeword")])])]),_vm._v(" "),_c('tbody',[_c('tr',[_c('td',[_vm._v("44691-05")]),_vm._v(" "),_c('td',[_vm._v("Graduate Directed Project-1")]),_vm._v(" "),_c('td',[_vm._v("Cricket")])]),_vm._v(" "),_c('tr',[_c('td',[_vm._v("44644-01")]),_vm._v(" "),_c('td',[_vm._v("Mobile Computing-Android")]),_vm._v(" "),_c('td',[_vm._v("America")])]),_vm._v(" "),_c('tr',[_c('td',[_vm._v("44664-04")]),_vm._v(" "),_c('td',[_vm._v("User Experience Design")]),_vm._v(" "),_c('td',[_vm._v("Bearcar")])])])]),_vm._v(" "),_c('div',{staticClass:"col-md-2 col-lg-2 col-xs-0 col-sm-0"})])])])}]
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container",staticStyle:{"margin-top":"5em"}},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-md-2 col-lg-2 col-xs-0 col-sm-0"}),_vm._v(" "),_c('div',{staticClass:"table-responsive col-md-8 col-lg-8 col-xs-12 col-sm-12"},[_c('h2',[_vm._v("CodWords")]),_vm._v(" "),_c('table',{staticClass:"table col-md-12 col-lg-12 col-xs-12 col-sm-12 table-striped table-bordered table-hover"},[_c('thead',[_c('tr',[_c('th',[_vm._v("Course Name")]),_vm._v(" "),_c('th',[_vm._v("Codeword")])])]),_vm._v(" "),_c('tbody',[_c('tr',[_c('td',[_vm._v("Graduate Directed Project-1")]),_vm._v(" "),_c('td',[_vm._v("Cricket")])]),_vm._v(" "),_c('tr',[_c('td',[_vm._v("Mobile Computing-Android")]),_vm._v(" "),_c('td',[_vm._v("America")])]),_vm._v(" "),_c('tr',[_c('td',[_vm._v("User Experience Design")]),_vm._v(" "),_c('td',[_vm._v("Bearcar")])])])]),_vm._v(" "),_c('div',{staticClass:"col-md-2 col-lg-2 col-xs-0 col-sm-0"})])])])}]
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
@@ -1543,7 +1544,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_CodeWordSet_vue__ = __webpack_require__(22);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_a2e20cfa_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CodeWordSet_vue__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_72b0ba26_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CodeWordSet_vue__ = __webpack_require__(96);
 function injectStyle (ssrContext) {
   __webpack_require__(95)
 }
@@ -1563,7 +1564,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_CodeWordSet_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_a2e20cfa_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CodeWordSet_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_72b0ba26_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CodeWordSet_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -1584,7 +1585,7 @@ var Component = normalizeComponent(
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container-fluid",staticStyle:{"margin-top":"5em"},attrs:{"id":"codeWordSet"}},[_c('div',{staticClass:"col-md-4 col-lg-4 col-xs-0 col-sm-0"},[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"modal fade",attrs:{"id":"addcourse","tabindex":"-1","role":"dialog","aria-labelledby":"addcourseLabel","aria-hidden":"true"}},[_c('div',{staticClass:"modal-dialog",attrs:{"role":"document"}},[_c('div',{staticClass:"modal-content",staticStyle:{"width":"fit-content"}},[_vm._m(1),_vm._v(" "),_c('div',{staticClass:"modal-body"},[_c('form',[_vm._m(2),_vm._v(" "),_c('div',{staticClass:"form-group text-left"},[_vm._v("\r\n                                Upload Cordword Set(Excel)\r\n                                "),_c('input',{ref:"myFile",staticClass:"form-control-file",staticStyle:{"margin-top":".2em"},attrs:{"type":"file","name":"file","id":"exampleFormControlFile1","required":""},on:{"change":_vm.previewFiles}})]),_vm._v(" "),_c('div',{staticClass:"alert alert-info"},[(_vm.count == 0)?_c('p',[_vm._v("                          \r\n                                 No File is uploaded. Waiting for user to upload the CodeWord Set.")]):_c('p',[_c('strong',[_vm._v("Info!")]),_vm._v(" There are "+_vm._s(_vm.count)+" codewords in the Uploaded set.")])]),_vm._v(" "),_c('div',{staticClass:"modal-footer"},[_c('button',{staticClass:"btn btn-danger",attrs:{"type":"button","data-dismiss":"modal"}},[_vm._v("Cancel")]),_vm._v(" "),_c('button',{staticClass:"btn btn-success",attrs:{"type":"submit","data-dismiss":"modal"},on:{"click":function($event){$event.preventDefault();return _vm.saveCodeWordData($event)}}},[_vm._v("Create Codeword Set")])])])])])])])]),_vm._v(" "),_c('table',{staticClass:"table table-striped"},[_vm._m(3),_vm._v(" "),_c('tbody',_vm._l((_vm.codeWordSetData),function(code,index){return _c('tr',{key:code._id},[_c('th',{attrs:{"scope":"row"}},[_vm._v(_vm._s(index + 1))]),_vm._v(" "),_c('td',[_vm._v(" "+_vm._s(code.CodeWordSetName)+" ")]),_vm._v(" "),_c('td',[_vm._v(" "+_vm._s(code.emailKey.length)+" ")]),_vm._v(" "),_c('td',[_vm._v("hoot@nwmissouri.edu")])])}))])])}
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container-fluid",staticStyle:{"margin-top":"5em"},attrs:{"id":"codeWordSet"}},[_c('div',{staticClass:"col-md-4 col-lg-4 col-xs-0 col-sm-0"},[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"modal fade",attrs:{"id":"addcourse","tabindex":"-1","role":"dialog","aria-labelledby":"addcourseLabel","aria-hidden":"true"}},[_c('div',{staticClass:"modal-dialog",attrs:{"role":"document"}},[_c('div',{staticClass:"modal-content",staticStyle:{"width":"fit-content"}},[_vm._m(1),_vm._v(" "),_c('div',{staticClass:"modal-body"},[_c('form',[_vm._m(2),_vm._v(" "),_c('div',{staticClass:"form-group text-left"},[_vm._v("\r\n                                Upload Cordword Set(Excel)\r\n                                "),_c('input',{ref:"myFile",staticClass:"form-control-file",staticStyle:{"margin-top":".2em"},attrs:{"type":"file","name":"file","id":"exampleFormControlFile1","required":""},on:{"change":_vm.previewFiles}})]),_vm._v(" "),_c('div',{staticClass:"alert alert-info"},[(_vm.count == 0)?_c('p',[_vm._v("                          \r\n                                 No File is uploaded. Waiting for user to upload the CodeWord Set.")]):_c('p',[_c('strong',[_vm._v("Info!")]),_vm._v(" There are "+_vm._s(_vm.count)+" codewords in the Uploaded set.")])]),_vm._v(" "),_c('div',{staticClass:"modal-footer"},[_c('button',{staticClass:"btn btn-danger",attrs:{"type":"button","data-dismiss":"modal"}},[_vm._v("Cancel")]),_vm._v(" "),_c('button',{staticClass:"btn btn-success",attrs:{"type":"submit","data-dismiss":"modal"},on:{"click":function($event){$event.preventDefault();return _vm.saveCodeWordData($event)}}},[_vm._v("Create Codeword Set")])])])])])])])]),_vm._v(" "),_c('table',{staticClass:"table table-striped"},[_vm._m(3),_vm._v(" "),_c('tbody',_vm._l((_vm.codeWordSetData),function(code,index){return _c('tr',{key:code._id},[_c('th',{attrs:{"scope":"row"}},[_vm._v(_vm._s(index + 1))]),_vm._v(" "),_c('td',[_vm._v(" "+_vm._s(code.CodeWordSetName)+" ")]),_vm._v(" "),_c('td',[_vm._v(" "+_vm._s(code.emailKey.length)+" ")]),_vm._v(" "),_c('td',[_vm._v(" "+_vm._s(code.codeWordCreator)+" ")])])}))])])}
 var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('button',{staticClass:"btn btn-success",attrs:{"type":"button","title":"Create CodeWord Set","data-toggle":"modal","data-target":"#addcourse"}},[_c('span',{staticClass:"fa fa-plus"}),_vm._v(" Create Codeword Set\r\n                ")])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"modal-header"},[_c('h5',{staticClass:"modal-title",attrs:{"id":"addcourseLabel"}},[_vm._v("Create CodewordSet")]),_vm._v(" "),_c('button',{staticClass:"close",attrs:{"type":"button","data-dismiss":"modal","aria-label":"Close"}},[_c('span',{attrs:{"aria-hidden":"true"}},[_vm._v("×")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-group"},[_c('input',{staticClass:"form-control",attrs:{"name":"dataSetName","type":"text","placeholder":"Enter CordwordSet Name","data-toggle":"tooltip","data-placement":"top","title":"Enter CordwordSet Name","required":""}})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('thead',[_c('tr',[_c('th',{attrs:{"scope":"col"}},[_c('h4',[_c('u',[_vm._v("ID")])])]),_vm._v(" "),_c('th',{attrs:{"scope":"col"}},[_c('h4',[_c('u',[_vm._v("CodewordSet Name")])])]),_vm._v(" "),_c('th',{attrs:{"scope":"col"}},[_c('h4',[_c('u',[_vm._v("Codeword Count")])])]),_vm._v(" "),_c('th',{attrs:{"scope":"col"}},[_c('h4',[_c('u',[_vm._v("CordwordSet Creator")])])])])])}]
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
@@ -1681,4 +1682,4 @@ var store = new __WEBPACK_IMPORTED_MODULE_1_Vuex__["a" /* default */].Store({
 
 /***/ })
 ],[24]);
-//# sourceMappingURL=app.47e1ac69b398fc124d36.js.map
+//# sourceMappingURL=app.b0886215845d917f6f71.js.map

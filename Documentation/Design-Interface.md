@@ -88,7 +88,7 @@ Post
 
 Link <http://gdpcodeword.herokuapp.com/?#/studentdashboard>
 
-![Sketch1](/Documentation/Sketches/gdp1234.png)
+
 ## INSTRUCTOR ROLE
 
 ### 2.02 Instructor Course List

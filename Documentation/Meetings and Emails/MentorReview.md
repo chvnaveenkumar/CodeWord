@@ -74,7 +74,7 @@ ______________________________
 
 | ID                | Folder/type               | Resource (the file names will depend on the folder/type) | Responsible Party        | Task Status | Comments |
 |-------------------|---------------------------|----------------------------------------------------------|--------------------------|-------------|----------|
-|    1.             |    model                  |    User                                                  |    Naveen Chandaluri     |             |          |
+|    1.             |    model                  |    User                                                  |    Naveen Chandaluri     |    Done         |          |
 |    2.             |    model                  |    Course                                                |    Sravya                |    In progress         |  Working on Adding new course of section number details for adding new course.      |
 |    3.             |    model                  |    CourseStudent                                         |    Vyshnavi              |             |          |
 |    4.             |    model                  |    CodewordSet                                           |    Srimai                |   Done          |          |
@@ -86,12 +86,12 @@ ______________________________
 |    10.            |    data                   |    Codeword                                              |    Sreelekha             |             |          |
 |    11.            |    utils/seeder.js        |    (all)                                                 |    Anurag                |             |          |
 |    12.            |    utils/logger.js        |    (all)                                                 |    Chaitanya             |             |          |
-|    13.            |    controller             |    User                                                  |    Naveen Chandaluri     |             |          |
+|    13.            |    controller             |    User                                                  |    Naveen Chandaluri     |    Done         |          |
 |    14.            |    controller             |    Course                                                |    Sravya                |             |          |
 |    15.            |    controller             |    CourseStudent                                         |    Vyshnavi              |             |          |
 |    16.            |    controller             |    CodewordSet                                           |    Srimai                |    In progress         |  few issues working on it        |
 |    17.            |    controller             |    Codeword                                              |    Sreelekha             |             |          |
-|    18.            |    views/user             |    User                                                  |    Naveen Chandaluri     |             |          |
+|    18.            |    views/user             |    User                                                  |    Naveen Chandaluri     |    In Progess         |  working on validations        |
 |    19.            |    views/course           |    Course                                                |    Chaitanya             |             |          |
 |    20.            |    views/coursestudent    |    CourseStudent                                         |    Anurag                |             |          |
 |    21.            |    views/codewordset      |    CodewordSet                                           |    Ujjawal               |             |          |

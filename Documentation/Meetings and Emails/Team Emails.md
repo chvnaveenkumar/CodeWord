@@ -43,3 +43,492 @@ Applied Computer Science - Fall 2017
 *  Mob: +1 (660) 528 0602 
 **Email: S530473@nwmissouri.edu
  
+
+From: Chandaluri,Naveen Kumar 
+Sent: Friday, October 26, 2018 11:27 AM
+To: Codeword <codeword@nwmissouri.onmicrosoft.com>
+Cc: Case,Denise M <DCASE@nwmissouri.edu>
+Subject: Credentials for MongoDB and herokuapp - Code Word Project
+ 
+Hi Team,
+ 
+Please find the below credentials for mongodb and herokuapp account.
+ 
+Mongodb:
+username: naveenkumarchandaluri@gmail.com
+password:  codeword2$
+ 
+Herokuapp:
+username: naveenkumarchandaluri@gmail.com
+password:  codeword2$
+ 
+Let me know if you have any issue.
+ 
+Thanks,
+Naveen Kumar C
+From: Case,Denise M
+Sent: Friday, October 26, 2018 3:16 PM
+To: Chandaluri,Naveen Kumar; Codeword
+Subject: RE: Credentials for MongoDB and herokuapp - Code Word Project
+ 
+Perfect – nice work!
+From: Chandaluri,Naveen Kumar
+Sent: Friday, October 26, 2018 5:23 PM
+To: Codeword
+Cc: Case,Denise M; Busireddy,Shivani
+Subject: Re: Credentials for MongoDB and herokuapp - Code Word Project
+ 
+Hi Team,
+
+Based on our discussion with team earlier. We decided to have a team meeting on below schedule.
+
+Every Tuesday - 05:00PM - 07:00PM
+Every Friday - 05:00PM - 07:00PM
+
+We can discuss about the project and other issues in the group meetings. We will add discussion in the Team Meeting markdown file in the below link. If anyone are not able to attend meeting you can just go through.
+
+Team Meeting Markdown Link:
+https://github.com/chvnaveenkumar/CodeWord/blob/Developer/Documentation/Meetings%20and%20Emails/Team%20meeting%20review.md
+
+ 
+Thanks,
+Naveen Kumar C
+
+
+
+
+From: Chandaluri,Naveen Kumar
+Sent: Tuesday, October 30, 2018 5:22 PM
+To: Codeword
+Cc: Case,Denise M; Busireddy,Shivani
+Subject: 44 - 691 - Code Word Project - Meetings
+ 
+Hi Team,
+
+
+Anyone of you are coming for Team Meeting at colden hall (Open Lab) to discuss the issues or anything related to the project.
+
+
+Thanks,
+
+Naveen Kumar C
+
+From: Chandaluri,Naveen Kumar
+Sent: Friday, October 26, 2018 5:23 PM
+To: Codeword
+Cc: Case,Denise M; Busireddy,Shivani
+Subject: Re: Credentials for MongoDB and herokuapp - Code Word Project
+ 
+Hi Team,
+
+
+Based on our discussion with team earlier. We decided to have a team meeting on below schedule.
+
+
+Every Tuesday - 05:00PM - 07:00PM
+
+Every Friday - 05:00PM - 07:00PM
+
+
+
+We can discuss about the project and other issues in the group meetings. We will add discussion in the Team Meeting markdown file in the below link. If anyone are not able to attend meeting you can just go through.
+
+
+Team Meeting Markdown Link:
+
+https://github.com/chvnaveenkumar/CodeWord/blob/Developer/Documentation/Meetings%20and%20Emails/Team%20meeting%20review.md
+
+
+chvnaveenkumar/CodeWord
+github.com
+GDP Code Word Project for Team C and D. Contribute to chvnaveenkumar/CodeWord development by creating an account on GitHub.
+
+
+Thanks,
+
+Naveen Kumar C
+
+From: Case,Denise M
+Sent: Friday, October 26, 2018 3:16 PM
+To: Chandaluri,Naveen Kumar; Codeword
+Subject: RE: Credentials for MongoDB and herokuapp - Code Word Project
+ 
+Perfect – nice work!
+
+ 
+
+From: Chandaluri,Naveen Kumar 
+Sent: Friday, October 26, 2018 11:27 AM
+To: Codeword <codeword@nwmissouri.onmicrosoft.com>
+Cc: Case,Denise M <DCASE@nwmissouri.edu>
+Subject: Credentials for MongoDB and herokuapp - Code Word Project
+
+ 
+
+Hi Team,
+
+ 
+
+Please find the below credentials for mongodb and herokuapp account.
+
+ 
+
+Mongodb:
+
+username: naveenkumarchandaluri@gmail.com
+
+password:  codeword2$
+
+ 
+
+Herokuapp:
+
+username: naveenkumarchandaluri@gmail.com
+
+password:  codeword2$
+
+ 
+
+Let me know if you have any issue.
+
+ 
+
+Thanks,
+
+Naveen Kumar C
+
+
+
+
+
+
+From: Kancharla,Sravya
+Sent: Sunday, November 4, 2018 4:23 PM
+To: Chandaluri,Naveen Kumar; Codeword
+Cc: Case,Denise M; Busireddy,Shivani
+Subject: Re: 44 - 691 - Code Word Project - Meetings
+ 
+Hi Team,
+
+
+We are updating details about every team Meeting here. Please got through that if you are unable to come to meeting.
+
+
+https://github.com/chvnaveenkumar/CodeWord/blob/Developer/Documentation/Meetings%20and%20Emails/Team%20meeting%20review.md
+
+
+chvnaveenkumar/CodeWord
+github.com
+GDP Code Word Project for Team C and D. Contribute to chvnaveenkumar/CodeWord development by creating an account on GitHub.
+
+
+Thank you in advance
+
+Regards,
+
+Sravya Kancharla
+
+(469)-816-9730
+
+From: Chandaluri,Naveen Kumar
+Sent: Tuesday, October 30, 2018 5:22:53 PM
+To: Codeword
+Cc: Case,Denise M; Busireddy,Shivani
+Subject: 44 - 691 - Code Word Project - Meetings
+ 
+Hi Team,
+
+
+Anyone of you are coming for Team Meeting at colden hall (Open Lab) to discuss the issues or anything related to the project.
+
+
+Thanks,
+
+Naveen Kumar C
+
+From: Chandaluri,Naveen Kumar
+Sent: Friday, October 26, 2018 5:23 PM
+To: Codeword
+Cc: Case,Denise M; Busireddy,Shivani
+Subject: Re: Credentials for MongoDB and herokuapp - Code Word Project
+ 
+Hi Team,
+
+
+Based on our discussion with team earlier. We decided to have a team meeting on below schedule.
+
+
+Every Tuesday - 05:00PM - 07:00PM
+
+Every Friday - 05:00PM - 07:00PM
+
+
+
+We can discuss about the project and other issues in the group meetings. We will add discussion in the Team Meeting markdown file in the below link. If anyone are not able to attend meeting you can just go through.
+
+
+Team Meeting Markdown Link:
+
+https://github.com/chvnaveenkumar/CodeWord/blob/Developer/Documentation/Meetings%20and%20Emails/Team%20meeting%20review.md
+
+
+chvnaveenkumar/CodeWord
+github.com
+GDP Code Word Project for Team C and D. Contribute to chvnaveenkumar/CodeWord development by creating an account on GitHub.
+
+
+Thanks,
+
+Naveen Kumar C
+
+From: Case,Denise M
+Sent: Friday, October 26, 2018 3:16 PM
+To: Chandaluri,Naveen Kumar; Codeword
+Subject: RE: Credentials for MongoDB and herokuapp - Code Word Project
+ 
+Perfect – nice work!
+
+ 
+
+From: Chandaluri,Naveen Kumar 
+Sent: Friday, October 26, 2018 11:27 AM
+To: Codeword <codeword@nwmissouri.onmicrosoft.com>
+Cc: Case,Denise M <DCASE@nwmissouri.edu>
+Subject: Credentials for MongoDB and herokuapp - Code Word Project
+
+ 
+
+Hi Team,
+
+ 
+
+Please find the below credentials for mongodb and herokuapp account.
+
+ 
+
+Mongodb:
+
+username: naveenkumarchandaluri@gmail.com
+
+password:  codeword2$
+
+ 
+
+Herokuapp:
+
+username: naveenkumarchandaluri@gmail.com
+
+password:  codeword2$
+
+ 
+
+Let me know if you have any issue.
+
+ 
+
+Thanks,
+
+Naveen Kumar C
+
+ 
+
+
+
+From: Kancharla,Sravya
+Sent: Sunday, November 4, 2018 4:23 PM
+To: Chandaluri,Naveen Kumar; Codeword
+Cc: Case,Denise M; Busireddy,Shivani
+Subject: Re: 44 - 691 - Code Word Project - Meetings
+ 
+Hi Team,
+
+
+We are updating details about every team Meeting here. Please got through that if you are unable to come to meeting.
+
+
+https://github.com/chvnaveenkumar/CodeWord/blob/Developer/Documentation/Meetings%20and%20Emails/Team%20meeting%20review.md
+
+
+chvnaveenkumar/CodeWord
+github.com
+GDP Code Word Project for Team C and D. Contribute to chvnaveenkumar/CodeWord development by creating an account on GitHub.
+
+
+Thank you in advance
+
+Regards,
+
+Sravya Kancharla
+
+(469)-816-9730
+
+From: Chandaluri,Naveen Kumar
+Sent: Tuesday, October 30, 2018 5:22:53 PM
+To: Codeword
+Cc: Case,Denise M; Busireddy,Shivani
+Subject: 44 - 691 - Code Word Project - Meetings
+ 
+Hi Team,
+
+
+Anyone of you are coming for Team Meeting at colden hall (Open Lab) to discuss the issues or anything related to the project.
+
+
+Thanks,
+
+Naveen Kumar C
+
+From: Chandaluri,Naveen Kumar
+Sent: Friday, October 26, 2018 5:23 PM
+To: Codeword
+Cc: Case,Denise M; Busireddy,Shivani
+Subject: Re: Credentials for MongoDB and herokuapp - Code Word Project
+ 
+Hi Team,
+
+
+Based on our discussion with team earlier. We decided to have a team meeting on below schedule.
+
+
+Every Tuesday - 05:00PM - 07:00PM
+
+Every Friday - 05:00PM - 07:00PM
+
+
+
+We can discuss about the project and other issues in the group meetings. We will add discussion in the Team Meeting markdown file in the below link. If anyone are not able to attend meeting you can just go through.
+
+
+Team Meeting Markdown Link:
+
+https://github.com/chvnaveenkumar/CodeWord/blob/Developer/Documentation/Meetings%20and%20Emails/Team%20meeting%20review.md
+
+
+chvnaveenkumar/CodeWord
+github.com
+GDP Code Word Project for Team C and D. Contribute to chvnaveenkumar/CodeWord development by creating an account on GitHub.
+
+
+Thanks,
+
+Naveen Kumar C
+
+From: Case,Denise M
+Sent: Friday, October 26, 2018 3:16 PM
+To: Chandaluri,Naveen Kumar; Codeword
+Subject: RE: Credentials for MongoDB and herokuapp - Code Word Project
+ 
+Perfect – nice work!
+
+ 
+
+From: Chandaluri,Naveen Kumar 
+Sent: Friday, October 26, 2018 11:27 AM
+To: Codeword <codeword@nwmissouri.onmicrosoft.com>
+Cc: Case,Denise M <DCASE@nwmissouri.edu>
+Subject: Credentials for MongoDB and herokuapp - Code Word Project
+
+ 
+
+Hi Team,
+
+ 
+
+Please find the below credentials for mongodb and herokuapp account.
+
+ 
+
+Mongodb:
+
+username: naveenkumarchandaluri@gmail.com
+
+password:  codeword2$
+
+ 
+
+Herokuapp:
+
+username: naveenkumarchandaluri@gmail.com
+
+password:  codeword2$
+
+ 
+
+Let me know if you have any issue.
+
+ 
+
+Thanks,
+
+Naveen Kumar C
+
+ 
+ 
+From: Kancharla,Sravya
+Sent: Sunday, November 4, 2018 4:23 PM
+To: Chandaluri,Naveen Kumar; Codeword
+Cc: Case,Denise M; Busireddy,Shivani
+Subject: Re: 44 - 691 - Code Word Project - Meetings
+ 
+Hi Team,
+
+
+We are updating details about every team Meeting here. Please got through that if you are unable to come to meeting.
+
+
+https://github.com/chvnaveenkumar/CodeWord/blob/Developer/Documentation/Meetings%20and%20Emails/Team%20meeting%20review.md
+
+
+chvnaveenkumar/CodeWord
+github.com
+GDP Code Word Project for Team C and D. Contribute to chvnaveenkumar/CodeWord development by creating an account on GitHub.
+
+
+Thank you in advance
+
+Regards,
+
+Sravya Kancharla
+
+(469)-816-9730
+
+From: Chandaluri,Naveen Kumar
+Sent: Tuesday, October 30, 2018 5:22:53 PM
+To: Codeword
+Cc: Case,Denise M; Busireddy,Shivani
+Subject: 44 - 691 - Code Word Project - Meetings
+ 
+Hi Team,
+
+
+Anyone of you are coming for Team Meeting at colden hall (Open Lab) to discuss the issues or anything related to the project.
+
+
+Thanks,
+
+Naveen Kumar C
+
+From: Chandaluri,Naveen Kumar
+Sent: Friday, October 26, 2018 5:23 PM
+To: Codeword
+Cc: Case,Denise M; Busireddy,Shivani
+Subject: Re: Credentials for MongoDB and herokuapp - Code Word Project
+ 
+Hi Team,
+
+
+Based on our discussion with team earlier. We decided to have a team meeting on below schedule.
+
+
+Every Tuesday - 05:00PM - 07:00PM
+
+Every Friday - 05:00PM - 07:00PM
+
+
+
+We can discuss about the project and other issues in the group meetings. We will add discussion in the Team Meeting markdown file in the below link. If anyone are not able to attend meeting you can just go through.
+
+
+Team Meeting Markdown Link:
+
+https://github.com/chvnaveenkumar/CodeWord/blob/Developer/Documentation/Meetings%20and%20Emails/Team%20meeting%20review.md
