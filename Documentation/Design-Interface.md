@@ -103,6 +103,24 @@ Links:
 ![Sketch1](/Documentation/Sketches/Instructorcourselist1.PNG)
 ![sketch2](/Documentation/Sketches/Instructorcourselist2.PNG)
 
+### 2.03 Create CodeWord Set
+
+Responsible party: Ujjawal Kumar
+
+Link: <http://gdpcodeword.herokuapp.com/#/codewordset>
+
+#### 1) Create Codeword Set Page:
+![Sketch1](/Documentation/Sketches/CodewordSetDashboard.PNG)
+
+#### 2) Post Clicking on Create Codeword Set button:
+![sketch2](/Documentation/Sketches/CreateCodeWordSet1.PNG)
+
+#### 3) Post filling all the fields and uploading file:
+![sketch2](/Documentation/Sketches/CreateCodeWordSet2.PNG)
+
+#### 4) Post Clicking on Create Codeword Set button:
+![sketch2](/Documentation/Sketches/CodeWordSetAdded.PNG)
+
 ### 2.05 Create Course
 
 Responsible party: Anurag Kumar
