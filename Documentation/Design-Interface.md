@@ -116,10 +116,10 @@ Link: <http://gdpcodeword.herokuapp.com/#/codewordset>
 ![sketch2](/Documentation/Sketches/CreateCodeWordSet1.PNG)
 
 #### 3) Post filling all the fields and uploading file:
-![sketch2](/Documentation/Sketches/CreateCodeWordSet2.PNG)
+![sketch3](/Documentation/Sketches/CreateCodeWordSet2.PNG)
 
 #### 4) Post Clicking on Create Codeword Set button:
-![sketch2](/Documentation/Sketches/CodeWordSetAdded.PNG)
+![sketch4](/Documentation/Sketches/CodeWordSetAdded.PNG)
 
 ### 2.05 Create Course
 
