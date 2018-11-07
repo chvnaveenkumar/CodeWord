@@ -110,16 +110,16 @@ Responsible party: Ujjawal Kumar
 Link: <http://gdpcodeword.herokuapp.com/#/codewordset>
 
 #### 1) Create Codeword Set Page:
-![Sketch1](/Documentation/Sketches/CodewordSetDashboard.PNG)
+![Sketch1](./Sketches/CodewordSetDashboard.PNG)
 
 #### 2) Post Clicking on Create Codeword Set button:
-![sketch2](/Documentation/Sketches/CreateCodeWordSet1.PNG)
+![sketch2](./Sketches/CreateCodeWordSet1.PNG)
 
 #### 3) Post filling all the fields and uploading file:
-![sketch3](/Documentation/Sketches/CreateCodeWordSet2.PNG)
+![sketch3](./Sketches/CreateCodeWordSet2.PNG)
 
 #### 4) Post Clicking on Create Codeword Set button:
-![sketch4](/Documentation/Sketches/CodeWordSetAdded.PNG)
+![sketch4](./Sketches/CodeWordSetAdded.PNG)
 
 ### 2.05 Create Course
 
