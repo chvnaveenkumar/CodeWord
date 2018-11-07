@@ -23,7 +23,7 @@
                         <router-link to="/coursestudent">Course Student</router-link>
                     </li>
                     <li class="nav-item" v-if='this.$route.name != "StudentDashboard" && this.$route.name !== "ChangePassword"'>
-                        <router-link to="/codewordset">CodeWordSet</router-link>
+                        <router-link to="/codewordset">CodeWord Set</router-link>
                     </li>
                     <li class="nav-item" v-if='this.$route.name != "StudentDashboard" && this.$route.name !== "ChangePassword"'>
                         <router-link to="/codeword">CodeWord</router-link>

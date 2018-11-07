@@ -8,7 +8,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content" style="width:fit-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="addcourseLabel">Create CodewordSet</h5>
+                        <h5 class="modal-title" id="addcourseLabel">Create Codeword Set</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                         </button>
@@ -16,7 +16,7 @@
                     <div class="modal-body">
                         <form>
                             <div class="form-group">
-                                <input name="dataSetName" type="text" class="form-control" placeholder="Enter CordwordSet Name" data-toggle="tooltip" data-placement="top" title="Enter CordwordSet Name"
+                                <input name="dataSetName" type="text" class="form-control" placeholder="Enter Cordword Set Name" data-toggle="tooltip" data-placement="top" title="Enter Cordword Set Name"
                                     required>
                             </div>
                             
@@ -56,17 +56,17 @@
                 </th>
                 <th scope="col">
                     <h4>
-                        <u>CodewordSet Name</u>
+                        <u>Codeword Set Name</u>
                     </h4>
                 </th>
                 <th scope="col">
                     <h4>
-                        <u>Codeword Count</u>
+                        <u>Count</u>
                     </h4>
                 </th>
                 <th scope="col">
                     <h4>
-                        <u>CordwordSet Creator</u>
+                        <u>Creator</u>
                     </h4>
                 </th>
             </tr>
