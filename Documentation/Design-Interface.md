@@ -87,6 +87,8 @@ Pre
 Post
 
 Link <http://gdpcodeword.herokuapp.com/?#/studentdashboard>
+![sketch1](/Documentation/Sketches/studentdashboard.png)
+
 
 
 ## INSTRUCTOR ROLE
