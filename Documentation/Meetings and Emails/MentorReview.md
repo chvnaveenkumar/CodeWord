@@ -95,5 +95,6 @@ ______________________________
 |    19.            |    views/course           |    Course                                                |    Chaitanya             |             |          |
 |    20.            |    views/coursestudent    |    CourseStudent                                         |    Anurag                |             |          |
 |    21.            |    views/codewordset      |    CodewordSet                                           |    Ujjawal               |             |          |
-|    22.            |    views/codeword         |    Codeword                                              |    Naveenkumar Nuggu     |             |          |
-|    23.            |    codeword rules         |    sets & codewords                                      |    Naveenkumar  Nuggu    |             |          |
+|    22.            |    views/codeword         |    Codeword                                              |    Naveenkumar Nuggu     |
+   In progress         | 
+|    23.            |    codeword rules         |    sets & codewords                                      |    Naveenkumar  Nuggu    | In progress         | 
