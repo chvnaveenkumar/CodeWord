@@ -80,3 +80,199 @@ TypeError: Cannot read property 'query' of undefined
 2018-11-10T19:10:03.255Z - debug: 6 datacourse seeded
 2018-11-10T19:10:03.255Z - debug: 114 dataCoursestudent seeded
 2018-11-10T19:10:03.256Z - info: END Seeder. Sample data read and verified.
+2018-11-10T20:34:52.004Z - info: START seeder.
+2018-11-10T20:34:52.049Z - debug: 2 dataCodewordset seeded
+2018-11-10T20:34:52.049Z - debug: 224 datacodeword seeded
+2018-11-10T20:34:52.049Z - debug: 6 datacourse seeded
+2018-11-10T20:34:52.051Z - debug: 114 dataCoursestudent seeded
+2018-11-10T20:34:52.051Z - info: END Seeder. Sample data read and verified.
+2018-11-10T20:35:55.957Z - info: START seeder.
+2018-11-10T20:35:55.973Z - debug: 2 dataCodewordset seeded
+2018-11-10T20:35:55.973Z - debug: 224 datacodeword seeded
+2018-11-10T20:35:55.983Z - debug: 6 datacourse seeded
+2018-11-10T20:35:55.984Z - debug: 114 dataCoursestudent seeded
+2018-11-10T20:35:55.984Z - info: END Seeder. Sample data read and verified.
+2018-11-10T20:40:06.305Z - info: START seeder.
+2018-11-10T20:40:06.360Z - debug: 2 dataCodewordset seeded
+2018-11-10T20:40:06.360Z - debug: 224 datacodeword seeded
+2018-11-10T20:40:06.361Z - debug: 6 datacourse seeded
+2018-11-10T20:40:06.361Z - debug: 114 dataCoursestudent seeded
+2018-11-10T20:40:06.361Z - info: END Seeder. Sample data read and verified.
+2018-11-10T20:47:44.332Z - info: START seeder.
+2018-11-10T20:47:44.356Z - debug: 2 dataCodewordset seeded
+2018-11-10T20:47:44.357Z - debug: 224 datacodeword seeded
+2018-11-10T20:47:44.357Z - debug: 6 datacourse seeded
+2018-11-10T20:47:44.357Z - debug: 114 dataCoursestudent seeded
+2018-11-10T20:47:44.357Z - info: END Seeder. Sample data read and verified.
+2018-11-10T20:48:01.099Z - info: START seeder.
+2018-11-10T20:48:01.120Z - debug: 2 dataCodewordset seeded
+2018-11-10T20:48:01.120Z - debug: 224 datacodeword seeded
+2018-11-10T20:48:01.120Z - debug: 6 datacourse seeded
+2018-11-10T20:48:01.124Z - debug: 114 dataCoursestudent seeded
+2018-11-10T20:48:01.124Z - info: END Seeder. Sample data read and verified.
+2018-11-10T20:48:35.780Z - info: START seeder.
+2018-11-10T20:48:35.804Z - debug: 2 dataCodewordset seeded
+2018-11-10T20:48:35.804Z - debug: 224 datacodeword seeded
+2018-11-10T20:48:35.805Z - debug: 6 datacourse seeded
+2018-11-10T20:48:35.805Z - debug: 114 dataCoursestudent seeded
+2018-11-10T20:48:35.805Z - info: END Seeder. Sample data read and verified.
+2018-11-10T21:11:45.527Z - info: START seeder.
+2018-11-10T21:11:45.544Z - debug: 2 dataCodewordset seeded
+2018-11-10T21:11:45.544Z - debug: 224 datacodeword seeded
+2018-11-10T21:11:45.550Z - debug: 6 datacourse seeded
+2018-11-10T21:11:45.550Z - debug: 114 dataCoursestudent seeded
+2018-11-10T21:11:45.550Z - info: END Seeder. Sample data read and verified.
+2018-11-10T21:12:50.746Z - info: START seeder.
+2018-11-10T21:12:50.761Z - debug: 2 dataCodewordset seeded
+2018-11-10T21:12:50.761Z - debug: 224 datacodeword seeded
+2018-11-10T21:12:50.761Z - debug: 6 datacourse seeded
+2018-11-10T21:12:50.770Z - debug: 114 dataCoursestudent seeded
+2018-11-10T21:12:50.770Z - info: END Seeder. Sample data read and verified.
+2018-11-10T21:13:34.686Z - info: START seeder.
+2018-11-10T21:13:34.697Z - debug: 2 dataCodewordset seeded
+2018-11-10T21:13:34.697Z - debug: 224 datacodeword seeded
+2018-11-10T21:13:34.697Z - debug: 6 datacourse seeded
+2018-11-10T21:13:34.711Z - debug: 114 dataCoursestudent seeded
+2018-11-10T21:13:34.711Z - info: END Seeder. Sample data read and verified.
+2018-11-10T21:15:10.180Z - info: START seeder.
+2018-11-10T21:15:10.217Z - debug: 2 dataCodewordset seeded
+2018-11-10T21:15:10.217Z - debug: 224 datacodeword seeded
+2018-11-10T21:15:10.217Z - debug: 6 datacourse seeded
+2018-11-10T21:15:10.217Z - debug: 114 dataCoursestudent seeded
+2018-11-10T21:15:10.217Z - info: END Seeder. Sample data read and verified.
+2018-11-10T21:34:10.664Z - info: START seeder.
+2018-11-10T21:34:10.691Z - debug: 2 dataCodewordset seeded
+2018-11-10T21:34:10.691Z - debug: 224 datacodeword seeded
+2018-11-10T21:34:10.694Z - debug: 6 datacourse seeded
+2018-11-10T21:34:10.695Z - debug: 114 dataCoursestudent seeded
+2018-11-10T21:34:10.695Z - info: END Seeder. Sample data read and verified.
+2018-11-10T21:34:42.948Z - info: START seeder.
+2018-11-10T21:34:42.971Z - debug: 2 dataCodewordset seeded
+2018-11-10T21:34:42.971Z - debug: 224 datacodeword seeded
+2018-11-10T21:34:42.973Z - debug: 6 datacourse seeded
+2018-11-10T21:34:42.973Z - debug: 114 dataCoursestudent seeded
+2018-11-10T21:34:42.973Z - info: END Seeder. Sample data read and verified.
+2018-11-10T21:38:11.230Z - info: START seeder.
+2018-11-10T21:38:11.259Z - debug: 2 dataCodewordset seeded
+2018-11-10T21:38:11.259Z - debug: 224 datacodeword seeded
+2018-11-10T21:38:11.259Z - debug: 6 datacourse seeded
+2018-11-10T21:38:11.260Z - debug: 114 dataCoursestudent seeded
+2018-11-10T21:38:11.260Z - info: END Seeder. Sample data read and verified.
+2018-11-10T21:38:21.642Z - error: uncaughtException: o is not defined date=Sat Nov 10 2018 15:38:21 GMT-0600 (Central Standard Time), pid=3256, uid=null, gid=null, cwd=c:\Users\s531383\Desktop\GDP\CodeWord, execPath=C:\Program Files\nodejs\node.exe, version=v8.9.4, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531383\Desktop\GDP\CodeWord\bin\www], rss=123793408, heapTotal=82219008, heapUsed=56149728, external=22488087, loadavg=[0, 0, 0], uptime=1371844.9110712
+ReferenceError: o is not defined
+    at c:\Users\s531383\Desktop\GDP\CodeWord\controllers\controller.coursestudent.js:28:32
+    at c:\Users\s531383\Desktop\GDP\CodeWord\node_modules\mongoose\lib\model.js:4527:16
+    at process.nextTick (c:\Users\s531383\Desktop\GDP\CodeWord\node_modules\mongoose\lib\query.js:2584:28)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+2018-11-10T21:38:51.099Z - info: START seeder.
+2018-11-10T21:38:51.122Z - debug: 2 dataCodewordset seeded
+2018-11-10T21:38:51.122Z - debug: 224 datacodeword seeded
+2018-11-10T21:38:51.126Z - debug: 6 datacourse seeded
+2018-11-10T21:38:51.126Z - debug: 114 dataCoursestudent seeded
+2018-11-10T21:38:51.126Z - info: END Seeder. Sample data read and verified.
+2018-11-10T21:40:10.433Z - info: START seeder.
+2018-11-10T21:40:10.455Z - debug: 2 dataCodewordset seeded
+2018-11-10T21:40:10.455Z - debug: 224 datacodeword seeded
+2018-11-10T21:40:10.456Z - debug: 6 datacourse seeded
+2018-11-10T21:40:10.456Z - debug: 114 dataCoursestudent seeded
+2018-11-10T21:40:10.456Z - info: END Seeder. Sample data read and verified.
+2018-11-10T21:42:17.217Z - info: START seeder.
+2018-11-10T21:42:17.244Z - debug: 2 dataCodewordset seeded
+2018-11-10T21:42:17.244Z - debug: 224 datacodeword seeded
+2018-11-10T21:42:17.244Z - debug: 6 datacourse seeded
+2018-11-10T21:42:17.244Z - debug: 114 dataCoursestudent seeded
+2018-11-10T21:42:17.245Z - info: END Seeder. Sample data read and verified.
+2018-11-10T21:42:27.233Z - error: uncaughtException: courseStudentModel is not defined date=Sat Nov 10 2018 15:42:27 GMT-0600 (Central Standard Time), pid=8032, uid=null, gid=null, cwd=c:\Users\s531383\Desktop\GDP\CodeWord, execPath=C:\Program Files\nodejs\node.exe, version=v8.9.4, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531383\Desktop\GDP\CodeWord\bin\www], rss=126836736, heapTotal=84672512, heapUsed=56797560, external=22397132, loadavg=[0, 0, 0], uptime=1372090.4936282
+ReferenceError: courseStudentModel is not defined
+    at c:\Users\s531383\Desktop\GDP\CodeWord\controllers\controller.coursestudent.js:35:17
+    at c:\Users\s531383\Desktop\GDP\CodeWord\node_modules\mongoose\lib\model.js:4527:16
+    at process.nextTick (c:\Users\s531383\Desktop\GDP\CodeWord\node_modules\mongoose\lib\query.js:2584:28)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+2018-11-10T21:43:56.571Z - info: START seeder.
+2018-11-10T21:43:56.606Z - debug: 2 dataCodewordset seeded
+2018-11-10T21:43:56.606Z - debug: 224 datacodeword seeded
+2018-11-10T21:43:56.607Z - debug: 6 datacourse seeded
+2018-11-10T21:43:56.607Z - debug: 114 dataCoursestudent seeded
+2018-11-10T21:43:56.607Z - info: END Seeder. Sample data read and verified.
+2018-11-10T21:44:13.240Z - error: uncaughtException: courseStudentModel is not defined date=Sat Nov 10 2018 15:44:13 GMT-0600 (Central Standard Time), pid=532, uid=null, gid=null, cwd=c:\Users\s531383\Desktop\GDP\CodeWord, execPath=C:\Program Files\nodejs\node.exe, version=v8.9.4, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531383\Desktop\GDP\CodeWord\bin\www], rss=128581632, heapTotal=84422656, heapUsed=49332968, external=21518697, loadavg=[0, 0, 0], uptime=1372196.5061133
+ReferenceError: courseStudentModel is not defined
+    at c:\Users\s531383\Desktop\GDP\CodeWord\controllers\controller.coursestudent.js:35:17
+    at c:\Users\s531383\Desktop\GDP\CodeWord\node_modules\mongoose\lib\model.js:4527:16
+    at process.nextTick (c:\Users\s531383\Desktop\GDP\CodeWord\node_modules\mongoose\lib\query.js:2584:28)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+2018-11-10T21:44:43.080Z - info: START seeder.
+2018-11-10T21:44:43.103Z - debug: 2 dataCodewordset seeded
+2018-11-10T21:44:43.103Z - debug: 224 datacodeword seeded
+2018-11-10T21:44:43.107Z - debug: 6 datacourse seeded
+2018-11-10T21:44:43.107Z - debug: 114 dataCoursestudent seeded
+2018-11-10T21:44:43.107Z - info: END Seeder. Sample data read and verified.
+2018-11-10T21:45:01.888Z - info: START seeder.
+2018-11-10T21:45:01.909Z - debug: 2 dataCodewordset seeded
+2018-11-10T21:45:01.909Z - debug: 224 datacodeword seeded
+2018-11-10T21:45:01.912Z - debug: 6 datacourse seeded
+2018-11-10T21:45:01.912Z - debug: 114 dataCoursestudent seeded
+2018-11-10T21:45:01.912Z - info: END Seeder. Sample data read and verified.
+2018-11-10T21:46:59.867Z - info: START seeder.
+2018-11-10T21:46:59.896Z - debug: 2 dataCodewordset seeded
+2018-11-10T21:46:59.896Z - debug: 224 datacodeword seeded
+2018-11-10T21:46:59.897Z - debug: 6 datacourse seeded
+2018-11-10T21:46:59.897Z - debug: 114 dataCoursestudent seeded
+2018-11-10T21:46:59.897Z - info: END Seeder. Sample data read and verified.
+2018-11-10T21:59:02.277Z - info: START seeder.
+2018-11-10T21:59:02.302Z - debug: 2 dataCodewordset seeded
+2018-11-10T21:59:02.302Z - debug: 224 datacodeword seeded
+2018-11-10T21:59:02.302Z - debug: 6 datacourse seeded
+2018-11-10T21:59:02.302Z - debug: 114 dataCoursestudent seeded
+2018-11-10T21:59:02.302Z - info: END Seeder. Sample data read and verified.
+2018-11-10T21:59:35.467Z - info: START seeder.
+2018-11-10T21:59:35.491Z - debug: 2 dataCodewordset seeded
+2018-11-10T21:59:35.491Z - debug: 224 datacodeword seeded
+2018-11-10T21:59:35.491Z - debug: 6 datacourse seeded
+2018-11-10T21:59:35.492Z - debug: 114 dataCoursestudent seeded
+2018-11-10T21:59:35.492Z - info: END Seeder. Sample data read and verified.
+2018-11-10T21:59:48.297Z - error: uncaughtException: CourseStudentModel.save is not a function date=Sat Nov 10 2018 15:59:48 GMT-0600 (Central Standard Time), pid=14924, uid=null, gid=null, cwd=c:\Users\s531383\Desktop\GDP\CodeWord, execPath=C:\Program Files\nodejs\node.exe, version=v8.9.4, argv=[C:\Program Files\nodejs\node.exe, c:\Users\s531383\Desktop\GDP\CodeWord\bin\www], rss=124059648, heapTotal=82219008, heapUsed=56616288, external=22488087, loadavg=[0, 0, 0], uptime=1373131.5681267
+TypeError: CourseStudentModel.save is not a function
+    at c:\Users\s531383\Desktop\GDP\CodeWord\controllers\controller.coursestudent.js:42:36
+    at c:\Users\s531383\Desktop\GDP\CodeWord\node_modules\mongoose\lib\model.js:4527:16
+    at process.nextTick (c:\Users\s531383\Desktop\GDP\CodeWord\node_modules\mongoose\lib\query.js:2584:28)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+2018-11-10T22:00:05.227Z - info: START seeder.
+2018-11-10T22:00:05.251Z - debug: 2 dataCodewordset seeded
+2018-11-10T22:00:05.251Z - debug: 224 datacodeword seeded
+2018-11-10T22:00:05.251Z - debug: 6 datacourse seeded
+2018-11-10T22:00:05.251Z - debug: 114 dataCoursestudent seeded
+2018-11-10T22:00:05.252Z - info: END Seeder. Sample data read and verified.
+2018-11-10T22:01:05.444Z - info: START seeder.
+2018-11-10T22:01:05.467Z - debug: 2 dataCodewordset seeded
+2018-11-10T22:01:05.467Z - debug: 224 datacodeword seeded
+2018-11-10T22:01:05.467Z - debug: 6 datacourse seeded
+2018-11-10T22:01:05.467Z - debug: 114 dataCoursestudent seeded
+2018-11-10T22:01:05.467Z - info: END Seeder. Sample data read and verified.
+2018-11-10T22:04:50.999Z - info: START seeder.
+2018-11-10T22:04:51.034Z - debug: 2 dataCodewordset seeded
+2018-11-10T22:04:51.034Z - debug: 224 datacodeword seeded
+2018-11-10T22:04:51.034Z - debug: 6 datacourse seeded
+2018-11-10T22:04:51.034Z - debug: 114 dataCoursestudent seeded
+2018-11-10T22:04:51.034Z - info: END Seeder. Sample data read and verified.
+2018-11-10T22:05:46.922Z - info: START seeder.
+2018-11-10T22:05:46.945Z - debug: 2 dataCodewordset seeded
+2018-11-10T22:05:46.945Z - debug: 224 datacodeword seeded
+2018-11-10T22:05:46.945Z - debug: 6 datacourse seeded
+2018-11-10T22:05:46.945Z - debug: 114 dataCoursestudent seeded
+2018-11-10T22:05:46.946Z - info: END Seeder. Sample data read and verified.
+2018-11-10T22:07:44.560Z - info: START seeder.
+2018-11-10T22:07:44.585Z - debug: 2 dataCodewordset seeded
+2018-11-10T22:07:44.585Z - debug: 224 datacodeword seeded
+2018-11-10T22:07:44.585Z - debug: 6 datacourse seeded
+2018-11-10T22:07:44.586Z - debug: 114 dataCoursestudent seeded
+2018-11-10T22:07:44.586Z - info: END Seeder. Sample data read and verified.
+2018-11-10T22:09:54.349Z - info: START seeder.
+2018-11-10T22:09:54.373Z - debug: 2 dataCodewordset seeded
+2018-11-10T22:09:54.373Z - debug: 224 datacodeword seeded
+2018-11-10T22:09:54.374Z - debug: 6 datacourse seeded
+2018-11-10T22:09:54.374Z - debug: 114 dataCoursestudent seeded
+2018-11-10T22:09:54.374Z - info: END Seeder. Sample data read and verified.
