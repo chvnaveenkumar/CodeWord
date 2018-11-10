@@ -4,11 +4,8 @@ const userController = require('../controllers/controller.user')
 const datacourse = require('../data/data.Course.json')
 const datacodeword = require('../data/data.codeword.json')
 const user = require('../data/data.user.json')
-
 const dataCodewordset = require('../data/data.codewordset.json')
 const dataCoursestudent = require('../data/data.coursestudent.json')
-
-
 const LOG = require('./logger.js')
 
 module.exports = (app) => {
@@ -16,16 +13,14 @@ module.exports = (app) => {
   const db = {}
 
 
-  users.forEach((user) => {
+/*   users.forEach((user) => {
     userController.newUser(user)
   })
-
-
+ */
 //USER
-  db.datauser = new Datastore()
-  db.datauser.loadDatabase()
-  db.datauser.insert(datauser)
-
+  // db.datauser = new Datastore()
+  // db.datauser.loadDatabase()
+  // db.datauser.insert(datauser)
 
 //CODEWORDSET
   db.dataCodewordset = new Datastore()
@@ -53,8 +48,8 @@ module.exports = (app) => {
 
 
 
-  app.locals.datauser = db.datauser.find(datauser)
-  LOG.debug(`${app.locals.datauser.query.length} datauser seeded`)
+  // app.locals.datauser = db.datauser.find(datauser)
+  // LOG.debug(`${app.locals.datauser.query.length} datauser seeded`)
 
 
   app.locals.dataCodewordset = db.dataCodewordset.find(dataCodewordset)

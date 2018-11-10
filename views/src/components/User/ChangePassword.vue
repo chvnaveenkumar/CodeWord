@@ -1,6 +1,4 @@
-/**
- * @author Naveen Kumar Chandaluri <S530742@nwmissouri.edu>
- */
+<!-- @author Naveen Kumar Chandaluri <S530742@nwmissouri.edu> -->
 <template>
   <div>
     <div class="container ">
@@ -15,7 +13,7 @@
             <div class="form-group row">
             <label for="inputPassword" class="col-lg-5 col-form-label">New Password:</label>
             <div class="col-lg-7" :class="{invalid: $v.newpassword.$error}">
-            <input type="password" class="form-control" placeholder="New Password" v-model="newpassword" @blur="$v.newpassword.$touch()">
+            <input type="password" class="form-control" placeholder="New Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" v-model="newpassword" @blur="$v.newpassword.$touch()">
       <p v-if="!$v.newpassword.minLength"> Password must have at least {{ $v.newpassword.$params.minLength.min }} letters. </p>
     </div>
   </div>
@@ -42,6 +40,7 @@
 <script>
 import { required, minLength, sameAs } from 'vuelidate/lib/validators'
 export default {
+  name: 'ChangePassword',
   data () {
     return {
       newpassword: '',
@@ -50,10 +49,13 @@ export default {
       loginrole: this.$route.params.loginrole
     }
   },
+  created () {
+    console.log('password page')
+  },
   validations: {
     newpassword: {
       required,
-      minLength: minLength(6)
+      minLength: minLength(8)
     },
     repeatPassword: {
       sameAsPassword: sameAs('newpassword')

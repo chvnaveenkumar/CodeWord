@@ -93,7 +93,7 @@ module.exports.validateEmail = validateEmail;
 let tempPassword = (req, res ) => {
     var body = _.pick(req.body,['email']);
     console.log('Tempa'+ body.email);
-    var chars = "abcdefghijklmnopqrstuvwxyz!@#$%^&*()-+<>ABCDEFGHIJKLMNOP1234567890";
+    var chars = "abcdefghijklmnopqrstuvwxyz@#$%&*ABCDEFGHIJKLMNOP123456789";
     var temporaryPassword = "";
     for (var x = 0; x < 5; x++) {
         var i = Math.floor(Math.random() * chars.length);

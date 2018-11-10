@@ -69,7 +69,8 @@ export default {
   },
   methods: {
     onLogout() {
-      localStorage.removeItem("token");
+      localStorage.removeItem('token')
+      localStorage.removeItem('status')
       this.auth = User.check();
       this.$router.push({ path: "/" });
     },

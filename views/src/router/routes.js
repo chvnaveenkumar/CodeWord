@@ -49,7 +49,7 @@ export default new Router({
       component: ForgetPassword
     },
     {
-      path: '/changepassword/:loginrole',
+      path: '/changepassword',
       name: 'ChangePassword',
       component: ChangePassword
     },

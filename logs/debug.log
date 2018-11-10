@@ -1,0 +1,82 @@
+2018-11-10T19:07:36.161Z - info: START seeder.
+2018-11-10T19:07:36.175Z - error: uncaughtException: users is not defined date=Sat Nov 10 2018 13:07:36 GMT-0600 (Central Standard Time), pid=6328, uid=null, gid=null, cwd=b:\GDP\Project, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP\Project\bin\www], rss=112504832, heapTotal=80015360, heapUsed=51089024, external=23425437, loadavg=[0, 0, 0], uptime=937999.4004872
+ReferenceError: users is not defined
+    at module.exports (b:\GDP\Project\utils\seeder.js:19:3)
+    at Object.<anonymous> (b:\GDP\Project\codeword.js:30:29)
+    at Module._compile (module.js:653:30)
+    at Object.Module._extensions..js (module.js:664:10)
+    at Module.load (module.js:566:32)
+    at tryModuleLoad (module.js:506:12)
+    at Function.Module._load (module.js:498:3)
+    at Module.require (module.js:597:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (b:\GDP\Project\bin\www:7:11)
+    at Module._compile (module.js:650:14)
+    at Object.Module._extensions..js (module.js:664:10)
+    at Module.load (module.js:566:32)
+    at tryModuleLoad (module.js:506:12)
+    at Function.Module._load (module.js:498:3)
+    at Function.Module.runMain (module.js:694:10)
+2018-11-10T19:08:54.496Z - info: START seeder.
+2018-11-10T19:08:54.513Z - error: uncaughtException: datauser is not defined date=Sat Nov 10 2018 13:08:54 GMT-0600 (Central Standard Time), pid=8608, uid=null, gid=null, cwd=b:\GDP\Project, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP\Project\bin\www], rss=111714304, heapTotal=80539648, heapUsed=51750104, external=23434257, loadavg=[0, 0, 0], uptime=938077.7377107
+ReferenceError: datauser is not defined
+    at module.exports (b:\GDP\Project\utils\seeder.js:23:22)
+    at Object.<anonymous> (b:\GDP\Project\codeword.js:30:29)
+    at Module._compile (module.js:653:30)
+    at Object.Module._extensions..js (module.js:664:10)
+    at Module.load (module.js:566:32)
+    at tryModuleLoad (module.js:506:12)
+    at Function.Module._load (module.js:498:3)
+    at Module.require (module.js:597:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (b:\GDP\Project\bin\www:7:11)
+    at Module._compile (module.js:650:14)
+    at Object.Module._extensions..js (module.js:664:10)
+    at Module.load (module.js:566:32)
+    at tryModuleLoad (module.js:506:12)
+    at Function.Module._load (module.js:498:3)
+    at Function.Module.runMain (module.js:694:10)
+2018-11-10T19:09:16.920Z - info: START seeder.
+2018-11-10T19:09:16.959Z - error: uncaughtException: Cannot read property 'find' of undefined date=Sat Nov 10 2018 13:09:16 GMT-0600 (Central Standard Time), pid=12888, uid=null, gid=null, cwd=b:\GDP\Project, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP\Project\bin\www], rss=112902144, heapTotal=81063936, heapUsed=53608536, external=23460717, loadavg=[0, 0, 0], uptime=938100.18465
+TypeError: Cannot read property 'find' of undefined
+    at module.exports (b:\GDP\Project\utils\seeder.js:51:37)
+    at Object.<anonymous> (b:\GDP\Project\codeword.js:30:29)
+    at Module._compile (module.js:653:30)
+    at Object.Module._extensions..js (module.js:664:10)
+    at Module.load (module.js:566:32)
+    at tryModuleLoad (module.js:506:12)
+    at Function.Module._load (module.js:498:3)
+    at Module.require (module.js:597:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (b:\GDP\Project\bin\www:7:11)
+    at Module._compile (module.js:650:14)
+    at Object.Module._extensions..js (module.js:664:10)
+    at Module.load (module.js:566:32)
+    at tryModuleLoad (module.js:506:12)
+    at Function.Module._load (module.js:498:3)
+    at Function.Module.runMain (module.js:694:10)
+2018-11-10T19:09:44.840Z - info: START seeder.
+2018-11-10T19:09:44.883Z - error: uncaughtException: Cannot read property 'query' of undefined date=Sat Nov 10 2018 13:09:44 GMT-0600 (Central Standard Time), pid=1016, uid=null, gid=null, cwd=b:\GDP\Project, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP\Project\bin\www], rss=112705536, heapTotal=80015360, heapUsed=53600696, external=23460717, loadavg=[0, 0, 0], uptime=938128.1092853
+TypeError: Cannot read property 'query' of undefined
+    at module.exports (b:\GDP\Project\utils\seeder.js:52:36)
+    at Object.<anonymous> (b:\GDP\Project\codeword.js:30:29)
+    at Module._compile (module.js:653:30)
+    at Object.Module._extensions..js (module.js:664:10)
+    at Module.load (module.js:566:32)
+    at tryModuleLoad (module.js:506:12)
+    at Function.Module._load (module.js:498:3)
+    at Module.require (module.js:597:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (b:\GDP\Project\bin\www:7:11)
+    at Module._compile (module.js:650:14)
+    at Object.Module._extensions..js (module.js:664:10)
+    at Module.load (module.js:566:32)
+    at tryModuleLoad (module.js:506:12)
+    at Function.Module._load (module.js:498:3)
+    at Function.Module.runMain (module.js:694:10)
+2018-11-10T19:10:03.224Z - info: START seeder.
+2018-11-10T19:10:03.255Z - debug: 2 dataCodewordset seeded
+2018-11-10T19:10:03.255Z - debug: 224 datacodeword seeded
+2018-11-10T19:10:03.255Z - debug: 6 datacourse seeded
+2018-11-10T19:10:03.255Z - debug: 114 dataCoursestudent seeded
+2018-11-10T19:10:03.256Z - info: END Seeder. Sample data read and verified.

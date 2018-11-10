@@ -72,6 +72,7 @@ export default {
               email: this.emailid,
               password: this.pass
             }).then(response => {
+              console.log(response.data.isInstructor)
               if (response.data.token) {
                 this.msg = 'Signed in successfully. Redirecting .'
                 this.signed = true
@@ -80,7 +81,7 @@ export default {
                 let _this = this
                 setTimeout(function () {
                   if (data.get('password').length === 5) {
-                    _this.$router.push({ name: 'ChangePassword', params: { loginrole: response.data.isInstructor } })
+                    _this.$router.push({ name: 'ChangePassword' })
                   } else if (response.data.isInstructor === false) {
                     _this.$router.push({ name: 'StudentDashboard' })
                   } else {
