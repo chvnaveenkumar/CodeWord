@@ -75,6 +75,15 @@ export default {
       codeWordSetData: ''
     }
   },
+  created () {
+    // fetch the data when the view is created and the data is
+    // already being observed
+    this.fetchCourseList()
+  },
+  watch: {
+    // call again the method if the route changes
+    '$route': 'fetchCourseList'
+  },
   methods: {
     CreateCourse () {
       let data = new FormData(document.querySelector('form'))
@@ -88,7 +97,7 @@ export default {
       formData.append('CodeWordSetName', 'Large Set1')
       formData.append('file', this.file)
       /* global axios $ */
-      axios.all([axios({
+      Promise.all([axios({
         method: 'post',
         url: 'codeword/addnewCourse',
         data: {
@@ -107,7 +116,6 @@ export default {
         }
         })])
         .then(res => {
-          console.log('Res ponse')
           $('#addcourse').modal('hide')
         })
     },
@@ -126,6 +134,19 @@ export default {
       }).then(response => {
         this.codeWordSetData = response.data.data
         console.log(this.codeWordSetData[0].CodeWordSetName)
+      })
+    },
+    fetchCourseList () {
+      console.log('fetchCourseList')
+      axios({
+        method: 'get',
+        url: 'codeword/getCourseList',
+        headers: {
+          token: window.localStorage.getItem('token')
+        }
+      }).then(response => {
+        console.log('res fetchcourse')
+        console.log(response.data.data)
       })
     }
   }

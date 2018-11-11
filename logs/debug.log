@@ -500,3 +500,93 @@ Error: Can't set headers after they are sent.
 2018-11-11T19:17:43.824Z - debug: 6 datacourse seeded
 2018-11-11T19:17:43.824Z - debug: 114 dataCoursestudent seeded
 2018-11-11T19:17:43.824Z - info: END Seeder. Sample data read and verified.
+2018-11-11T20:13:36.367Z - info: START seeder.
+2018-11-11T20:13:36.389Z - debug: 2 dataCodewordset seeded
+2018-11-11T20:13:36.389Z - debug: 224 datacodeword seeded
+2018-11-11T20:13:36.390Z - debug: 6 datacourse seeded
+2018-11-11T20:13:36.390Z - debug: 114 dataCoursestudent seeded
+2018-11-11T20:13:36.390Z - info: END Seeder. Sample data read and verified.
+2018-11-11T20:16:02.923Z - info: START seeder.
+2018-11-11T20:16:02.953Z - debug: 2 dataCodewordset seeded
+2018-11-11T20:16:02.953Z - debug: 224 datacodeword seeded
+2018-11-11T20:16:02.953Z - debug: 6 datacourse seeded
+2018-11-11T20:16:02.954Z - debug: 114 dataCoursestudent seeded
+2018-11-11T20:16:02.954Z - info: END Seeder. Sample data read and verified.
+2018-11-11T20:22:40.051Z - info: START seeder.
+2018-11-11T20:22:40.110Z - debug: 2 dataCodewordset seeded
+2018-11-11T20:22:40.111Z - debug: 224 datacodeword seeded
+2018-11-11T20:22:40.111Z - debug: 6 datacourse seeded
+2018-11-11T20:22:40.111Z - debug: 114 dataCoursestudent seeded
+2018-11-11T20:22:40.112Z - info: END Seeder. Sample data read and verified.
+2018-11-11T20:55:38.801Z - info: START seeder.
+2018-11-11T20:55:38.865Z - debug: 2 dataCodewordset seeded
+2018-11-11T20:55:38.866Z - debug: 224 datacodeword seeded
+2018-11-11T20:55:38.867Z - debug: 6 datacourse seeded
+2018-11-11T20:55:38.867Z - debug: 114 dataCoursestudent seeded
+2018-11-11T20:55:38.868Z - info: END Seeder. Sample data read and verified.
+2018-11-11T20:56:11.507Z - info: START seeder.
+2018-11-11T20:56:11.533Z - debug: 2 dataCodewordset seeded
+2018-11-11T20:56:11.533Z - debug: 224 datacodeword seeded
+2018-11-11T20:56:11.533Z - debug: 6 datacourse seeded
+2018-11-11T20:56:11.533Z - debug: 114 dataCoursestudent seeded
+2018-11-11T20:56:11.534Z - info: END Seeder. Sample data read and verified.
+2018-11-11T20:59:51.298Z - info: START seeder.
+2018-11-11T20:59:51.328Z - debug: 2 dataCodewordset seeded
+2018-11-11T20:59:51.329Z - debug: 224 datacodeword seeded
+2018-11-11T20:59:51.329Z - debug: 6 datacourse seeded
+2018-11-11T20:59:51.329Z - debug: 114 dataCoursestudent seeded
+2018-11-11T20:59:51.329Z - info: END Seeder. Sample data read and verified.
+2018-11-11T21:07:33.079Z - info: START seeder.
+2018-11-11T21:07:33.106Z - debug: 2 dataCodewordset seeded
+2018-11-11T21:07:33.106Z - debug: 224 datacodeword seeded
+2018-11-11T21:07:33.106Z - debug: 6 datacourse seeded
+2018-11-11T21:07:33.106Z - debug: 114 dataCoursestudent seeded
+2018-11-11T21:07:33.107Z - info: END Seeder. Sample data read and verified.
+2018-11-11T21:08:43.890Z - info: START seeder.
+2018-11-11T21:08:43.917Z - debug: 2 dataCodewordset seeded
+2018-11-11T21:08:43.917Z - debug: 224 datacodeword seeded
+2018-11-11T21:08:43.917Z - debug: 6 datacourse seeded
+2018-11-11T21:08:43.917Z - debug: 114 dataCoursestudent seeded
+2018-11-11T21:08:43.918Z - info: END Seeder. Sample data read and verified.
+2018-11-11T21:09:43.474Z - info: START seeder.
+2018-11-11T21:09:43.501Z - debug: 2 dataCodewordset seeded
+2018-11-11T21:09:43.501Z - debug: 224 datacodeword seeded
+2018-11-11T21:09:43.501Z - debug: 6 datacourse seeded
+2018-11-11T21:09:43.501Z - debug: 114 dataCoursestudent seeded
+2018-11-11T21:09:43.501Z - info: END Seeder. Sample data read and verified.
+2018-11-11T21:12:30.622Z - info: START seeder.
+2018-11-11T21:12:30.652Z - debug: 2 dataCodewordset seeded
+2018-11-11T21:12:30.652Z - debug: 224 datacodeword seeded
+2018-11-11T21:12:30.652Z - debug: 6 datacourse seeded
+2018-11-11T21:12:30.652Z - debug: 114 dataCoursestudent seeded
+2018-11-11T21:12:30.653Z - info: END Seeder. Sample data read and verified.
+2018-11-11T21:15:04.676Z - info: START seeder.
+2018-11-11T21:15:04.702Z - debug: 2 dataCodewordset seeded
+2018-11-11T21:15:04.702Z - debug: 224 datacodeword seeded
+2018-11-11T21:15:04.702Z - debug: 6 datacourse seeded
+2018-11-11T21:15:04.703Z - debug: 114 dataCoursestudent seeded
+2018-11-11T21:15:04.703Z - info: END Seeder. Sample data read and verified.
+2018-11-11T21:15:58.370Z - info: START seeder.
+2018-11-11T21:15:58.397Z - debug: 2 dataCodewordset seeded
+2018-11-11T21:15:58.397Z - debug: 224 datacodeword seeded
+2018-11-11T21:15:58.397Z - debug: 6 datacourse seeded
+2018-11-11T21:15:58.397Z - debug: 114 dataCoursestudent seeded
+2018-11-11T21:15:58.397Z - info: END Seeder. Sample data read and verified.
+2018-11-11T21:17:32.019Z - info: START seeder.
+2018-11-11T21:17:32.046Z - debug: 2 dataCodewordset seeded
+2018-11-11T21:17:32.046Z - debug: 224 datacodeword seeded
+2018-11-11T21:17:32.046Z - debug: 6 datacourse seeded
+2018-11-11T21:17:32.047Z - debug: 114 dataCoursestudent seeded
+2018-11-11T21:17:32.047Z - info: END Seeder. Sample data read and verified.
+2018-11-11T21:19:18.575Z - info: START seeder.
+2018-11-11T21:19:18.603Z - debug: 2 dataCodewordset seeded
+2018-11-11T21:19:18.603Z - debug: 224 datacodeword seeded
+2018-11-11T21:19:18.603Z - debug: 6 datacourse seeded
+2018-11-11T21:19:18.603Z - debug: 114 dataCoursestudent seeded
+2018-11-11T21:19:18.603Z - info: END Seeder. Sample data read and verified.
+2018-11-11T21:19:44.827Z - info: START seeder.
+2018-11-11T21:19:44.858Z - debug: 2 dataCodewordset seeded
+2018-11-11T21:19:44.859Z - debug: 224 datacodeword seeded
+2018-11-11T21:19:44.859Z - debug: 6 datacourse seeded
+2018-11-11T21:19:44.859Z - debug: 114 dataCoursestudent seeded
+2018-11-11T21:19:44.860Z - info: END Seeder. Sample data read and verified.
