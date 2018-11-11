@@ -30,3 +30,16 @@ PostSurveyURL: body.postSurveyURL
     })
 }
 module.exports.addCourse = addCourse;
+
+let getCourses = (req,res) => {
+    CourseModel.find({emailKey: req.session.email}, function (err, courses) {
+        if(err){
+            return res.json({ code: 200, message: 'No courses created!!'});
+        }
+        if (courses)
+            return res.json({ code: 200, data: courses });
+        }).catch((e) => {
+        return res.json({ code: 400, message: e });
+        })
+}
+module.exports.getCourses = getCourses;
