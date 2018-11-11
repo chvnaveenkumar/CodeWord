@@ -7,13 +7,12 @@
 
             </div>
 
+ 
+<div class="contan">
+  <div class="skills html">10 of 20 Students  (50%)</div>
+</div>
 
 
-  <div id="myProgress">
-  <div id="myBar"></div>
-  </div>  
-  <div><h4><b>10 of 20 Students  (50%)</b></h4></div>  
-       
  
   <table class="table table-striped">
   <thead>
@@ -33,69 +32,8 @@
       <td>Africa</td>
       <td> 1 </td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>s530742@nwmissouri.edu</td>
-      <td>Naveen Kumar Chandaluri</td>
-      <td>Almond</td>
-      <td>1 </td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>s531495@nwmissouri.edu</td>
-      <td>Chaithanya Cherukuru</td>
-      <td>Anger</td>
-      <td> 1 </td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>s531367@nwmissouri.edu</td>
-      <td>Sai Sirisha Devineni</td>
-      <td>America</td>
-      <td> 1 </td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td>s531496@nwmissouri.edu</td>
-      <td>Shivani Reddy Dodla</td>
-      <td>Bravo</td>
-      <td> 0 </td>
-    </tr>
-    <tr>
-      <th scope="row">6</th>
-      <td>s531369@nwmissouri.edu</td>
-      <td>Girish Guntuku</td>
-      <td>Bank</td>
-      <td> 0 </td>
-    </tr>
-    <tr>
-      <th scope="row">7</th>
-      <td>s531499@nwmissouri.edu</td>
-      <td>Saicharan Gurudu</td>
-      <td>Bounce</td>
-      <td> 0 </td>
-    </tr>
-    <tr>
-      <th scope="row">8</th>
-      <td>s531500@nwmissouri.edu</td>
-      <td>Sravya Kancharla</td>
-      <td>Bigger</td>
-      <td> 0 </td>
-    </tr>
-    <tr>
-      <th scope="row">9</th>
-      <td>s531372@nwmissouri.edu</td>
-      <td>Anurag Kumar</td>
-      <td>Computer</td>
-      <td> 1 </td>
-    </tr>
-    <tr>
-      <th scope="row">10</th>
-      <td>s530473@nwmissouri.edu</td>
-      <td>Ujjawal Kumar</td>
-      <td>Cancer</td>
-      <td> 1 </td>
-    </tr>
+  
+  
     
   </tbody>
 </table>
@@ -108,63 +46,17 @@
   margin-top: 5em;
 }
 
-#myProgress {
-    width: 100%;
-    background-color: grey;
+.contan{
+  width: 100%;
+  background-color: #ddd;
 }
-#myBar {
-    width: 50%;
-    height: 30px;
-    background-color: green;
+
+.skills {
+  text-align: right;
+  padding: 10px;
+  color: white;
 }
+
+.html {width: 50%; background-color: #4CAF50;}
+
 </style>
-
-<script>
-import axios from 'axios'
-
-export default {
-  name: 'CodeWordSet',
-  data () {
-    return {
-      files: '',
-      tcodeWordSetData: [],
-      codeWordSetData: [],
-      count: 0
-    }
-  },
-
-  methods: {
-    // Getting the data from uploaded xls file
-    previewFiles () {
-      this.files = this.$refs.myFile
-      let data = new FormData(document.querySelector('form'))
-      axios.post('http://localhost:3000/codeword/getdataxlsx', data).then(response => {
-        console.log(response.data.data)
-        this.tcodeWordSetData = response.data.data
-        this.count = this.tcodeWordSetData.length
-      })
-    },
-
-    // Calling API of codeWordSet controller and sending xls data in form of json
-    saveCodeWordData () {
-      let data = new FormData(document.querySelector('form'))
-      let sendData = {
-        codeWordSetName: data.get('dataSetName'),
-        emailKeySet: this.tcodeWordSetData
-      }
-      axios.post('http://localhost:3000/codeword/addcodewordset', sendData).then(response => {
-        console.log(response.data.data)
-        this.getCodeWordData()
-      })
-    },
-    getCodeWordData () {
-      axios.get('http://localhost:3000/codeword/getcodewordset').then(response => {
-        this.codeWordSetData = response.data.data
-      })
-    }
-  },
-  mounted () {
-    this.getCodeWordData()
-  }
-}
-</script>
