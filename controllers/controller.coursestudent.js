@@ -42,7 +42,7 @@ let addCourseStudent = (req,res) => {
              }  
              CourseStudentModel.insertMany(courseStudents, (error, students) => {
                  if(error){
-                     res.send(400, "Unable to store Course Student details")
+                     res.send(400, error.errors[0].message)
                  }
                  res.send("Sucessfully Created course Student")
              });         

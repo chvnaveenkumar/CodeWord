@@ -27,8 +27,8 @@
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span></button>
             </div>
+            <form @submit.prevent="CreateCourse">
             <div class="modal-body">
-            <form>
             <!-- Retrive the course name from input field -->
             <div class="form-group">
               <input type="text" class="form-control" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip" data-placement="bottom" title="Enter Course Name">
@@ -38,7 +38,7 @@
                 <div class="col tooltip-test" title="End Date"> EndDate:<input type="date" class="form-control" name="endDate" placeholder="End Date"></div>
             </div>
             <div class="form-group">
-                <input type="file" class="form-control-file" id="exampleFormControlFile1" style="margin-top:1em">
+                <input type="file" ref="file" v-on:change="handleFileUpload()" class="form-control-file" id="file" style="margin-top:1em">
                 Upload Student Details(Excel)
             </div>
             <div class="form-group">
@@ -52,12 +52,12 @@
             <div class="form-group" >
               <input type="text" class="form-control" placeholder="Enter Survey End URL"  name="endSurveyurl" data-toggle="tooltip" data-placement="bottom" title="Enter Survey End URL" >
             </div>
-            </form>
+            <div >
+              <button type="cancel" class="btn btn-warning" data-dismiss="modal">Cancel</button>
+              <button type="create" class="btn btn-primary">Create Course</button>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
-              <button type="button" class="btn btn-primary" v-on:click="CreateCourse" >Create Course</button>
-            </div></div></div></div>  
+            </div>
+            </form></div></div></div>
   </div>
 </template>
 <script>
@@ -69,20 +69,25 @@ export default {
       startDate: '',
       endDate: '',
       startSurveyurl: '',
-      endSurveyurl: ''
+      endSurveyurl: '',
+      CodeWordSetName: '',
+      file: ''
     }
   },
   methods: {
     CreateCourse () {
-      console.log('Create Course')
       let data = new FormData(document.querySelector('form'))
       this.courseName = data.get('courseName').toLowerCase()
       this.startDate = data.get('startDate')
       this.endDate = data.get('endDate')
       this.startSurveyurl = data.get('startSurveyurl')
       this.endSurveyurl = data.get('endSurveyurl')
+      let formData = new FormData()
+      formData.append('CourseNameKey', this.courseName)
+      formData.append('CodeWordSetName', 'Large Set1')
+      formData.append('file', this.file)
       /* global axios $ */
-      axios({
+      axios.all([axios({
         method: 'post',
         url: 'codeword/addnewCourse',
         data: {
@@ -93,10 +98,20 @@ export default {
           preSurveyURL: this.startSurveyurl,
           postSurveyURL: this.endSurveyurl
         }
-      }).then(res => {
-        $('#addcourse').modal('hide')
-        console.log(res)
-      })
+      }),
+      axios.post('codeword/addcoursestudent',
+        formData, {headers: {
+          'Content-Type': 'multipart/form-data',
+          token: window.localStorage.getItem('token')
+        }
+        })])
+        .then(res => {
+          $('#addcourse').modal('hide')
+        })
+    },
+    handleFileUpload () {
+      this.file = this.$refs.file.files[0]
+      console.log(this.file)
     }
   }
 }

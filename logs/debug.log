@@ -370,3 +370,121 @@ Error: Can't set headers after they are sent.
     at b:\GDP\Project\node_modules\mongoose\lib\document.js:1687:5
     at b:\GDP\Project\node_modules\mongoose\lib\document.js:1861:9
     at b:\GDP\Project\node_modules\kareem\index.js:135:16
+2018-11-11T15:11:28.509Z - info: START seeder.
+2018-11-11T15:11:28.561Z - debug: 2 dataCodewordset seeded
+2018-11-11T15:11:28.562Z - debug: 224 datacodeword seeded
+2018-11-11T15:11:28.562Z - debug: 6 datacourse seeded
+2018-11-11T15:11:28.563Z - debug: 114 dataCoursestudent seeded
+2018-11-11T15:11:28.564Z - info: END Seeder. Sample data read and verified.
+2018-11-11T15:21:06.949Z - info: START seeder.
+2018-11-11T15:21:06.973Z - debug: 2 dataCodewordset seeded
+2018-11-11T15:21:06.974Z - debug: 224 datacodeword seeded
+2018-11-11T15:21:06.974Z - debug: 6 datacourse seeded
+2018-11-11T15:21:06.974Z - debug: 114 dataCoursestudent seeded
+2018-11-11T15:21:06.974Z - info: END Seeder. Sample data read and verified.
+2018-11-11T15:23:16.518Z - info: START seeder.
+2018-11-11T15:23:16.540Z - debug: 2 dataCodewordset seeded
+2018-11-11T15:23:16.540Z - debug: 224 datacodeword seeded
+2018-11-11T15:23:16.540Z - debug: 6 datacourse seeded
+2018-11-11T15:23:16.540Z - debug: 114 dataCoursestudent seeded
+2018-11-11T15:23:16.541Z - info: END Seeder. Sample data read and verified.
+2018-11-11T15:26:58.823Z - info: START seeder.
+2018-11-11T15:26:58.853Z - debug: 2 dataCodewordset seeded
+2018-11-11T15:26:58.853Z - debug: 224 datacodeword seeded
+2018-11-11T15:26:58.853Z - debug: 6 datacourse seeded
+2018-11-11T15:26:58.853Z - debug: 114 dataCoursestudent seeded
+2018-11-11T15:26:58.854Z - info: END Seeder. Sample data read and verified.
+2018-11-11T15:29:40.129Z - info: START seeder.
+2018-11-11T15:29:40.151Z - debug: 2 dataCodewordset seeded
+2018-11-11T15:29:40.152Z - debug: 224 datacodeword seeded
+2018-11-11T15:29:40.152Z - debug: 6 datacourse seeded
+2018-11-11T15:29:40.152Z - debug: 114 dataCoursestudent seeded
+2018-11-11T15:29:40.152Z - info: END Seeder. Sample data read and verified.
+2018-11-11T17:19:03.667Z - info: START seeder.
+2018-11-11T17:19:03.691Z - debug: 2 dataCodewordset seeded
+2018-11-11T17:19:03.691Z - debug: 224 datacodeword seeded
+2018-11-11T17:19:03.691Z - debug: 6 datacourse seeded
+2018-11-11T17:19:03.691Z - debug: 114 dataCoursestudent seeded
+2018-11-11T17:19:03.691Z - info: END Seeder. Sample data read and verified.
+2018-11-11T17:29:45.882Z - info: START seeder.
+2018-11-11T17:29:45.907Z - debug: 2 dataCodewordset seeded
+2018-11-11T17:29:45.908Z - debug: 224 datacodeword seeded
+2018-11-11T17:29:45.908Z - debug: 6 datacourse seeded
+2018-11-11T17:29:45.909Z - debug: 114 dataCoursestudent seeded
+2018-11-11T17:29:45.909Z - info: END Seeder. Sample data read and verified.
+2018-11-11T17:38:54.929Z - info: START seeder.
+2018-11-11T17:38:54.952Z - debug: 2 dataCodewordset seeded
+2018-11-11T17:38:54.952Z - debug: 224 datacodeword seeded
+2018-11-11T17:38:54.952Z - debug: 6 datacourse seeded
+2018-11-11T17:38:54.952Z - debug: 114 dataCoursestudent seeded
+2018-11-11T17:38:54.952Z - info: END Seeder. Sample data read and verified.
+2018-11-11T17:41:11.714Z - error: uncaughtException: Cannot read property 'codeword' of null date=Sun Nov 11 2018 11:41:11 GMT-0600 (Central Standard Time), pid=7636, uid=null, gid=null, cwd=b:\GDP\Project, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP\Project\bin\www], rss=97353728, heapTotal=50737152, heapUsed=47042088, external=22060695, loadavg=[0, 0, 0], uptime=1019215.9231622
+TypeError: Cannot read property 'codeword' of null
+    at b:\GDP\Project\controllers\controller.coursestudent.js:21:38
+    at b:\GDP\Project\node_modules\mongoose\lib\model.js:4518:16
+    at model.Query.Query._completeOne (b:\GDP\Project\node_modules\mongoose\lib\query.js:1883:12)
+    at Immediate.Query.base.findOne.call (b:\GDP\Project\node_modules\mongoose\lib\query.js:1943:10)
+    at Immediate._onImmediate (b:\GDP\Project\node_modules\mquery\lib\utils.js:116:16)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-11-11T17:42:55.425Z - error: uncaughtException: Cannot read property 'codeword' of null date=Sun Nov 11 2018 11:42:55 GMT-0600 (Central Standard Time), pid=7636, uid=null, gid=null, cwd=b:\GDP\Project, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP\Project\bin\www], rss=100147200, heapTotal=51261440, heapUsed=47664216, external=22125323, loadavg=[0, 0, 0], uptime=1019319.6290242
+TypeError: Cannot read property 'codeword' of null
+    at b:\GDP\Project\controllers\controller.coursestudent.js:21:38
+    at b:\GDP\Project\node_modules\mongoose\lib\model.js:4518:16
+    at model.Query.Query._completeOne (b:\GDP\Project\node_modules\mongoose\lib\query.js:1883:12)
+    at Immediate.Query.base.findOne.call (b:\GDP\Project\node_modules\mongoose\lib\query.js:1943:10)
+    at Immediate._onImmediate (b:\GDP\Project\node_modules\mquery\lib\utils.js:116:16)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-11-11T17:45:27.680Z - error: uncaughtException: Cannot read property 'codeword' of null date=Sun Nov 11 2018 11:45:27 GMT-0600 (Central Standard Time), pid=7636, uid=null, gid=null, cwd=b:\GDP\Project, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP\Project\bin\www], rss=100872192, heapTotal=53358592, heapUsed=46795768, external=21529400, loadavg=[0, 0, 0], uptime=1019471.8898592
+TypeError: Cannot read property 'codeword' of null
+    at b:\GDP\Project\controllers\controller.coursestudent.js:21:38
+    at b:\GDP\Project\node_modules\mongoose\lib\model.js:4518:16
+    at model.Query.Query._completeOne (b:\GDP\Project\node_modules\mongoose\lib\query.js:1883:12)
+    at Immediate.Query.base.findOne.call (b:\GDP\Project\node_modules\mongoose\lib\query.js:1943:10)
+    at Immediate._onImmediate (b:\GDP\Project\node_modules\mquery\lib\utils.js:116:16)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-11-11T17:46:01.644Z - error: uncaughtException: Cannot read property 'codeword' of null date=Sun Nov 11 2018 11:46:01 GMT-0600 (Central Standard Time), pid=7636, uid=null, gid=null, cwd=b:\GDP\Project, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP\Project\bin\www], rss=100634624, heapTotal=52310016, heapUsed=46920872, external=21412971, loadavg=[0, 0, 0], uptime=1019505.8545732
+TypeError: Cannot read property 'codeword' of null
+    at b:\GDP\Project\controllers\controller.coursestudent.js:21:38
+    at b:\GDP\Project\node_modules\mongoose\lib\model.js:4518:16
+    at model.Query.Query._completeOne (b:\GDP\Project\node_modules\mongoose\lib\query.js:1883:12)
+    at Immediate.Query.base.findOne.call (b:\GDP\Project\node_modules\mongoose\lib\query.js:1943:10)
+    at Immediate._onImmediate (b:\GDP\Project\node_modules\mquery\lib\utils.js:116:16)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-11-11T17:47:11.408Z - info: START seeder.
+2018-11-11T17:47:11.433Z - debug: 2 dataCodewordset seeded
+2018-11-11T17:47:11.433Z - debug: 224 datacodeword seeded
+2018-11-11T17:47:11.434Z - debug: 6 datacourse seeded
+2018-11-11T17:47:11.434Z - debug: 114 dataCoursestudent seeded
+2018-11-11T17:47:11.434Z - info: END Seeder. Sample data read and verified.
+2018-11-11T17:48:41.097Z - info: START seeder.
+2018-11-11T17:48:41.119Z - debug: 2 dataCodewordset seeded
+2018-11-11T17:48:41.119Z - debug: 224 datacodeword seeded
+2018-11-11T17:48:41.119Z - debug: 6 datacourse seeded
+2018-11-11T17:48:41.119Z - debug: 114 dataCoursestudent seeded
+2018-11-11T17:48:41.119Z - info: END Seeder. Sample data read and verified.
+2018-11-11T17:51:56.008Z - error: uncaughtException: Can't set headers after they are sent. date=Sun Nov 11 2018 11:51:55 GMT-0600 (Central Standard Time), pid=17224, uid=null, gid=null, cwd=b:\GDP\Project, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP\Project\bin\www], rss=100540416, heapTotal=53358592, heapUsed=49502872, external=21509297, loadavg=[0, 0, 0], uptime=1019860.2156355
+Error: Can't set headers after they are sent.
+    at validateHeader (_http_outgoing.js:491:11)
+    at ServerResponse.setHeader (_http_outgoing.js:498:3)
+    at ServerResponse.header (b:\GDP\Project\node_modules\express\lib\response.js:767:10)
+    at ServerResponse.send (b:\GDP\Project\node_modules\express\lib\response.js:170:12)
+    at CourseStudentModel.insertMany (b:\GDP\Project\controllers\controller.coursestudent.js:47:22)
+    at b:\GDP\Project\node_modules\mongoose\lib\model.js:4518:16
+    at b:\GDP\Project\node_modules\mongoose\lib\model.js:2824:7
+    at b:\GDP\Project\node_modules\async\internal\parallel.js:39:9
+    at b:\GDP\Project\node_modules\async\internal\once.js:12:16
+    at iterateeCallback (b:\GDP\Project\node_modules\async\internal\eachOfLimit.js:45:17)
+    at b:\GDP\Project\node_modules\async\internal\onlyOnce.js:12:16
+    at b:\GDP\Project\node_modules\async\internal\parallel.js:36:13
+    at b:\GDP\Project\node_modules\mongoose\lib\model.js:2815:18
+    at b:\GDP\Project\node_modules\mongoose\lib\document.js:1687:5
+    at b:\GDP\Project\node_modules\mongoose\lib\document.js:1861:9
+    at b:\GDP\Project\node_modules\kareem\index.js:135:16
