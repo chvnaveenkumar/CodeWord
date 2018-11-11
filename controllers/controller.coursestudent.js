@@ -18,7 +18,7 @@ let addCourseStudent = (req,res) => {
             return res.json({ code: 204, message: 'CodeWord Set Not found error'});
         }
         codewordslist.push(CodeWords.codeword)
-        if(codewordslist.length < studetList.length )
+        if(codewordslist.length > studetList.length )
         {
             return res.json({ code: 200, message: 'Insufficent Codewords'})
         }else {
@@ -28,9 +28,8 @@ let addCourseStudent = (req,res) => {
             studentidList.push(studentData[Object.keys(studentData)[0]])
             studentNameList.push(studentData[Object.keys(studentData)[1]])
             }
-
             console.log(studentidList+" "+studentNameList)
-
+            var courseStudents = [];
             for(var i=0;i<studentidList.length;i++){
                 var courseStudentModel = CourseStudentModel({
                     CourseNameKey: body.CourseNameKey,
@@ -38,15 +37,16 @@ let addCourseStudent = (req,res) => {
                     Codeword:'Codewords',
                     StudentName: studentNameList[i],
                     Acknowledged: false 
-                }); 
-                courseStudentModel.save();
-             }           
+                });
+                courseStudents.push(courseStudentModel);
+             }  
+             CourseStudentModel.insertMany(courseStudents, (error, students) => {
+                 if(error){
+                     res.send(400, "Unable to store Course Student details")
+                 }
+                 res.send("Sucessfully Created course Student")
+             });         
         }
-    }).then((user) => {
-        if(user)
-        return res.json({ code: 200, message: true});           
-    }).catch((e) => {
-        return res.json({ code: 400, message: e});        
     })
 }
 

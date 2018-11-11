@@ -276,3 +276,97 @@ TypeError: CourseStudentModel.save is not a function
 2018-11-10T22:09:54.374Z - debug: 6 datacourse seeded
 2018-11-10T22:09:54.374Z - debug: 114 dataCoursestudent seeded
 2018-11-10T22:09:54.374Z - info: END Seeder. Sample data read and verified.
+2018-11-11T00:16:02.514Z - info: START seeder.
+2018-11-11T00:16:02.545Z - debug: 2 dataCodewordset seeded
+2018-11-11T00:16:02.545Z - debug: 224 datacodeword seeded
+2018-11-11T00:16:02.545Z - debug: 6 datacourse seeded
+2018-11-11T00:16:02.546Z - debug: 114 dataCoursestudent seeded
+2018-11-11T00:16:02.546Z - info: END Seeder. Sample data read and verified.
+2018-11-11T00:16:07.253Z - error: uncaughtException: Cannot read property 'codeword' of null date=Sat Nov 10 2018 18:16:07 GMT-0600 (Central Standard Time), pid=2672, uid=null, gid=null, cwd=b:\GDP\Project, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP\Project\bin\www], rss=120598528, heapTotal=84209664, heapUsed=49379936, external=21655217, loadavg=[0, 0, 0], uptime=956511.461906
+TypeError: Cannot read property 'codeword' of null
+    at b:\GDP\Project\controllers\controller.coursestudent.js:20:38
+    at b:\GDP\Project\node_modules\mongoose\lib\model.js:4518:16
+    at model.Query.Query._completeOne (b:\GDP\Project\node_modules\mongoose\lib\query.js:1883:12)
+    at Immediate.Query.base.findOne.call (b:\GDP\Project\node_modules\mongoose\lib\query.js:1943:10)
+    at Immediate._onImmediate (b:\GDP\Project\node_modules\mquery\lib\utils.js:116:16)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-11-11T00:17:09.683Z - info: START seeder.
+2018-11-11T00:17:09.711Z - debug: 2 dataCodewordset seeded
+2018-11-11T00:17:09.711Z - debug: 224 datacodeword seeded
+2018-11-11T00:17:09.712Z - debug: 6 datacourse seeded
+2018-11-11T00:17:09.712Z - debug: 114 dataCoursestudent seeded
+2018-11-11T00:17:09.712Z - info: END Seeder. Sample data read and verified.
+2018-11-11T00:17:40.730Z - error: uncaughtException: Cannot read property 'codeword' of null date=Sat Nov 10 2018 18:17:40 GMT-0600 (Central Standard Time), pid=8648, uid=null, gid=null, cwd=b:\GDP\Project, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP\Project\bin\www], rss=101707776, heapTotal=56504320, heapUsed=50098936, external=21500916, loadavg=[0, 0, 0], uptime=956604.9354535
+TypeError: Cannot read property 'codeword' of null
+    at b:\GDP\Project\controllers\controller.coursestudent.js:20:38
+    at b:\GDP\Project\node_modules\mongoose\lib\model.js:4518:16
+    at model.Query.Query._completeOne (b:\GDP\Project\node_modules\mongoose\lib\query.js:1883:12)
+    at Immediate.Query.base.findOne.call (b:\GDP\Project\node_modules\mongoose\lib\query.js:1943:10)
+    at Immediate._onImmediate (b:\GDP\Project\node_modules\mquery\lib\utils.js:116:16)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5)
+2018-11-11T00:18:11.840Z - info: START seeder.
+2018-11-11T00:18:11.912Z - debug: 2 dataCodewordset seeded
+2018-11-11T00:18:11.912Z - debug: 224 datacodeword seeded
+2018-11-11T00:18:11.913Z - debug: 6 datacourse seeded
+2018-11-11T00:18:11.914Z - debug: 114 dataCoursestudent seeded
+2018-11-11T00:18:11.914Z - info: END Seeder. Sample data read and verified.
+2018-11-11T00:20:09.203Z - info: START seeder.
+2018-11-11T00:20:09.232Z - debug: 2 dataCodewordset seeded
+2018-11-11T00:20:09.232Z - debug: 224 datacodeword seeded
+2018-11-11T00:20:09.233Z - debug: 6 datacourse seeded
+2018-11-11T00:20:09.233Z - debug: 114 dataCoursestudent seeded
+2018-11-11T00:20:09.233Z - info: END Seeder. Sample data read and verified.
+2018-11-11T00:20:36.881Z - error: uncaughtException: courseStudentModel.insertMany is not a function date=Sat Nov 10 2018 18:20:36 GMT-0600 (Central Standard Time), pid=12524, uid=null, gid=null, cwd=b:\GDP\Project, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP\Project\bin\www], rss=97669120, heapTotal=51261440, heapUsed=46104560, external=22496020, loadavg=[0, 0, 0], uptime=956781.0840583
+TypeError: courseStudentModel.insertMany is not a function
+    at b:\GDP\Project\controllers\controller.coursestudent.js:43:33
+    at b:\GDP\Project\node_modules\mongoose\lib\model.js:4518:16
+    at process.nextTick (b:\GDP\Project\node_modules\mongoose\lib\query.js:2584:28)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2018-11-11T00:21:25.348Z - info: START seeder.
+2018-11-11T00:21:25.403Z - debug: 2 dataCodewordset seeded
+2018-11-11T00:21:25.403Z - debug: 224 datacodeword seeded
+2018-11-11T00:21:25.403Z - debug: 6 datacourse seeded
+2018-11-11T00:21:25.404Z - debug: 114 dataCoursestudent seeded
+2018-11-11T00:21:25.404Z - info: END Seeder. Sample data read and verified.
+2018-11-11T00:22:42.399Z - error: uncaughtException: courseStudentModel.insertMany is not a function date=Sat Nov 10 2018 18:22:42 GMT-0600 (Central Standard Time), pid=7548, uid=null, gid=null, cwd=b:\GDP\Project, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP\Project\bin\www], rss=97239040, heapTotal=50737152, heapUsed=45034304, external=21500546, loadavg=[0, 0, 0], uptime=956906.607312
+TypeError: courseStudentModel.insertMany is not a function
+    at b:\GDP\Project\controllers\controller.coursestudent.js:43:33
+    at b:\GDP\Project\node_modules\mongoose\lib\model.js:4518:16
+    at process.nextTick (b:\GDP\Project\node_modules\mongoose\lib\query.js:2584:28)
+    at _combinedTickCallback (internal/process/next_tick.js:132:7)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+2018-11-11T00:23:23.490Z - info: START seeder.
+2018-11-11T00:23:23.518Z - debug: 2 dataCodewordset seeded
+2018-11-11T00:23:23.518Z - debug: 224 datacodeword seeded
+2018-11-11T00:23:23.519Z - debug: 6 datacourse seeded
+2018-11-11T00:23:23.519Z - debug: 114 dataCoursestudent seeded
+2018-11-11T00:23:23.520Z - info: END Seeder. Sample data read and verified.
+2018-11-11T00:25:05.819Z - info: START seeder.
+2018-11-11T00:25:05.848Z - debug: 2 dataCodewordset seeded
+2018-11-11T00:25:05.848Z - debug: 224 datacodeword seeded
+2018-11-11T00:25:05.848Z - debug: 6 datacourse seeded
+2018-11-11T00:25:05.849Z - debug: 114 dataCoursestudent seeded
+2018-11-11T00:25:05.849Z - info: END Seeder. Sample data read and verified.
+2018-11-11T00:26:13.603Z - error: uncaughtException: Can't set headers after they are sent. date=Sat Nov 10 2018 18:26:13 GMT-0600 (Central Standard Time), pid=7028, uid=null, gid=null, cwd=b:\GDP\Project, execPath=C:\Program Files\nodejs\node.exe, version=v8.12.0, argv=[C:\Program Files\nodejs\node.exe, b:\GDP\Project\bin\www], rss=98459648, heapTotal=51261440, heapUsed=47468304, external=21501429, loadavg=[0, 0, 0], uptime=957117.8112555
+Error: Can't set headers after they are sent.
+    at validateHeader (_http_outgoing.js:491:11)
+    at ServerResponse.setHeader (_http_outgoing.js:498:3)
+    at ServerResponse.header (b:\GDP\Project\node_modules\express\lib\response.js:767:10)
+    at ServerResponse.send (b:\GDP\Project\node_modules\express\lib\response.js:170:12)
+    at CourseStudentModel.insertMany (b:\GDP\Project\controllers\controller.coursestudent.js:47:22)
+    at b:\GDP\Project\node_modules\mongoose\lib\model.js:4518:16
+    at b:\GDP\Project\node_modules\mongoose\lib\model.js:2824:7
+    at b:\GDP\Project\node_modules\async\internal\parallel.js:39:9
+    at b:\GDP\Project\node_modules\async\internal\once.js:12:16
+    at iterateeCallback (b:\GDP\Project\node_modules\async\internal\eachOfLimit.js:45:17)
+    at b:\GDP\Project\node_modules\async\internal\onlyOnce.js:12:16
+    at b:\GDP\Project\node_modules\async\internal\parallel.js:36:13
+    at b:\GDP\Project\node_modules\mongoose\lib\model.js:2815:18
+    at b:\GDP\Project\node_modules\mongoose\lib\document.js:1687:5
+    at b:\GDP\Project\node_modules\mongoose\lib\document.js:1861:9
+    at b:\GDP\Project\node_modules\kareem\index.js:135:16
