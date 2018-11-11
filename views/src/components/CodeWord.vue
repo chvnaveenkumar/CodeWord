@@ -23,10 +23,9 @@
   <button class="btn btn-primary dropdown-toggle  text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Select Codeword set
   </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Set1</a>
-    <a class="dropdown-item" href="#">Set2</a>
-    <a class="dropdown-item" href="#">Set2</a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+    <a class="dropdown-item" href="#" v-for="(code) in codeWordSetData" :key="code._id" > {{ code.CodeWordSetName }} </a>
+    
   </div>
 </div>
 

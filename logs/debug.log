@@ -10,3 +10,15 @@
 2018-11-11T22:05:35.186Z - debug: 6 datacourse seeded
 2018-11-11T22:05:35.188Z - debug: 114 dataCoursestudent seeded
 2018-11-11T22:05:35.190Z - info: END Seeder. Sample data read and verified.
+2018-11-11T22:08:38.921Z - info: START seeder.
+2018-11-11T22:08:38.933Z - debug: 2 dataCodewordset seeded
+2018-11-11T22:08:38.934Z - debug: 224 datacodeword seeded
+2018-11-11T22:08:38.935Z - debug: 6 datacourse seeded
+2018-11-11T22:08:38.936Z - debug: 114 dataCoursestudent seeded
+2018-11-11T22:08:38.937Z - info: END Seeder. Sample data read and verified.
+2018-11-11T22:14:04.950Z - info: START seeder.
+2018-11-11T22:14:04.970Z - debug: 2 dataCodewordset seeded
+2018-11-11T22:14:04.972Z - debug: 224 datacodeword seeded
+2018-11-11T22:14:04.973Z - debug: 6 datacourse seeded
+2018-11-11T22:14:04.975Z - debug: 114 dataCoursestudent seeded
+2018-11-11T22:14:04.977Z - info: END Seeder. Sample data read and verified.
