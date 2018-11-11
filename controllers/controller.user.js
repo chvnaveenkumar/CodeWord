@@ -13,7 +13,7 @@ let signUp = (req,res) => {
     var body = _.pick(req.body,['email','password','instructor']);
     var gen_token = jwt.sign({email: body.email },'codewordnwmsu',{expiresIn:  1* 300 }).toString();
     body.token = gen_token;
-    console.log("controller signup"+ body.email+" "+body.password);
+    console.log("controller signup"+ body.email+" "+body.password+" "+body.instructor);
     bcrypt.genSalt(10, (err,salt) => {
         bcrypt.hash(body.password,salt,(err,hash) => {
             body.password = hash;

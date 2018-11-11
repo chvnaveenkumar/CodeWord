@@ -28,8 +28,7 @@ var UserModel = mongoose.model('UserModel', {
     minlength: 6
    },
    isInstructor: {
-       type:Boolean,
-       default: false
+       type:Boolean   
    }
 });
 module.exports.UserModel = UserModel

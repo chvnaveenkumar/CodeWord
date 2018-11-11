@@ -5,16 +5,16 @@
       <span class="fa fa-plus"></span> Add Course </button>
   </div>
   <div class="row">
-    <div class="col-md-3 col-lg-3 col-xs-0 col-sm-0" v-for="courseName in coursesDate" :key="courseName._id">
+    <div class="col-md-3 col-lg-3 col-xs-0 col-sm-0" v-for="course in coursesDate" :key="course._id">
       <div class="card coursecard" >
         <div class="card-body">
-          <h5 class="card-title">{{ courseName.courseNameKey }}</h5>
+          <h5 class="card-title">{{ course.courseNameKey }}</h5>
           <br>          
-          <p> <pre>{{ courseName.Startdate }}  {{ courseName.Enddate }}</pre></p>  
-          <p>{{courseName.startSurveyurl }}</p>        
+          <p> <pre>{{ course.Startdate }}  {{ course.Enddate }}</pre></p>      
           <a href="#" class="card-link">Survey Start URL</a>
           <a href="#" class="card-link">Survey End URL</a>
-          <button type="button" class="btn btn-primary">View students</button>
+          <router-link :to="{ name: 'CourseStudent', params: { courseName: course.courseNameKey } }">Navigate to Page2</router-link>
+          <button type="button" class="btn btn-primary" >View students</button>
         </div>
       </div>
     </div>

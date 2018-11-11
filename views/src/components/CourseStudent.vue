@@ -54,17 +54,26 @@
       <td>{{ Acknowledged }} </td>
     </tr>
 
-          
-
-     
-  
-    
   </tbody>
 </table>
 
 </div>    
 </template>
-
+<script>
+    /* $ */
+    export default {
+      name: 'CourseStudent',
+      data () {
+        return {
+          id: 0
+        }
+      },
+      created () {
+        this.id = this.$route.params.id
+        console.log('created courseStudert')
+      }
+    }
+</script>
 
 <style>
 #message {
