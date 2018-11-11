@@ -124,7 +124,6 @@ export default {
     },
     handleFileUpload () {
       this.file = this.$refs.file.files[0]
-      console.log(this.file)
     },
     getStartDate () {
       var today = new Date()
@@ -136,11 +135,9 @@ export default {
         url: 'codeword/getcodewordset'
       }).then(response => {
         this.codeWordSetData = response.data.data
-        console.log(this.codeWordSetData[0].CodeWordSetName)
       })
     },
     fetchCourseList () {
-      console.log('fetchCourseList')
       axios({
         method: 'get',
         url: 'codeword/getCourseList',
@@ -148,9 +145,7 @@ export default {
           token: window.localStorage.getItem('token')
         }
       }).then(response => {
-        console.log('res fetchcourse')
         this.coursesDate = response.data.data
-        console.log(this.coursesDate)
       })
     }
   }

@@ -10,10 +10,11 @@
  
 <div class="contan">
   <div class="skills html">10 of 20 Students  (50%)</div>
+   <h1> eee{{ c }}</h1>
+
 </div>
 
 
- 
   <table class="table table-striped">
  <thead>
             <tr>
@@ -56,7 +57,6 @@
 
   </tbody>
 </table>
-
 </div>    
 </template>
 <script>
@@ -65,12 +65,12 @@
       name: 'CourseStudent',
       data () {
         return {
-          id: 0
+          c: 'hello'
         }
       },
       created () {
-        this.id = this.$route.params.id
-        console.log('created courseStudert')
+        this.c = this.$route.params.courseName
+        console.log('created courseStudert' + this.$route.params.courseName)
       }
     }
 </script>
@@ -94,32 +94,3 @@
 .html {width: 50%; background-color: #4CAF50;}
 
 </style>
-<script>
-import axios from 'axios'
-export default {
-  name: 'CourseStudent',
-  data () {
-    return {
-      CourseNameKey: '',
-      EmailKey: '',
-      Name: '',
-      Codeword: '',
-      Acknowledged: ''
-
-    }
-  },
-  mounted () {
-    var self = this
-    axios.get('https://raw.githubusercontent.com/chvnaveenkumar/CodeWord/Developer/data/data.coursestudent.json').then(function (res) {
-      self.CourseNameKey = res.data
-      self.EmailKey = res.data
-      self.Name = res.data
-      self.Codeword = res.data
-      self.Acknowledged = res.data
-      console.log('Data: ', res.data)
-    }).catch(function (error) {
-      console.log('Error: ', error)
-    })
-  }
-}
-</script>
