@@ -1,7 +1,7 @@
 <template>
 <div class="container-fluid" style="margin-top:5em" >
   <div class="col-md-4 col-lg-4 col-xs-0 col-sm-0">
-    <button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" data-target="#addcourse">
+    <button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" id="addcourse" v-on:click="loadCourseModel">
       <span class="fa fa-plus"></span> Add Course </button>
   </div>
   <div class="row">
@@ -42,8 +42,8 @@
                 Upload Student Details(Excel)
             </div>
             <div class="form-group" required>
-                <select class="form-control form-control-sm">
-                  <option>Select Codeword set</option>
+                <select class="form-control form-control-sm" v-for="codewordset in codeWordSetData" :key="codewordset">
+                  <option>{{ codewordset.CodeWordSetName }}</option>
                 </select>
             </div>
             <div class="form-group" >
@@ -71,7 +71,8 @@ export default {
       startSurveyurl: '',
       endSurveyurl: '',
       CodeWordSetName: '',
-      file: ''
+      file: '',
+      codeWordSetData: ''
     }
   },
   methods: {
@@ -116,6 +117,14 @@ export default {
     getStartDate () {
       var today = new Date()
       document.getElementById('startDate').value = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2)
+    },
+    loadCourseModel () {
+      axios({
+        method: 'get',
+        url: 'codeword/getcodewordset'
+      }).then(response => {
+        this.codeWordSetData = response.data.data
+      })
     }
   }
 }
