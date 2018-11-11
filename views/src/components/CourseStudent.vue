@@ -1,7 +1,7 @@
 <template>
 <div class="container-fluid" style="margin-top:5em" >
             <div class="col-md-8 col-lg-12 col-xs-0 col-sm-0">
-              <h2><u>Course Name : 2018 Fall 44-444-01 </u></h2> <br>
+             
                
                 
 
@@ -15,28 +15,53 @@
 
  
   <table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col"><h4><u>Course ID</u></h4></th>
-      <th scope="col"><h4><u>Email </u></h4></th>
-      <th scope="col"><h4><u>Name</u></h4></th>
-      <th scope="col"><h4><u>Cordword</u></h4></th>
-      <th scope="col"><h4><u>Acknowledged</u></h4></th>
-    </tr>
-  </thead>
+ <thead>
+            <tr>
+                <th scope="col">
+                    <h4>
+                        <u>Course Name</u>
+                    </h4>
+                </th>
+                <th scope="col">
+                    <h4>
+                        <u>Email</u>
+                    </h4>
+                </th>
+                <th scope="col">
+                    <h4>
+                        <u>Name</u>
+                    </h4>
+                </th>
+                <th scope="col">
+                    <h4>
+                        <u>Codeword</u>
+                    </h4>
+                </th>
+				<th scope="col">
+                    <h4>
+                        <u>Acknowledged</u>
+                    </h4>
+                </th>
+            </tr>
+        </thead>
+
   <tbody>
     <tr>
-      <th scope="row">1</th>
-      <td>s531519@nwmissouri.edu</td>
-      <td>Yashwanth Reddy Bommineni</td>
-      <td>Africa</td>
-      <td> 1 </td>
+      <th scope="row">{{ CourseNameKey }}</th>
+      <td>{{ EmailKey }}</td>
+      <td>{{ Name }}</td>
+      <td>{{ Codeword }}</td>
+      <td>{{ Acknowledged }} </td>
     </tr>
-  
+
+          
+
+     
   
     
   </tbody>
 </table>
+
 </div>    
 </template>
 
@@ -60,3 +85,26 @@
 .html {width: 50%; background-color: #4CAF50;}
 
 </style>
+<script>
+import axios from 'axios'
+export default {
+  name: 'CourseStudent',
+  data () {
+    return {
+      CourseNameKey: '',
+      EmailKey: '',
+      Name: '',
+      Codeword: '',
+      Acknowledged: ''
+
+    }
+  },
+  mounted () {
+    axios.get('https://raw.githubusercontent.com/chvnaveenkumar/CodeWord/Developer/data/data.coursestudent.json').then(function (res) {
+      console.log('Data: ', res)
+    }).catch(function (error) {
+      console.log('Error: ', error)
+    })
+  }
+}
+</script>
