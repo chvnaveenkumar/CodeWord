@@ -31,17 +31,17 @@
             <div class="modal-body">
             <!-- Retrive the course name from input field -->
             <div class="form-group">
-              <input type="text" class="form-control" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip" data-placement="bottom" title="Enter Course Name">
+              <input type="text" class="form-control" pattern=".{6,}" placeholder="Enter Course Name" data-toggle="tooltip"  title="Atleast 6 characters" required>
             </div>
             <div class="row">
-                <div class="col tooltip-test" title="Start Date"> StartDate:<input  type="date" class="form-control" name="startDate" placeholder="Start Date"></div>
-                <div class="col tooltip-test" title="End Date"> EndDate:<input type="date" class="form-control" name="endDate" placeholder="End Date"></div>
+                <div class="col tooltip-test" title="Start Date"> Start Date:<input type="date" class="form-control" id="startDate" name="startDate" placeholder="Start Date" required/></div>
+                <div class="col tooltip-test" title="End Date"> End Date:<input type="date" class="form-control" id="endDate"  name="endDate" placeholder="End Date" required></div>
             </div>
             <div class="form-group">
-                <input type="file" ref="file" v-on:change="handleFileUpload()" class="form-control-file" id="file" style="margin-top:1em">
+                <input type="file" ref="file" v-on:change="handleFileUpload()" class="form-control-file" id="file" style="margin-top:1em" required>
                 Upload Student Details(Excel)
             </div>
-            <div class="form-group">
+            <div class="form-group" required>
                 <select class="form-control form-control-sm">
                   <option>Select Codeword set</option>
                 </select>
@@ -112,6 +112,10 @@ export default {
     handleFileUpload () {
       this.file = this.$refs.file.files[0]
       console.log(this.file)
+    },
+    getStartDate () {
+      var today = new Date()
+      document.getElementById('startDate').value = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2)
     }
   }
 }
