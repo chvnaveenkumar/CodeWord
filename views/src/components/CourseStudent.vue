@@ -1,20 +1,11 @@
 <template>
 <div class="container-fluid" style="margin-top:5em" >
             <div class="col-md-8 col-lg-12 col-xs-0 col-sm-0">
-             
-               
-                
-
             </div>
-
- 
 <div class="contan">
   <div class="skills html">10 of 20 Students  (50%)</div>
-   <h1> eee{{ c }}</h1>
-
+  <h1> {{ courseNameData }} </h1>
 </div>
-
-
   <table class="table table-striped">
  <thead>
             <tr>
@@ -65,12 +56,17 @@
       name: 'CourseStudent',
       data () {
         return {
-          c: 'hello'
+          courseNameData: ''
         }
       },
       created () {
-        this.c = this.$route.params.courseName
-        console.log('created courseStudert' + this.$route.params.courseName)
+        console.log(this.$route.params.courseName + 'params')
+        if (this.$route.params.courseName == null) {
+          this.courseNameData = window.localStorage.getItem('courseName')
+        } else {
+          this.courseNameData = this.$route.params.courseName
+          window.localStorage.setItem('courseName', this.courseNameData)
+        }
       }
     }
 </script>
