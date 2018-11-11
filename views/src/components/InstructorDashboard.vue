@@ -1,7 +1,7 @@
 <template>
 <div class="container-fluid" style="margin-top:5em" >
   <div class="col-md-4 col-lg-4 col-xs-0 col-sm-0">
-    <button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" id="addcourse" v-on:click="loadCourseModel">
+    <button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" data-target="#addcourse" v-on:click="loadCourseModel">
       <span class="fa fa-plus"></span> Add Course </button>
   </div>
   <div class="row">
@@ -31,7 +31,7 @@
             <div class="modal-body">
             <!-- Retrive the course name from input field -->
             <div class="form-group">
-              <input type="text" class="form-control" pattern=".{6,}" placeholder="Enter Course Name" data-toggle="tooltip"  title="Atleast 6 characters" required>
+              <input type="text" class="form-control" pattern=".{6,}" id="courseName" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip"  title="Atleast 6 characters" required>
             </div>
             <div class="row">
                 <div class="col tooltip-test" title="Start Date"> Start Date:<input type="date" class="form-control" id="startDate" name="startDate" placeholder="Start Date" required/></div>
@@ -42,8 +42,8 @@
                 Upload Student Details(Excel)
             </div>
             <div class="form-group" required>
-                <select class="form-control form-control-sm" v-for="codewordset in codeWordSetData" :key="codewordset">
-                  <option>{{ codewordset.CodeWordSetName }}</option>
+                <select class="form-control form-control-sm" >
+                  <option v-for="codewordset in codeWordSetData" :key="codewordset._id">{{ codewordset.CodeWordSetName }}</option>
                 </select>
             </div>
             <div class="form-group" >
@@ -78,7 +78,7 @@ export default {
   methods: {
     CreateCourse () {
       let data = new FormData(document.querySelector('form'))
-      this.courseName = data.get('courseName').toLowerCase()
+      this.courseName = data.get('courseName')
       this.startDate = data.get('startDate')
       this.endDate = data.get('endDate')
       this.startSurveyurl = data.get('startSurveyurl')
@@ -107,6 +107,7 @@ export default {
         }
         })])
         .then(res => {
+          console.log('Res ponse')
           $('#addcourse').modal('hide')
         })
     },
@@ -124,6 +125,7 @@ export default {
         url: 'codeword/getcodewordset'
       }).then(response => {
         this.codeWordSetData = response.data.data
+        console.log(this.codeWordSetData[0].CodeWordSetName)
       })
     }
   }
