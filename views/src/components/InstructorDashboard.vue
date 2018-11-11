@@ -5,17 +5,18 @@
       <span class="fa fa-plus"></span> Add Course </button>
   </div>
   <div class="row">
-    <div class="col-md-4 col-lg-4 col-xs-0 col-sm-0">
+    <div class="col-md-3 col-lg-3 col-xs-0 col-sm-0" v-for="courseName in coursesDate" :key="courseName._id">
       <div class="card coursecard" >
         <div class="card-body">
-          <h5 class="card-title">{{ courseName }}</h5>
+          <h5 class="card-title">{{ courseName.courseNameKey }}</h5>
           <br>          
-          <p> <pre>{{ startDate }}            {{ endDate }}</pre></p>          
+          <p> <pre>{{ courseName.Startdate }}  {{ courseName.Enddate }}</pre></p>  
+          <p>{{courseName.startSurveyurl }}</p>        
           <a href="#" class="card-link">Survey Start URL</a>
           <a href="#" class="card-link">Survey End URL</a>
           <button type="button" class="btn btn-primary">View students</button>
-          </div>
         </div>
+      </div>
     </div>
   </div>
   <!-- Model to  add Course -->
@@ -72,7 +73,8 @@ export default {
       endSurveyurl: '',
       CodeWordSetName: '',
       file: '',
-      codeWordSetData: ''
+      codeWordSetData: '',
+      coursesDate: ''
     }
   },
   created () {
@@ -117,6 +119,7 @@ export default {
         })])
         .then(res => {
           $('#addcourse').modal('hide')
+          this.fetchCourseList()
         })
     },
     handleFileUpload () {
@@ -146,7 +149,8 @@ export default {
         }
       }).then(response => {
         console.log('res fetchcourse')
-        console.log(response.data.data)
+        this.coursesDate = response.data.data
+        console.log(this.coursesDate)
       })
     }
   }
@@ -157,9 +161,8 @@ export default {
     margin-top:5em;
 }
 .coursecard {
-  width: 20rem;
-  margin-top: 1em;
-  margin-left: 8.5em;
+  width: 100%;
+  margin-bottom: 1em;
   background-color:#41f4b2;
 }
 </style>

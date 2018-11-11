@@ -1,0 +1,6 @@
+2018-11-11T22:14:32.785Z - info: START seeder.
+2018-11-11T22:14:32.812Z - debug: 2 dataCodewordset seeded
+2018-11-11T22:14:32.812Z - debug: 224 datacodeword seeded
+2018-11-11T22:14:32.812Z - debug: 6 datacourse seeded
+2018-11-11T22:14:32.812Z - debug: 114 dataCoursestudent seeded
+2018-11-11T22:14:32.812Z - info: END Seeder. Sample data read and verified.
