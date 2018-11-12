@@ -38,12 +38,12 @@
         </thead>
 
   <tbody>
-    <tr>
-      <th scope="row">{{ CourseNameKey }}</th>
-      <td>{{ EmailKey }}</td>
-      <td>{{ Name }}</td>
-      <td>{{ Codeword }}</td>
-      <td>{{ Acknowledged }} </td>
+    <tr v-for="courseStudent in courseStudentData" :key="courseStudent._id">
+      <th scope="row">{{ courseStudent.CourseNameKey }}</th>
+      <td>{{ courseStudent.EmailKey }}</td>
+      <td>{{ courseStudent.StudentName }}</td>
+      <td>{{ courseStudent.Codeword }}</td>
+      <td>{{ courseStudent.Acknowledged }} </td>
     </tr>
 
   </tbody>
@@ -83,8 +83,8 @@
               token: window.localStorage.getItem('token')
             }
           }).then(response => {
+            console.log(response.data.data)
             this.courseStudentData = response.data.data
-            console.log(this.courseStudentData + 'courseStudent Testing')
           })
         }
       }

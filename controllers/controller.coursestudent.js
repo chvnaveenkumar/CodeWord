@@ -63,3 +63,18 @@ function shuffle(array) {
   }
 module.exports.addCourseStudent = addCourseStudent;
 
+let getCourseStudent = (req,res) => {
+    var body = _.pick(req.body,['CourseNameValue']);    
+    CourseStudentModel.find({CourseNameKey: body.CourseNameValue}, function (err, courseStudents) {
+        if(err){
+            return res.json({ code: 200, message: 'No courses created!!'});
+        }
+        if (courseStudents)
+            return res.json({ code: 200, data: courseStudents });
+        }).catch((e) => {
+        return res.json({ code: 400, message: e });
+        })
+}
+module.exports.getCourseStudent = getCourseStudent;
+
+
