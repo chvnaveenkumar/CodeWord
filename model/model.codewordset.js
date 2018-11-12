@@ -6,20 +6,13 @@ var mongoose = require('mongoose'),
 Schema = mongoose.Schema;
 
 var codeWordSetSchema = new Schema({
-
         CodeWordSetName: {
                 type: String,
                 require: true,
                 minlength: 5,
                 unique:true
         },
-
-        emailKey: {
-                type: [String],
-                required: true,
-                minlength: 4
-        },
-        codeWordCreator: {
+        CodeWordCreator: {
                 type: String,
                 required: true,
         }
