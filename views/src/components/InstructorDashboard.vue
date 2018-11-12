@@ -133,8 +133,12 @@ export default {
     loadCourseModel () {
       axios({
         method: 'get',
-        url: 'codeword/getcodewordset'
+        url: 'codeword/getcodewordset',
+        headers: {
+          token: window.localStorage.getItem('token')
+        }
       }).then(response => {
+        console.log('rest' + response.data.data)
         this.codeWordSetData = response.data.data
       })
     },
