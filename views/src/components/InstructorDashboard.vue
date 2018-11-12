@@ -8,9 +8,9 @@
     <div class="col-md-3 col-lg-3 col-xs-0 col-sm-0" v-for="course in coursesDate" :key="course._id">
       <div class="card coursecard" >
         <div class="card-body">
-          <h5 class="card-title">{{ course.courseNameKey }}</h5>
+          <h5 class="card-title" id = "boldforcourse">{{ course.courseNameKey }}</h5>
           <br>          
-          <p> <pre>{{ course.Startdate }}  {{ course.Enddate }}</pre></p>      
+          <p id = "sizeofDate"> <pre>{{ course.Startdate }}       {{ course.Enddate }}</pre></p>      
           <a href="#" class="card-link">Survey Start URL</a>
           <a href="#" class="card-link">Survey End URL</a>
           <router-link :to="{ name: 'CourseStudent', params: { courseName: course.courseNameKey } }">Navigate to Page2</router-link>
@@ -69,8 +69,8 @@ export default {
       courseName: '',
       startDate: '',
       endDate: '',
-      startSurveyurl: '',
-      endSurveyurl: '',
+      startSurveyurldata: '',
+      endSurveyurldata: '',
       CodeWordSetName: '',
       file: '',
       codeWordSetData: '',
@@ -92,8 +92,8 @@ export default {
       this.courseName = data.get('courseName')
       this.startDate = data.get('startDate')
       this.endDate = data.get('endDate')
-      this.startSurveyurl = data.get('startSurveyurl')
-      this.endSurveyurl = data.get('endSurveyurl')
+      this.startSurveyurldata = data.get('startSurveyurl')
+      this.endSurveyurldata = data.get('endSurveyurl')
       let formData = new FormData()
       formData.append('CourseNameKey', this.courseName)
       formData.append('CodeWordSetName', 'Large Set1')
@@ -107,8 +107,8 @@ export default {
           courseNameKey: this.courseName,
           startDate: this.startDate,
           endDate: this.endDate,
-          preSurveyURL: this.startSurveyurl,
-          postSurveyURL: this.endSurveyurl
+          preSurveyURL: this.startSurveyurldata,
+          postSurveyURL: this.endSurveyurldata
         }
       }),
       axios.post('codeword/addcoursestudent',
@@ -158,6 +158,14 @@ export default {
 .coursecard {
   width: 100%;
   margin-bottom: 1em;
+  box-sizing: border-box;
   background-color:#41f4b2;
+}
+#boldforcourse{
+  font-weight:bold;
+}
+#sizeofDate {
+  font-size:125%;
+  font-weight: bold;
 }
 </style>
