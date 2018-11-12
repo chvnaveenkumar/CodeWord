@@ -44,7 +44,7 @@
                 Upload Student Details(Excel)
             </div>
             <div class="form-group" required>
-                <select class="form-control form-control-sm" >
+                <select class="form-control form-control-sm" v-model="CodeWordSetName">
                   <option v-for="codewordset in codeWordSetData" :key="codewordset._id">{{ codewordset.CodeWordSetName }}</option>
                 </select>
             </div>
@@ -97,10 +97,10 @@ export default {
       this.endSurveyurldata = data.get('endSurveyurl')
       let formData = new FormData()
       formData.append('CourseNameKey', this.courseName)
-      formData.append('CodeWordSetName', 'Large Set1')
+      formData.append('CodeWordSetName', this.CodeWordSetName)
       formData.append('file', this.file)
       /* global axios $ */
-      Promise.all([axios({
+      axios({
         method: 'post',
         url: 'codeword/addnewCourse',
         data: {
@@ -111,17 +111,19 @@ export default {
           preSurveyURL: this.startSurveyurldata,
           postSurveyURL: this.endSurveyurldata
         }
-      }),
+      }).then(res => {
+        $('#addcourse').modal('hide')
+        this.fetchCourseList()
+      })
       axios.post('codeword/addcoursestudent',
         formData, {headers: {
           'Content-Type': 'multipart/form-data',
           token: window.localStorage.getItem('token')
         }
-        })])
-        .then(res => {
-          $('#addcourse').modal('hide')
-          this.fetchCourseList()
-        })
+        }).then(res => {
+        $('#addcourse').modal('hide')
+        this.fetchCourseList()
+      })
     },
     handleFileUpload () {
       this.file = this.$refs.file.files[0]
