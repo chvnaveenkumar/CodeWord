@@ -49,11 +49,11 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th scope="col">
+                <!-- <th scope="col">
                     <h4>
                         <u>ID</u>
                     </h4>
-                </th>
+                </th> -->
                 <th scope="col">
                     <h4>
                         <u>Codeword Set Name</u>
@@ -73,7 +73,7 @@
         </thead>
         <tbody>
             <tr v-for="(code,index) in codeWordSetData" :key="code._id">
-                 <th scope="row">{{ index + 1 }}</th>
+                 <!-- <th scope="row">{{ index + 1 }}</th> -->
                 <td> {{ code.CodeWordSetName }} </td>
                 <td> {{ code.emailKey.length }} </td>
                 <td> {{ code.codeWordCreator }} </td>
