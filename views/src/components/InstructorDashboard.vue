@@ -4,17 +4,18 @@
     <button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" data-target="#addcourse" v-on:click="loadCourseModel">
       <span class="fa fa-plus"></span> Add Course </button>
   </div>
-  <div class="row">
+  <div class="row" style="margin-left: 7rem;margin-right: 7rem;" >
     <div class="col-md-3 col-lg-3 col-xs-0 col-sm-0" v-for="course in coursesDate" :key="course._id">
-      <div class="card coursecard" >
-        <div class="card-body">
-          <h5 class="card-title" id = "boldforcourse">{{ course.courseNameKey }}</h5>
+      <div class="card border-success mb-3" style="max-width: 20rem;margin-top: 1rem;" >
+         <div class="card-header bg-info border-success" id = "boldforcourse">{{ course.courseNameKey }}</div>
+        <div class="card-body text-info">
+          <h5 class="card-title" ></h5>
           <br>          
-          <p id = "sizeofDate"> <pre>{{ course.Startdate }}       {{ course.Enddate }}</pre></p>      
-          <a href="#" class="card-link">Survey Start URL</a>
-          <a href="#" class="card-link">Survey End URL</a>
-          <router-link :to="{ name: 'CourseStudent', params: { courseName: course.courseNameKey } }">Navigate to Page2</router-link>
-          <button type="button" class="btn btn-primary" >View students</button>
+          <p id = "sizeofDate"> <pre>{{ course.Startdate }} {{ course.Enddate }}</pre></p>      
+          <a v-bind:href="course.PreSurveyURL" class="card-link">Start Survey</a>
+          <a v-bind:href="course.PostSurveyURL" class="card-link">End Survey</a>
+          <br>
+          <router-link :to="{ name: 'CourseStudent', params: { courseName: course.courseNameKey } }"><button type="button" class="btn btn-primary" >View students</button></router-link>
         </div>
       </div>
     </div>
@@ -146,6 +147,7 @@ export default {
         }
       }).then(response => {
         this.coursesDate = response.data.data
+        console.log(this.coursesDate)
       })
     }
   }
@@ -163,6 +165,7 @@ export default {
 }
 #boldforcourse{
   font-weight:bold;
+  text-align: left;
 }
 #sizeofDate {
   font-size:125%;
