@@ -51,21 +51,41 @@
 </div>    
 </template>
 <script>
-    /* $ */
+    /* global axios */
     export default {
       name: 'CourseStudent',
       data () {
         return {
-          courseNameData: ''
+          courseNameData: '',
+          courseStudentData: ''
         }
       },
       created () {
         console.log(this.$route.params.courseName + 'params')
         if (this.$route.params.courseName == null) {
           this.courseNameData = window.localStorage.getItem('courseName')
+          this.getCourseStudent()
         } else {
           this.courseNameData = this.$route.params.courseName
           window.localStorage.setItem('courseName', this.courseNameData)
+          this.getCourseStudent()
+        }
+      },
+      methods: {
+        getCourseStudent () {
+          axios({
+            method: 'post',
+            url: 'codeword/getcoursestudent',
+            data: {
+              CourseNameValue: this.courseNameData
+            },
+            headers: {
+              token: window.localStorage.getItem('token')
+            }
+          }).then(response => {
+            this.courseStudentData = response.data.data
+            console.log(this.courseStudentData + 'courseStudent Testing')
+          })
         }
       }
     }
