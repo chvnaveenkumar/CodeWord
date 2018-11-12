@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
 var { CourseStudentModel } = require('../model/model.coursestudent');
 var { mongoose } = require('./../config/database')
-var  CodeWordSet = require('../model/model.codewordset')
+var { CodeWord } = require('../model/model.codeword')
 let XLSX = require('xlsx')
 let addCourseStudent = (req,res) => {
     var codewordslist =[];
@@ -13,13 +13,13 @@ let addCourseStudent = (req,res) => {
     var body = _.pick(req.body,['CourseNameKey','CodeWordSetName']);    
     studetList = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]]);
     
-    CodeWordSet.find({CodeWordSetName: body.CodeWordSetName}, function (err, CodeWords) {
+    CodeWord.find({CodeWordSetName: body.CodeWordSetName}, function (err, CodeWords) {
         if(err){
             return res.json({ code: 204, message: 'CodeWord Set Not found error'});
         }
-        console.log(CodeWords[0].emailKey[0]+"check")
-        console.log(codeWords[0].emailKey.si)
-        codewordslist.push(CodeWords[0].emailKey[0])
+        for(var i=0;i<CodeWords.length;i++){
+        codewordslist.push(CodeWords[i].Codeword)
+        }
         if(codewordslist.length < studetList.length )
         {
             return res.json({ code: 200, message: 'Insufficent Codewords'})

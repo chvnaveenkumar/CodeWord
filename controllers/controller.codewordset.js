@@ -42,25 +42,12 @@ module.exports.getDataFromXLS = getDataFromXLS;
 
 
 let addcodewordset = (req, res) => {
-    // Codewordset.find({ CodeWordSetName: req.body.codeWordSetName }).then((codes) => {
-    //     if (codes && codes.length)
-    //         return res.json({ code: 500, message: "Code word setname exist" });
-
-    //     var itemsProcessed = 0;
-    //     req.body.emailKeySet.forEach((item, index, array) => {
-
-    //     });
-
-    // }).catch((e) => {
-    //     console.log(e);
-    //     return res.json({ code: 400, message: e });
-    // })
-
     // Upper code was not working so I(Ujjawal) added the below code
+    // Removed emailkey it is not in requirement - updated by Srimai
+    var body = _.pick(req.body,['CodeWordSetName']);
     var codewordset = new Codewordset({
-        CodeWordSetName: req.body.codeWordSetName,
-        emailKey: _.map(req.body.emailKeySet, 'codeword'),
-        codeWordCreator: req.session.email
+        CodeWordSetName: body.CodeWordSetName,
+        CodeWordCreator: req.session.email
     });
     codewordset.save().then((codes) => {
         return res.json({ code: 200, data: codes });
@@ -72,7 +59,7 @@ let addcodewordset = (req, res) => {
 module.exports.addcodewordset = addcodewordset;
 
 let getcodewordset = (req, res) => {
-    Codewordset.find({}).then((codes) => {
+    Codewordset.find({ CodeWordCreator: { $in: ["default", req.session.email] }}).then((codes) => {
         if (codes)
             return res.json({ code: 200, data: codes });
     }).catch((e) => {

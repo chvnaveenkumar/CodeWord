@@ -6,7 +6,7 @@
   </div>
   <div class="row" style="margin-left: 7rem;margin-right: 7rem;" >
     <div class="col-md-3 col-lg-3 col-xs-0 col-sm-0" v-for="course in coursesDate" :key="course._id">
-      <div class="card border-success mb-3" style="max-width: 20rem;margin-top: 1rem;" >
+      <div class="card border-success mb-3 shadow bg-white rounded" style="max-width: 20rem;margin-top: 1rem;" >
          <div class="card-header bg-info border-success" id = "boldforcourse">{{ course.courseNameKey }}</div>
         <div class="card-body text-info">
           <h5 class="card-title" ></h5>
@@ -15,7 +15,9 @@
           <a v-bind:href="course.PreSurveyURL" class="card-link">Start Survey</a>
           <a v-bind:href="course.PostSurveyURL" class="card-link">End Survey</a>
           <br>
-          <router-link :to="{ name: 'CourseStudent', params: { courseName: course.courseNameKey } }"><button type="button" class="btn btn-primary" >View students</button></router-link>
+          <router-link :to="{ name: 'CourseStudent', params: { courseName: course.courseNameKey } }"><a type="button" aria-label="Left Align"><i class="fa fa-eye shadow-lg bg-white rounded glyphicon glyphicon-eye-open" aria-hidden="true" ></i></a></router-link>
+          <a type=button class="btn-floating btn-small"><span class="fa fa-pencil square-o shadow-lg bg-white rounded glyphicon" aria-hidden=true></span></a> 
+          <a type=button class="btn-floating btn-small"><span class="	fa fa-trash-o square-o shadow-lg bg-white rounded glyphicon" aria-hidden=true></span></a>           
         </div>
       </div>
     </div>
@@ -44,7 +46,7 @@
                 Upload Student Details(Excel)
             </div>
             <div class="form-group" required>
-                <select class="form-control form-control-sm" >
+                <select class="form-control form-control-sm" v-model="CodeWordSetName">
                   <option v-for="codewordset in codeWordSetData" :key="codewordset._id">{{ codewordset.CodeWordSetName }}</option>
                 </select>
             </div>
@@ -97,10 +99,10 @@ export default {
       this.endSurveyurldata = data.get('endSurveyurl')
       let formData = new FormData()
       formData.append('CourseNameKey', this.courseName)
-      formData.append('CodeWordSetName', 'Large Set1')
+      formData.append('CodeWordSetName', this.CodeWordSetName)
       formData.append('file', this.file)
       /* global axios $ */
-      Promise.all([axios({
+      axios({
         method: 'post',
         url: 'codeword/addnewCourse',
         data: {
@@ -111,17 +113,19 @@ export default {
           preSurveyURL: this.startSurveyurldata,
           postSurveyURL: this.endSurveyurldata
         }
-      }),
+      }).then(res => {
+        $('#addcourse').modal('hide')
+        this.fetchCourseList()
+      })
       axios.post('codeword/addcoursestudent',
         formData, {headers: {
           'Content-Type': 'multipart/form-data',
           token: window.localStorage.getItem('token')
         }
-        })])
-        .then(res => {
-          $('#addcourse').modal('hide')
-          this.fetchCourseList()
-        })
+        }).then(res => {
+        $('#addcourse').modal('hide')
+        this.fetchCourseList()
+      })
     },
     handleFileUpload () {
       this.file = this.$refs.file.files[0]
@@ -133,8 +137,12 @@ export default {
     loadCourseModel () {
       axios({
         method: 'get',
-        url: 'codeword/getcodewordset'
+        url: 'codeword/getcodewordset',
+        headers: {
+          token: window.localStorage.getItem('token')
+        }
       }).then(response => {
+        console.log('rest' + response.data.data)
         this.codeWordSetData = response.data.data
       })
     },
@@ -170,5 +178,14 @@ export default {
 #sizeofDate {
   font-size:125%;
   font-weight: bold;
+}
+#leftAlign {
+  text-align: left;
+}
+.glyphicon {
+    font-size: 30px;
+}
+.glyphicon.glyphicon-globe {
+    font-size: 30px;
 }
 </style>
