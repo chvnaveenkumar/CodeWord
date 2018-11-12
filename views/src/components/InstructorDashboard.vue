@@ -10,14 +10,13 @@
          <div class="card-header bg-info border-success" id = "boldforcourse">{{ course.courseNameKey }}</div>
         <div class="card-body text-info">
           <h5 class="card-title" ></h5>
-          <br>          
+          <br>
           <p id = "sizeofDate"> <pre>{{ course.Startdate }} {{ course.Enddate }}</pre></p>      
           <a v-bind:href="course.PreSurveyURL" class="card-link">Start Survey</a>
           <a v-bind:href="course.PostSurveyURL" class="card-link">End Survey</a>
           <br>
-<router-link :to="{ name: 'CourseStudent', params: { courseName: course.courseNameKey } }"><a type="button" aria-label="Left Align"><i class="fa fa-eye shadow-lg bg-white rounded glyphicon glyphicon-eye-open" aria-hidden="true" ></i></a></router-link>
-          <a type=button class="btn-floating btn-small"><span class="fa fa-pencil square-o shadow-lg bg-white rounded glyphicon" aria-hidden=true></span></a> 
-          <a type=button class="btn-floating btn-small"><span class="	fa fa-trash-o square-o shadow-lg bg-white rounded glyphicon" aria-hidden=true></span></a> 
+          <router-link :to="{ name: 'CourseStudent', params: { courseName: course.courseNameKey } }"><button class="btn "><i class="fa fa-eye fa-lg" aria-hidden="true" ></i></button></router-link>
+          <button class="btn "><i class="fa fa-trash fa-lg"></i></button>
         </div>
       </div>
     </div>
@@ -194,9 +193,22 @@ export default {
   text-align: left;
 }
 .glyphicon {
-    font-size: 30px;
+    size: 50px;
 }
 .glyphicon.glyphicon-globe {
     font-size: 30px;
 } 
+.btn {
+    background-color: rgb(17, 132, 248);
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+    background-color: RoyalBlue;
+}
 </style>

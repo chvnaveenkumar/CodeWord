@@ -2,9 +2,9 @@
 <div class="container-fluid" style="margin-top:5em" >
             <div class="col-md-8 col-lg-12 col-xs-0 col-sm-0">
             </div>
+              <h1> {{ courseNameData }} </h1>
 <div class="contan">
   <div class="skills html">10 of 20 Students  (50%)</div>
-  <h1> {{ courseNameData }} </h1>
 </div>
   <table class="table table-striped">
  <thead>
