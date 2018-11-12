@@ -6,7 +6,7 @@
   </div>
   <div class="row" style="margin-left: 7rem;margin-right: 7rem;" >
     <div class="col-md-3 col-lg-3 col-xs-0 col-sm-0" v-for="course in coursesDate" :key="course._id">
-      <div class="card border-success mb-3" style="max-width: 20rem;margin-top: 1rem;" >
+      <div class="card border-success mb-3 shadow bg-white rounded" style="max-width: 20rem;margin-top: 1rem;" >
          <div class="card-header bg-info border-success" id = "boldforcourse">{{ course.courseNameKey }}</div>
         <div class="card-body text-info">
           <h5 class="card-title" ></h5>
@@ -15,7 +15,9 @@
           <a v-bind:href="course.PreSurveyURL" class="card-link">Start Survey</a>
           <a v-bind:href="course.PostSurveyURL" class="card-link">End Survey</a>
           <br>
-          <router-link :to="{ name: 'CourseStudent', params: { courseName: course.courseNameKey } }"><button type="button" class="btn btn-primary" >View students</button></router-link>
+          <router-link :to="{ name: 'CourseStudent', params: { courseName: course.courseNameKey } }"><a type="button" aria-label="Left Align"><i class="fa fa-eye shadow-lg bg-white rounded glyphicon glyphicon-eye-open" aria-hidden="true" ></i></a></router-link>
+          <a type=button class="btn-floating btn-small"><span class="fa fa-pencil square-o shadow-lg bg-white rounded glyphicon" aria-hidden=true></span></a> 
+          <a type=button class="btn-floating btn-small"><span class="	fa fa-trash-o square-o shadow-lg bg-white rounded glyphicon" aria-hidden=true></span></a>           
         </div>
       </div>
     </div>
@@ -176,5 +178,14 @@ export default {
 #sizeofDate {
   font-size:125%;
   font-weight: bold;
+}
+#leftAlign {
+  text-align: left;
+}
+.glyphicon {
+    font-size: 30px;
+}
+.glyphicon.glyphicon-globe {
+    font-size: 30px;
 }
 </style>
