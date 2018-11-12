@@ -87,6 +87,8 @@ Pre
 Post
 
 Link <http://gdpcodeword.herokuapp.com/?#/studentdashboard>
+![sketch1](/Documentation/Sketches/studentdashboard.png)
+
 
 
 ## INSTRUCTOR ROLE
@@ -101,7 +103,8 @@ Links:
 
 
 ![Sketch1](/Documentation/Sketches/Instructorcourselist1.PNG)
-![sketch2](/Documentation/Sketches/Instructorcourselist2.PNG)
+
+![Sketch1](/Documentation/Sketches/Instructorcourselist.PNG)
 
 ### 2.03 Create CodeWord Set
 

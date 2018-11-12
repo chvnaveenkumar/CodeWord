@@ -23,6 +23,7 @@ router.post('/validateEmail', usersController.validateEmail);
 router.post('/sendmail', usersController.tempPassword);
 router.post('/changepassword', usersController.changePassword);
 router.post('/addnewCourse', courseController.addCourse);
+router.get('/getCourseList', courseController.getCourses)
 router.post('/addcodewordset',codewordsetController.addcodewordset)
 router.post('/getdataxlsx',codewordsetController.getDataFromXLS)
 router.post('/addnewcodewords', codewordController.addcodewords)
@@ -31,6 +32,7 @@ router.get('/getcodewordset', codewordsetController.getcodewordset)
 // router.post('/getdataxlsx',codewordsetController.getDataFromXLS);
 // router.post('/addnewcodewords', codewordController.addcodewords);
 router.post('/addcoursestudent',multer().single('file'), courseStudentController.addCourseStudent);
+router.post('/getcoursestudent', courseStudentController.getCourseStudent);
 // router.post('/getcodewords', codewordController.getcodewords)
 
 module.exports = router;

@@ -13,7 +13,7 @@ let signUp = (req,res) => {
     var body = _.pick(req.body,['email','password','instructor']);
     var gen_token = jwt.sign({email: body.email },'codewordnwmsu',{expiresIn:  1* 300 }).toString();
     body.token = gen_token;
-    console.log("controller signup"+ body.email+" "+body.password);
+    console.log("controller signup"+ body.email+" "+body.password+" "+body.instructor);
     bcrypt.genSalt(10, (err,salt) => {
         bcrypt.hash(body.password,salt,(err,hash) => {
             body.password = hash;
@@ -93,7 +93,7 @@ module.exports.validateEmail = validateEmail;
 let tempPassword = (req, res ) => {
     var body = _.pick(req.body,['email']);
     console.log('Tempa'+ body.email);
-    var chars = "abcdefghijklmnopqrstuvwxyz!@#$%^&*()-+<>ABCDEFGHIJKLMNOP1234567890";
+    var chars = "abcdefghijklmnopqrstuvwxyz@#$%&*ABCDEFGHIJKLMNOP123456789";
     var temporaryPassword = "";
     for (var x = 0; x < 5; x++) {
         var i = Math.floor(Math.random() * chars.length);

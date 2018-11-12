@@ -1,21 +1,22 @@
 <template>
 <div class="container-fluid" style="margin-top:5em" >
   <div class="col-md-4 col-lg-4 col-xs-0 col-sm-0">
-    <button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" data-target="#addcourse">
+    <button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" data-target="#addcourse" v-on:click="loadCourseModel">
       <span class="fa fa-plus"></span> Add Course </button>
   </div>
   <div class="row">
-    <div class="col-md-4 col-lg-4 col-xs-0 col-sm-0">
+    <div class="col-md-3 col-lg-3 col-xs-0 col-sm-0" v-for="course in coursesDate" :key="course._id">
       <div class="card coursecard" >
         <div class="card-body">
-          <h5 class="card-title">{{ courseName }}</h5>
+          <h5 class="card-title" id = "boldforcourse">{{ course.courseNameKey }}</h5>
           <br>          
-          <p> <pre>{{ startDate }}            {{ endDate }}</pre></p>          
+          <p id = "sizeofDate"> <pre>{{ course.Startdate }}       {{ course.Enddate }}</pre></p>      
           <a href="#" class="card-link">Survey Start URL</a>
           <a href="#" class="card-link">Survey End URL</a>
-          <button type="button" class="btn btn-primary">View students</button>
-          </div>
+          <router-link :to="{ name: 'CourseStudent', params: { courseName: course.courseNameKey } }">Navigate to Page2</router-link>
+          <button type="button" class="btn btn-primary" >View students</button>
         </div>
+      </div>
     </div>
   </div>
   <!-- Model to  add Course -->
@@ -27,23 +28,23 @@
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span></button>
             </div>
+            <form @submit.prevent="CreateCourse">
             <div class="modal-body">
-            <form>
             <!-- Retrive the course name from input field -->
             <div class="form-group">
-              <input type="text" class="form-control" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip" data-placement="bottom" title="Enter Course Name">
+              <input type="text" class="form-control" pattern=".{6,}" id="courseName" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip"  title="Atleast 6 characters" required>
             </div>
             <div class="row">
-                <div class="col tooltip-test" title="Start Date"> StartDate:<input  type="date" class="form-control" name="startDate" placeholder="Start Date"></div>
-                <div class="col tooltip-test" title="End Date"> EndDate:<input type="date" class="form-control" name="endDate" placeholder="End Date"></div>
+                <div class="col tooltip-test" title="Start Date"> Start Date:<input type="date" class="form-control" id="startDate" name="startDate" placeholder="Start Date" required/></div>
+                <div class="col tooltip-test" title="End Date"> End Date:<input type="date" class="form-control" id="endDate"  name="endDate" placeholder="End Date" required></div>
             </div>
             <div class="form-group">
-                <input type="file" class="form-control-file" id="exampleFormControlFile1" style="margin-top:1em">
+                <input type="file" ref="file" v-on:change="handleFileUpload()" class="form-control-file" id="file" style="margin-top:1em" required>
                 Upload Student Details(Excel)
             </div>
-            <div class="form-group">
-                <select class="form-control form-control-sm">
-                  <option>Select Codeword set</option>
+            <div class="form-group" required>
+                <select class="form-control form-control-sm" >
+                  <option v-for="codewordset in codeWordSetData" :key="codewordset._id">{{ codewordset.CodeWordSetName }}</option>
                 </select>
             </div>
             <div class="form-group" >
@@ -52,12 +53,12 @@
             <div class="form-group" >
               <input type="text" class="form-control" placeholder="Enter Survey End URL"  name="endSurveyurl" data-toggle="tooltip" data-placement="bottom" title="Enter Survey End URL" >
             </div>
-            </form>
+            <div >
+              <button type="cancel" class="btn btn-warning" data-dismiss="modal">Cancel</button>
+              <button type="create" class="btn btn-primary">Create Course</button>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
-              <button type="button" class="btn btn-primary" v-on:click="CreateCourse" >Create Course</button>
-            </div></div></div></div>  
+            </div>
+            </form></div></div></div>
   </div>
 </template>
 <script>
@@ -68,21 +69,37 @@ export default {
       courseName: '',
       startDate: '',
       endDate: '',
-      startSurveyurl: '',
-      endSurveyurl: ''
+      startSurveyurldata: '',
+      endSurveyurldata: '',
+      CodeWordSetName: '',
+      file: '',
+      codeWordSetData: '',
+      coursesDate: ''
     }
+  },
+  created () {
+    // fetch the data when the view is created and the data is
+    // already being observed
+    this.fetchCourseList()
+  },
+  watch: {
+    // call again the method if the route changes
+    '$route': 'fetchCourseList'
   },
   methods: {
     CreateCourse () {
-      console.log('Create Course')
       let data = new FormData(document.querySelector('form'))
-      this.courseName = data.get('courseName').toLowerCase()
+      this.courseName = data.get('courseName')
       this.startDate = data.get('startDate')
       this.endDate = data.get('endDate')
-      this.startSurveyurl = data.get('startSurveyurl')
-      this.endSurveyurl = data.get('endSurveyurl')
+      this.startSurveyurldata = data.get('startSurveyurl')
+      this.endSurveyurldata = data.get('endSurveyurl')
+      let formData = new FormData()
+      formData.append('CourseNameKey', this.courseName)
+      formData.append('CodeWordSetName', 'Large Set1')
+      formData.append('file', this.file)
       /* global axios $ */
-      axios({
+      Promise.all([axios({
         method: 'post',
         url: 'codeword/addnewCourse',
         data: {
@@ -90,12 +107,45 @@ export default {
           courseNameKey: this.courseName,
           startDate: this.startDate,
           endDate: this.endDate,
-          preSurveyURL: this.startSurveyurl,
-          postSurveyURL: this.endSurveyurl
+          preSurveyURL: this.startSurveyurldata,
+          postSurveyURL: this.endSurveyurldata
         }
-      }).then(res => {
-        $('#addcourse').modal('hide')
-        console.log(res)
+      }),
+      axios.post('codeword/addcoursestudent',
+        formData, {headers: {
+          'Content-Type': 'multipart/form-data',
+          token: window.localStorage.getItem('token')
+        }
+        })])
+        .then(res => {
+          $('#addcourse').modal('hide')
+          this.fetchCourseList()
+        })
+    },
+    handleFileUpload () {
+      this.file = this.$refs.file.files[0]
+    },
+    getStartDate () {
+      var today = new Date()
+      document.getElementById('startDate').value = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2)
+    },
+    loadCourseModel () {
+      axios({
+        method: 'get',
+        url: 'codeword/getcodewordset'
+      }).then(response => {
+        this.codeWordSetData = response.data.data
+      })
+    },
+    fetchCourseList () {
+      axios({
+        method: 'get',
+        url: 'codeword/getCourseList',
+        headers: {
+          token: window.localStorage.getItem('token')
+        }
+      }).then(response => {
+        this.coursesDate = response.data.data
       })
     }
   }
@@ -106,9 +156,16 @@ export default {
     margin-top:5em;
 }
 .coursecard {
-  width: 20rem;
-  margin-top: 1em;
-  margin-left: 8.5em;
+  width: 100%;
+  margin-bottom: 1em;
+  box-sizing: border-box;
   background-color:#41f4b2;
+}
+#boldforcourse{
+  font-weight:bold;
+}
+#sizeofDate {
+  font-size:125%;
+  font-weight: bold;
 }
 </style>

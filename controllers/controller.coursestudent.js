@@ -6,68 +6,48 @@ var { mongoose } = require('./../config/database')
 var { CodeWord } = require('../model/model.codeword')
 let XLSX = require('xlsx')
 let addCourseStudent = (req,res) => {
-    var codewordslist = [];
-    var studentIDList = [];
-    var studentNameList = [];
-    var studentData = [];
-    var workbook = XLSX.read(req.file.buffer, {type:"buffer"})
-    _.each(XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]]), function(ele,index,list){
-    var status = true;
-    for(firstKey in ele) {
-    //studentData.push(ele[firstKey])
-    if( status == true ) {
-    studentIDList.push(ele[firstKey]);
-    status = false
-    }else {
-    studentNameList.push(ele[firstKey]);
-    }
-    }
-  })
+    var codewordslist =[];
+    var shuffleCodeWords, studetList;
+    var studentidList=[],studentNameList=[];
+    var workbook = XLSX.read(req.file.buffer, {type:"buffer"});
     var body = _.pick(req.body,['CourseNameKey','CodeWordSetName']);    
-    //console.log(body.CourseNameKey);
-    //console.log(body.CodeWordSetName);
-
+    studetList = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]]);
+    
     CodeWord.findOne({CodeWordSetName: body.CodeWordSetName}, function (err, CodeWords) {
         if(err){
-            return res.json({ code: 200, message: 'Email id not registered!!'});
+            return res.json({ code: 204, message: 'CodeWord Set Not found error'});
         }
         codewordslist.push(CodeWords.codeword)
-        //console.log(CodeWords.codeword)
+        if(codewordslist.length > studetList.length )
+        {
+            return res.json({ code: 200, message: 'Insufficent Codewords'})
+        }else {
+            shuffleCodeWords = shuffle(codewordslist);
+            for(var i=0;i<studetList.length;i++) {
+            var studentData = JSON.parse(JSON.stringify(studetList[i]))
+            studentidList.push(studentData[Object.keys(studentData)[0]])
+            studentNameList.push(studentData[Object.keys(studentData)[1]])
+            }
+            console.log(studentidList+" "+studentNameList)
+            var courseStudents = [];
+            for(var i=0;i<studentidList.length;i++){
+                var courseStudentModel = CourseStudentModel({
+                    CourseNameKey: body.CourseNameKey,
+                    EmailKey:studentidList[i],
+                    Codeword:'Codewords',
+                    StudentName: studentNameList[i],
+                    Acknowledged: false 
+                });
+                courseStudents.push(courseStudentModel);
+             }  
+             CourseStudentModel.insertMany(courseStudents, (error, students) => {
+                 if(error){
+                     res.send(400, error.errors[0].message)
+                 }
+                 res.send("Sucessfully Created course Student")
+             });         
+        }
     })
-    //console.log("studentID"+studentIDList);
-    //console.log("studentName"+studentNameList);
-    //console.log(codewordslist);
-
-    var shuffleCodeWords = shuffle(codewordslist);
-
-    // convert xlsx to json
-        var server = http.createServer(function(request, response) {
-        var XLSX = require('xlsx');
-        var workbook = XLSX.readFile('file.xlsx');
-        var sheet_name_list = workbook.SheetNames;
-        var testList = XLSX.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]])
-        console.log(typeof testList)
-        for (var i in testList){
-            testList[i].fileName = "file.xlsx"
-        }  
-        console.log(testList)
-    })
-
-    // var courseStudentModel = new CourseStudentModel({
-    //     CourseNameKey: body.CourseNameKey,
-    //     EmailKey:body.EmailKey,
-    //     Codeword:body.Codeword,
-    //     StudentName: body.name,
-    //     Acknowledged:body.Acknowledged
-    // });
-    // courseStudentModel.save().then((user) => {
-    //     if(user)
-    //     return res.json({ code: 200, message: true});
-
-    // }).catch((e) => {
-    //     console.log(e);
-    //     return res.json({ code: 400, message : e});
-    // })
 }
 
 function shuffle(array) {
@@ -82,3 +62,19 @@ function shuffle(array) {
     return array;
   }
 module.exports.addCourseStudent = addCourseStudent;
+
+let getCourseStudent = (req,res) => {
+    var body = _.pick(req.body,['CourseNameValue']);    
+    CourseStudentModel.find({CourseNameKey: body.CourseNameValue}, function (err, courseStudents) {
+        if(err){
+            return res.json({ code: 200, message: 'No courses created!!'});
+        }
+        if (courseStudents)
+            return res.json({ code: 200, data: courseStudents });
+        }).catch((e) => {
+        return res.json({ code: 400, message: e });
+        })
+}
+module.exports.getCourseStudent = getCourseStudent;
+
+

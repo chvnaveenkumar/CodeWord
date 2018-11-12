@@ -4,60 +4,68 @@ const userController = require('../controllers/controller.user')
 const datacourse = require('../data/data.Course.json')
 const datacodeword = require('../data/data.codeword.json')
 const user = require('../data/data.user.json')
-
-const dataCodewordset=require('../data/data.codewordset.json')
-const dataCoursestudent=require('../data/data.coursestudent.json') 
-
-
-const LOG = require('../utils/logger.js')
+const dataCodewordset = require('../data/data.codewordset.json')
+const dataCoursestudent = require('../data/data.coursestudent.json')
+const LOG = require('./logger.js')
 
 module.exports = (app) => {
-    LOG.info('START seeder.')
-    const db = {}
+  LOG.info('START seeder.')
+  const db = {}
 
 
-    users.forEach((user) => {
-        userController.newUser(user)
-      })
+/*   users.forEach((user) => {
+    userController.newUser(user)
+  })
+ */
+//USER
+  // db.datauser = new Datastore()
+  // db.datauser.loadDatabase()
+  // db.datauser.insert(datauser)
+
+//CODEWORDSET
+  db.dataCodewordset = new Datastore()
+  db.dataCodewordset.loadDatabase()
+  db.dataCodewordset.insert(dataCodewordset)
 
 
-    db.datacourse = new Datastore()
+ //CODEWORD
+ 
+ db.datacodeword = new Datastore()
+ db.datacodeword.loadDatabase()
+ db.datacodeword.insert(datacodeword)
+
+ //COURSE
+
+  db.datacourse = new Datastore()
   db.datacourse.loadDatabase()
-
-  // insert the sample data into our data store
   db.datacourse.insert(datacourse)
 
+//COURSESTUDENT
 
-
-  db.datacodeword = new Datastore()
-  db.datacodeword.loadDatabase()
-
-  // insert the sample data into our data store
-  db.datacodeword.insert(datacodeword)
-
-
-
-  db.datauser = new Datastore()
-  db.datauser.loadDatabase()
-
-  // insert the sample data into our data store
-  db.datauser.insert(datauser)
-
-
-db.dataCodewordset = new Datastore()
-db.dataCodewordset.loadDatabase()
-db.dataCodewordset.insert(dataCodewordset)
-
-db.dataCoursestudent = new Datastore()
-db.dataCoursestudent.loadDatabase()
-db.dataCoursestudent.insert(dataCoursestudent)
+  db.dataCoursestudent = new Datastore()
+  db.dataCoursestudent.loadDatabase()
+  db.dataCoursestudent.insert(dataCoursestudent)
 
 
 
+  // app.locals.datauser = db.datauser.find(datauser)
+  // LOG.debug(`${app.locals.datauser.query.length} datauser seeded`)
 
-  app.locals.users = db.users.find(users)
-  LOG.debug(`${app.locals.users.query.length} users registered`)
+
+  app.locals.dataCodewordset = db.dataCodewordset.find(dataCodewordset)
+  LOG.debug(`${app.locals.dataCodewordset.query.length} dataCodewordset seeded`)
 
 
+  app.locals.datacodeword = db.datacodeword.find(datacodeword)
+  LOG.debug(`${app.locals.datacodeword.query.length} datacodeword seeded`)
+
+
+  app.locals.datacourse = db.datacourse.find(datacourse)
+  LOG.debug(`${app.locals.datacourse.query.length} datacourse seeded`)
+
+  app.locals.dataCoursestudent = db.dataCoursestudent.find(dataCoursestudent)
+  LOG.debug(`${app.locals.dataCoursestudent.query.length} dataCoursestudent seeded`)
+
+  
   LOG.info('END Seeder. Sample data read and verified.')
 }
