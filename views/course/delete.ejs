@@ -1,0 +1,28 @@
+<br/>
+<br/>
+<h2>Confirm deletion of course</h2>
+<br/>
+<br/> email:
+<%=  course.email%>
+  <br> codeWordSet:
+  <%=course.codeWordSet%>
+    <br/> Startdate:
+    <%=course.Startdate%>
+      <br/> Enddatr:
+      <%=course.Enddate%>
+        <br/> PostSurveyURL:
+        <%=course.PostSurveyURL%>
+          <br/> PreSurveyURL:
+          <%=course.PreSurveyURL%>
+            
+
+            <form method="get" action="/course">
+              <input type="submit" value="Return to list" class="btn btn-caution" />
+            </form>
+
+            <br/>
+            <form method="POST" action="/course/delete/<%= course.email %>">
+              <input type="submit" value="Delete this item" class="btn btn-danger pull-right" />
+            </form>
+
+           

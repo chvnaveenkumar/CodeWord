@@ -1,0 +1,23 @@
+<br/>
+<br/>
+<div class="container-fluid">
+  <div class=row>
+    <div class="col col-md-12">
+      <h2>Edit Course </h2>
+      <div class="content">
+        <form method="POST" action="/course/save/<%= course.email %>">
+          <div class="form-group" id=frm>
+            <label for="_id">ID</label>
+            <input type="number" class="form-control" id="_id" name="_id" value="<%= course.email %>" required disabled>
+          </div>
+           <%include partial_edit.ejs %>
+              <input type="submit" value="Save" class="btn btn-primary" />
+        </form>
+        <br/>
+        <form method="get" action="/course">
+          <input type="submit" value="Return to list" class="btn btn-caution" />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
