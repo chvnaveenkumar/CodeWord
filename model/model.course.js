@@ -15,22 +15,22 @@ var CourseModel = mongoose.model('courseModel', {
    },
    emailKey:{
     type: String,
-    require: true,
+    required: true,
     minlength: 3
    },
    codeWordSetName:{
     type: String,
-    require: true,
+    required: true,
     minlength: 5
    },
    Startdate: {
     type: String,
-    require: true,
+    required: true,
     minlength: 5
    },
    Enddate: {
     type: String,
-    require: true,
+    required: true,
     minlength: 5
    },
    PreSurveyURL: {

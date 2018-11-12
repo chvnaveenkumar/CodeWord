@@ -33,8 +33,7 @@ var CourseStudentModel = mongoose.model('CourseStudentModel', {
    Acknowledged: {
     type: Boolean,
     require: true,
-    default: false,
-    minlength:1
+    default: false
    }
 });
 module.exports.CourseStudentModel = CourseStudentModel

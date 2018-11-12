@@ -65,6 +65,8 @@
   </div>
 </template>
 <script>
+import swal from 'sweetalert2'
+
 export default {
   name: 'InstructorDashboard',
   data () {
@@ -114,15 +116,27 @@ export default {
           postSurveyURL: this.endSurveyurldata
         }
       })
-      axios.post('codeword/addcoursestudent',
-        formData, {headers: {
-          'Content-Type': 'multipart/form-data',
-          token: window.localStorage.getItem('token')
-        }
-        }).then(res => {
-        $('#addcourse').modal('hide')
-        this.fetchCourseList()
-      })
+        .then((response) => {
+          if (response) {
+            axios.post('codeword/addcoursestudent',
+              formData, {headers: {
+                'Content-Type': 'multipart/form-data',
+                token: window.localStorage.getItem('token')
+              }
+              }).then(response => {
+              $('#addcourse').modal('hide')
+              this.fetchCourseList()
+            })
+              .catch(error => {
+                console.log('addcoursestudent' + error)
+                swal('Error courseStudent', error, 'error')
+              })
+          }
+        })
+        .catch(error => {
+          swal('Error Message', error.response.data.message, 'error')
+          console.log('Eoor' + error)
+        })
     },
     handleFileUpload () {
       this.file = this.$refs.file.files[0]

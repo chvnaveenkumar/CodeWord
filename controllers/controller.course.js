@@ -23,10 +23,12 @@ PostSurveyURL: body.postSurveyURL
 });
     courseModel.save().then((user) => {
         if(user)
-        return res.json({ code: 200, message: true});
-    }).catch((e) => {
-        console.log(e);
-        return res.json({ code: 400, message : e});
+        return res.status(200).json({ message: "Course created successfully."});
+    }).catch((error) => {
+        if (error.name === 'MongoError' && error.code === 11000) {
+            return res.status(403).json({message:'There was a duplicate course error'});
+        }
+        return res.status(403).json({ message:e.message});
     })
 }
 module.exports.addCourse = addCourse;

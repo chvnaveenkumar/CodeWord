@@ -16,14 +16,14 @@ let addCourseStudent = (req,res) => {
     
     CodeWord.find({CodeWordSetName: body.CodeWordSetName}, function (err, CodeWords) {
         if(err){
-            return res.json({ code: 204, message: 'CodeWord Set Not found error'});
+            return res.status(200).json({ message: 'CodeWord Set Not found error'});
         }
         for(var i=0;i<CodeWords.length;i++){
         codewordslist.push(CodeWords[i].Codeword)
         }
         if(codewordslist.length < studetList.length )
         {
-            return res.json({ code: 200, message: 'Insufficent Codewords'})
+            return res.status(200).json({ message: 'Insufficient Codewords.'});
         }else {
             shuffleCodeWords = shuffle(codewordslist);
             for(var i=0;i<studetList.length;i++) {
@@ -38,12 +38,18 @@ let addCourseStudent = (req,res) => {
                 var courseStudentModel = CourseStudentModel({
                     CourseNameKey: body.CourseNameKey,
                     EmailKey:studentidList[i],
-                    Codeword:'Codewords',
+                    Codeword:shuffleCodeWords[i],
                     StudentName: studentNameList[i],
                     Acknowledged: false 
                 });
-                courseStudentModel.save();
-                 }
+                coursestudent.push(courseStudentModel);
+            }
+                CourseStudentModel.insertMany(coursestudent).then((courseStudent) => {
+                    return res.status(200).json({message: 'Course student successfully!'})    
+                })
+                .catch(error => {
+                    return res.status(403).json({ message:error.message});
+                })                 
         }
     })
 }
