@@ -26,10 +26,10 @@ router.post('/addnewCourse', courseController.addCourse);
 router.get('/getCourseList', courseController.getCourses)
 router.post('/addcodewordset',codewordsetController.addcodewordset)
 router.post('/getdataxlsx',codewordsetController.getDataFromXLS)
-router.post('/addnewcodewords', codewordController.addcodewords)
+router.post('/addnewcodewords',multer().single('file'), codewordController.addcodewords)
 router.post('/getCodewords', codewordController.getCodewords)
 router.get('/getcodewordset', codewordsetController.getcodewordset)
-// router.post('/addcodewordset',codewordsetController.addcodewordset);
+// router.post('/addcodewords',multer().single('file'), codewordController.addcodewords);
 // router.post('/getdataxlsx',codewordsetController.getDataFromXLS);
 // router.post('/addnewcodewords', codewordController.addcodewords);
 router.post('/addcoursestudent',multer().single('file'), courseStudentController.addCourseStudent);
