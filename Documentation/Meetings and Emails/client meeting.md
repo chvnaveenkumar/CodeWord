@@ -82,3 +82,16 @@ Create Codewords Client Comments
 7.	Codewords that are approved should not be allowed to be changed and If that would be the case then what should be in the case of Instructor’s own code1.word set(He/she would be allowed to change/delete his/her own code1.word set or not? – Talk to mentor for this) - Add the desired require to user stories for "codeword set creation rules" and assign it to GDP2.
 8.	When does the assignment of codeword taking place? We automatically and randomly assign the set of codewords to the set of emails once when the event is set up. This is the obvious and efficient approach. If an instructor deletes a student during an active course, we are fine. If they add a student and they correctly selected a codeword set with more words than students, they are fine. If a (non-forward-thinking) instructor assigns an 80-count codeword set to a course with 80 students, and tries to add one, it will violate the course creation rules as defined in our current user stories. The (non-forward-thinking) instructor will be unable to add a student if they cannont assign them a codeword. They will have to wait til a student drops or plan better next time.
 9.	Assign codeword randomly when the Course is created (At the time of creation of code1.word set – Talk to mentor for this) - Yes - we assign them not at the creation of the codeword set (codeword sets are always there), but at the creation of the instuctor's uniquely-named course.
+
+# We had a Client meeting on 09-Nov  with Dr. Hoot (Naveen Nuggu) and we demonstrated our app. Following was his suggestions after viewing everything meticulously:
+
+1.  The Basic sets can’t be either deleted or edited. For sets that are created by the instructor, he can edit them.
+2.  By default, the list of codewords should be in Alphabetical order.
+3.  Instructor can download the codewords in a set.
+4.  The number of codewords in a list should be at least 5% more than the number of students in the course.
+5.  There should be an ‘+Add codeword’ button on top of the table which displays the list of code words in the set.
+6.  Instructor can add a new student and delete a student for a course.
+7.  If the student is deleted from the course, then the codeword assigned to him should not be reused.
+8.  The codeword set assigned for a course cannot be changed.
+9.  The details page should clearly show the ‘X’ number of codewords remaining in a set.
+
