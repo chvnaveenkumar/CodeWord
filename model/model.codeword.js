@@ -5,14 +5,12 @@ var CodeWord = mongoose.model('codeword', {
     CodeWordSetName: {
         type: String,
         require: true,
-        minlength: 5,
-        unique: true
+        minlength: 5
     },
-    codeword: {
+    Codeword: {
         type: String,
         require: true,
-        minlength: 5,
-        unique: true
+        minlength: 5
     }
 
 });
