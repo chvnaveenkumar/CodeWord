@@ -45,3 +45,19 @@ let getCourses = (req,res) => {
         })
 }
 module.exports.getCourses = getCourses;
+
+let deleteCourse = (req, res) => {
+    var body = _.pick(req.body,['courseNameKey']);
+    courseModel.remove(req.emailKey, function (err, body) {
+        if (err) {
+            return console.error(err);
+        } else {
+            console.log('Deleting'+ body.courseNameKey);
+        }
+            // json: function(){
+            //     res.json({message: 'deleted', item : body})
+            // };
+    })
+        return res.json({ code: 200, message: true});
+    };
+module.exports.deleteCourse = deleteCourse;

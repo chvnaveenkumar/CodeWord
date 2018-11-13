@@ -29,6 +29,7 @@ router.post('/getdataxlsx',codewordsetController.getDataFromXLS)
 router.post('/addnewcodewords',multer().single('file'), codewordController.addcodewords)
 router.post('/getCodewords', codewordController.getCodewords)
 router.get('/getcodewordset', codewordsetController.getcodewordset)
+router.post('/deleteCourse', courseController.deleteCourse)
 // router.post('/addcodewords',multer().single('file'), codewordController.addcodewords);
 // router.post('/getdataxlsx',codewordsetController.getDataFromXLS);
 // router.post('/addnewcodewords', codewordController.addcodewords);

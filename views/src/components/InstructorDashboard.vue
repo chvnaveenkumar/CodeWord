@@ -16,7 +16,12 @@
           <a v-bind:href="course.PostSurveyURL" class="card-link">End Survey</a>
           <br>
           <router-link :to="{ name: 'CourseStudent', params: { courseName: course.courseNameKey } }"><button class="btn "><i class="fa fa-eye fa-lg" aria-hidden="true" ></i></button></router-link>
-          <button class="btn "><i class="fa fa-trash fa-lg"></i></button>
+          <button class="btn" v-confirm="{
+                        loader: true,
+                        message: trans('messages.directive_object'),
+                        ok: clickOkHandler,
+                        cancel: clickCancelHandler}"><i class="fa fa-trash fa-lg">
+          </i></button>
         </div>
       </div>
     </div>
