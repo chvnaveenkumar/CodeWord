@@ -36,7 +36,7 @@
 | Register himself/herself by filling information like Name, Email id, Password, Confirm password and checking the Instructor checkbox                                                                           |        |          |
 | After clicking on “Register Now” button, he/she should be able to view a message “Successfully Registered and Redirecting to Sign In page”                                                               |        |          |
 
-## 2.02 [Shivani Dodla(views, controllers, models)] - As an instructor, I want to see my list of active courses
+## 2.02 [Sravya Kancharla(controllers, models), Chaithanya Cherukuru(views)] - As an instructor, I want to see my list of active courses
 
 | Acceptance Criteria                                                                         | Yes/No | Comments |
 |---------------------------------------------------------------------------------------------|--------|----------|
@@ -119,7 +119,7 @@
 
 
 
-## 3.02 - As an instructor, I want to see my list of courses, those are “active” today between the start and end date inclusively.
+## 3.02 - [Sravya Kancharla] As an instructor, I want to see my list of courses, those are “active” today between the start and end date inclusively.
 
 
 ## 3.03 - As an instructor, I want to be notified if the codeword set is too small. If the calculated count of codewords is less than the calculated count of students then I want to see a warning that says “You have n students, but the codeword set has only m words. Please select another set or click the + button next to the codeword dropdown to add a new, larger set of codewords" while creating or editing a course.
@@ -131,7 +131,7 @@
 ## 3.05 - As an instructor, I want to see the calculated count of students and codewords when I edit or view a course with the unique name, list of students, codeword set, start and end date.
 
 
-## 3.06 - As an instructor, I want to delete an existing course once it is completed. 
+## 3.06 - [Sravya Kancharla] As an instructor, I want to delete an existing course once it is completed. 
 
 
 ## 3.07 - As an instructor, I want the percentage of students who have accessed their codewords in that course.
