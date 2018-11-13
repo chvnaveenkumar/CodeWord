@@ -103,7 +103,7 @@
 | User must able to see the calculated count of the students in the  selected course                                     |        |          |
 | User must be able to see the edit option to edit the student names  and Email ID                                       |        |          |
 | User must be able to see delete option to delete an active course.                                                     |        |          |
-### 2.08 - Naveen Kumar Chandaluri(views) As an instructor, I want one codeword from the specified set to be randomly assigned to only one student and each student must have a unique codeword in that course and each codeword can only be issued once in each course (or not used at all) when a course is created.
+### 2.08 - [Naveen Kumar Chandaluri(views),Vyshnavi yalamareddy(Controller)] As an instructor, I want one codeword from the specified set to be randomly assigned to only one student and each student must have a unique codeword in that course and each codeword can only be issued once in each course (or not used at all) when a course is created.
 |                                  Acceptance Criteria                                  | Yes/No | Comments |
 |:-------------------------------------------------------------------------------------:|--------|----------|
 | User should be able to see the unique codeword for each student in every course       |        |          |
@@ -116,7 +116,7 @@
 
 ### 3.02 - [Sravya Kancharla] As an instructor, I want to see my list of courses, those are “active” today between the start and end date inclusively.
 
-### 3.03 - [Naveen Kumar Chandaluri] As an instructor, I want to be notified if the codeword set is too small. If the calculated count of codewords is less than the calculated count of students then I want to see a warning that says “You have n students, but the codeword set has only m words. Please select another set or click the + button next to the codeword dropdown to add a new, larger set of codewords" while creating or editing a course.
+### 3.03 - [Naveen Kumar Chandaluri, Vyshnavi yalamareddy(Controller)] As an instructor, I want to be notified if the codeword set is too small. If the calculated count of codewords is less than the calculated count of students then I want to see a warning that says “You have n students, but the codeword set has only m words. Please select another set or click the + button next to the codeword dropdown to add a new, larger set of codewords" while creating or editing a course.
 
 
 ### 3.04 - [Naveen Kumar Chandaluri]As an instructor, I want the codewords confidential and must not know or be able to see the code word each student gets.
