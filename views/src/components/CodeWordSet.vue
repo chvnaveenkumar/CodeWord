@@ -76,7 +76,7 @@
             <tr v-for="(code,index) in codeWordSetData" :key="code._id">
                  <!-- <th scope="row">{{ index + 1 }}</th> -->
                 <td> {{ code.CodeWordSetName }} </td>
-                <td> 0 </td>
+                 <td>{{ codeWordSetCount[index]}} </td>
                 <!-- <td> {{ code.codeWordCreator }} </td> -->
             </tr>
 
@@ -86,19 +86,17 @@
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
   name: 'CodeWordSet',
   data () {
     return {
       files: '',
-      tcodeWordSetData: [],
+      codeWordSetCount: [],
       codeWordSetData: [],
       count: 0
     }
   },
-
+  /* global axios */
   methods: {
     // Getting the data from uploaded xls file
     previewFiles () {
@@ -147,13 +145,26 @@ export default {
     getCodeWordData () {
       axios({
         method: 'get',
-        url: 'http://localhost:3000/codeword/getcodewordset',
+        url: '/codeword/getcodewordset',
         headers: {
           token: window.localStorage.getItem('token')
         }
       }).then(response => {
-        // console.log('rest' + response.data.data)
         this.codeWordSetData = response.data.data
+        for (var i = 0; i < this.codeWordSetData.length; i++) {
+          axios({
+            method: 'post',
+            url: '/codeword/getCodewords',
+            headers: {
+              token: window.localStorage.getItem('token')
+            },
+            data: {
+              CodeWordSetKey: this.codeWordSetData[i].CodeWordSetName
+            }
+          }).then(response => {
+            this.codeWordSetCount.push(response.data.count)
+          })
+        }
       })
     }
   },

@@ -39,7 +39,7 @@ let getCodewords = (req,res) => {
             return res.json({ code: 200, message: 'No codewordset is created!!'});
         }
         if (codewords)
-            return res.json({ code: 200, data: codewords });
+            return res.json({ code: 200, data: codewords, count: codewords.length });
         }).catch((e) => {
             return res.json({ code: 400, message: e });
         })

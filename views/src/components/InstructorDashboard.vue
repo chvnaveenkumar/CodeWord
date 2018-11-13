@@ -16,16 +16,32 @@
           <a v-bind:href="course.PostSurveyURL" class="card-link">End Survey</a>
           <br>
           <router-link :to="{ name: 'CourseStudent', params: { courseName: course.courseNameKey } }"><button class="btn "><i class="fa fa-eye fa-lg" aria-hidden="true" ></i></button></router-link>
-          <button class="btn" v-confirm="{
-                        loader: true,
-                        message: trans('messages.directive_object'),
-                        ok: clickOkHandler,
-                        cancel: clickCancelHandler}"><i class="fa fa-trash fa-lg">
+          <button class="btn" data-toggle="modal" @click="getCourseName(course.courseNameKey)" data-target="#deleteCourse"><i class="fa fa-trash fa-lg">
           </i></button>
         </div>
       </div>
     </div>
   </div>
+  <!-- Modal Delete course -->
+<div class="modal fade" id="deleteCourse" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete Course</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h1> {{selectedCourse}} </h1>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primart" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger" @click="deleteCourseKey">Delete Course</button>
+      </div>
+    </div>
+  </div>
+</div>
   <!-- Model to  add Course -->
       <div class="modal fade" id="addcourse" tabindex="-1" role="dialog" aria-labelledby="addcourseLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -50,11 +66,11 @@
                 Upload Student Details(Excel)
             </div>
             <div class="form-group" required>
-                <select class="form-control form-control-sm" v-model="CodeWordSetName">
+                <select class="form-control form-control-sm" v-model="CodeWordSetName" value ="Select codeword set">
                   <option v-for="codewordset in codeWordSetData" :key="codewordset._id">{{ codewordset.CodeWordSetName }}</option>
                 </select>
             </div>
-            <div class="form-group" >
+            <div class="form-group">
               <input type="text" class="form-control" placeholder="Enter Survey Start URL" name="startSurveyurl" data-toggle="tooltip" data-placement="bottom" title="Enter Survey Start URL" >
             </div>
             <div class="form-group" >
@@ -83,7 +99,8 @@ export default {
       CodeWordSetName: '',
       file: '',
       codeWordSetData: '',
-      coursesDate: ''
+      coursesDate: '',
+      selectedCourse: ''
     }
   },
   created () {
@@ -157,7 +174,6 @@ export default {
           token: window.localStorage.getItem('token')
         }
       }).then(response => {
-        console.log('rest' + response.data.data)
         this.codeWordSetData = response.data.data
       })
     },
@@ -171,6 +187,25 @@ export default {
       }).then(response => {
         this.coursesDate = response.data.data
         console.log(this.coursesDate)
+      })
+    },
+    getCourseName (item) {
+      this.selectedCourse = item
+    },
+    deleteCourseKey () {
+      console.log('deletecoursekey')
+      axios({
+        method: 'post',
+        url: 'codeword/deleteCourse',
+        headers: {
+          token: window.localStorage.getItem('token')
+        },
+        data: {
+          CourseNameKey: this.selectedCourse
+        }
+      }).then(response => {
+        $('#deleteCourse').modal('hide')
+        this.fetchCourseList()
       })
     }
   }
