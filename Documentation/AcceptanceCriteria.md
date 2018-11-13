@@ -44,7 +44,7 @@
 | After successful Sign In, he/she should be able to view Instructor’s dashboard where they can view all the coursed he/she are added to along with list of active courses.                                                                                         |        |          |
 | After clicking on courses, instructor should be able to view course details like Course Name and Code-words assigned for respective course|        |          |
 
-### 2.03 [ Ujjawal Kumar ]- As an instructor, I want to create a new set of code words by entering a unique name for the codeword set and uploading a plain text file that contains a new list of codewords.
+### 2.03 [ Ujjawal Kumar, Srimai Reddy Yanala(Data,Model,Controller)]- As an instructor, I want to create a new set of code words by entering a unique name for the codeword set and uploading a plain text file that contains a new list of codewords.
 
 | Acceptance Criteria                                                                         | Yes/No | Comments |
 |---------------------------------------------------------------------------------------------|--------|----------|
