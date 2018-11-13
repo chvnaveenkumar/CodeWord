@@ -123,7 +123,7 @@
 
 ### 3.05 - [Naveen Kumar Chandaluri]As a user, I want to navigate between multiple pages (Home (list of active courses), + New Course, View a Set of Codewords and Confirm Delete Course).
 
-### 3.06 - As an instructor, I want to see the calculated count of students and codewords when I edit or view a course with the unique name, list of students, codeword set, start and end date.
+### 3.06 -[Shivani Reddy Dodla] As an instructor, I want to see the calculated count of students and codewords when I edit or view a course with the unique name, list of students, codeword set, start and end date.
 
 ### 3.07 - [Sravya Kancharla] As an instructor, I want to delete an existing course once it is completed. 
 
@@ -133,7 +133,7 @@
 
 ## Additional Requirements
 
-### 3.10 - Instructors are limited to no more than 10 active courses. (Verified with client)
+### 3.10 - {Shivani Reddy Dodla] Instructors are limited to no more than 10 active courses. (Verified with client)
 
 ### 3.11 - Each course is limited to no more than 1000 students.  (Verified with client)
 
