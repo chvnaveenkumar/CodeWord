@@ -114,34 +114,42 @@
 
 # MVP 3 (Fri-9-Nov)
 
- As a student, I want to see my courses and see/acknowledge/get my random codeword for the respective course on my home page.
+## 3.01 - As a student, I want to see my courses and see/acknowledge/get my random codeword for the respective course on my home page.
 
 
 
 
-As an instructor, I want to see my list of courses, those are “active” today between the start and end date inclusively.
+## 3.02 - As an instructor, I want to see my list of courses, those are “active” today between the start and end date inclusively.
 
 
- As an instructor, I want to be notified if the codeword set is too small. If the calculated count of codewords is less than the calculated count of students then I want to see a warning that says “You have n students, but the codeword set has only m words. Please select another set or click the + button next to the codeword dropdown to add a new, larger set of codewords" while creating or editing a course.
- As an instructor, I want the codewords confidential and must not know or be able to see the code word each student gets.
+## 3.03 - As an instructor, I want to be notified if the codeword set is too small. If the calculated count of codewords is less than the calculated count of students then I want to see a warning that says “You have n students, but the codeword set has only m words. Please select another set or click the + button next to the codeword dropdown to add a new, larger set of codewords" while creating or editing a course.
 
 
- As an instructor, I want to see the calculated count of students and codewords when I edit or view a course with the unique name, list of students, codeword set, start and end date.
- As an instructor, I want to delete an existing course once it is completed. 
- As an instructor, I want the percentage of students who have accessed their codewords in that course.
-As an instructor, I want to assign codewords for the concurrent survey in different courses.
+## 3.04 - As an instructor, I want the codewords confidential and must not know or be able to see the code word each student gets.
 
 
-As a user, I want to navigate between multiple pages (Home (list of active courses), + New Course, View a Set of Codewords and Confirm Delete Course).
+## 3.05 - As an instructor, I want to see the calculated count of students and codewords when I edit or view a course with the unique name, list of students, codeword set, start and end date.
 
 
-Additional Requirements
+## 3.06 - As an instructor, I want to delete an existing course once it is completed. 
 
-Instructors are limited to no more than 10 active courses. (Verified with client)
 
-Each course is limited to no more than 1000 students.  (Verified with client)
+## 3.07 - As an instructor, I want the percentage of students who have accessed their codewords in that course.
 
-Each codeword set limited to no more than 1200 codewords.  (Verified with client)
 
-Registration is limited to 25 teachers.  (Verified with client)
+## 3.08 -As an instructor, I want to assign codewords for the concurrent survey in different courses.
+
+
+## 3.09 - As a user, I want to navigate between multiple pages (Home (list of active courses), + New Course, View a Set of Codewords and Confirm Delete Course).
+
+
+# Additional Requirements
+
+## 3.10 - Instructors are limited to no more than 10 active courses. (Verified with client)
+
+## 3.11 - Each course is limited to no more than 1000 students.  (Verified with client)
+
+## 3.12 - [Ujjawal Kumar] As an Instructor, while creating codeword set, If there is more than 1200 codewords in the file which is getting uploaded to create codeword set, Instructor should be notified with a pop up message that "Each codeword set has a limit of upto 1200 codewords".(Verified with client)
+
+## 3.13 - Registration is limited to 25 teachers.  (Verified with client)
 
