@@ -12,11 +12,14 @@ let XLSX = require('xlsx')
 
 
 let addcodewords = (req, res) => {
-
-    let workbook = XLSX.read(req.file.buffer, {type:"buffer"})
-    codewords = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]])
-    _.each(codewords, function(ele){
-        ele.CodeWordSetName = req.body.CodeWordSetName
+     var codewords = [];
+    var body = _.pick(req.body,['CodeWordSetName','Codewords']);
+    codewords = body.Codewords;
+    codewords = _.map(codewords, function(codeword){
+        return {
+            CodeWordSetName: req.body.CodeWordSetName,
+            Codeword: codeword
+        }
     })
     CodeWord.insertMany(codewords).then((user) => {
         if (user)
@@ -42,12 +45,3 @@ let getCodewords = (req,res) => {
         })
 }
 module.exports.getCodewords = getCodewords;
-
-// let addcodewords = (req,res) => {
-//     var workbook = XLSX.read(req.file.buffer, {type:"buffer"})
-//     codewords = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]])
-//     console.log(codewords)
-//     res.send("success")
-// }
-
-// module.exports.addcodewords = addcodewords

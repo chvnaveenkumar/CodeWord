@@ -1,35 +1,27 @@
 <template>
 <div class="container-fluid" style="margin-top:5em" >
-            <div class="col-md-8 col-lg-12 col-xs-0 col-sm-0">
+            <div class="col-md-3 col-lg-3 col-xs-0 col-sm-0">
+                <h1> {{ courseNameData }} </h1>
             </div>
-              <h1> {{ courseNameData }} </h1>
-<div class="contan">
-  <div class="skills html">10 of 20 Students  (50%)</div>
+ <div class="card">
+  <div class="card-body">
+    Start Date:
+  </div>
 </div>
-  <table class="table table-striped">
+ <table class="table table-striped col-md-6 col-lg-6 col-xs-0 col-sm-0 " align="right">
  <thead>
             <tr>
-                <th scope="col">
-                    <h4>
-                        <u>Course Name</u>
-                    </h4>
-                </th>
-                <th scope="col">
+                <th>
                     <h4>
                         <u>Email</u>
                     </h4>
                 </th>
-                <th scope="col">
+                <th>
                     <h4>
                         <u>Name</u>
                     </h4>
                 </th>
-                <th scope="col">
-                    <h4>
-                        <u>Codeword</u>
-                    </h4>
-                </th>
-				<th scope="col">
+				<th>
                     <h4>
                         <u>Acknowledged</u>
                     </h4>
@@ -39,13 +31,10 @@
 
   <tbody>
     <tr v-for="courseStudent in courseStudentData" :key="courseStudent._id">
-      <th scope="row">{{ courseStudent.CourseNameKey }}</th>
-      <td>{{ courseStudent.EmailKey }}</td>
+      <td scope="row">{{ courseStudent.EmailKey }}</td>
       <td>{{ courseStudent.StudentName }}</td>
-      <td>{{ courseStudent.Codeword }}</td>
       <td>{{ courseStudent.Acknowledged }} </td>
     </tr>
-
   </tbody>
 </table>
 </div>    
@@ -57,22 +46,24 @@
       data () {
         return {
           courseNameData: '',
-          courseStudentData: ''
+          courseStudentData: '',
+          courseData: ''
         }
       },
       created () {
-        console.log(this.$route.params.courseName + 'params')
         if (this.$route.params.courseName == null) {
           this.courseNameData = window.localStorage.getItem('courseName')
-          this.getCourseStudent()
+          this.getCourseStudentData()
+          this.getCourseData()
         } else {
           this.courseNameData = this.$route.params.courseName
           window.localStorage.setItem('courseName', this.courseNameData)
-          this.getCourseStudent()
+          this.getCourseStudentData()
+          this.getCourseData()
         }
       },
       methods: {
-        getCourseStudent () {
+        getCourseStudentData () {
           axios({
             method: 'post',
             url: 'codeword/getcoursestudent',
@@ -86,6 +77,8 @@
             console.log(response.data.data)
             this.courseStudentData = response.data.data
           })
+        },
+        getCourseData () {
         }
       }
     }
