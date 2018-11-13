@@ -46,7 +46,7 @@
 
 
 
-## 2.03 [ Ujjawal Kumar ]- As an instructor, I want to create a new set of code words by entering a unique name for the codeword set and uploading a plain text file that contains a new list of codewords.
+## 2.03 [ Ujjawal Kumar ][ Srimai Reddy Yanala(Data,Model,Controller)- As an instructor, I want to create a new set of code words by entering a unique name for the codeword set and uploading a plain text file that contains a new list of codewords.
 
 | Acceptance Criteria                                                                         | Yes/No | Comments |
 |---------------------------------------------------------------------------------------------|--------|----------|
@@ -125,7 +125,7 @@
 ## 3.03 - As an instructor, I want to be notified if the codeword set is too small. If the calculated count of codewords is less than the calculated count of students then I want to see a warning that says “You have n students, but the codeword set has only m words. Please select another set or click the + button next to the codeword dropdown to add a new, larger set of codewords" while creating or editing a course.
 
 
-## 3.04 - As an instructor, I want the codewords confidential and must not know or be able to see the code word each student gets.
+## 3.04 [Srimai Reddy Yanala]- As an instructor, I want the codewords confidential and must not know or be able to see the code word each student gets.
 
 
 ## 3.05 - As an instructor, I want to see the calculated count of students and codewords when I edit or view a course with the unique name, list of students, codeword set, start and end date.
