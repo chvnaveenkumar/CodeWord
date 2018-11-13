@@ -54,6 +54,7 @@
                         <u>ID</u>
                     </h4>
                 </th> -->
+                
                 <th scope="col">
                     <h4>
                         <u>Codeword Set Name</u>
@@ -64,19 +65,19 @@
                         <u>Count</u>
                     </h4>
                 </th>
-                <th scope="col">
+                <!-- <th scope="col">
                     <h4>
                         <u>Creator</u>
                     </h4>
-                </th>
+                </th> -->
             </tr>
         </thead>
         <tbody>
             <tr v-for="(code,index) in codeWordSetData" :key="code._id">
                  <!-- <th scope="row">{{ index + 1 }}</th> -->
                 <td> {{ code.CodeWordSetName }} </td>
-                <td> {{ code.emailKey.length }} </td>
-                <td> {{ code.codeWordCreator }} </td>
+                <td> 0 </td>
+                <!-- <td> {{ code.codeWordCreator }} </td> -->
             </tr>
 
         </tbody>
@@ -106,7 +107,7 @@ export default {
       axios.post('http://localhost:3000/codeword/getdataxlsx', data).then(response => {
         console.log(response.data.data)
         this.tcodeWordSetData = response.data.data
-        this.count = this.tcodeWordSetData.length
+        this.count = response.data.data.length
       })
     },
 
@@ -114,8 +115,11 @@ export default {
     saveCodeWordData () {
       let data = new FormData(document.querySelector('form'))
       let sendData = {
-        codeWordSetName: data.get('dataSetName'),
-        emailKeySet: this.tcodeWordSetData
+        CodeWordSetName: data.get('dataSetName')
+      }
+      let sendData2 = {
+        CodeWordSetName: data.get('dataSetName'),
+        Codewords: this.tcodeWordSetData
       }
       axios({
         method: 'post',
@@ -125,12 +129,30 @@ export default {
           token: window.localStorage.getItem('token')
         }
       }).then(response => {
-        console.log(response.data.data)
-        this.getCodeWordData()
+        if (response.data.code === 200) {
+          axios({
+            method: 'post',
+            url: 'http://localhost:3000/codeword/addnewcodewords',
+            data: sendData2,
+            headers: {
+              token: window.localStorage.getItem('token')
+            }
+          }).then(response => {
+            console.log(response.data.data)
+            this.getCodeWordData()
+          })
+        }
       })
     },
     getCodeWordData () {
-      axios.get('http://localhost:3000/codeword/getcodewordset').then(response => {
+      axios({
+        method: 'get',
+        url: 'http://localhost:3000/codeword/getcodewordset',
+        headers: {
+          token: window.localStorage.getItem('token')
+        }
+      }).then(response => {
+        // console.log('rest' + response.data.data)
         this.codeWordSetData = response.data.data
       })
     }

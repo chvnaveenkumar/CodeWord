@@ -33,7 +33,8 @@ let getDataFromXLS = (req, res) => {
                     'codeword': 'A',
                 }
             }).then(jsonArray => {
-                return res.status(200).json({ data: jsonArray[0], count: jsonArray[0].length })
+                console.log(_.map(jsonArray[0],'codeword'))
+                return res.status(200).json({ data: _.map(jsonArray[0],'codeword'), count: jsonArray[0].length })
             })
     })
 
