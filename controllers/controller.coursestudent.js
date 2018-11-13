@@ -85,7 +85,7 @@ module.exports.getCourseStudent = getCourseStudent;
 
 let deletecoursestudent=(req,res) =>{
     var body = _.pick(req.body,['CourseNameKey','EmailKey']);  
-    CourseStudentModel.deleteOne({CourseNameKey: body.CourseNameKey,EmailKey: body.EmailKey}, function(err,deletecourse){
+    CourseStudentModel.deleteOne({CourseNameKey: body.CourseNameKey,EmailKey: body.EmailKey}, function(err,deletecoursestudent){
         if(err){
             return res.json({ code:200, message:'Deletion of the EmailKey'});
         }
