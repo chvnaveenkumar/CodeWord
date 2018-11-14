@@ -34,7 +34,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                                <button type="submit" class="btn btn-success" data-dismiss="modal" @click.prevent="saveCodeWordData">Create Codeword Set</button>
+                                <button type="submit" class="btn btn-success" data-dismiss="modal" @click.prevent="saveCodeWordData" @click="showDetails">Create Codeword Set</button>
                             </div>
 
                         </form>
@@ -45,8 +45,9 @@
             </div>
         </div>
     </div>
+    <!-- class="table table-striped" -->
 
-    <table class="table table-striped">
+    <table id="codewordsetTable">
         <thead>
             <tr>
                 <!-- <th scope="col">
@@ -65,19 +66,18 @@
                         <u>Count</u>
                     </h4>
                 </th>
-                <!-- <th scope="col">
-                    <h4>
-                        <u>Creator</u>
-                    </h4>
-                </th> -->
+                <th scope="col">
+                   
+                </th>
             </tr>
         </thead>
         <tbody>
             <tr v-for="(code,index) in codeWordSetData" :key="code._id">
                  <!-- <th scope="row">{{ index + 1 }}</th> -->
                 <td> {{ code.CodeWordSetName }} </td>
-                 <td>{{ codeWordSetCount[index]}} </td>
-                <!-- <td> {{ code.codeWordCreator }} </td> -->
+                 <td id="count">{{ codeWordSetCount[index] }}</td>
+                <td> <router-link to="/codeword"><button type="button" class="btn btn-info btn-sm">Show Details</button></router-link>
+                    </td>
             </tr>
 
         </tbody>
@@ -177,6 +177,45 @@ export default {
 <style>
 #message {
   margin-top: 5em;
+}
+
+  #codewordsetTable {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 3%;
+    margin-bottom: 10%;
+}
+
+#codewordsetTable td, #codewordsetTable th {
+    /* border: 1px solid #ddd; */
+    padding: 8px;
+}
+
+
+#codewordsetTable tr:nth-child(even){background-color: #f2f2f2;}
+
+#codewordsetTable tr:hover {background-color: #ddd;}
+
+#codewordsetTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    width: 60%;
+}
+
+#codewordsetTable td {
+    text-align: center;
+    color:black;
+    width: 60%;
+}
+#btn{
+  width: 80%;
+  align: right;
+  /* margin-left: 50%; */
 }
 </style>
 
