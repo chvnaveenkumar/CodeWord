@@ -100,7 +100,8 @@ export default {
       file: '',
       codeWordSetData: '',
       coursesDate: '',
-      selectedCourse: ''
+      selectedCourse: '',
+      codeWordSetCount: ''
     }
   },
   created () {
@@ -131,6 +132,7 @@ export default {
         data: {
           token: window.localStorage.getItem('token'),
           courseNameKey: this.courseName,
+          codeWordSetName: this.CodeWordSetName,
           startDate: this.startDate,
           endDate: this.endDate,
           preSurveyURL: this.startSurveyurldata,
@@ -145,13 +147,15 @@ export default {
                 token: window.localStorage.getItem('token')
               }
               }).then(response => {
-              $('#addcourse').modal('hide')
-              this.fetchCourseList()
+              console.log(response.data.message)
+              if (response.data.message === 'Course student successfully!') {
+                console.log('success')
+                $('#addcourse').modal('hide')
+                this.fetchCourseList()
+              } else {
+                swal('Less Codewords', response.data.message, 'error')
+              }
             })
-              .catch(error => {
-                console.log('addcoursestudent' + error)
-                swal('Error courseStudent', error, 'error')
-              })
           }
         })
         .catch(error => {

@@ -15,7 +15,7 @@ let addCourse = (req,res) => {
     var courseModel = new CourseModel({
 courseNameKey : body.courseNameKey,
 emailKey: req.session.email,
-codeWordSetName: 'Large Codeword Set',
+codeWordSetName: body.codeWordSetName,
 Startdate: body.startDate,
 Enddate: body.endDate,
 PreSurveyURL: body.preSurveyURL,
@@ -35,9 +35,6 @@ module.exports.addCourse = addCourse;
 
 let getCourses = (req,res) => {
     CourseModel.find({emailKey: req.session.email}, function (err, courses) {
-        if(err){
-            return res.json({ code: 200, message: 'No courses created!!'});
-        }
         if (courses)
             return res.json({ code: 200, data: courses });
         }).catch((e) => {

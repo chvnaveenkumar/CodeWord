@@ -96,4 +96,7 @@ li a {
 #dropdownMenuButton{
   color: white
 }
+.active {
+  color: blue;
+}
 </style>

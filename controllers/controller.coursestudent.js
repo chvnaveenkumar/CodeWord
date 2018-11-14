@@ -1,10 +1,10 @@
 const _ = require('lodash');
-const bcrypt = require('bcryptjs');
-var jwt = require('jsonwebtoken');
 var { CourseStudentModel } = require('../model/model.coursestudent');
 var { mongoose } = require('./../config/database')
 var { CodeWord } = require('../model/model.codeword')
 let XLSX = require('xlsx')
+var Course = require('./../controllers/controller.course')
+var { CourseModel } = require('../model/model.course');
 
 let addCourseStudent = (req,res) => {
     var codewordslist =[];
@@ -23,7 +23,12 @@ let addCourseStudent = (req,res) => {
         }
         if(codewordslist.length < studetList.length )
         {
-            return res.status(200).json({ message: 'Insufficient Codewords.'});
+            CourseModel.deleteOne({courseNameKey: body.CourseNameKey,emailKey: req.session.email }, function(err,deletecourse){
+                if(err){
+                    return res.status(200).json({ code:200, message:'Deletion of course'});
+                }
+                return res.status(200).json({ code: 400, message: studetList.length +' students have '+ codewordslist.length + ' Codewords.'})
+            })
         }else {
             shuffleCodeWords = shuffle(codewordslist);
             for(var i=0;i<studetList.length;i++) {
@@ -31,8 +36,6 @@ let addCourseStudent = (req,res) => {
             studentidList.push(studentData[Object.keys(studentData)[0]])
             studentNameList.push(studentData[Object.keys(studentData)[1]])
             }
-
-            console.log(studentidList+" "+studentNameList)
             var coursestudent=[];
             for(var i=0;i<studentidList.length;i++){
                 var courseStudentModel = CourseStudentModel({
