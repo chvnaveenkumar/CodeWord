@@ -30,7 +30,7 @@
                                  <p v-if="count == 0">                          
                                  No File is uploaded. Waiting for user to upload the CodeWord Set.</p>
                                 <p v-else>
-                                    <strong>Info!</strong> There are {{ count }} codewords in the Uploaded set.</p>
+                                    There are {{ count }} codewords in the Uploaded set.</p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
