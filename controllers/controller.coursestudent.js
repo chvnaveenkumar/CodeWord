@@ -97,14 +97,33 @@ let deletecoursestudent=(req,res) =>{
 module.exports.deletecoursestudent=deletecoursestudent;
 
 let updatecoursestudent=(req,res) =>{
-    var body = _.pick(req.body,['CourseNameKey','EmailKey','StudentName','NewEmailKey']);  
-        CourseStudentModel.updateOne({CourseNameKey: body.CourseNameKey,EmailKey: body.EmailKey}, { $set: { "StudentName" : body.StudentName,"EmailKey":body.NewEmailKey } }, function(err,updatecoursestudent){
+    var body = _.pick(req.body,['CourseNameKey','EmailKey','StudentName','NewEmailKey','Newstudentkey']);  
+        CourseStudentModel.updateOne({CourseNameKey: body.CourseNameKey,EmailKey: body.EmailKey}, { $set: { "StudentName" : body.Newstudentkey,"EmailKey":body.NewEmailKey } }, function(err,updatecoursestudent){
         if(err){
             return res.json({ code:200, message:'StudentName is updated'});
         }
         return res.json({ code: 400, message:true})
     })
 }
-
 module.exports.updatecoursestudent=updatecoursestudent;
+
+let getstudentcodeword=(req,res) =>{
+        CourseStudentModel.find({EmailKey: req.session.email}, function(err,getstudentcodeword){
+        if(err){
+            return res.json({ code:200, message:'EmailKeys are fetched'});
+        }
+            if (getstudentcodeword)
+            {
+                CourseModel.find({CourseNameKey}, function(err,getstudentcodeword){
+                if(err){
+                    return res.json({ code:200,message:'URL is fetched'});
+                }
+                })
+                return res.json({ code: 200, data: getstudentcodeword });
+            }
+        }).catch((e) => {
+        return res.json({ code: 400, message: e });
+        })
+}
+module.exports.getstudentcodeword=getstudentcodeword;
 
