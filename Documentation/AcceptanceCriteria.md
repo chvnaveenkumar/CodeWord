@@ -139,4 +139,10 @@
 
 ### 3.12 - [Ujjawal Kumar] As an Instructor, while creating codeword set, If there is more than 1200 codewords in the file which is getting uploaded to create codeword set, Instructor should be notified with a pop up message that "Each codeword set has a limit of upto 1200 codewords".(Verified with client)
 
+| Acceptance Criteria                                                | Yes/No | Comments |
+|--------------------------------------------------------------------|--------|----------|
+| After successfull login, Instructor should be able to view Codeword Set list where he/she should be able to view all the codeword set created by him/her along with the two default codeword set |        |          |
+| After clicking on Create Codeword Set button at the top left corner of the page and post filling the required fields for codewordset creation and post uploading the file containing codewordset, Instructor should be able to view actual count of codewords in the uploaded file                 |        |          |
+| After filling all the required fields and clicking on Create codeword set button, If there is more than 1200 codewords in the file which was uploaded, Instructor should be notified with a pop up message that "Each codeword set has a limit of upto 1200 codewords".           |        |          |
+
 ### 3.13 - Registration is limited to 25 teachers.  (Verified with client)
