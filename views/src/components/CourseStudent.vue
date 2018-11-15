@@ -12,6 +12,9 @@
     Start Survey URL: {{ courseData.PreSurveyURL }} <br>
     End Survey URL: {{ courseData.PostSurveyURL }} <br>
     </div>
+     <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0" style="text-align:left;font-weight:bold">
+          <button><button class="btn" @click="deleteStudent(courseStudent.EmailKey)"><i class="fa fa-pencil fa-xs"></i></button></button>
+    </div>
     </div>
   </div>
 </div>
@@ -41,13 +44,37 @@
       <td scope="row">{{ courseStudent.EmailKey }}</td>
       <td>{{ courseStudent.StudentName }}</td>
       <td>{{ courseStudent.Acknowledged }} </td>
+      <a><button class="btn" @click="editStudent(courseNameData,courseStudent.EmailKey, courseStudent.StudentName)"><i class="fa fa-pencil fa-xs"></i></button></a>
+      <a><button class="btn" data-toggle="modal" @click="selectStudent(courseNameData, courseStudent.EmailKey)" data-target="#deleteStudent"><i class="fa fa-trash fa-xs"></i></button></a>
     </tr>
   </tbody>
 </table>
+<!-- Modal Delete Student -->
+<div class="modal fade" id="deleteStudent" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete Course</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h5> Course Name: {{selectCourseName}} </h5>
+        <h6> Student Email:{{ selectEmailKey}} </h6>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primart" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger" @click="deleteStudent(selectCourseName, selectEmailKey)">Delete Course</button>
+      </div>
+    </div>
+  </div>
+</div>
 </div>    
 </template>
 <script>
-/* global axios */
+import swal from 'sweetalert2'
+/* global axios $ */
 export default {
   name: 'CourseStudent',
   data () {
@@ -55,7 +82,9 @@ export default {
       courseNameData: '',
       courseStudentData: '',
       courseData: '',
-      coursesData: ''
+      coursesData: '',
+      selectCourseName: '',
+      selectEmailKey: ''
     }
   },
   created () {
@@ -104,27 +133,32 @@ export default {
         }
         console.log(this.coursesData.length + this.coursesData[0].PostSurveyURL)
       })
+    },
+    selectStudent (courseName, emailKey) {
+      this.selectCourseName = courseName
+      this.selectEmailKey = emailKey
+    },
+    deleteStudent (courseName, emailKey) {
+      console.log('courseName' + courseName)
+      axios({
+        method: 'post',
+        url: 'codeword/deletecoursestudent',
+        headers: {
+          token: window.localStorage.getItem('token')
+        },
+        data: {
+          CourseNameKey: courseName,
+          EmailKey: emailKey
+        }
+      }).then(response => {
+        if (response.data.message === 'Deleted Student Successfully!') {
+          swal('Success', response.data.message, 'success')
+          $('#deleteStudent').modal('hide')
+          this.getCourseStudentData()
+          this.getCoursesData(this.courseNameData)
+        }
+      })
     }
   }
 }
 </script>
-
-<style>
-#message {
-  margin-top: 5em;
-}
-
-.contan{
-  width: 100%;
-  background-color: #ddd;
-}
-
-.skills {
-  text-align: right;
-  padding: 10px;
-  color: white;
-}
-
-.html {width: 50%; background-color: #4CAF50;}
-
-</style>

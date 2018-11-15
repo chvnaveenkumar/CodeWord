@@ -90,7 +90,7 @@ let deletecoursestudent=(req,res) =>{
         if(err){
             return res.json({ code:200, message:'Deletion of the EmailKey'});
         }
-        return res.json({ code: 400, message:true})
+        return res.json({ code: 400, message: 'Deleted Student Successfully!'})
     })
 }
 
