@@ -44,8 +44,8 @@
       <td scope="row">{{ courseStudent.EmailKey }}</td>
       <td>{{ courseStudent.StudentName }}</td>
       <td>{{ courseStudent.Acknowledged }} </td>
-      <a><button class="btn" @click="editStudent(courseNameData,courseStudent.EmailKey, courseStudent.StudentName)"><i class="fa fa-pencil fa-xs"></i></button></a>
-      <a><button class="btn" data-toggle="modal" @click="selectStudent(courseNameData, courseStudent.EmailKey)" data-target="#deleteStudent"><i class="fa fa-trash fa-xs"></i></button></a>
+      <a><button class="btn" data-toggle="modal" @click="selectStudent(courseNameData,courseStudent.EmailKey, courseStudent.StudentName)" data-target="#editStudent"><i class="fa fa-pencil fa-xs"></i></button></a>
+      <a><button class="btn" data-toggle="modal" @click="selectStudent(courseNameData, courseStudent.EmailKey, courseStudent.StudentName)" data-target="#deleteStudent"><i class="fa fa-trash fa-xs"></i></button></a>
     </tr>
   </tbody>
 </table>
@@ -70,6 +70,27 @@
     </div>
   </div>
 </div>
+<!-- Modal Edit Student -->
+<div class="modal fade" id="editStudent" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Course</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input type="text" v-model="studentName">
+        <input type="text" v-model="selectEmailKey">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primart" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger" @click="editStudent(selectCourseName, selectEmailKey, selectStudent)">Edit Course</button>
+      </div>
+    </div>
+  </div>
+</div>
 </div>    
 </template>
 <script>
@@ -84,7 +105,10 @@ export default {
       courseData: '',
       coursesData: '',
       selectCourseName: '',
-      selectEmailKey: ''
+      selectEmailKey: '',
+      studentName: '',
+      selectedEmailKey: '',
+      selectedStudentName: ''
     }
   },
   created () {
@@ -134,12 +158,14 @@ export default {
         console.log(this.coursesData.length + this.coursesData[0].PostSurveyURL)
       })
     },
-    selectStudent (courseName, emailKey) {
+    selectStudent (courseName, emailKey, studentName) {
       this.selectCourseName = courseName
       this.selectEmailKey = emailKey
+      this.studentName = studentName
+      this.selectedEmailKey = emailKey
+      this.selectedStudentName = studentName
     },
     deleteStudent (courseName, emailKey) {
-      console.log('courseName' + courseName)
       axios({
         method: 'post',
         url: 'codeword/deletecoursestudent',
@@ -154,6 +180,29 @@ export default {
         if (response.data.message === 'Deleted Student Successfully!') {
           swal('Success', response.data.message, 'success')
           $('#deleteStudent').modal('hide')
+          this.getCourseStudentData()
+          this.getCoursesData(this.courseNameData)
+        }
+      })
+    },
+    editStudent (selectCourseName, selectEmailKey, selectStudent) {
+      axios({
+        method: 'post',
+        url: 'codeword/updatecoursestudent',
+        headers: {
+          token: window.localStorage.getItem('token')
+        },
+        data: {
+          CourseNameKey: selectCourseName,
+          EmailKey: this.selectedEmailKey,
+          StudentName: this.studentName,
+          NewEmailKey: selectEmailKey,
+          Newstudentkey: selectStudent
+        }
+      }).then(response => {
+        if (response.data.message === true) {
+          swal('Success', response.data.message, 'success')
+          $('#editStudent').modal('hide')
           this.getCourseStudentData()
           this.getCoursesData(this.courseNameData)
         }
