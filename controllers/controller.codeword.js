@@ -13,7 +13,7 @@ let XLSX = require('xlsx')
 
 let addcodewords = (req, res) => {
      var codewords = [];
-    var body = _.pick(req.body,['CodeWordSetName','Codewords']);
+    var body = _.pick(req.body,['CodeWordSetName','Codeword']);
     codewords = body.Codewords;
     codewords = _.map(codewords, function(codeword){
         return {
@@ -45,3 +45,16 @@ let getCodewords = (req,res) => {
         })
 }
 module.exports.getCodewords = getCodewords;
+
+let updatecodeword=(req,res) =>{
+    var body = _.pick(req.body,['CodeWordSetName','Codeword']);  
+    CodeWord.updateOne({CodeWordSetName: body.CodeWordSetName}, { $set: { "Codeword" : body.Codeword } }, function(err, updatecodeword){
+        if(err){
+            return res.json({ code:200, message:'StudentName is updated'});
+        }
+        return res.json({ code: 400, message:true})
+    })
+}
+
+module.exports.updatecodeword=updatecodeword;
+
