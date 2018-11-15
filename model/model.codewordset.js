@@ -15,6 +15,10 @@ var codeWordSetSchema = new Schema({
         CodeWordCreator: {
                 type: String,
                 required: true,
+        },
+        defaultRow : {
+                type: Boolean,
+                default : false
         }
 });
 

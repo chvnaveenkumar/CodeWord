@@ -46,8 +46,8 @@
         </div>
     </div>
     <!-- class="table table-striped" -->
-
-    <table id="codewordsetTable">
+    <div class="table-responsive-sm"> 
+    <table class="table" id="codewordsetTable">
         <thead>
             <tr>
                 <!-- <th scope="col">
@@ -82,6 +82,7 @@
 
         </tbody>
     </table>
+    </div>
 </div>
 </template>
 
@@ -151,6 +152,7 @@ export default {
         }
       }).then(response => {
         this.codeWordSetData = response.data.data
+        this.codeWordSetCount = []
         for (var i = 0; i < this.codeWordSetData.length; i++) {
           axios({
             method: 'post',
@@ -162,7 +164,10 @@ export default {
               CodeWordSetKey: this.codeWordSetData[i].CodeWordSetName
             }
           }).then(response => {
+            var name = response.data.data[0].CodeWordSetName
             this.codeWordSetCount.push(response.data.count)
+            this.codeWordSetData.map(d => { if (d.CodeWordSetName === name) { d.count = response.data.count } })
+            console.log(this.codeWordSetData)
           })
         }
       })
@@ -180,12 +185,13 @@ export default {
 }
 
   #codewordsetTable {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    /* font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; */
     border-collapse: collapse;
     width: 80%;
     margin-left: 10%;
     margin-top: 3%;
     margin-bottom: 10%;
+    border: 1px solid black;
 }
 
 #codewordsetTable td, #codewordsetTable th {
@@ -202,7 +208,7 @@ export default {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color: #4CAF50;
+    background-color:#212121;
     color: white;
     width: 60%;
 }

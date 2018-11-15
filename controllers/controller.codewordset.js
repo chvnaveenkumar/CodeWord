@@ -60,7 +60,7 @@ let addcodewordset = (req, res) => {
 module.exports.addcodewordset = addcodewordset;
 
 let getcodewordset = (req, res) => {
-    Codewordset.find({ CodeWordCreator: { $in: ["default", req.session.email] }}).then((codes) => {
+    Codewordset.find({ $or: [{CodeWordCreator: req.session.email}, {defaultRow: true}] } ).then((codes) => {
         if (codes)
             return res.json({ code: 200, data: codes });
     }).catch((e) => {
