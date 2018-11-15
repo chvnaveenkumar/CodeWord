@@ -71,7 +71,7 @@
 | User should able to enter Survey Start URL                                 |        |          |
 | User should able to enter Survey End URL                                   |        |          |
 
-### 2.06 [Shivani Dodla] - As an instructor, if I click on “View Students” I want to see a list of students for the selected course (emails and names) and want to see the calculated count of students in that course.
+### 2.06 [Anurag Kumar] - As an instructor, if I click on “View Students” I want to see a list of students for the selected course (emails and names) and want to see the calculated count of students in that course.
 |                                        Acceptance Criteria                                       | Yes/No | Comments |
 |:------------------------------------------------------------------------------------------------:|--------|----------|
 | If user clicks on “View Students”, list of students for the selected course should be displayed. |        |          |
