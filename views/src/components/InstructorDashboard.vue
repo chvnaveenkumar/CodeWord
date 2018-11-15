@@ -5,7 +5,7 @@
       <span class="fa fa-plus"></span> Add Course </button>
   </div>
   <div class="row" style="margin-left: 7rem;margin-right: 7rem;" >
-    <div class="col-md-3 col-lg-3 col-xs-0 col-sm-0" v-for="course in coursesDate" :key="course._id">
+    <div class="col-md-3 col-lg-3 col-xs-0 col-sm-0" v-for="course in coursesData" :key="course._id">
       <div class="card border-success mb-3" style="max-width: 20rem;margin-top: 1rem;" >
          <div class="card-header bg-info border-success" id = "boldforcourse">{{ course.courseNameKey }}</div>
         <div class="card-body text-info">
@@ -99,7 +99,7 @@ export default {
       CodeWordSetName: '',
       file: '',
       codeWordSetData: '',
-      coursesDate: '',
+      coursesData: '',
       selectedCourse: '',
       codeWordSetCount: ''
     }
@@ -189,8 +189,8 @@ export default {
           token: window.localStorage.getItem('token')
         }
       }).then(response => {
-        this.coursesDate = response.data.data
-        console.log(this.coursesDate)
+        this.coursesData = response.data.data
+        console.log(this.coursesData)
       })
     },
     getCourseName (item) {
