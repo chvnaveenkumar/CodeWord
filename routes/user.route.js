@@ -36,4 +36,5 @@ router.post('/deleteCourse', courseController.deleteCourse)
 router.post('/addcoursestudent',multer().single('file'), courseStudentController.addCourseStudent);
 router.post('/getcoursestudent', courseStudentController.getCourseStudent);
 router.post('/deletecoursestudent', courseStudentController.deletecoursestudent);
+router.post('/updatecoursestudent', courseStudentController.updatecoursestudent);
 module.exports = router;

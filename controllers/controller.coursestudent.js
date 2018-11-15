@@ -84,8 +84,6 @@ let getCourseStudent = (req,res) => {
 
 module.exports.getCourseStudent = getCourseStudent;
 
-
-
 let deletecoursestudent=(req,res) =>{
     var body = _.pick(req.body,['CourseNameKey','EmailKey']);  
     CourseStudentModel.deleteOne({CourseNameKey: body.CourseNameKey,EmailKey: body.EmailKey}, function(err,deletecoursestudent){
@@ -97,3 +95,16 @@ let deletecoursestudent=(req,res) =>{
 }
 
 module.exports.deletecoursestudent=deletecoursestudent;
+
+let updatecoursestudent=(req,res) =>{
+    var body = _.pick(req.body,['CourseNameKey','EmailKey','StudentName']);  
+        CourseStudentModel.updateOne({CourseNameKey: body.CourseNameKey,EmailKey: body.EmailKey}, { $set: { "StudentName" : body.StudentName } }, function(err,deletecoursestudent){
+        if(err){
+            return res.json({ code:200, message:'StudentName is updated'});
+        }
+        return res.json({ code: 400, message:true})
+    })
+}
+
+module.exports.updatecoursestudent=updatecoursestudent;
+
