@@ -58,3 +58,14 @@ let updatecodeword=(req,res) =>{
 
 module.exports.updatecodeword=updatecodeword;
 
+let deleteCodewords=(req,res) =>{
+    var body = _.pick(req.body,['CodeWordSetName','Codeword']);  
+    CodeWord.deleteOne({Codeword: body.Codeword}, function(err,deleteCodewords){
+        if(err){
+            return res.json({ code:200, message:'Deletion of codewords'});
+        }
+        return res.json({ code: 400, message:true})
+    })
+}
+
+module.exports.deleteCodewords=deleteCodewords;
