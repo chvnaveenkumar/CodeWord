@@ -127,7 +127,7 @@
 
 ### 3.07 - [Sravya Kancharla] As an instructor, I want to delete an existing course once it is completed. 
 
-### 3.08 - As an instructor, I want the percentage of students who have accessed their codewords in that course.
+### 3.08 - [Srimai Reddy Yanala] As an instructor, I want the percentage of students who have accessed their codewords in that course.
 
 ### 3.09 -As an instructor, I want to assign codewords for the concurrent survey in different courses.
 
