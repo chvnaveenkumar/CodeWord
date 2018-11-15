@@ -12,6 +12,7 @@ import CourseStudent from '@/components/CourseStudent'
 Vue.use(Router)
 
 export default new Router({
+  linkExactActiveClass: 'active',
   routes: [
     {
       path: '/',

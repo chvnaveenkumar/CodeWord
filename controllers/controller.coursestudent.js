@@ -1,10 +1,10 @@
 const _ = require('lodash');
-const bcrypt = require('bcryptjs');
-var jwt = require('jsonwebtoken');
 var { CourseStudentModel } = require('../model/model.coursestudent');
 var { mongoose } = require('./../config/database')
 var { CodeWord } = require('../model/model.codeword')
 let XLSX = require('xlsx')
+var Course = require('./../controllers/controller.course')
+var { CourseModel } = require('../model/model.course');
 
 let addCourseStudent = (req,res) => {
     var codewordslist =[];
@@ -23,7 +23,12 @@ let addCourseStudent = (req,res) => {
         }
         if(codewordslist.length < studetList.length )
         {
-            return res.status(200).json({ message: 'Insufficient Codewords.'});
+            CourseModel.deleteOne({courseNameKey: body.CourseNameKey,emailKey: req.session.email }, function(err,deletecourse){
+                if(err){
+                    return res.status(200).json({ code:200, message:'Deletion of course'});
+                }
+                return res.status(200).json({ code: 400, message: studetList.length +' students have '+ codewordslist.length + ' Codewords.'})
+            })
         }else {
             shuffleCodeWords = shuffle(codewordslist);
             for(var i=0;i<studetList.length;i++) {
@@ -31,8 +36,6 @@ let addCourseStudent = (req,res) => {
             studentidList.push(studentData[Object.keys(studentData)[0]])
             studentNameList.push(studentData[Object.keys(studentData)[1]])
             }
-
-            console.log(studentidList+" "+studentNameList)
             var coursestudent=[];
             for(var i=0;i<studentidList.length;i++){
                 var courseStudentModel = CourseStudentModel({
@@ -81,16 +84,47 @@ let getCourseStudent = (req,res) => {
 
 module.exports.getCourseStudent = getCourseStudent;
 
-
-
 let deletecoursestudent=(req,res) =>{
     var body = _.pick(req.body,['CourseNameKey','EmailKey']);  
     CourseStudentModel.deleteOne({CourseNameKey: body.CourseNameKey,EmailKey: body.EmailKey}, function(err,deletecoursestudent){
         if(err){
             return res.json({ code:200, message:'Deletion of the EmailKey'});
         }
-        return res.json({ code: 400, message:true})
+        return res.json({ code: 400, message: 'Deleted Student Successfully!'})
     })
 }
 
 module.exports.deletecoursestudent=deletecoursestudent;
+
+let updatecoursestudent=(req,res) =>{
+    var body = _.pick(req.body,['CourseNameKey','EmailKey','StudentName','NewEmailKey','Newstudentkey']);  
+        CourseStudentModel.updateOne({CourseNameKey: body.CourseNameKey,EmailKey: body.EmailKey}, { $set: { "StudentName" : body.Newstudentkey,"EmailKey":body.NewEmailKey } }, function(err,updatecoursestudent){
+        if(err){
+            return res.json({ code:200, message:err});
+        }
+        return res.json({ code: 400, message:true})
+    })
+}
+module.exports.updatecoursestudent=updatecoursestudent;
+
+let getstudentcodeword=(req,res) =>{
+        CourseStudentModel.find({EmailKey: 'S530742@nwmissouri.edu  '}, function(err,getstudentcodeword){
+        if(err){
+            return res.json({ code:200, message:'EmailKeys are fetched'});
+        }
+            if (getstudentcodeword)
+            {
+                console.log(getstudentcodeword[0].CourseNameKey)
+                CourseModel.find({CourseNameKey: getstudentcodeword[0].CourseNameKey}, function(err,getstudentcodeword){
+                if(err){
+                    return res.json({ code:200,message:'URL is fetched'});
+                }
+                })
+                return res.json({ code: 200, data: getstudentcodeword });
+            }
+        }).catch((e) => {
+        return res.json({ code: 400, message: e });
+        })
+}
+module.exports.getstudentcodeword=getstudentcodeword;
+

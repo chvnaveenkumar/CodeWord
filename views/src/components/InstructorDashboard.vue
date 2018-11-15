@@ -5,24 +5,29 @@
       <span class="fa fa-plus"></span> Add Course </button>
   </div>
   <div class="row" style="margin-left: 7rem;margin-right: 7rem;" >
-    <div class="col-md-3 col-lg-3 col-xs-0 col-sm-0" v-for="course in coursesDate" :key="course._id">
-      <div class="card border-success mb-3" style="max-width: 20rem;margin-top: 1rem;" >
-         <div class="card-header bg-info border-success" id = "boldforcourse">{{ course.courseNameKey }}</div>
+    <div class="col-md-3 col-lg-3 col-xs-0 col-sm-0" v-for="course in coursesData" :key="course._id">
+      <div class="card border-success mb-3 cardstyle" style="max-width: 20rem;margin-top: 1rem;" >
+         <div class="card-header bg-info border-success" id = "boldforcourse"><h4>{{ course.courseNameKey }}</h4>
+       <br>
+       <div>
+         01/01/2019 &nbsp;&nbsp; 12/31/2019 
+    </div>
+         </div>
         <div class="card-body text-info">
           <h5 class="card-title" ></h5>
           <br>
-          <p id = "sizeofDate"> <pre>{{ course.Startdate }} {{ course.Enddate }}</pre></p>      
           <a v-bind:href="course.PreSurveyURL" class="card-link">Start Survey</a>
           <a v-bind:href="course.PostSurveyURL" class="card-link">End Survey</a>
           <br>
-          <router-link :to="{ name: 'CourseStudent', params: { courseName: course.courseNameKey } }"><button class="btn "><i class="fa fa-eye fa-lg" aria-hidden="true" ></i></button></router-link>
+          <router-link :to="{ name: 'CourseStudent', params: { courseName: course.courseNameKey } }">
+          <button class="btn "><i class="fa fa-eye fa-lg" aria-hidden="true" ></i></button></router-link>
           <button class="btn" data-toggle="modal" @click="getCourseName(course.courseNameKey)" data-target="#deleteCourse"><i class="fa fa-trash fa-lg">
           </i></button>
         </div>
       </div>
     </div>
   </div>
-  <!-- Modal Delete course -->
+<!-- Modal Delete course -->
 <div class="modal fade" id="deleteCourse" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -99,8 +104,9 @@ export default {
       CodeWordSetName: '',
       file: '',
       codeWordSetData: '',
-      coursesDate: '',
-      selectedCourse: ''
+      coursesData: '',
+      selectedCourse: '',
+      codeWordSetCount: ''
     }
   },
   created () {
@@ -131,6 +137,7 @@ export default {
         data: {
           token: window.localStorage.getItem('token'),
           courseNameKey: this.courseName,
+          codeWordSetName: this.CodeWordSetName,
           startDate: this.startDate,
           endDate: this.endDate,
           preSurveyURL: this.startSurveyurldata,
@@ -145,13 +152,15 @@ export default {
                 token: window.localStorage.getItem('token')
               }
               }).then(response => {
-              $('#addcourse').modal('hide')
-              this.fetchCourseList()
+              console.log(response.data.message)
+              if (response.data.message === 'Course student successfully!') {
+                console.log('success')
+                $('#addcourse').modal('hide')
+                this.fetchCourseList()
+              } else {
+                swal('Less Codewords', response.data.message, 'error')
+              }
             })
-              .catch(error => {
-                console.log('addcoursestudent' + error)
-                swal('Error courseStudent', error, 'error')
-              })
           }
         })
         .catch(error => {
@@ -185,8 +194,8 @@ export default {
           token: window.localStorage.getItem('token')
         }
       }).then(response => {
-        this.coursesDate = response.data.data
-        console.log(this.coursesDate)
+        this.coursesData = response.data.data
+        console.log(this.coursesData)
       })
     },
     getCourseName (item) {
@@ -215,15 +224,14 @@ export default {
 #message{
     margin-top:5em;
 }
-.coursecard {
-  width: 100%;
-  margin-bottom: 1em;
-  box-sizing: border-box;
-  background-color:#41f4b2;
-}
 #boldforcourse{
-  font-weight:bold;
-  text-align: left;
+  background-color: white;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-weight: bold;
+  padding-top: 10%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  color: black
 }
 #sizeofDate {
   font-size:125%;
@@ -232,23 +240,29 @@ export default {
 #leftAlign {
   text-align: left;
 }
-.glyphicon {
-    size: 50px;
-}
-.glyphicon.glyphicon-globe {
-    font-size: 30px;
-} 
 .btn {
-    background-color: rgb(17, 132, 248);
-    border: none;
-    color: white;
-    padding: 12px 16px;
-    font-size: 16px;
-    cursor: pointer;
-}
+      
+        border-radius: 5px;
+        background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        color: darkviolet;
+   }
 
 /* Darker background on mouse-over */
 .btn:hover {
     background-color: RoyalBlue;
+}
+.cardstyle {
+  
+background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width: 260px;
+    height: 320px;
+   background-color: floralwhite;
+
+     margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 160px;
+    margin-left: 80px;
 }
 </style>

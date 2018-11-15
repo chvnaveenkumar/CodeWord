@@ -119,7 +119,7 @@
 ### 3.03 - [Naveen Kumar Chandaluri, Vyshnavi yalamareddy(Controller)] As an instructor, I want to be notified if the codeword set is too small. If the calculated count of codewords is less than the calculated count of students then I want to see a warning that says “You have n students, but the codeword set has only m words. Please select another set or click the + button next to the codeword dropdown to add a new, larger set of codewords" while creating or editing a course.
 
 
-### 3.04 - [Naveen Kumar Chandaluri]As an instructor, I want the codewords confidential and must not know or be able to see the code word each student gets.
+### 3.04 - [Naveen Kumar Chandaluri , Anurag Kumar]As an instructor, I want the codewords confidential and must not know or be able to see the code word each student gets.
 
 ### 3.05 - [Naveen Kumar Chandaluri]As a user, I want to navigate between multiple pages (Home (list of active courses), + New Course, View a Set of Codewords and Confirm Delete Course).
 
@@ -127,7 +127,7 @@
 
 ### 3.07 - [Sravya Kancharla] As an instructor, I want to delete an existing course once it is completed. 
 
-### 3.08 - As an instructor, I want the percentage of students who have accessed their codewords in that course.
+### 3.08 - [Srimai Reddy Yanala , Anurag Kumar ] As an instructor, I want the percentage of students who have accessed their codewords in that course.
 
 ### 3.09 -As an instructor, I want to assign codewords for the concurrent survey in different courses.
 
@@ -135,7 +135,7 @@
 
 ### 3.10 - {Shivani Reddy Dodla] Instructors are limited to no more than 10 active courses. (Verified with client)
 
-### 3.11 - Each course is limited to no more than 1000 students.  (Verified with client)
+### 3.11 - [Anurag Kumar]Each course is limited to no more than 1000 students.  (Verified with client)
 
 ### 3.12 - [Ujjawal Kumar] As an Instructor, while creating codeword set, If there is more than 1200 codewords in the file which is getting uploaded to create codeword set, Instructor should be notified with a pop up message that "Each codeword set has a limit of upto 1200 codewords".(Verified with client)
 
