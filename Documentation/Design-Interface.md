@@ -114,7 +114,7 @@ Link: <http://gdpcodeword.herokuapp.com/#/codewordset>
 
 #### 1) Create Codeword Set Page:
 
-![Sketch1](/Documentation/Sketches/CodewordSetDashboard.PNG)
+![Sketch1](/Documentation/Sketches/ModifiedCodewordSet-1.PNG)
 
 #### 2) Post Clicking on Create Codeword Set button:
 
@@ -126,7 +126,7 @@ Link: <http://gdpcodeword.herokuapp.com/#/codewordset>
 
 #### 4) Post Clicking on Create Codeword Set button:
 
-![sketch4](/Documentation/Sketches/CodewordSetAdded.PNG)
+![sketch4](/Documentation/Sketches/ModifiedCodewordSet-2.PNG)
 
 ### 2.05 Create Course
 
