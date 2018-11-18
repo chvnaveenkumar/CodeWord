@@ -173,4 +173,114 @@
             </script>
             
 
-      
+            <script>
+                $("#endDate").change(function() {
+                  var startDate = document.getElementById("startDate").value;
+                   
+                  var endDate = document.getElementById("endDate").value;
+              
+                  if ((Date.parse(endDate) <= Date.parse(startDate))) {
+                    alert("End date should be greater than Start date");
+                    var n = startDate.getMonth()+2;
+                var dd=startDate.getDate();
+                var ye=startDate.getYear()+1900;
+                
+                // document.getElementById("demo").innerHTML =ye+'/'+n+'/'+dd ;
+                document.getElementById("endDate").value=ye+'-'+n+'-'+dd;
+                    
+                    // document.getElementById("endDate").value = "";
+                  }
+                  if(Date.parse(endDate) <=dd.getDate){
+          alert("End date should be greater 4 months");
+                    document.getElementById("endDate").value();
+                  }
+          var d = new Date(startDate);
+                var n = startDate.getMonth()+1;
+                var dd=startDate.getDate()+1;
+                var ye=startDate.getYear()+1900;
+                
+                // document.getElementById("demo").innerHTML =ye+'/'+n+'/'+dd ;
+                document.getElementById("endDate").value=ye+'-'+n+'-'+dd;
+        var startDate = document.getElementById("startDate").value;
+                    var n = startDate.getMonth()+2;
+                var dd=startDate.getDate();
+                var ye=startDate.getYear()+1900;
+                
+                // document.getElementById("demo").innerHTML =ye+'/'+n+'/'+dd ;
+                document.getElementById("endDate").value=ye+'-'+n+'-'+dd;
+        
+        
+                });
+          
+              </script>
+              <script>
+                var date = new Date();
+          
+          var day = date.getDate();
+          var month = date.getMonth() + 1;
+          var year = date.getFullYear();
+          
+          if (month < 10) month = "" + month;
+          if (day < 10) day = "0" + day;
+          
+          var today = year + "-" + month + "-" + day;      
+          document.getElementById("endDate").value = today;
+        </script>
+              <!-- </script> --> --> -->
+              <script>
+                $("#startDate").change(function() {
+                var startDate = document.getElementById("startDate").value;
+            var d = new Date(startDate);
+            var n = d.getMonth()+1;
+            var dd=d.getDate()+1;
+            var ye=d.getYear()+1900;
+            document.getElementById("endDate").value="n+"/"+dd+"/"+ye";
+                }); -->
+              <!-- </script> -->
+         <script>
+        $(document).ready(function() {
+            $("#dataStart").datepicker({
+                minDate: '+1d',
+                changeMonth: true,
+            changeYear: true,
+            dateFormat: 'mm/dd/yy',
+                onSelect: function(date){
+                    var dates = date.split('/');
+                    var lastDate = new Date(dates[2], dates[0], 0);
+                    var y = lastDate.getFullYear(), m = lastDate.getMonth(), d = lastDate.getDate();
+                    m = ('0'+ (m+1)).slice(-2);
+                    
+                    $('#dataEnd').val(m+4+'/'+d+'/'+y);
+                }
+            });
+        });   
+        </script> -->
+         <script>
+             $("#startDate").change(function() {
+             var startDate = document.getElementById("startDate").value;
+                var d = new Date(startDate);
+                var n = d.getMonth()+1;
+                var dd=d.getDate()+1;
+                var ye=d.getYear()+1900;
+                
+                // document.getElementById("demo").innerHTML =ye+'/'+n+'/'+dd ;
+                document.getElementById("endDate").value=ye+'-'+n+'-'+dd;
+            });
+            </script>
+            <script>
+            $(document).ready(function() {
+            $("#dataStart").datepicker({
+                minDate: '+1d',
+                changeMonth: true,
+            changeYear: true,
+            dateFormat: 'mm/dd/yy',
+                onSelect: function(date){
+                    var dates = date.split('/');
+                    var lastDate = new Date(dates[2], dates[0], 0);
+                    var y = lastDate.getFullYear(), m = lastDate.getMonth(), d = lastDate.getDate();
+                    m = ('0'+ (m+1)).slice(-2);
+                    
+                    $('#dataEnd').val(m+4+'/'+d+'/'+y);
+                }
+            });
+        });</script>
