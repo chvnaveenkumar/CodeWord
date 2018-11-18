@@ -5,6 +5,8 @@ var { CodeWord } = require('../model/model.codeword')
 let XLSX = require('xlsx')
 var Course = require('./../controllers/controller.course')
 var { CourseModel } = require('../model/model.course');
+const fs = require('fs');
+
 
 let addCourseStudent = (req,res) => {
     var codewordslist =[];
@@ -70,13 +72,18 @@ function shuffle(array) {
 module.exports.addCourseStudent = addCourseStudent;
 
 let getCourseStudent = (req,res) => {
+    //code by anurag
+    let drCaseDataRead = fs.readFileSync('./data/data.coursestudent.json'); 
+    let drCaseData = JSON.parse(drCaseDataRead);  
+    
     var body = _.pick(req.body,['CourseNameValue']);    
     CourseStudentModel.find({CourseNameKey: body.CourseNameValue}, function (err, courseStudents) {
         if(err){
             return res.json({ code: 200, message: 'No courses created!!'});
         }
         if (courseStudents)
-            return res.json({ code: 200, data: courseStudents });
+        //code by anurag
+            return res.json({ code: 200, data: courseStudents, drCaseData : _.filter(drCaseData, { 'CourseNameKey':  body.CourseNameValue}) });
         }).catch((e) => {
         return res.json({ code: 400, message: e });
         })

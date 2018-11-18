@@ -28,7 +28,7 @@ PostSurveyURL: body.postSurveyURL
         if (error.name === 'MongoError' && error.code === 11000) {
             return res.status(403).json({message:'There was a duplicate course error'});
         }
-        return res.status(403).json({ message:e.message});
+        return res.status(403).json({ message:error.message});
     })
 }
 module.exports.addCourse = addCourse;

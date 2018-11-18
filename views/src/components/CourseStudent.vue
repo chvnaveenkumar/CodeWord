@@ -40,6 +40,16 @@
         </thead>
 
   <tbody>
+
+
+    <tr v-for="courseStudent in drCaseStudentData" :key="courseStudent._id">
+      <td scope="row">{{ courseStudent.EmailKey }}</td>
+      <td>{{ courseStudent.Name }}</td>
+      <td>{{ courseStudent.Acknowledged }} </td>
+      <a><button class="btn" data-toggle="modal" @click="selectStudent(courseNameData,courseStudent.EmailKey, courseStudent.StudentName)" data-target="#editStudent"><i class="fa fa-pencil fa-xs"></i></button></a>
+      <a><button class="btn" data-toggle="modal" @click="selectStudent(courseNameData, courseStudent.EmailKey, courseStudent.StudentName)" data-target="#deleteStudent"><i class="fa fa-trash fa-xs"></i></button></a>
+    </tr>
+    
     <tr v-for="courseStudent in courseStudentData" :key="courseStudent._id">
       <td scope="row">{{ courseStudent.EmailKey }}</td>
       <td>{{ courseStudent.StudentName }}</td>
@@ -104,6 +114,7 @@ export default {
       courseStudentData: '',
       courseData: '',
       coursesData: '',
+      drCaseStudentData: [],
       selectCourseName: '',
       selectEmailKey: '',
       studentName: '',
@@ -136,6 +147,7 @@ export default {
         }
       }).then(response => {
         this.courseStudentData = response.data.data
+        this.drCaseStudentData = response.data.drCaseData
       })
     },
     getCoursesData (courseNameData) {
