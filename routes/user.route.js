@@ -40,4 +40,5 @@ router.post('/getcoursestudent', courseStudentController.getCourseStudent);
 router.get('/getstudentcodeword', courseStudentController.getstudentcodeword);
 router.post('/deletecoursestudent', courseStudentController.deletecoursestudent);
 router.post('/updatecoursestudent', courseStudentController.updatecoursestudent);
+router.post('/updateCourse', courseController.updateCourse)
 module.exports = router;
