@@ -135,8 +135,8 @@
 #### 2.08 As an instructor, I want one codeword from the specified set to be randomly assigned to only one student and each student must have a unique codeword in that course and each codeword can only be issued once in each course (or not used at all) when a course is created.
 |                                  Acceptance Criteria                                  | Yes/No | Comments |
 |:-------------------------------------------------------------------------------------:|--------|----------|
-| User should be able to see the unique codeword for each student in every course       |        |    No      |
-| when course is created user should be able to see the unique codeword in each course. |        |     No     |
+| User should be able to see the unique codeword for each student in every course       |        |    V      |
+| when course is created user should be able to see the unique codeword in each course. |        |    V     |
 
 
 # MVP 3 (Fri-9-Nov)
