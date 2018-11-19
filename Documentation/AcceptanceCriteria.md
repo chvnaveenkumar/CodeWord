@@ -40,9 +40,9 @@
 
 | Acceptance Criteria                                                                         | Yes/No | Comments |
 |---------------------------------------------------------------------------------------------|--------|----------|
-| After filling information in Sign In page and clicking on Sign In button, he/she should be able to view a message “Sign In successful. Redirecting to Instructor’s Dashboard”                                   |        |          |
-| After successful Sign In, he/she should be able to view Instructor’s dashboard where they can view all the courses he/she are added to along with list of active courses.                                                                                         |        |          |
-| After clicking on courses, instructor should be able to view course details like Course Name and Code-words assigned for respective course|        |          |
+| After filling information in Sign In page and clicking on Sign In button, he/she should be able to view a message “Sign In successful. Redirecting to Instructor’s Dashboard”                                   |        |    V     |
+| After successful Sign In, he/she should be able to view Instructor’s dashboard where they can view all the courses he/she are added to along with list of active courses.                                                                                         |        |     V     |
+| After clicking on courses, instructor should be able to view course details like Course Name and Code-words assigned for respective course|        |     V     |
 
 ### 2.03 [ Ujjawal Kumar, Srimai Reddy Yanala(Data,Model,Controller)]- As an instructor, I want to create a new set of code words by entering a unique name for the codeword set and uploading a plain text file that contains a new list of codewords.
 
@@ -124,8 +124,8 @@
 
 |                       Acceptance Criteria                      | Yes/No | Comments |
 |:--------------------------------------------------------------:|--------|----------|
-| User should be able to see the list of his/her courses.        |        |          |
-| User should be able to see the courses which are active today. |        |          |
+| User should be able to see the list of his/her courses.        |        |    V      |
+| User should be able to see the courses which are active today. |        |    V      |
 
 ### 3.03 - [Naveen Kumar Chandaluri, Vyshnavi yalamareddy(Controller)] As an instructor, I want to be notified if the codeword set is too small. If the calculated count of codewords is less than the calculated count of students then I want to see a warning that says “You have n students, but the codeword set has only m words. 
 
@@ -160,8 +160,8 @@
 
 |                        Acceptance Criteria                        | Yes/No | Comments |
 |:-----------------------------------------------------------------:|--------|----------|
-| User should be able see the delete button for each course.        |        |          |
-| When clicked on delete button, existing course should be deleted. |        |          |
+| User should be able see the delete button for each course.        |        |   V      |
+| When clicked on delete button, existing course should be deleted. |        |   V       |
 
 ### 3.08 - [Srimai Reddy Yanala , Anurag Kumar ] As an instructor, I want the percentage of students who have accessed their codewords in that course.
 
