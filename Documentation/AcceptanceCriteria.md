@@ -213,3 +213,36 @@
 | After filling all the required fields and clicking on Create codeword set button, If there is more than 1200 codewords in the file which was uploaded, Instructor should be notified with a pop up message that "Each codeword set has a limit of upto 1200 codewords".           |        |          |
 
 #### 3.13 - Registration is limited to 25 teachers.  (Verified with client)
+
+### GDP2
+
+#### Administrator Functionality
+
+1. As an administrator, I want to add new instructors, see the list of instructors and instructor surveys details. 
+2. As an administrator, I want to be able to add new sets of codewords. (Already provided above - can be deleted)
+3. As an administrator, I want the option to hide the Instructor checkbox when new users are registering.
+4. As an administrator, I want a set of instructions on how to deploy a new instance of the application (e.g. an administrator at another institution OR if each instructor has their own deployed version.)
+5. As a User, I want to search the name of particular courses in a search bar.
+6. As a User, I want Email id to be auto-filled.
+
+#### Core Version
+
+1. As an instructor, I want to delete a student from an active course (e.g. when they drop). 
+2. As an instructor, I want to add a student to an active course (e.g. when a new student transfers in)
+    a. The unique name,
+    b. The codeword set name with the calculated count of words,
+    c. The start date and end date,
+    d. The pre-survey URL and the post-survey URLAs an instructor, I want to edit a course by clicking "Edit" on a course entry. I want to be able to modify:
+3. As an instructor, I want to delete an active course, by clicking the delete button on the view courses screen, getting a confirmation box that says" Are you sure you want to delete course <Unique Name>? This action is not reversible. with two buttons "Delete", "Cancel". If I click cancel, I return to the view courses screen, if I click "Delete", the course will be deleted (along with the course student list). New!. 
+
+### Team Roles
+
+1. One client manager - the single point of contact for your team and the client. Sends meeting invitations and thank yous, keeps notes, makes sure the team effort is always directly in line with client needs and priorities. (Ujjwal Kumar, Sreelekha Vijaya, Naveen Chandaluri)
+2. One 2-3 person architectural team - the team that makes technical implementation decisions, responsible for choosing a platform, tools, frameworks, libraries, and deployment. Must work closely with the design team and be active in the development effort. (Naveen Chandaluri, Shivani Reddy, Sravya Kancharla )
+3. One 2-person project management team - responsible for making sure that team deadlines are assigned and progress is being made and reported to mentors and the client lead. (Sreelekha Vijaya, Shivani Reddy, Sravya Kancharla)
+4. 2-3 scrum masters - responsible for making sure tasks are entered, assigned, completed, and tracked correctly in Jira. (Ujjwal Kumar, Anurag Kumar)
+5. One 2-3 person UX design team - responsible for choosing colors and branding for the app and verifying the look & feel with the client manager). Must work closely with architecture and development teams. (Vyshnavi Yalamareddy, Srimai Yanala)
+6. One 6-8 person development team - to plan and perform the implementation - must verify all work and get specific screen sketches approved before beginning implementation. (Anurag Kumar, Naveen Kumar Nuggu, Vyshnavi Yalamareddy, Srimai Yanala, Naveen Chandaluri, Sravya Kancharla, Shivani Reddy)
+7. 2-3 people for the marketing team - responsible for creating a one-page flyer advertising your app, your clients, and your team and periodically posting project-related progress and events on social media. (Sreelekha Vijaya, Anurag Kumar)
+8. 2-3 people for quality assurance and client acceptance. Make sure developers include unit tests and perform critical testing before and after all releases. Ensure the app meets all acceptance criteria. (Chaithanya Cherukuru, Naveen Kumar Nuggu)
+9. Database - Cheruku Chaitanya, Naveen Kumar Nuggu
