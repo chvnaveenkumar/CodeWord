@@ -1,8 +1,13 @@
 <template>
 <div class="container-fluid" style="margin-top:5em" >
+      <div class="row" >
             <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0">
-                <h3 style="font-weight:bold"> Course Name: {{ courseNameData }} </h3>
+                <h3 style="font-weight:bold;text-align:left"> Course Name: {{ courseNameData }} </h3>
             </div>
+            <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0">
+                <h3 style="font-weight:bold;text-align:right"> Acknowledged Status: {{ ( acknowledgedTrue / acknowledgedTotal )  * 100}} %</h3>
+            </div>
+      </div>
  <div class="card">
   <div class="card-body">
     <div class="row" >
@@ -41,7 +46,6 @@
 
   <tbody>
 
-
     <tr v-for="courseStudent in drCaseStudentData" :key="courseStudent._id">
       <td scope="row">{{ courseStudent.EmailKey }}</td>
       <td>{{ courseStudent.Name }}</td>
@@ -51,9 +55,10 @@
     </tr>
     
     <tr v-for="courseStudent in courseStudentData" :key="courseStudent._id">
+      {{ courseStudentData.length }}
       <td scope="row">{{ courseStudent.EmailKey }}</td>
       <td>{{ courseStudent.StudentName }}</td>
-      <td>{{ courseStudent.Acknowledged }} </td>
+      <td> {{ courseStudent.Acknowledged }} </td>
       <a><button class="btn" data-toggle="modal" @click="selectStudent(courseNameData,courseStudent.EmailKey, courseStudent.StudentName)" data-target="#editStudent"><i class="fa fa-pencil fa-xs"></i></button></a>
       <a><button class="btn" data-toggle="modal" @click="selectStudent(courseNameData, courseStudent.EmailKey, courseStudent.StudentName)" data-target="#deleteStudent"><i class="fa fa-trash fa-xs"></i></button></a>
     </tr>
@@ -85,7 +90,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Edit Course</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Edit Student</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -119,7 +124,10 @@ export default {
       selectEmailKey: '',
       studentName: '',
       selectedEmailKey: '',
-      selectedStudentName: ''
+      selectedStudentName: '',
+      acknowledgedTotal: 0,
+      acknowledgedTrue: 0,
+      acknowledgedFalse: 0
     }
   },
   created () {
@@ -147,6 +155,14 @@ export default {
         }
       }).then(response => {
         this.courseStudentData = response.data.data
+        for (var i = 0; i < this.courseStudentData.length; i++) {
+          this.acknowledgedTotal = this.acknowledgedTotal + 1
+          if (this.courseStudentData[0].Acknowledged === true) {
+            this.acknowledgedTrue = this.acknowledgedTrue + 1
+          } else {
+            this.acknowledgedFalse = this.acknowledgedFalse + 1
+          }
+        }
         this.drCaseStudentData = response.data.drCaseData
       })
     },
@@ -159,12 +175,9 @@ export default {
         }
       }).then(response => {
         this.coursesData = response.data.data
-        console.log('coursenamedate' + this.coursesData)
         for (var index = 0; index < this.coursesData.length; index++) {
-          console.log('i' + index)
           if (this.coursesData[index].courseNameKey === courseNameData) {
             this.courseData = this.coursesData[index]
-            console.log(this.courseData.PostSurveyURL + 'test')
           }
         }
         console.log(this.coursesData.length + this.coursesData[0].PostSurveyURL)
