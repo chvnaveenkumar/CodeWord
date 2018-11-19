@@ -1,9 +1,14 @@
+/**
+ * @author Naveenkumar Nuggu
+ */
 <template>
     <div id="codeWord" class="container-fluid" style="margin-top:5em">
-    <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
+    <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
       
-                <!-- Button trigger modal -->
-<button type="button" class="btn btn-success" title="Create CodeWord" data-toggle="modal" data-target="#createcodeword">
+<h1>Softseventy(70)</h1>
+<div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">
+   <!-- Button trigger modal -->
+<button type="button" class="btn btn-success" title="Create CodeWord" data-toggle="modal" data-target="#createcodeword" style="float:left">
    <span class="fa fa-plus"></span> Add codeword
 </button>
 
@@ -19,18 +24,10 @@
         </button>
       </div>
       <div class="modal-body">
-       <div class="dropdown">
-  <button class="btn btn-primary dropdown-toggle  text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Select Codeword set
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
-    <a class="dropdown-item" href="#" v-for="(code) in codeWordSetData" :key="code._id" > {{ code.CodeWordSetName }} </a>
-    
-  </div>
-</div>
+       
 
 <div class="form-group text-left">
-                                Upload Cordword Set(Excel)
+                                Upload Cordwords(Excel)
                                 <input type="file"  name="file" ref="myFile"  class="form-control-file" id="exampleFormControlFile1" style="margin-top:.2em"
                                     required>
                             </div>
@@ -43,14 +40,6 @@
     </div>
   </div>
 </div>
-  <div class="dropdown">
-  <button class="btn btn-primary dropdown-toggle  text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Select Codeword set
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
-    <a class="dropdown-item" href="#" v-for="(code) in codeWordSetData" :key="code._id" > {{ code.CodeWordSetName }} </a>
-    
-  </div>
 </div>
 <table class="table">
                 <thead class="thead-dark">
@@ -63,18 +52,21 @@
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
-                        <td>Codeword1</td>
-                         <td><a href="#" class="btn btn-warning"> Edit </a></td>
+                        <td > Codeword1</td>
+                         <td><a href="#" class="btn btn-warning"> <i class="fas fa-pencil-alt"></i> </a> <button type="button" class="btn btn-danger" title="Create CodeWord" data-toggle="modal" data-target="#" style="marging-left:10px">
+   <i class="fas fa-trash"></i>
+</button> 
+</td>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
                         <td>Codeword2</td>
-                        <td><a href="#" class="btn btn-warning"> Edit </a></td>
+                        <td><a href="#" class="btn btn-warning"> <i class="fas fa-pencil-alt"></i> </a> <a href="#" class="btn btn-danger" style="marging-left:10px"> <i class="fas fa-trash"></i> </a> </td>
                     </tr>
                     <tr>
                         <th scope="row">3</th>
                         <td>Codeword3</td>
-                        <td><a href="#" class="btn btn-warning"> Edit </a></td>
+                        <td><a href="#" class="btn btn-warning"> <i class="fas fa-pencil-alt"></i> </a> <a href="#" class="btn btn-danger" style="marging-left:10px"> <i class="fas fa-trash"></i> </a> </td>
                     </tr>
 
                 </tbody>
@@ -138,3 +130,4 @@ export default {
   }
 }
 </script>
+
