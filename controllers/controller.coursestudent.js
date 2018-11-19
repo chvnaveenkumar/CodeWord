@@ -29,7 +29,7 @@ let addCourseStudent = (req,res) => {
                 if(err){
                     return res.status(200).json({ code:200, message:'Deletion of course'});
                 }
-                return res.status(200).json({ code: 400, message: studetList.length +' students have '+ codewordslist.length + ' Codewords.'})
+                return res.status(200).json({ code: 400,  message: 'You have '+studetList.length +' students, But the codewordset has only '+ codewordslist.length + ' Codewords.'})
             })
         }else {
             shuffleCodeWords = shuffle(codewordslist);
