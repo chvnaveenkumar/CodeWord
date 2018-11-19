@@ -25,27 +25,9 @@
 
 <body>
        
-    <div id="app-2"  class="card border-success mb-3" style="max-width: 20rem;margin-top: 1rem;">
-        <div class="card-header bg-info border-success" id = "boldforcourse"><h3><b>Course Name
-        </b></h3>
-        <br>
-       <div>
-         01/01/2019 &nbsp;&nbsp; 12/31/2019
-      
-    </div>
-        </div>
-        
-     
-        <div class="card-body text-info">
-         <h5 class="card-title" ></h5>
-                
-         <a class="card-link">Start Survey</a> &nbsp;
-         <a class="card-link">End Survey</a>
-       <br>
-        <button class="btn "><i class="fa fa-eye fa-2x" aria-hidden="true" ></i></button> 
-         <button class="btn" data-toggle="modal" data-target="#deleteCourse"><i class="fa fa-trash fa-2x">
-         </i></button>
-       </div>
+    <div id="app-2" style="max-width: 20rem;margin-top: 1rem;">
+    Enter Number : <input type="date" v-model="message" >
+    <p>{{ new Date(message) .getMonth() + 1 }}</p>
      </div>
    
      
@@ -56,53 +38,8 @@
     var app2 = new Vue({
   el: '#app-2',
   data: {
-    courseName: '',
-      startDate: '',
-      endDate: '',
-      startSurveyurldata: '',
-      endSurveyurldata: '',
-      CodeWordSetName: '',
-      file: '',
-      codeWordSetData: '',
-      coursesDate: '',
-      selectedCourse: '',
-      codeWordSetCount: ''  }
+    message: ''
+  }
 })
 </script>
-<style>
-    .btn {
-       
-        border-radius: 5px;
-        background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        color: darkviolet
-
-        
-    }
-
-    #boldforcourse{
-        background-color: white;
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-   
-    font-weight: bold;
-    padding-top: 20%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-    color: black
-    
-    }
-    #app-2{
-        background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        width: 260px;
-    height: 320px;
-   background-color: floralwhite;
-
-     margin-top: 100px;
-    margin-bottom: 100px;
-    margin-right: 160px;
-    margin-left: 80px;
-    }
-   
-</style>
 </html>

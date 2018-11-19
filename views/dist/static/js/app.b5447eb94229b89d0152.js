@@ -1321,6 +1321,34 @@ webpackJsonp([1],[
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* global axios $ */
@@ -1337,7 +1365,11 @@ webpackJsonp([1],[
       selectEmailKey: '',
       studentName: '',
       selectedEmailKey: '',
-      selectedStudentName: ''
+      selectedStudentName: '',
+      acknowledgedTotal: 0,
+      acknowledgedTrue: 0,
+      acknowledgedFalse: 0,
+      courseInfo: ''
     };
   },
   created: function created() {
@@ -1368,6 +1400,14 @@ webpackJsonp([1],[
         }
       }).then(function (response) {
         _this.courseStudentData = response.data.data;
+        for (var i = 0; i < _this.courseStudentData.length; i++) {
+          _this.acknowledgedTotal = _this.acknowledgedTotal + 1;
+          if (_this.courseStudentData[0].Acknowledged === true) {
+            _this.acknowledgedTrue = _this.acknowledgedTrue + 1;
+          } else {
+            _this.acknowledgedFalse = _this.acknowledgedFalse + 1;
+          }
+        }
         _this.drCaseStudentData = response.data.drCaseData;
       });
     },
@@ -1382,12 +1422,9 @@ webpackJsonp([1],[
         }
       }).then(function (response) {
         _this2.coursesData = response.data.data;
-        console.log('coursenamedate' + _this2.coursesData);
         for (var index = 0; index < _this2.coursesData.length; index++) {
-          console.log('i' + index);
           if (_this2.coursesData[index].courseNameKey === courseNameData) {
             _this2.courseData = _this2.coursesData[index];
-            console.log(_this2.courseData.PostSurveyURL + 'test');
           }
         }
         console.log(_this2.coursesData.length + _this2.coursesData[0].PostSurveyURL);
@@ -1446,6 +1483,27 @@ webpackJsonp([1],[
           _this4.getCoursesData(_this4.courseNameData);
         }
       });
+    },
+    editCourse: function editCourse(courseId) {
+      axios({
+        method: 'post',
+        url: 'codeword/updateCourse',
+        headers: {
+          token: window.localStorage.getItem('token')
+        },
+        data: {
+          id: courseId,
+          Startdate: this.courseInfo.Startdate,
+          Enddate: this.courseInfo.Enddate,
+          PreSurveyURL: this.courseInfo.PreSurveyURL,
+          PostSurveyURL: this.courseInfo.PostSurveyURL
+        }
+      }).then(function (response) {
+        $('#editCourse').modal('hide');
+      });
+    },
+    selectCourse: function selectCourse(courseDetails) {
+      this.courseInfo = courseDetails;
     }
   }
 });
@@ -2151,7 +2209,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_CourseStudent_vue__ = __webpack_require__(27);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_61e2fd66_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CourseStudent_vue__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_7fd11301_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CourseStudent_vue__ = __webpack_require__(103);
 var normalizeComponent = __webpack_require__(2)
 /* script */
 
@@ -2168,7 +2226,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_CourseStudent_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_61e2fd66_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CourseStudent_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_7fd11301_hasScoped_false_transformToRequire_video_src_poster_source_src_img_src_image_xlink_href_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CourseStudent_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -2183,8 +2241,8 @@ var Component = normalizeComponent(
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container-fluid",staticStyle:{"margin-top":"5em"}},[_c('div',{staticClass:"col-md-6 col-lg-6 col-xs-0 col-sm-0"},[_c('h3',{staticStyle:{"font-weight":"bold"}},[_vm._v(" Course Name: "+_vm._s(_vm.courseNameData)+" ")])]),_vm._v(" "),_c('div',{staticClass:"card"},[_c('div',{staticClass:"card-body"},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-md-6 col-lg-6 col-xs-0 col-sm-0",staticStyle:{"text-align":"left","font-weight":"bold"}},[_vm._v("\r\n    Start Date: "+_vm._s(_vm.courseData.Startdate)+" "),_c('br'),_vm._v("\r\n    End Date: "+_vm._s(_vm.courseData.Enddate)+" "),_c('br'),_vm._v("\r\n    Start Survey URL: "+_vm._s(_vm.courseData.PreSurveyURL)+" "),_c('br'),_vm._v("\r\n    End Survey URL: "+_vm._s(_vm.courseData.PostSurveyURL)+" "),_c('br')]),_vm._v(" "),_c('div',{staticClass:"col-md-6 col-lg-6 col-xs-0 col-sm-0",staticStyle:{"text-align":"left","font-weight":"bold"}},[_c('button',[_c('button',{staticClass:"btn",on:{"click":function($event){_vm.deleteStudent(_vm.courseStudent.EmailKey)}}},[_c('i',{staticClass:"fa fa-pencil fa-xs"})])])])])])]),_vm._v(" "),_c('table',{staticClass:"table table-striped col-md-6 col-lg-6 col-xs-0 col-sm-0 ",attrs:{"align":"right"}},[_vm._m(0),_vm._v(" "),_c('tbody',[_vm._l((_vm.drCaseStudentData),function(courseStudent){return _c('tr',{key:courseStudent._id},[_c('td',{attrs:{"scope":"row"}},[_vm._v(_vm._s(courseStudent.EmailKey))]),_vm._v(" "),_c('td',[_vm._v(_vm._s(courseStudent.Name))]),_vm._v(" "),_c('td',[_vm._v(_vm._s(courseStudent.Acknowledged)+" ")]),_vm._v(" "),_c('a',[_c('button',{staticClass:"btn",attrs:{"data-toggle":"modal","data-target":"#editStudent"},on:{"click":function($event){_vm.selectStudent(_vm.courseNameData,courseStudent.EmailKey, courseStudent.StudentName)}}},[_c('i',{staticClass:"fa fa-pencil fa-xs"})])]),_vm._v(" "),_c('a',[_c('button',{staticClass:"btn",attrs:{"data-toggle":"modal","data-target":"#deleteStudent"},on:{"click":function($event){_vm.selectStudent(_vm.courseNameData, courseStudent.EmailKey, courseStudent.StudentName)}}},[_c('i',{staticClass:"fa fa-trash fa-xs"})])])])}),_vm._v(" "),_vm._l((_vm.courseStudentData),function(courseStudent){return _c('tr',{key:courseStudent._id},[_c('td',{attrs:{"scope":"row"}},[_vm._v(_vm._s(courseStudent.EmailKey))]),_vm._v(" "),_c('td',[_vm._v(_vm._s(courseStudent.StudentName))]),_vm._v(" "),_c('td',[_vm._v(_vm._s(courseStudent.Acknowledged)+" ")]),_vm._v(" "),_c('a',[_c('button',{staticClass:"btn",attrs:{"data-toggle":"modal","data-target":"#editStudent"},on:{"click":function($event){_vm.selectStudent(_vm.courseNameData,courseStudent.EmailKey, courseStudent.StudentName)}}},[_c('i',{staticClass:"fa fa-pencil fa-xs"})])]),_vm._v(" "),_c('a',[_c('button',{staticClass:"btn",attrs:{"data-toggle":"modal","data-target":"#deleteStudent"},on:{"click":function($event){_vm.selectStudent(_vm.courseNameData, courseStudent.EmailKey, courseStudent.StudentName)}}},[_c('i',{staticClass:"fa fa-trash fa-xs"})])])])})],2)]),_vm._v(" "),_c('div',{staticClass:"modal fade",attrs:{"id":"deleteStudent","tabindex":"-1","role":"dialog","aria-labelledby":"exampleModalLabel","aria-hidden":"true"}},[_c('div',{staticClass:"modal-dialog",attrs:{"role":"document"}},[_c('div',{staticClass:"modal-content"},[_vm._m(1),_vm._v(" "),_c('div',{staticClass:"modal-body"},[_c('h5',[_vm._v(" Course Name: "+_vm._s(_vm.selectCourseName)+" ")]),_vm._v(" "),_c('h6',[_vm._v(" Student Email:"+_vm._s(_vm.selectEmailKey)+" ")])]),_vm._v(" "),_c('div',{staticClass:"modal-footer"},[_c('button',{staticClass:"btn btn-primart",attrs:{"type":"button","data-dismiss":"modal"}},[_vm._v("Close")]),_vm._v(" "),_c('button',{staticClass:"btn btn-danger",attrs:{"type":"button"},on:{"click":function($event){_vm.deleteStudent(_vm.selectCourseName, _vm.selectEmailKey)}}},[_vm._v("Delete Course")])])])])]),_vm._v(" "),_c('div',{staticClass:"modal fade",attrs:{"id":"editStudent","tabindex":"-1","role":"dialog","aria-labelledby":"exampleModalLabel","aria-hidden":"true"}},[_c('div',{staticClass:"modal-dialog",attrs:{"role":"document"}},[_c('div',{staticClass:"modal-content"},[_vm._m(2),_vm._v(" "),_c('div',{staticClass:"modal-body"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.studentName),expression:"studentName"}],attrs:{"type":"text"},domProps:{"value":(_vm.studentName)},on:{"input":function($event){if($event.target.composing){ return; }_vm.studentName=$event.target.value}}}),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.selectEmailKey),expression:"selectEmailKey"}],attrs:{"type":"text"},domProps:{"value":(_vm.selectEmailKey)},on:{"input":function($event){if($event.target.composing){ return; }_vm.selectEmailKey=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"modal-footer"},[_c('button',{staticClass:"btn btn-primart",attrs:{"type":"button","data-dismiss":"modal"}},[_vm._v("Close")]),_vm._v(" "),_c('button',{staticClass:"btn btn-danger",attrs:{"type":"button"},on:{"click":function($event){_vm.editStudent(_vm.selectCourseName, _vm.selectEmailKey, _vm.selectStudent)}}},[_vm._v("Edit Course")])])])])])])}
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('thead',[_c('tr',[_c('th',[_c('h4',[_c('u',[_vm._v("Email")])])]),_vm._v(" "),_c('th',[_c('h4',[_c('u',[_vm._v("Name")])])]),_vm._v(" "),_c('th',[_c('h4',[_c('u',[_vm._v("Acknowledged")])])])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"modal-header"},[_c('h5',{staticClass:"modal-title",attrs:{"id":"exampleModalLabel"}},[_vm._v("Delete Course")]),_vm._v(" "),_c('button',{staticClass:"close",attrs:{"type":"button","data-dismiss":"modal","aria-label":"Close"}},[_c('span',{attrs:{"aria-hidden":"true"}},[_vm._v("×")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"modal-header"},[_c('h5',{staticClass:"modal-title",attrs:{"id":"exampleModalLabel"}},[_vm._v("Edit Course")]),_vm._v(" "),_c('button',{staticClass:"close",attrs:{"type":"button","data-dismiss":"modal","aria-label":"Close"}},[_c('span',{attrs:{"aria-hidden":"true"}},[_vm._v("×")])])])}]
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container-fluid",staticStyle:{"margin-top":"5em"}},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-md-6 col-lg-6 col-xs-0 col-sm-0"},[_c('h3',{staticStyle:{"font-weight":"bold","text-align":"left"}},[_vm._v(" Course Name: "+_vm._s(_vm.courseNameData)+" ")])]),_vm._v(" "),_c('div',{staticClass:"col-md-6 col-lg-6 col-xs-0 col-sm-0"},[_c('h3',{staticStyle:{"font-weight":"bold","text-align":"right"}},[_vm._v(" Acknowledged Status: "+_vm._s(( _vm.acknowledgedTrue / _vm.acknowledgedTotal )  * 100)+" %")])])]),_vm._v(" "),_c('div',{staticClass:"card"},[_c('div',{staticClass:"card-body"},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-md-6 col-lg-6 col-xs-0 col-sm-0",staticStyle:{"text-align":"left","font-weight":"bold"}},[_vm._v("\r\n    Start Date: "+_vm._s(_vm.courseData.Startdate)+" "),_c('br'),_vm._v("\r\n    End Date: "+_vm._s(_vm.courseData.Enddate)+" "),_c('br'),_vm._v("\r\n    Start Survey URL: "+_vm._s(_vm.courseData.PreSurveyURL)+" "),_c('br'),_vm._v("\r\n    End Survey URL: "+_vm._s(_vm.courseData.PostSurveyURL)+" "),_c('br')]),_vm._v(" "),_c('div',{staticClass:"col-md-6 col-lg-6 col-xs-0 col-sm-0",staticStyle:{"text-align":"left","font-weight":"bold"}},[_c('button',[_c('button',{staticClass:"btn",attrs:{"data-toggle":"modal","data-target":"#editCourse"},on:{"click":function($event){_vm.selectCourse(_vm.courseData)}}},[_c('i',{staticClass:"fa fa-pencil fa-xs"})])])])])])]),_vm._v(" "),_c('table',{staticClass:"table table-striped col-md-6 col-lg-6 col-xs-0 col-sm-0 ",attrs:{"align":"right"}},[_vm._m(0),_vm._v(" "),_c('tbody',[_vm._l((_vm.drCaseStudentData),function(courseStudent){return _c('tr',{key:courseStudent._id},[_c('td',{attrs:{"scope":"row"}},[_vm._v(_vm._s(courseStudent.EmailKey))]),_vm._v(" "),_c('td',[_vm._v(_vm._s(courseStudent.Name))]),_vm._v(" "),_c('td',[_vm._v(_vm._s(courseStudent.Acknowledged)+" ")]),_vm._v(" "),_c('a',[_c('button',{staticClass:"btn",attrs:{"data-toggle":"modal","data-target":"#editStudent"},on:{"click":function($event){_vm.selectStudent(_vm.courseNameData,courseStudent.EmailKey, courseStudent.StudentName)}}},[_c('i',{staticClass:"fa fa-pencil fa-xs"})])]),_vm._v(" "),_c('a',[_c('button',{staticClass:"btn",attrs:{"data-toggle":"modal","data-target":"#deleteStudent"},on:{"click":function($event){_vm.selectStudent(_vm.courseNameData, courseStudent.EmailKey, courseStudent.StudentName)}}},[_c('i',{staticClass:"fa fa-trash fa-xs"})])])])}),_vm._v(" "),_vm._l((_vm.courseStudentData),function(courseStudent){return _c('tr',{key:courseStudent._id},[_vm._v("\r\n      "+_vm._s(_vm.courseStudentData.length)+"\r\n      "),_c('td',{attrs:{"scope":"row"}},[_vm._v(_vm._s(courseStudent.EmailKey))]),_vm._v(" "),_c('td',[_vm._v(_vm._s(courseStudent.StudentName))]),_vm._v(" "),_c('td',[_vm._v(" "+_vm._s(courseStudent.Acknowledged)+" ")]),_vm._v(" "),_c('a',[_c('button',{staticClass:"btn",attrs:{"data-toggle":"modal","data-target":"#editStudent"},on:{"click":function($event){_vm.selectStudent(_vm.courseNameData,courseStudent.EmailKey, courseStudent.StudentName)}}},[_c('i',{staticClass:"fa fa-pencil fa-xs"})])]),_vm._v(" "),_c('a',[_c('button',{staticClass:"btn",attrs:{"data-toggle":"modal","data-target":"#deleteStudent"},on:{"click":function($event){_vm.selectStudent(_vm.courseNameData, courseStudent.EmailKey, courseStudent.StudentName)}}},[_c('i',{staticClass:"fa fa-trash fa-xs"})])])])})],2)]),_vm._v(" "),_c('div',{staticClass:"modal fade",attrs:{"id":"deleteStudent","tabindex":"-1","role":"dialog","aria-labelledby":"exampleModalLabel","aria-hidden":"true"}},[_c('div',{staticClass:"modal-dialog",attrs:{"role":"document"}},[_c('div',{staticClass:"modal-content"},[_vm._m(1),_vm._v(" "),_c('div',{staticClass:"modal-body"},[_c('h5',[_vm._v(" Course Name: "+_vm._s(_vm.selectCourseName)+" ")]),_vm._v(" "),_c('h6',[_vm._v(" Student Email:"+_vm._s(_vm.selectEmailKey)+" ")])]),_vm._v(" "),_c('div',{staticClass:"modal-footer"},[_c('button',{staticClass:"btn btn-primart",attrs:{"type":"button","data-dismiss":"modal"}},[_vm._v("Close")]),_vm._v(" "),_c('button',{staticClass:"btn btn-danger",attrs:{"type":"button"},on:{"click":function($event){_vm.deleteStudent(_vm.selectCourseName, _vm.selectEmailKey)}}},[_vm._v("Delete Course")])])])])]),_vm._v(" "),_c('div',{staticClass:"modal fade",attrs:{"id":"editStudent","tabindex":"-1","role":"dialog","aria-labelledby":"exampleModalLabel","aria-hidden":"true"}},[_c('div',{staticClass:"modal-dialog",attrs:{"role":"document"}},[_c('div',{staticClass:"modal-content"},[_vm._m(2),_vm._v(" "),_c('div',{staticClass:"modal-body"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.studentName),expression:"studentName"}],attrs:{"type":"text"},domProps:{"value":(_vm.studentName)},on:{"input":function($event){if($event.target.composing){ return; }_vm.studentName=$event.target.value}}}),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.selectEmailKey),expression:"selectEmailKey"}],attrs:{"type":"text"},domProps:{"value":(_vm.selectEmailKey)},on:{"input":function($event){if($event.target.composing){ return; }_vm.selectEmailKey=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"modal-footer"},[_c('button',{staticClass:"btn btn-primart",attrs:{"type":"button","data-dismiss":"modal"}},[_vm._v("Close")]),_vm._v(" "),_c('button',{staticClass:"btn btn-danger",attrs:{"type":"button"},on:{"click":function($event){_vm.editStudent(_vm.selectCourseName, _vm.selectEmailKey, _vm.selectStudent)}}},[_vm._v("Edit Course")])])])])]),_vm._v(" "),_c('div',{staticClass:"modal fade",attrs:{"id":"editCourse","tabindex":"-1","role":"dialog","aria-labelledby":"exampleModalLabel","aria-hidden":"true"}},[_c('div',{staticClass:"modal-dialog",attrs:{"role":"document"}},[_c('div',{staticClass:"modal-content"},[_vm._m(3),_vm._v(" "),_c('div',{staticClass:"modal-body"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.courseInfo.Startdate),expression:"courseInfo.Startdate"}],attrs:{"type":"text"},domProps:{"value":(_vm.courseInfo.Startdate)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.courseInfo, "Startdate", $event.target.value)}}}),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.courseInfo.Enddate),expression:"courseInfo.Enddate"}],attrs:{"type":"text"},domProps:{"value":(_vm.courseInfo.Enddate)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.courseInfo, "Enddate", $event.target.value)}}}),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.courseInfo.PreSurveyURL),expression:"courseInfo.PreSurveyURL"}],attrs:{"type":"text"},domProps:{"value":(_vm.courseInfo.PreSurveyURL)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.courseInfo, "PreSurveyURL", $event.target.value)}}}),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.courseInfo.PostSurveyURL),expression:"courseInfo.PostSurveyURL"}],attrs:{"type":"text"},domProps:{"value":(_vm.courseInfo.PostSurveyURL)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.courseInfo, "PostSurveyURL", $event.target.value)}}})]),_vm._v(" "),_c('div',{staticClass:"modal-footer"},[_c('button',{staticClass:"btn btn-primart",attrs:{"type":"button","data-dismiss":"modal"}},[_vm._v("Close")]),_vm._v(" "),_c('button',{staticClass:"btn btn-danger",attrs:{"type":"button"},on:{"click":function($event){_vm.editCourse(_vm.courseInfo._id)}}},[_vm._v("Edit Course")])])])])])])}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('thead',[_c('tr',[_c('th',[_c('h4',[_c('u',[_vm._v("Email")])])]),_vm._v(" "),_c('th',[_c('h4',[_c('u',[_vm._v("Name")])])]),_vm._v(" "),_c('th',[_c('h4',[_c('u',[_vm._v("Acknowledged")])])])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"modal-header"},[_c('h5',{staticClass:"modal-title",attrs:{"id":"exampleModalLabel"}},[_vm._v("Delete Course")]),_vm._v(" "),_c('button',{staticClass:"close",attrs:{"type":"button","data-dismiss":"modal","aria-label":"Close"}},[_c('span',{attrs:{"aria-hidden":"true"}},[_vm._v("×")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"modal-header"},[_c('h5',{staticClass:"modal-title",attrs:{"id":"exampleModalLabel"}},[_vm._v("Edit Student")]),_vm._v(" "),_c('button',{staticClass:"close",attrs:{"type":"button","data-dismiss":"modal","aria-label":"Close"}},[_c('span',{attrs:{"aria-hidden":"true"}},[_vm._v("×")])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"modal-header"},[_c('h5',{staticClass:"modal-title",attrs:{"id":"exampleModalLabel"}},[_vm._v("Edit Course")]),_vm._v(" "),_c('button',{staticClass:"close",attrs:{"type":"button","data-dismiss":"modal","aria-label":"Close"}},[_c('span',{attrs:{"aria-hidden":"true"}},[_vm._v("×")])])])}]
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
@@ -2239,4 +2297,4 @@ var store = new __WEBPACK_IMPORTED_MODULE_1_Vuex__["a" /* default */].Store({
 
 /***/ })
 ],[29]);
-//# sourceMappingURL=app.44623ae667553e9a9c5b.js.map
+//# sourceMappingURL=app.b5447eb94229b89d0152.js.map
