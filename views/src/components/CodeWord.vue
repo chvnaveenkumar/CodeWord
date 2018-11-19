@@ -41,3 +41,38 @@
   </div>
 </div>
 </div>
+<table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Codewords</th>
+                        <th scope="col">Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td > Codeword1</td>
+                         <td><a href="#" class="btn btn-warning"> <i class="fas fa-pencil-alt"></i> </a> <button type="button" class="btn btn-danger" title="Create CodeWord" data-toggle="modal" data-target="#" style="marging-left:10px">
+   <i class="fas fa-trash"></i>
+</button> 
+</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Codeword2</td>
+                        <td><a href="#" class="btn btn-warning"> <i class="fas fa-pencil-alt"></i> </a> <a href="#" class="btn btn-danger" style="marging-left:10px"> <i class="fas fa-trash"></i> </a> </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Codeword3</td>
+                        <td><a href="#" class="btn btn-warning"> <i class="fas fa-pencil-alt"></i> </a> <a href="#" class="btn btn-danger" style="marging-left:10px"> <i class="fas fa-trash"></i> </a> </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+    </div>
+    </div>  
+</template>
