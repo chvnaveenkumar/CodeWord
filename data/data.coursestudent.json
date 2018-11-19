@@ -1,0 +1,800 @@
+[
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531519@nwmissouri.edu",
+        "Name":"Yashwanth Reddy Bommineni",
+        "Codeword":"Africa",
+        "Acknowledged":true
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s530742@nwmissouri.edu",
+        "Name":"Naveen Kumar Chandaluri",
+        "Codeword":"Almond",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531495@nwmissouri.edu",
+        "Name":"Chaithanya Cherukuru",
+        "Codeword":"Anger",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531367@nwmissouri.edu",
+        "Name":"Sai Sirisha Devineni",
+        "Codeword":"America",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531496@nwmissouri.edu",
+        "Name":"Shivani Reddy Dodla",
+        "Codeword":"Bravo",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531369@nwmissouri.edu",
+        "Name":"Girish Guntuku",
+        "Codeword":"Bank",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531499@nwmissouri.edu",
+        "Name":"Saicharan Gurudu",
+        "Codeword":"Bounce",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531500@nwmissouri.edu",
+        "Name":"Sravya Kancharla",
+        "Codeword":"Bigger",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531372@nwmissouri.edu",
+        "Name":"Anurag Kumar",
+        "Codeword":"Computer",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s530473@nwmissouri.edu",
+        "Name":"Ujjawal Kumar",
+        "Codeword":"Cancer",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531439@nwmissouri.edu",
+        "Name":"Dattu Bhargav Medarametla",
+        "Codeword":"Chair",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531503@nwmissouri.edu",
+        "Name":"Santosh Sekhar Muchkur Bogarajula",
+        "Codeword":"Center",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531373@nwmissouri.edu",
+        "Name":"Naveenkumar Nuggu",
+        "Codeword":"Dagger",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531507@nwmissouri.edu",
+        "Name":"Vijay Kumar Tupakula",
+        "Codeword":"Desk",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531508@nwmissouri.edu",
+        "Name":"Satya Sai Ram Vankina",
+        "Codeword":"Dim",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531382@nwmissouri.edu",
+        "Name":"Sreelekha Vijaya",
+        "Codeword":"Dog",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"mwoolery@nwmissouri.edu",
+        "Name":"Matthew Woolery",
+        "Codeword":"Echo",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531383@nwmissouri.edu",
+        "Name":"Vyshnavi Yalamareddy",
+        "Codeword":"Elvis",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-444-01",
+        "EmailKey":"s531384@nwmissouri.edu",
+        "Name":"Srimai Reddy Yanala",
+        "Codeword":"Extra",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531519@nwmissouri.edu",
+        "Name":"Yashwanth Reddy Bommineni",
+        "Codeword":"Engage",
+        "Acknowledged":true
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s530742@nwmissouri.edu",
+        "Name":"Naveen Kumar Chandaluri",
+        "Codeword":"France",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531495@nwmissouri.edu",
+        "Name":"Chaithanya Cherukuru",
+        "Codeword":"Foxtrot",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531367@nwmissouri.edu",
+        "Name":"Sai Sirisha Devineni",
+        "Codeword":"Fancy",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531496@nwmissouri.edu",
+        "Name":"Shivani Reddy Dodla",
+        "Codeword":"Feline",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531369@nwmissouri.edu",
+        "Name":"Girish Guntuku",
+        "Codeword":"Golf",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531499@nwmissouri.edu",
+        "Name":"Saicharan Gurudu",
+        "Codeword":"Ginger",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531500@nwmissouri.edu",
+        "Name":"Sravya Kancharla",
+        "Codeword":"Globe",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531372@nwmissouri.edu",
+        "Name":"Anurag Kumar",
+        "Codeword":"Germany",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s530473@nwmissouri.edu",
+        "Name":"Ujjawal Kumar",
+        "Codeword":"Hotel",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531439@nwmissouri.edu",
+        "Name":"Dattu Bhargav Medarametla",
+        "Codeword":"Hanger",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531503@nwmissouri.edu",
+        "Name":"Santosh Sekhar Muchkur Bogarajula",
+        "Codeword":"Helmet",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531373@nwmissouri.edu",
+        "Name":"Naveenkumar Nuggu",
+        "Codeword":"Hidden",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531507@nwmissouri.edu",
+        "Name":"Vijay Kumar Tupakula",
+        "Codeword":"Ice",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531508@nwmissouri.edu",
+        "Name":"Satya Sai Ram Vankina",
+        "Codeword":"Inkspot",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531382@nwmissouri.edu",
+        "Name":"Sreelekha Vijaya",
+        "Codeword":"Impulse",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"mwoolery@nwmissouri.edu",
+        "Name":"Matthew Woolery",
+        "Codeword":"Igor",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531383@nwmissouri.edu",
+        "Name":"Vyshnavi Yalamareddy",
+        "Codeword":"Kilo",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-691-05",
+        "EmailKey":"s531384@nwmissouri.edu",
+        "Name":"Srimai Reddy Yanala",
+        "Codeword":"Kangaroo",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531519@nwmissouri.edu",
+        "Name":"Yashwanth Reddy Bommineni",
+        "Codeword":"Kennedy",
+        "Acknowledged":true
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s530742@nwmissouri.edu",
+        "Name":"Naveen Kumar Chandaluri",
+        "Codeword":"Lemon",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531495@nwmissouri.edu",
+        "Name":"Chaithanya Cherukuru",
+        "Codeword":"Lamp",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531367@nwmissouri.edu",
+        "Name":"Sai Sirisha Devineni",
+        "Codeword":"London",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531496@nwmissouri.edu",
+        "Name":"Shivani Reddy Dodla",
+        "Codeword":"Line",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531369@nwmissouri.edu",
+        "Name":"Girish Guntuku",
+        "Codeword":"Mink",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531499@nwmissouri.edu",
+        "Name":"Saicharan Gurudu",
+        "Codeword":"Mumbai",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531500@nwmissouri.edu",
+        "Name":"Sravya Kancharla",
+        "Codeword":"Money",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531372@nwmissouri.edu",
+        "Name":"Anurag Kumar",
+        "Codeword":"Market",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s530473@nwmissouri.edu",
+        "Name":"Ujjawal Kumar",
+        "Codeword":"Native",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531439@nwmissouri.edu",
+        "Name":"Dattu Bhargav Medarametla",
+        "Codeword":"Next",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531503@nwmissouri.edu",
+        "Name":"Santosh Sekhar Muchkur Bogarajula",
+        "Codeword":"November",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531373@nwmissouri.edu",
+        "Name":"Naveenkumar Nuggu",
+        "Codeword":"Nickel",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531507@nwmissouri.edu",
+        "Name":"Vijay Kumar Tupakula",
+        "Codeword":"Object",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531508@nwmissouri.edu",
+        "Name":"Satya Sai Ram Vankina",
+        "Codeword":"Option",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531382@nwmissouri.edu",
+        "Name":"Sreelekha Vijaya",
+        "Codeword":"Onion",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"mwoolery@nwmissouri.edu",
+        "Name":"Matthew Woolery",
+        "Codeword":"Ogre",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531383@nwmissouri.edu",
+        "Name":"Vyshnavi Yalamareddy",
+        "Codeword":"Papa",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-542-02",
+        "EmailKey":"s531384@nwmissouri.edu",
+        "Name":"Srimai Reddy Yanala",
+        "Codeword":"Pencil",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531519@nwmissouri.edu",
+        "Name":"Yashwanth Reddy Bommineni",
+        "Codeword":"Purple",
+        "Acknowledged":true
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s530742@nwmissouri.edu",
+        "Name":"Naveen Kumar Chandaluri",
+        "Codeword":"Pill",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531495@nwmissouri.edu",
+        "Name":"Chaithanya Cherukuru",
+        "Codeword":"Quick",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531367@nwmissouri.edu",
+        "Name":"Sai Sirisha Devineni",
+        "Codeword":"Quasar",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531496@nwmissouri.edu",
+        "Name":"Shivani Reddy Dodla",
+        "Codeword":"Quest",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531369@nwmissouri.edu",
+        "Name":"Girish Guntuku",
+        "Codeword":"Romance",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531499@nwmissouri.edu",
+        "Name":"Saicharan Gurudu",
+        "Codeword":"Redwood",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531500@nwmissouri.edu",
+        "Name":"Sravya Kancharla",
+        "Codeword":"Rose",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531372@nwmissouri.edu",
+        "Name":"Anurag Kumar",
+        "Codeword":"Ring",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s530473@nwmissouri.edu",
+        "Name":"Ujjawal Kumar",
+        "Codeword":"Steve",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531439@nwmissouri.edu",
+        "Name":"Dattu Bhargav Medarametla",
+        "Codeword":"Sender",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531503@nwmissouri.edu",
+        "Name":"Santosh Sekhar Muchkur Bogarajula",
+        "Codeword":"Saturn",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531373@nwmissouri.edu",
+        "Name":"Naveenkumar Nuggu",
+        "Codeword":"Singer",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531507@nwmissouri.edu",
+        "Name":"Vijay Kumar Tupakula",
+        "Codeword":"Twilight",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531508@nwmissouri.edu",
+        "Name":"Satya Sai Ram Vankina",
+        "Codeword":"Titanic",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531382@nwmissouri.edu",
+        "Name":"Sreelekha Vijaya",
+        "Codeword":"Tower",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"mwoolery@nwmissouri.edu",
+        "Name":"Matthew Woolery",
+        "Codeword":"Tank",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531383@nwmissouri.edu",
+        "Name":"Vyshnavi Yalamareddy",
+        "Codeword":"Uniform",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-04",
+        "EmailKey":"s531384@nwmissouri.edu",
+        "Name":"Srimai Reddy Yanala",
+        "Codeword":"Ultimate",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531519@nwmissouri.edu",
+        "Name":"Yashwanth Reddy Bommineni",
+        "Codeword":"Victory",
+        "Acknowledged":false
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s530742@nwmissouri.edu",
+        "Name":"Naveen Kumar Chandaluri",
+        "Codeword":"Vagrant",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531495@nwmissouri.edu",
+        "Name":"Chaithanya Cherukuru",
+        "Codeword":"Velvet",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531367@nwmissouri.edu",
+        "Name":"Sai Sirisha Devineni",
+        "Codeword":"Voice",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531496@nwmissouri.edu",
+        "Name":"Shivani Reddy Dodla",
+        "Codeword":"Whiskey",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531369@nwmissouri.edu",
+        "Name":"Girish Guntuku",
+        "Codeword":"Witch",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531499@nwmissouri.edu",
+        "Name":"Saicharan Gurudu",
+        "Codeword":"Water",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531500@nwmissouri.edu",
+        "Name":"Sravya Kancharla",
+        "Codeword":"Well",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531372@nwmissouri.edu",
+        "Name":"Anurag Kumar",
+        "Codeword":"Xray",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s530473@nwmissouri.edu",
+        "Name":"Ujjawal Kumar",
+        "Codeword":"Yankee",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531439@nwmissouri.edu",
+        "Name":"Dattu Bhargav Medarametla",
+        "Codeword":"Yesterday",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531503@nwmissouri.edu",
+        "Name":"Santosh Sekhar Muchkur Bogarajula",
+        "Codeword":"Young",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531373@nwmissouri.edu",
+        "Name":"Naveenkumar Nuggu",
+        "Codeword":"Zap",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531507@nwmissouri.edu",
+        "Name":"Vijay Kumar Tupakula",
+        "Codeword":"Zulu",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531508@nwmissouri.edu",
+        "Name":"Satya Sai Ram Vankina",
+        "Codeword":"Zombie",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531382@nwmissouri.edu",
+        "Name":"Sreelekha Vijaya",
+        "Codeword":"Zebra",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"mwoolery@nwmissouri.edu",
+        "Name":"Matthew Woolery",
+        "Codeword":"Vagrant",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531383@nwmissouri.edu",
+        "Name":"Vyshnavi Yalamareddy",
+        "Codeword":"Helmet",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-06",
+        "EmailKey":"s531384@nwmissouri.edu",
+        "Name":"Srimai Reddy Yanala",
+        "Codeword":"Computer",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531519@nwmissouri.edu",
+        "Name":"Yashwanth Reddy Bommineni",
+        "Codeword":"Cancer",
+        "Acknowledged":false
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s530742@nwmissouri.edu",
+        "Name":"Naveen Kumar Chandaluri",
+        "Codeword":"Chair",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531495@nwmissouri.edu",
+        "Name":"Chaithanya Cherukuru",
+        "Codeword":"Center",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531367@nwmissouri.edu",
+        "Name":"Sai Sirisha Devineni",
+        "Codeword":"Dagger",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531496@nwmissouri.edu",
+        "Name":"Shivani Reddy Dodla",
+        "Codeword":"Desk",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531369@nwmissouri.edu",
+        "Name":"Girish Guntuku",
+        "Codeword":"Dim",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531499@nwmissouri.edu",
+        "Name":"Saicharan Gurudu",
+        "Codeword":"Dog",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531500@nwmissouri.edu",
+        "Name":"Sravya Kancharla",
+        "Codeword":"Echo",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531372@nwmissouri.edu",
+        "Name":"Anurag Kumar",
+        "Codeword":"Elvis",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s530473@nwmissouri.edu",
+        "Name":"Ujjawal Kumar",
+        "Codeword":"Extra",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531439@nwmissouri.edu",
+        "Name":"Dattu Bhargav Medarametla",
+        "Codeword":"Engage",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531503@nwmissouri.edu",
+        "Name":"Santosh Sekhar Muchkur Bogarajula",
+        "Codeword":"France",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531373@nwmissouri.edu",
+        "Name":"Naveenkumar Nuggu",
+        "Codeword":"Foxtrot",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531507@nwmissouri.edu",
+        "Name":"Vijay Kumar Tupakula",
+        "Codeword":"Fancy",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531508@nwmissouri.edu",
+        "Name":"Satya Sai Ram Vankina",
+        "Codeword":"Feline",
+        "Acknowledged":false 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531382@nwmissouri.edu",
+        "Name":"Sreelekha Vijaya",
+        "Codeword":"Golf",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"mwoolery@nwmissouri.edu",
+        "Name":"Matthew Woolery",
+        "Codeword":"Ginger",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531383@nwmissouri.edu",
+        "Name":"Vyshnavi Yalamareddy",
+        "Codeword":"Globe",
+        "Acknowledged":true 
+    },
+    {
+        "CourseNameKey":"2018 Fall 44-563-07",
+        "EmailKey":"s531384@nwmissouri.edu",
+        "Name":"Srimai Reddy Yanala",
+        "Codeword":"Germany",
+        "Acknowledged":false 
+    }
+]

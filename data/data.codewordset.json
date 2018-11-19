@@ -1,0 +1,11 @@
+[
+    {
+    "CodeWordSetName": "Hoot Original set",
+    "emailKey": "hoot@nwmissouri.edu"
+    },
+    {
+    "CodeWordSetName": "Large set",
+    "emailKey": ["dcase@nwmissouri.edu", "asdasd"]
+    }
+
+]
