@@ -18,7 +18,7 @@
     End Survey URL: {{ courseData.PostSurveyURL }} <br>
     </div>
      <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0" style="text-align:left;font-weight:bold">
-          <button><button class="btn" @click="deleteStudent(courseStudent.EmailKey)"><i class="fa fa-pencil fa-xs"></i></button></button>
+          <button><button class="btn" data-toggle="modal" data-target="#editCourse" @click="selectCourse(courseData)"><i class="fa fa-pencil fa-xs"></i></button></button>
     </div>
     </div>
   </div>
@@ -106,6 +106,29 @@
     </div>
   </div>
 </div>
+<!-- Modal Edit Course -->
+<div class="modal fade" id="editCourse" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Course</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input type="text" v-model="courseInfo.Startdate">
+        <input type="text" v-model="courseInfo.Enddate">
+        <input type="text" v-model="courseInfo.PreSurveyURL">
+        <input type="text" v-model="courseInfo.PostSurveyURL">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primart" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger" @click="editCourse(courseInfo._id)">Edit Course</button>
+      </div>
+    </div>
+  </div>
+</div>
 </div>    
 </template>
 <script>
@@ -127,7 +150,8 @@ export default {
       selectedStudentName: '',
       acknowledgedTotal: 0,
       acknowledgedTrue: 0,
-      acknowledgedFalse: 0
+      acknowledgedFalse: 0,
+      courseInfo: ''
     }
   },
   created () {
@@ -232,6 +256,27 @@ export default {
           this.getCoursesData(this.courseNameData)
         }
       })
+    },
+    editCourse (courseId) {
+      axios({
+        method: 'post',
+        url: 'codeword/updateCourse',
+        headers: {
+          token: window.localStorage.getItem('token')
+        },
+        data: {
+          id: courseId,
+          Startdate: this.courseInfo.Startdate,
+          Enddate: this.courseInfo.Enddate,
+          PreSurveyURL: this.courseInfo.PreSurveyURL,
+          PostSurveyURL: this.courseInfo.PostSurveyURL
+        }
+      }).then(response => {
+        $('#editCourse').modal('hide')
+      })
+    },
+    selectCourse (courseDetails) {
+      this.courseInfo = courseDetails
     }
   }
 }
