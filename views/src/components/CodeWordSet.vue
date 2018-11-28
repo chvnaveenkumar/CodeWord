@@ -4,14 +4,23 @@
         <button type="button" class="btn btn-success" title="Create CodeWord Set" data-toggle="modal" data-target="#addcourse">
                     <span class="fa fa-plus"></span> Create Codeword Set
                 </button>
+                
         <div class="modal fade" id="addcourse" tabindex="-1" role="dialog" aria-labelledby="addcourseLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content" style="width:fit-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="addcourseLabel">Create Codeword Set</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                        </button>
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span> -->
+                                    <button class="btn btn-info btn-sm"><i class="fa fa-eye"></i> Hint</button>
+                       
+                        <!-- <b-btn id="popoverButton-open" class="btn btn-info btn-sm" variant="primary"><i class="fa fa-eye"></i> Hint</b-btn>
+                        <b-popover show target="popoverButton-open" title="Hints for codewordset">
+                          I start open
+                        </b-popover>             -->
+                        <!-- </button> -->
+                        <!-- <btn v-popover="{title:'Title', content:'Popover content'}" type="primary">Popover</btn> -->
+
                     </div>
                     <div class="modal-body">
                         <form>
