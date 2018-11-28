@@ -10,7 +10,7 @@
          <div class="card-header bg-info border-success" id = "boldforcourse"><h4>{{ course.courseNameKey }}</h4>
        <br>
        <div>
-         01/01/2019 &nbsp;&nbsp; 12/31/2019 
+         {{ course.Startdate }} &nbsp;&nbsp; {{ course.Enddate }} 
     </div>
          </div>
         <div class="card-body text-info">
@@ -63,8 +63,10 @@
               <input type="text" class="form-control" pattern=".{6,}" id="courseName" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip"  title="Atleast 6 characters" required>
             </div>
             <div class="row">
-                <div class="col tooltip-test" title="Start Date"> Start Date:<input type="date" class="form-control" id="startDate" name="startDate" placeholder="Start Date" required/></div>
-                <div class="col tooltip-test" title="End Date"> End Date:<input type="date" class="form-control" id="endDate"  name="endDate" placeholder="End Date" required></div>
+              <!-- :value="startDate && startDate.toISOString().split('T')[0]" -->
+              <!--  v-model="startDate" -->
+                <div class="col tooltip-test" title="Start Date"> Start Date:<input type="date" class="form-control" v-model="startDate" placeholder="Start Date" required/></div>
+                <div class="col tooltip-test" title="End Date"> End Date:<input type="date" class="form-control" v-model="endDate"  name="endDate" placeholder="End Date" required></div>
             </div>
             <div class="form-group">
                 <input type="file" ref="file" v-on:change="handleFileUpload()" class="form-control-file" id="file" style="margin-top:1em" required>
@@ -98,7 +100,7 @@ export default {
     return {
       courseName: '',
       startDate: '',
-      endDate: '',
+      endDate: new Date(),
       startSurveyurldata: '',
       endSurveyurldata: '',
       CodeWordSetName: '',
@@ -110,11 +112,19 @@ export default {
     }
   },
   created () {
+    this.startDate = new Date() && new Date().toISOString().split('T')[0]
     // fetch the data when the view is created and the data is
     // already being observed
+    // this.endDate = new Date()
+    // this.endDate.setMonth(this.endDate.getMonth() + 4)
     this.fetchCourseList()
   },
   watch: {
+    startDate (value) {
+      let start = new Date(value)
+      console.log(start.getMonth())
+      this.endDate = new Date(start.setMonth(start.getMonth() + 4)) && new Date(start.setMonth(start.getMonth() + 4)).toISOString().split('T')[0]
+    },
     // call again the method if the route changes
     '$route': 'fetchCourseList'
   },
