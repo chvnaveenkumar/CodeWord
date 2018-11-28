@@ -18,13 +18,13 @@
     End Survey URL: {{ courseData.PostSurveyURL }} <br>
     </div>
      <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0" style="text-align:left;font-weight:bold">
-          <button><button class="btn" data-toggle="modal" data-target="#editCourse" @click="selectCourse(courseData)"><i class="fa fa-pencil fa-xs"></i></button></button>
+          <button class="btn" data-toggle="modal" data-target="#editCourse" @click="selectCourse(courseData)"><i class="fa fa-pencil fa-xs"></i></button>
     </div>
     </div>
   </div>
 </div>
  <table class="table table-striped col-md-6 col-lg-6 col-xs-0 col-sm-0 " align="right">
- <thead>
+ <thead class="thead-dark">
             <tr>
                 <th>
                     <h4>
@@ -45,7 +45,6 @@
         </thead>
 
   <tbody>
-
     <tr v-for="courseStudent in drCaseStudentData" :key="courseStudent._id">
       <td scope="row">{{ courseStudent.EmailKey }}</td>
       <td>{{ courseStudent.Name }}</td>
@@ -55,7 +54,6 @@
     </tr>
     
     <tr v-for="courseStudent in courseStudentData" :key="courseStudent._id">
-      {{ courseStudentData.length }}
       <td scope="row">{{ courseStudent.EmailKey }}</td>
       <td>{{ courseStudent.StudentName }}</td>
       <td> {{ courseStudent.Acknowledged }} </td>
@@ -117,10 +115,23 @@
         </button>
       </div>
       <div class="modal-body">
-        <input type="text" v-model="courseInfo.Startdate">
-        <input type="text" v-model="courseInfo.Enddate">
-        <input type="text" v-model="courseInfo.PreSurveyURL">
-        <input type="text" v-model="courseInfo.PostSurveyURL">
+        <div class="container-fluid">
+        <div class="row">
+          <div class=" col-md-6">
+        Start Date: </div>
+          <div class="col-md-6">
+        <input type="date" class="form-control" v-model="courseInfo.Startdate"></div></div>
+        <div class="row">
+          <div class=" col-md-6">
+        End Date: </div><div class="col-md-6"><input type="date" class="form-control" v-model="courseInfo.Enddate"></div>
+        </div>
+             <div class="row">
+          <div class=" col-md-6">
+        Start Survey URL: </div> <div class="col-md-6"><input type="text" class="form-control" v-model="courseInfo.PreSurveyURL"></div></div>
+          <div class="row">
+          <div class=" col-md-6">
+        End Survey URL: </div> <div class="col-md-6"><input type="text" class="form-control" v-model="courseInfo.PostSurveyURL"></div></div>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primart" data-dismiss="modal">Close</button>
@@ -281,3 +292,17 @@ export default {
   }
 }
 </script>
+
+<style>
+.btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: RoyalBlue;
+}
+</style>
