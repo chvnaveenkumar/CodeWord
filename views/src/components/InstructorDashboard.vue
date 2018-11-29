@@ -65,7 +65,7 @@
             <div class="row">
               <!-- :value="startDate && startDate.toISOString().split('T')[0]" -->
               <!--  v-model="startDate" -->
-                <div class="col tooltip-test" title="Start Date"> Start Date:<input type="date" class="form-control" v-model="startDate" placeholder="Start Date" required/></div>
+                <div class="col tooltip-test" title="Start Date"> Start Date:<input type="date" name="startDate" class="form-control" v-model="startDate" placeholder="Start Date" required/></div>
                 <div class="col tooltip-test" title="End Date"> End Date:<input type="date" class="form-control" v-model="endDate"  name="endDate" placeholder="End Date" required></div>
             </div>
             <div class="form-group">
@@ -100,7 +100,7 @@ export default {
     return {
       courseName: '',
       startDate: '',
-      endDate: new Date(),
+      endDate: '',
       startSurveyurldata: '',
       endSurveyurldata: '',
       CodeWordSetName: '',
@@ -122,6 +122,7 @@ export default {
   watch: {
     startDate (value) {
       let start = new Date(value)
+      this.startDate = new Date(start) && new Date(start).toISOString().split('T')[0]
       console.log(start.getMonth())
       this.endDate = new Date(start.setMonth(start.getMonth() + 4)) && new Date(start.setMonth(start.getMonth() + 4)).toISOString().split('T')[0]
     },
@@ -132,6 +133,7 @@ export default {
     CreateCourse () {
       let data = new FormData(document.querySelector('form'))
       this.courseName = data.get('courseName')
+      console.log(data.get('startDate'))
       this.startDate = data.get('startDate')
       this.endDate = data.get('endDate')
       this.startSurveyurldata = data.get('startSurveyurl')

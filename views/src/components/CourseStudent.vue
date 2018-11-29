@@ -18,7 +18,7 @@
     End Survey URL: {{ courseData.PostSurveyURL }} <br>
     </div>
      <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0" style="text-align:left;font-weight:bold">
-          <button class="btn" data-toggle="modal" data-target="#editCourse" @click="selectCourse(courseData)"><i class="fa fa-pencil fa-xs"></i></button>
+          <button class="btn" data-toggle="modal" data-target="#editCourse" @click="selectCourse(courseData)">Edit <i class="fa fa-pencil fa-xs"></i></button>
     </div>
     </div>
   </div>
@@ -38,7 +38,7 @@
                 </th>
 				<th>
                     <h4>
-                        <u>Acknowledged</u>
+                        <u>CodeWord</u>
                     </h4>
                 </th>
             </tr>
@@ -48,7 +48,7 @@
     <tr v-for="courseStudent in drCaseStudentData" :key="courseStudent._id">
       <td scope="row">{{ courseStudent.EmailKey }}</td>
       <td>{{ courseStudent.Name }}</td>
-      <td>{{ courseStudent.Acknowledged }} </td>
+      <td>{{ courseStudent.Codeword }}</td>
       <a><button class="btn" data-toggle="modal" @click="selectStudent(courseNameData,courseStudent.EmailKey, courseStudent.StudentName)" data-target="#editStudent"><i class="fa fa-pencil fa-xs"></i></button></a>
       <a><button class="btn" data-toggle="modal" @click="selectStudent(courseNameData, courseStudent.EmailKey, courseStudent.StudentName)" data-target="#deleteStudent"><i class="fa fa-trash fa-xs"></i></button></a>
     </tr>
@@ -56,7 +56,7 @@
     <tr v-for="courseStudent in courseStudentData" :key="courseStudent._id">
       <td scope="row">{{ courseStudent.EmailKey }}</td>
       <td>{{ courseStudent.StudentName }}</td>
-      <td> {{ courseStudent.Acknowledged }} </td>
+       <td>{{ courseStudent.Codeword }}</td>
       <a><button class="btn" data-toggle="modal" @click="selectStudent(courseNameData,courseStudent.EmailKey, courseStudent.StudentName)" data-target="#editStudent"><i class="fa fa-pencil fa-xs"></i></button></a>
       <a><button class="btn" data-toggle="modal" @click="selectStudent(courseNameData, courseStudent.EmailKey, courseStudent.StudentName)" data-target="#deleteStudent"><i class="fa fa-trash fa-xs"></i></button></a>
     </tr>
