@@ -32,26 +32,25 @@
 
 | Acceptance Criteria                                                                         | Yes/No | Comments |
 |---------------------------------------------------------------------------------------------|--------|----------|
-| The registration page is displayed                                                          |        |   V       |
-| User has entered the username, password and confirmed the password in the registration page |        |    V       |
-| If user is an instructor, the Instructor box is checked                                     |        |     V      |
-| User clicks on ‘Register Now’ button in the registration screen                             |        |     V     |
-| User should be able to redirect to the Login page                                           |        |   V       |
+| User has entered the username, password and confirmed the password in the registration page |  Yes      |    V       |
+| If user is an instructor, the Instructor box is checked                                     |  Yes      |     V      |
+| User clicks on ‘Register Now’ button in the registration screen                             |  Yes      |     V     |
+| User should be able to redirect to the Login page                                           |  Yes      |   V       |
 
 #### 1.02 As a user, I want to log in with my Email Id and password.
 
 | Acceptance Criteria                                                | Yes/No | Comments |
 |--------------------------------------------------------------------|--------|----------|
-| User has entered correct username and password in the login screen |        |    V     |
-| User click on ‘Sign in’ button in the login screen                 |        |    V     |
-| User should be able to see the home screen with codewords          |        |    V     |
+| User has entered correct username and password in the login screen |  Yes      |    V     |
+| User click on ‘Sign in’ button in the login screen                 |  Yes       |    V     |
+| User should be able to see the home screen with codewords          |  Yes      |    V     |
 
 #### 1.03 - As a user, if I forget the password, I want to retrieve my account by entering the registered Email ID and submit it. Later I can access my account with the temporary password provided.
 
 | Acceptance Criteria                                                                      | Yes/No | Comments |
 |------------------------------------------------------------------------------------------|--------|----------|
-| Invalid login results will display the error message as “Password wrong”                 |        |    V      |
-| User clicks on ‘Forget password’, is asked for email address to send password reset link |        |    V     |
+| Invalid login results will display the error message as “Password wrong”                 | Yes       |    V      |
+| User clicks on ‘Forget password’, is asked for email address to send password reset link | Yes       |    V     |
 
 ## MVP 2:
 
@@ -59,18 +58,18 @@
 
 | Acceptance Criteria                                                                         | Yes/No | Comments |
 |---------------------------------------------------------------------------------------------|--------|----------|
-| Should be able to View the Login page                                                       |        |    V      |
-| Should be able to Click on Sign Up/Register and should be able to view the Registration page|        |      V    |
-| Register himself/herself by filling information like Name, Email id, Password, Confirm password and checking the Instructor checkbox                                                                           |        |   V       |
-| After clicking on “Register Now” button, he/she should be able to view a message “Successfully Registered and Redirecting to Sign In page”                                                               |        |    V      |
+| Should be able to View the Login page                                                       |  Yes      |    V      |
+| Should be able to Click on Sign Up/Register and should be able to view the Registration page|  Yes      |      V    |
+| Register himself/herself by filling information like Name, Email id, Password, Confirm password and checking the Instructor checkbox                                                                           |  Yes      |   V       |
+| After clicking on “Register Now” button, he/she should be able to view a message “Successfully Registered and Redirecting to Sign In page”                                                               |  Yes      |    V      |
 
 #### 2.02 As an instructor, I want to see my list of active courses
 
 | Acceptance Criteria                                                                         | Yes/No | Comments |
 |---------------------------------------------------------------------------------------------|--------|----------|
-| After filling information in Sign In page and clicking on Sign In button, he/she should be able to view a message “Sign In successful. Redirecting to Instructor’s Dashboard”                                   |        |    V     |
-| After successful Sign In, he/she should be able to view Instructor’s dashboard where they can view all the courses he/she are added to along with list of active courses.                                                                                         |        |     V     |
-| After clicking on courses, instructor should be able to view course details like Course Name and Code-words assigned for respective course|        |     V     |
+| After filling information in Sign In page and clicking on Sign In button, he/she should be able to view a message “Sign In successful. Redirecting to Instructor’s Dashboard”                                   |  Yes      |    V     |
+| After successful Sign In, he/she should be able to view Instructor’s dashboard where they can view all the courses he/she are added to along with list of active courses.                                                                                         |  Yes      |     V     |
+| After clicking on courses, instructor should be able to view course details like Course Name and Code-words assigned for respective course|  Yes      |     V     |
 
 #### 2.03  As an instructor, I want to create a new set of code words by entering a unique name for the codeword set and uploading a plain text file that contains a new list of codewords.
 
@@ -135,8 +134,8 @@
 #### 2.08 As an instructor, I want one codeword from the specified set to be randomly assigned to only one student and each student must have a unique codeword in that course and each codeword can only be issued once in each course (or not used at all) when a course is created.
 |                                  Acceptance Criteria                                  | Yes/No | Comments |
 |:-------------------------------------------------------------------------------------:|--------|----------|
-| User should be able to see the unique codeword for each student in every course       |        |    V      |
-| when course is created user should be able to see the unique codeword in each course. |        |    V     |
+| User should be able to see the unique codeword for each student in every course       |  Yes      |    V      |
+| when course is created user should be able to see the unique codeword in each course. |  Yes      |    V     |
 
 
 # MVP 3 (Fri-9-Nov)
@@ -152,8 +151,8 @@
 
 |                       Acceptance Criteria                      | Yes/No | Comments |
 |:--------------------------------------------------------------:|--------|----------|
-| User should be able to see the list of his/her courses.        |        |    V      |
-| User should be able to see the courses which are active today. |        |    V      |
+| User should be able to see the list of his/her courses.        | Yes       |    V      |
+| User should be able to see the courses which are active today. | Yes       |    V      |
 
 #### 3.03 As an instructor, I want to be notified if the codeword set is too small. If the calculated count of codewords is less than the calculated count of students then I want to see a warning that says “You have n students, but the codeword set has only m words. 
 
@@ -188,8 +187,8 @@
 
 |                        Acceptance Criteria                        | Yes/No | Comments |
 |:-----------------------------------------------------------------:|--------|----------|
-| User should be able see the delete button for each course.        |        |   V      |
-| When clicked on delete button, existing course should be deleted. |        |   V       |
+| User should be able see the delete button for each course.        |  Yes      |   V      |
+| When clicked on delete button, existing course should be deleted. |  Yes      |   V       |
 
 #### 3.08 As an instructor, I want the percentage of students who have accessed their codewords in that course.
 
