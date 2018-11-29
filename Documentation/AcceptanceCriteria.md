@@ -134,8 +134,8 @@
 #### 2.08 As an instructor, I want one codeword from the specified set to be randomly assigned to only one student and each student must have a unique codeword in that course and each codeword can only be issued once in each course (or not used at all) when a course is created.
 |                                  Acceptance Criteria                                  | Yes/No | Comments |
 |:-------------------------------------------------------------------------------------:|--------|----------|
-| User should be able to see the unique codeword for each student in every course       |  Yes      |    V      |
-| when course is created user should be able to see the unique codeword in each course. |  Yes      |    V     |
+| User should be able to see the unique codeword for each student in every course       |       |    V      |
+| when course is created user should be able to see the unique codeword in each course. |       |    V     |
 
 
 # MVP 3 (Fri-9-Nov)
@@ -151,8 +151,8 @@
 
 |                       Acceptance Criteria                      | Yes/No | Comments |
 |:--------------------------------------------------------------:|--------|----------|
-| User should be able to see the list of his/her courses.        | Yes       |    V      |
-| User should be able to see the courses which are active today. | Yes       |    V      |
+| User should be able to see the list of his/her courses.        |        |    V      |
+| User should be able to see the courses which are active today. |        |    V      |
 
 #### 3.03 As an instructor, I want to be notified if the codeword set is too small. If the calculated count of codewords is less than the calculated count of students then I want to see a warning that says “You have n students, but the codeword set has only m words. 
 
