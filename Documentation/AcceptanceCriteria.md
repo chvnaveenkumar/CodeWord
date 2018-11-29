@@ -158,24 +158,24 @@
 
 |                                                              Acceptance Criteria                                                              | Yes/No | Comments |
 |:---------------------------------------------------------------------------------------------------------------------------------------------:|--------|----------|
-| When the codeword doesnt not meet the requirements, user should be notified.                                                                  |        |          |
-| User gets a warning "You have n students, but the codeword set has only m words" when count of codewords are less that the count of students. |        |          |
+| When the codeword doesnt not meet the requirements, user should be notified.                                                                  |        |    V      |
+| User gets a warning "You have n students, but the codeword set has only m words" when count of codewords are less that the count of students. |        |  V        |
 
 #### 3.04 As an instructor, I want the codewords confidential and must not know or be able to see the code word each student gets.
 
 |                    Acceptance Criteria                    | Yes/No | Comments |
 |:---------------------------------------------------------:|--------|----------|
-| User should not know the codeword when each student gets. |        |          |
-| Codewords should be confidential.                         |        |          |
+| User should not know the codeword when each student gets. |        |    V     |
+| Codewords should be confidential.                         |        |    V     |
 
 #### 3.05 As a user, I want to navigate between multiple pages (Home (list of active courses), + New Course, View a Set of Codewords and Confirm Delete Course).
 
 |                                                                Acceptance Criteria                                                               | Yes/No | Comments |
 |:------------------------------------------------------------------------------------------------------------------------------------------------:|--------|----------|
-| User should be able to navigate easily between the pages.                                                                                        |        |          |
-| When clicked on "+ Add course", it should redirect to the page where we can add the course details.                                              |        |          |
-| When clicked on "View Students", it should redirect to the page where it has the course details and students assigned to that particular course. |        |          |
-| When clicked on "Delete course", user should get a pop up asking for a confirmation.                                                             |        |          |
+| User should be able to navigate easily between the pages.                                                                                        |        |     V     |
+| When clicked on "+ Add course", it should redirect to the page where we can add the course details.                                              |        |     V    |
+| When clicked on "View Students", it should redirect to the page where it has the course details and students assigned to that particular course. |        |   V       |
+| When clicked on "Delete course", user should get a pop up asking for a confirmation.                                                             |        |     V     |
 
 #### 3.06 As an instructor, I want to see the calculated count of students for codewords when I view a course.
 
@@ -187,8 +187,8 @@
 
 |                        Acceptance Criteria                        | Yes/No | Comments |
 |:-----------------------------------------------------------------:|--------|----------|
-| User should be able see the delete button for each course.        |  Yes      |   V      |
-| When clicked on delete button, existing course should be deleted. |  Yes      |   V       |
+| User should be able see the delete button for each course.        |        |   V      |
+| When clicked on delete button, existing course should be deleted. |        |   V       |
 
 #### 3.08 As an instructor, I want the percentage of students who have accessed their codewords in that course.
 
