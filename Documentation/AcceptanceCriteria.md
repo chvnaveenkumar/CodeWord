@@ -19,12 +19,10 @@
 | 3.03 As an instructor, I want to be notified if the codeword set is too small. If the calculated count of codewords is less than the calculated count of students then I want to see a warning that says “You have n students, but the codeword set has only m words.                                                                                                                                                                         |  1)Naveen Chandaluri 2)Sravya Kancharla   3) Vyshnavi Yallamareddy                                                        |  
 | 3.04 As an instructor, I want the codewords confidential and must not know or be able to see the code word each student gets.                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |  1) Naveen Chandaluri 2) Sravya Kancharla 3) Anurag Kumar                                                           | 
 | 3.05 As a user, I want to navigate between multiple pages (Home (list of active courses), + New Course, View a Set of Codewords and Confirm Delete Course)                                                                                                                                                                                                                                                                                                                                                                                                                                              |  1) Naveen Chandaluri 2)Sravya Kancharla 3) Shivani Dodla                                                           | 
-| 3.06 As an instructor, I want to see the calculated count of students for codewords when I view a course.                                                                                                                                                                                                                                                                                                                                                                                                              |  1)Shivani Reddy Dodla 2)srimai Reddy Yanala 3) Vyshnavi Yallamareddy                                                        |  
-| 3.07 As an instructor, I want to delete an existing course once it is completed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | 1) Sravya Kancharla  2) Sreelekha Vijaya 3) Shivani Dodla                                                         |  
-| 3.08 As an instructor, I want the percentage of students who have accessed their codewords in that course                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | 1) srimai Reddy Yanala 2) Vyshnavi Yallamareddy   3)                                                      |  
-| 3.09 Instructors are limited to no more than 10 active courses. (Verified with client)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |   1) Shivani Reddy Dodla 2) Cherukuru Chaithanya                                                    |
-| 3.10 Each course is limited to no more than 1000 students.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |  1) Anurag Kumar 2)   3)                                                            |
-| 3.11 As an Instructor, while creating codeword set, If there is more than 1200 codewords in the file which is getting uploaded to create codeword set, Instructor should be notified with a pop up message that "Each codeword set has a limit of upto 1200 codewords".                                                                                                                                                                                                                                                                                                                                 | 1) Naveen Nuggu 2) Chaithanya Cherukuru 3) Ujjawal Kumar        |
+| 3.06 As an instructor, I want to delete an existing course once it is completed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | 1) Sravya Kancharla  2) Sreelekha Vijaya 3) Shivani Dodla                                                         |  
+| 3.07 As an instructor, I want the percentage of students who have accessed their codewords in that course                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | 1) srimai Reddy Yanala 2) Vyshnavi Yallamareddy   3)                                                      |                                             
+| 3.08 Each course is limited to no more than 1000 students.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |  1) Anurag Kumar 2)   3)                                                            |
+| 3.09 As an Instructor, while creating codeword set, If there is more than 1200 codewords in the file which is getting uploaded to create codeword set, Instructor should be notified with a pop up message that "Each codeword set has a limit of upto 1200 codewords".                                                                                                                                                                                                                                                                                                                                 | 1) Naveen Nuggu 2) Chaithanya Cherukuru 3) Ujjawal Kumar        |
 
 ## MVP 1:
 
@@ -134,8 +132,8 @@
 #### 2.08 As an instructor, I want one codeword from the specified set to be randomly assigned to only one student and each student must have a unique codeword in that course and each codeword can only be issued once in each course (or not used at all) when a course is created.
 |                                  Acceptance Criteria                                  | Yes/No | Comments |
 |:-------------------------------------------------------------------------------------:|--------|----------|
-| User should be able to see the unique codeword for each student in every course       |       |    V      |
-| when course is created user should be able to see the unique codeword in each course. |       |    V     |
+| User should be able to see the unique codeword for each student in every course       |  Yes      |    V      |
+| when course is created user should be able to see the unique codeword in each course. |  Yes      |    V     |
 
 
 # MVP 3 (Fri-9-Nov)
@@ -151,31 +149,31 @@
 
 |                       Acceptance Criteria                      | Yes/No | Comments |
 |:--------------------------------------------------------------:|--------|----------|
-| User should be able to see the list of his/her courses.        |        |    V      |
-| User should be able to see the courses which are active today. |        |    V      |
+| User should be able to see the list of his/her courses.        | Yes       |    V      |
+| User should be able to see the courses which are active today. | Yes       |    V      |
 
 #### 3.03 As an instructor, I want to be notified if the codeword set is too small. If the calculated count of codewords is less than the calculated count of students then I want to see a warning that says “You have n students, but the codeword set has only m words. 
 
 |                                                              Acceptance Criteria                                                              | Yes/No | Comments |
 |:---------------------------------------------------------------------------------------------------------------------------------------------:|--------|----------|
-| When the codeword doesnt not meet the requirements, user should be notified.                                                                  |        |    V      |
-| User gets a warning "You have n students, but the codeword set has only m words" when count of codewords are less that the count of students. |        |  V        |
+| When the codeword doesnt not meet the requirements, user should be notified.                                                                  |        |          |
+| User gets a warning "You have n students, but the codeword set has only m words" when count of codewords are less that the count of students. |        |          |
 
 #### 3.04 As an instructor, I want the codewords confidential and must not know or be able to see the code word each student gets.
 
 |                    Acceptance Criteria                    | Yes/No | Comments |
 |:---------------------------------------------------------:|--------|----------|
-| User should not know the codeword when each student gets. |        |    V     |
-| Codewords should be confidential.                         |        |    V     |
+| User should not know the codeword when each student gets. |        |          |
+| Codewords should be confidential.                         |        |          |
 
 #### 3.05 As a user, I want to navigate between multiple pages (Home (list of active courses), + New Course, View a Set of Codewords and Confirm Delete Course).
 
 |                                                                Acceptance Criteria                                                               | Yes/No | Comments |
 |:------------------------------------------------------------------------------------------------------------------------------------------------:|--------|----------|
-| User should be able to navigate easily between the pages.                                                                                        |        |     V     |
-| When clicked on "+ Add course", it should redirect to the page where we can add the course details.                                              |        |     V    |
-| When clicked on "View Students", it should redirect to the page where it has the course details and students assigned to that particular course. |        |   V       |
-| When clicked on "Delete course", user should get a pop up asking for a confirmation.                                                             |        |     V     |
+| User should be able to navigate easily between the pages.                                                                                        |        |          |
+| When clicked on "+ Add course", it should redirect to the page where we can add the course details.                                              |        |          |
+| When clicked on "View Students", it should redirect to the page where it has the course details and students assigned to that particular course. |        |          |
+| When clicked on "Delete course", user should get a pop up asking for a confirmation.                                                             |        |          |
 
 #### 3.06 As an instructor, I want to see the calculated count of students for codewords when I view a course.
 
@@ -187,8 +185,8 @@
 
 |                        Acceptance Criteria                        | Yes/No | Comments |
 |:-----------------------------------------------------------------:|--------|----------|
-| User should be able see the delete button for each course.        |        |   V      |
-| When clicked on delete button, existing course should be deleted. |        |   V       |
+| User should be able see the delete button for each course.        |  Yes      |   V      |
+| When clicked on delete button, existing course should be deleted. |  Yes      |   V       |
 
 #### 3.08 As an instructor, I want the percentage of students who have accessed their codewords in that course.
 
@@ -211,16 +209,18 @@
 | After clicking on Create Codeword Set button at the top left corner of the page and post filling the required fields for codewordset creation and post uploading the file containing codewordset, Instructor should be able to view actual count of codewords in the uploaded file                 |        |          |
 | After filling all the required fields and clicking on Create codeword set button, If there is more than 1200 codewords in the file which was uploaded, Instructor should be notified with a pop up message that "Each codeword set has a limit of upto 1200 codewords".           |        |          |
 
-#### 3.13 - Registration is limited to 25 teachers.  (Verified with client)
+#### 3.12 - Registration is limited to 25 teachers.  (Verified with client)
 
 ### GDP2
 
 #### Administrator Functionality
 
 1. As an administrator, I want to add new instructors, see the list of instructors and instructor surveys details. 
-2. As an administrator, I want to be able to add new sets of codewords. (Already provided above - can be deleted)
+2. As an administrator, I want to be able to add new sets of codewords.(Already provided above - can be deleted)
 3. As an administrator, I want the option to hide the Instructor checkbox when new users are registering.
 4. As an administrator, I want a set of instructions on how to deploy a new instance of the application (e.g. an administrator at another institution OR if each instructor has their own deployed version.)
+5. As an instructor, I want to see the calculated count of students for codewords when I view a course.  
+6. As an instructor ,i want to see less than 10 active courses. 
 5. As a User, I want to search the name of particular courses in a search bar.
 6. As a User, I want Email id to be auto-filled.
 
