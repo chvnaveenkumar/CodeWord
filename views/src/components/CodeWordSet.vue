@@ -30,16 +30,14 @@
                     
                     <!-- Modal Body -->
                     <div class="modal-body">
-                        <form>
+                        <form @submit.prevent="CreateCodewordSet">
                             <div class="form-group">
-                                <input name="dataSetName" type="text" class="form-control" placeholder="Enter Cordword Set Name" data-toggle="tooltip" data-placement="top" title="Enter Cordword Set Name"
-                                    required>
+                                <input name="dataSetName" type="text" class="form-control" placeholder="Enter Cordword Set Name" data-toggle="tooltip" data-placement="top" title="Enter Cordword Set Name" required>
                             </div>
                             
                             <div class="form-group text-left">
                                 Upload Cordword Set(Excel)
-                                <input type="file"  name="file" ref="myFile" @change="previewFiles" class="form-control-file" id="exampleFormControlFile1" style="margin-top:.2em"
-                                    required>
+                                <input type="file"  name="file" ref="myFile" @change="previewFiles" class="form-control-file" id="exampleFormControlFile1" style="margin-top:.2em" required>
                             </div>
                             
                             <div class="alert alert-info">
@@ -55,8 +53,8 @@
                     </div>
                     <!-- Modal Footer -->
                      <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-success" data-dismiss="modal" @click.prevent="saveCodeWordData" @click="showDetails">Create Codeword Set</button>
+                                <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                <button type="create" class="btn btn-success" data-dismiss="modal" @click.prevent="saveCodeWordData" @click="showDetails">Create Codeword Set</button>
                             </div>
 
                 </div>
@@ -105,10 +103,10 @@
                     </tr>
                 </thead>
                 <tbody>
-            <tr v-for="(code,index) in codeWordSetData" :key="code._id">
+            <tr v-for="(code,index) in codeWordTempSetData" :key="code._id">
                 
                 <td> {{ code.CodeWordSetName }} </td>
-                 <td id="count">{{ code.count }}</td>
+                 <td id="count">{{ codeWordSetData[code.CodeWordSetName] ? codeWordSetData[code.CodeWordSetName].length : 0 }}</td>
                 <td> <router-link to="/codeword"><button type="button" class="btn btn-info btn-sm">Show Details</button></router-link>
                     </td>
             </tr>
@@ -122,12 +120,15 @@
 </template>
 
 <script>
+// import swal from 'sweetalert2'
+
 export default {
   name: 'CodeWordSet',
   data () {
     return {
       files: '',
       codeWordSetCount: [],
+      codeWordTempSetData: [],
       codeWordSetData: [],
       count: 0
     }
@@ -186,28 +187,22 @@ export default {
           token: window.localStorage.getItem('token')
         }
       }).then(response => {
-        this.codeWordSetData = response.data.data
+        this.codeWordTempSetData = response.data.data
         this.codeWordSetCount = []
-        for (var i = 0; i < this.codeWordSetData.length; i++) {
-          axios({
-            method: 'post',
-            url: '/codeword/getCodewords',
-            headers: {
-              token: window.localStorage.getItem('token')
-            },
-            data: {
-              CodeWordSetKey: this.codeWordSetData[i].CodeWordSetName
-            }
-          }).then(response => {
-            if (response.data.data && response.data.data && response.data.data.length) {
-              var name = response.data.data[0].CodeWordSetName
-              this.codeWordSetCount.push(response.data.count)
-              this.codeWordSetData.map(d => { if (d.CodeWordSetName === name) { d.count = response.data.count } })
-              console.log(this.codeWordSetData, this.codeWordSetCount)
-            }
-          })
-        }
-        this.$set(this.codeWordSetData)
+        axios({
+          method: 'post',
+          url: '/codeword/getCodewords',
+          headers: {
+            token: window.localStorage.getItem('token')
+          },
+          data: {
+            CodeWordSetKey: this.codeWordTempSetData
+          }
+        }).then(response => {
+          if (response.data && response.data.data) {
+            this.codeWordSetData = response.data.data
+          }
+        })
       })
     }
   },

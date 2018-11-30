@@ -13,7 +13,7 @@ let XLSX = require('xlsx')
 
 let addcodewords = (req, res) => {
      var codewords = [];
-    var body = _.pick(req.body,['CodeWordSetName','Codeword']);
+    var body = _.pick(req.body,['CodeWordSetName','Codewords']);
     codewords = body.Codewords;
     codewords = _.map(codewords, function(codeword){
         return {
@@ -32,14 +32,15 @@ let addcodewords = (req, res) => {
 module.exports.addcodewords = addcodewords;
 
 let getCodewords = (req,res) => {
-    var body = _.pick(req.body, ['CodeWordSetKey']);
-    CodeWord.find({CodeWordSetName : body.CodeWordSetKey}, function (err, codewords) {
+    var body = _.map(req.body.CodeWordSetKey, 'CodeWordSetName');
+    CodeWord.find({CodeWordSetName : {$in : body}}, function (err, codewords) {
         console.log(codewords)
+        data = _.groupBy(codewords, 'CodeWordSetName');
         if(err){
             return res.json({ code: 200, message: 'No codewordset is created!!'});
         }
         if (codewords)
-            return res.json({ code: 200, data: codewords, count: codewords.length });
+            return res.json({ code: 200, data: data});
         }).catch((e) => {
             return res.json({ code: 400, message: e });
         })
