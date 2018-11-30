@@ -172,20 +172,14 @@
 | When clicked on "View Students", it should redirect to the page where it has the course details and students assigned to that particular course. |        |          |
 | When clicked on "Delete course", user should get a pop up asking for a confirmation.                                                             |        |          |
 
-#### 3.06 As an instructor, I want to see the calculated count of students for codewords when I view a course.
-
-|                                                            Acceptance Criteria                                                           | Yes/No | Comments |
-|:----------------------------------------------------------------------------------------------------------------------------------------:|--------|----------|
-| When user view the course details page, he/she should be able to see the calculate count of students when acknowledged for the codeword. |        |          |
-
-#### 3.07 As an instructor, I want to delete an existing course once it is completed. 
+#### 3.06 As an instructor, I want to delete an existing course once it is completed. 
 
 |                        Acceptance Criteria                        | Yes/No | Comments |
 |:-----------------------------------------------------------------:|--------|----------|
 | User should be able see the delete button for each course.        |  Yes      |   V      |
 | When clicked on delete button, existing course should be deleted. |  Yes      |   V       |
 
-#### 3.08 As an instructor, I want the percentage of students who have accessed their codewords in that course.
+#### 3.07 As an instructor, I want the percentage of students who have accessed their codewords in that course.
 
 |                                   Acceptance Criteria                                   | Yes/No | Comments |
 |:---------------------------------------------------------------------------------------:|--------|----------|
@@ -194,11 +188,11 @@
 
 ## Additional Requirements
 
-#### 3.09 Instructors are limited to no more than 10 active courses. (Verified with client)
+#### 3.08 Instructors are limited to no more than 10 active courses. (Verified with client)
 
-#### 3.10 Each course is limited to no more than 1000 students.  (Verified with client)
+#### 3.09 Each course is limited to no more than 1000 students.  (Verified with client)
 
-#### 3.11  As an Instructor, while creating codeword set, If there is more than 1200 codewords in the file which is getting uploaded to create codeword set, Instructor should be notified with a pop up message that "Each codeword set has a limit of upto 1200 codewords".(Verified with client)
+#### 3.10  As an Instructor, while creating codeword set, If there is more than 1200 codewords in the file which is getting uploaded to create codeword set, Instructor should be notified with a pop up message that "Each codeword set has a limit of upto 1200 codewords".(Verified with client)
 
 | Acceptance Criteria                                                | Yes/No | Comments |
 |--------------------------------------------------------------------|--------|----------|
