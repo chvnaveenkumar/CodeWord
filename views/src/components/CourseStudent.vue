@@ -1,5 +1,8 @@
 <template>
 <div class="container-fluid" style="margin-top:5em" >
+   <div class="row" >
+ <router-link :to="{ name: 'InstructorDashboard' }"><button type="button" style="float:left;" class="btn btn-primary btn-xs"><i class="fa fa-chevron-left fa-lg"></i> DashBoard</button></router-link>
+  </div>
       <div class="row" >
             <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0">
                 <h3 style="font-weight:bold;text-align:left"> Course Name: {{ courseNameData }} </h3>
@@ -18,12 +21,14 @@
     End Survey URL: {{ courseData.PostSurveyURL }} <br>
     </div>
      <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0" style="text-align:left;font-weight:bold">
-          <button class="btn" data-toggle="modal" data-target="#editCourse" @click="selectCourse(courseData)">Edit <i class="fa fa-pencil fa-xs"></i></button>
+          <button class="btn" data-toggle="modal" data-target="#editCourse" @click="selectCourse(courseData)" style="float:right;">Edit <i class="fa fa-pencil fa-xs"></i></button>
     </div>
     </div>
   </div>
 </div>
- <table class="table table-striped col-md-6 col-lg-6 col-xs-0 col-sm-0 " align="right">
+<br>
+<br>
+ <table class="table col-md-6 col-lg-6 col-xs-0 col-sm-0 " >
  <thead class="thead-dark">
             <tr>
                 <th>
@@ -68,7 +73,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Delete Course</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -77,7 +82,7 @@
         <h6> Student Email:{{ selectEmailKey}} </h6>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primart" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primart" data-dismiss="modal">Cancel</button>
         <button type="button" class="btn btn-danger" @click="deleteStudent(selectCourseName, selectEmailKey)">Delete Course</button>
       </div>
     </div>
@@ -89,7 +94,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Edit Student</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -98,8 +103,8 @@
         <input type="text" v-model="selectEmailKey">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primart" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-danger" @click="editStudent(selectCourseName, selectEmailKey, selectStudent)">Edit Course</button>
+        <button type="button" class="btn btn-primart" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-danger" @click="editStudent(selectCourseName, selectEmailKey, selectStudent)">Edit Student</button>
       </div>
     </div>
   </div>
@@ -110,7 +115,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Edit Course</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -134,7 +139,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primart" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primart" data-dismiss="modal">Cancel</button>
         <button type="button" class="btn btn-danger" @click="editCourse(courseInfo._id)">Edit Course</button>
       </div>
     </div>
@@ -261,7 +266,6 @@ export default {
         }
       }).then(response => {
         if (response.data.message === true) {
-          swal('Success', response.data.message, 'success')
           $('#editStudent').modal('hide')
           this.getCourseStudentData()
           this.getCoursesData(this.courseNameData)
