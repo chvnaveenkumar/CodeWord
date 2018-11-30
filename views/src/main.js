@@ -10,6 +10,8 @@ import 'mdbvue/build/css/mdb.css'
 import {store} from './store'
 import 'font-awesome/css/font-awesome.min.css'
 import VueSweetalert2 from 'vue-sweetalert2'
+import BootstrapVue from 'bootstrap-vue'
+
 window.axios = axios.create({
   baseURL: process.env.URL,
   timeout: 1000
@@ -19,6 +21,8 @@ Vue.use(VueSweetalert2)
 Vue.use(Vuelidate)
 Vue.config.productionTip = false
 require('bootstrap')
+
+Vue.use(BootstrapVue)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

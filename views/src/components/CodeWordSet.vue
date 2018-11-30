@@ -17,8 +17,16 @@
                         <h5 class="modal-title" id="addcourseLabel">Create Codeword Set</h5>
                         <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span></button> -->
-                                    <button class="btn btn-info btn-sm"><i class="fa fa-eye"></i> Hint</button>
+                      <button id="exPopover3" class="btn btn-info btn-sm"><i class="fa fa-eye"></i> Hint</button>
                        
+                      <b-popover target="exPopover3" triggers="click" placement="auto">
+                        <template slot="title">Rules for Creating Codewords</template>
+                        <strong>1.</strong> Every codeword should be unique in the set.</br>
+                        <strong>2.</strong> The codewords with substring should differ by at least 3 letters.</br>
+                        <strong>3.</strong> There should not be any codewords like Ex: daa , baa.</br>
+                        <strong>4.</strong> Scan the codewords as soon as the upload is done and give the feedback.</br>
+                        <strong>5.</strong> Every codeword should be compared with every other codeword in the set.
+                      </b-popover>
                         <!-- <b-btn id="popoverButton-open" class="btn btn-info btn-sm" variant="primary"><i class="fa fa-eye"></i> Hint</b-btn>
                         <b-popover show target="popoverButton-open" title="Hints for codewordset">
                           I start open
@@ -54,7 +62,7 @@
                     <!-- Modal Footer -->
                      <div class="modal-footer">
                                 <button type="cancel" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                                <button type="create" class="btn btn-success" data-dismiss="modal" @click.prevent="saveCodeWordData" @click="showDetails">Create Codeword Set</button>
+                                <button type="create" class="btn btn-success" data-dismiss="modal" @click.prevent="saveCodeWordData" @click="showDetails">Create</button>
                             </div>
 
                 </div>
@@ -224,7 +232,7 @@ export default {
     margin-left: 3%;
     margin-top: 3%;
     margin-bottom: 10%;
-    border: 1px solid black;
+    border: 1px solid#969494;
 }
 
 #codewordsetTable td, #codewordsetTable th {
