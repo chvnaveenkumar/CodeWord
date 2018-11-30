@@ -17,6 +17,7 @@ courseNameKey : body.courseNameKey,
 emailKey: req.session.email,
 codeWordSetName: body.codeWordSetName,
 Startdate: body.startDate,
+Startdate: body.startDate,
 Enddate: body.endDate,
 PreSurveyURL: body.preSurveyURL,
 PostSurveyURL: body.postSurveyURL 

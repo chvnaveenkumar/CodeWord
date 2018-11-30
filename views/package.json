@@ -26,6 +26,7 @@
     "route": "^0.2.5",
     "serve": "^10.0.1",
     "vue": "^2.5.2",
+    "vue-js-popover": "^1.1.7",
     "vue-router": "^3.0.1",
     "vue-sweetalert2": "^1.5.6",
     "vuelidate": "^0.7.4",

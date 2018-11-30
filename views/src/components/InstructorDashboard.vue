@@ -10,7 +10,7 @@
          <div class="card-header bg-info border-success" id = "boldforcourse"><h4>{{ course.courseNameKey }}</h4>
        <br>
        <div>
-         01/01/2019 &nbsp;&nbsp; 12/31/2019 
+         {{ course.Startdate }} &nbsp;&nbsp; {{ course.Enddate }} 
     </div>
          </div>
         <div class="card-body text-info">
@@ -33,7 +33,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Delete Course</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -41,7 +41,7 @@
         <h1> {{selectedCourse}} </h1>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primart" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primart" data-dismiss="modal">Cancel</button>
         <button type="button" class="btn btn-danger" @click="deleteCourseKey">Delete Course</button>
       </div>
     </div>
@@ -53,7 +53,7 @@
           <div class="modal-content" style= "width:fit-content">
             <div class="modal-header">
               <h5 class="modal-title" id="addcourseLabel">New Course Details</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
               <span aria-hidden="true">&times;</span></button>
             </div>
             <form @submit.prevent="CreateCourse">
@@ -63,15 +63,18 @@
               <input type="text" class="form-control" pattern=".{6,}" id="courseName" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip"  title="Atleast 6 characters" required>
             </div>
             <div class="row">
-                <div class="col tooltip-test" title="Start Date"> Start Date:<input type="date" class="form-control" id="startDate" name="startDate" placeholder="Start Date" required/></div>
-                <div class="col tooltip-test" title="End Date"> End Date:<input type="date" class="form-control" id="endDate"  name="endDate" placeholder="End Date" required></div>
+              <!-- :value="startDate && startDate.toISOString().split('T')[0]" -->
+              <!--  v-model="startDate" -->
+                <div class="col tooltip-test" title="Start Date"> Start Date:<input type="date" name="startDate" class="form-control" v-model="startDate" placeholder="Start Date" required/></div>
+                <div class="col tooltip-test" title="End Date"> End Date:<input type="date" class="form-control" v-model="endDate"  name="endDate" :disabled=true  placeholder="End Date" required></div>
             </div>
             <div class="form-group">
                 <input type="file" ref="file" v-on:change="handleFileUpload()" class="form-control-file" id="file" style="margin-top:1em" required>
                 Upload Student Details(Excel)
             </div>
             <div class="form-group" required>
-                <select class="form-control form-control-sm" v-model="CodeWordSetName" value ="Select codeword set">
+                <select class="form-control" v-model="CodeWordSetName" value ="Select codeword set">
+                  <option disabled value="">Please select CodeWordSet</option>
                   <option v-for="codewordset in codeWordSetData" :key="codewordset._id">{{ codewordset.CodeWordSetName }}</option>
                 </select>
             </div>
@@ -110,63 +113,74 @@ export default {
     }
   },
   created () {
-    // fetch the data when the view is created and the data is
-    // already being observed
+    this.startDate = new Date() && new Date().toISOString().split('T')[0]
+    this.endDate = new Date() && new Date(new Date().getMonth() + 4).toISOString().split('T')[0]
+    console.log(this.endDate)
     this.fetchCourseList()
   },
   watch: {
-    // call again the method if the route changes
+    startDate (value) {
+      let start = new Date(value)
+      this.startDate = new Date(start) && new Date(start).toISOString().split('T')[0]
+      console.log(start.getMonth())
+      this.endDate = new Date(start.setMonth(start.getMonth())) && new Date(start.setMonth(start.getMonth() + 4)).toISOString().split('T')[0]
+    },
     '$route': 'fetchCourseList'
   },
   methods: {
     CreateCourse () {
-      let data = new FormData(document.querySelector('form'))
-      this.courseName = data.get('courseName')
-      this.startDate = data.get('startDate')
-      this.endDate = data.get('endDate')
-      this.startSurveyurldata = data.get('startSurveyurl')
-      this.endSurveyurldata = data.get('endSurveyurl')
-      let formData = new FormData()
-      formData.append('CourseNameKey', this.courseName)
-      formData.append('CodeWordSetName', this.CodeWordSetName)
-      formData.append('file', this.file)
-      /* global axios $ */
-      axios({
-        method: 'post',
-        url: 'codeword/addnewCourse',
-        data: {
-          token: window.localStorage.getItem('token'),
-          courseNameKey: this.courseName,
-          codeWordSetName: this.CodeWordSetName,
-          startDate: this.startDate,
-          endDate: this.endDate,
-          preSurveyURL: this.startSurveyurldata,
-          postSurveyURL: this.endSurveyurldata
-        }
-      })
-        .then((response) => {
-          if (response) {
-            axios.post('codeword/addcoursestudent',
-              formData, {headers: {
-                'Content-Type': 'multipart/form-data',
-                token: window.localStorage.getItem('token')
-              }
-              }).then(response => {
-              console.log(response.data.message)
-              if (response.data.message === 'Course student successfully!') {
-                console.log('success')
-                $('#addcourse').modal('hide')
-                this.fetchCourseList()
-              } else {
-                swal('Less Codewords', response.data.message, 'error')
-              }
-            })
+      if (this.CodeWordSetName === '') {
+        swal('Please select codeword set!')
+      } else {
+        let data = new FormData(document.querySelector('form'))
+        this.courseName = data.get('courseName')
+        this.startDate = this.startDate
+        this.endDate = this.endDate
+        this.startSurveyurldata = data.get('startSurveyurl')
+        this.endSurveyurldata = data.get('endSurveyurl')
+        let formData = new FormData()
+        console.log(this.CodeWordSetName + 'testcode')
+        formData.append('CourseNameKey', this.courseName)
+        formData.append('CodeWordSetName', this.CodeWordSetName)
+        formData.append('file', this.file)
+        /* global axios $ */
+        axios({
+          method: 'post',
+          url: 'codeword/addnewCourse',
+          data: {
+            token: window.localStorage.getItem('token'),
+            courseNameKey: this.courseName,
+            codeWordSetName: this.CodeWordSetName,
+            startDate: this.startDate,
+            endDate: this.endDate,
+            preSurveyURL: this.startSurveyurldata,
+            postSurveyURL: this.endSurveyurldata
           }
         })
-        .catch(error => {
-          swal('Error Message', error.response.data.message, 'error')
-          console.log('Eoor' + error)
-        })
+          .then((response) => {
+            if (response) {
+              axios.post('codeword/addcoursestudent',
+                formData, {headers: {
+                  'Content-Type': 'multipart/form-data',
+                  token: window.localStorage.getItem('token')
+                }
+                }).then(response => {
+                console.log(response.data.message)
+                if (response.data.message === 'Course student successfully!') {
+                  console.log('success')
+                  $('#addcourse').modal('hide')
+                  this.fetchCourseList()
+                } else {
+                  swal('Less Codewords', response.data.message, 'error')
+                }
+              })
+            }
+          })
+          .catch(error => {
+            swal('Error Message', error.response.data.message, 'error')
+            console.log('Eoor' + error)
+          })
+      }
     },
     handleFileUpload () {
       this.file = this.$refs.file.files[0]
