@@ -16,7 +16,7 @@ var codeWordSetSchema = new Schema({
                 type: String,
                 required: true,
         },
-        defaultRow : {
+        isPermanent : {
                 type: Boolean,
                 default : false
         }

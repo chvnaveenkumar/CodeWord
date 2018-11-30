@@ -11,7 +11,7 @@
 | 2.04 As an instructor, I want the app to always have my Basic small codeword set (with 90 unique codewords) and a second Large Codeword Set (with 200 unique codewords) and instructors are not allowed to delete them.                                                                                                                                                                                                                                                                                                                                                                                 | 1) Sreelekha 2) Shivani Reddy Dodla  3) Ujjawal Kumar              |
 | 2.05 As an instructor, I want to create a new course by adding a list of students (containing one *.edu email & one name field for each student), selecting a codeword set from a drop-down that shows the name of the set with the calculated count in parenthesis, and setting the start date (default to today) and end date (defaulted to 4 Months after then start date) for the course, and a pre-survey URL, and a post-survey URL. Team: implement either cut & paste a tab or comma separated list of students OR offer to import by selecting a csv file or Excel file in the proper format). |  1) Chaithanya Cherukuru, 2) Ujjawal kumar                                                  |  
 | 2.06 As an instructor, if I click on “View Students” I want to see a list of students for the selected course (emails and names) and want to see the calculated count of students in that course.                                                                                                                                                                                                                                                                                                                                                                                                       | 1) Anurag Kumar  2)Vyshnavi Yallamareddy 3) Sravya Kancharla                                                        | 
-| 2.07 As an instructor, when I view my list of active courses, for each active course, I want to see:     a. The unique name,     b. The codeword set name with the calculated count of words,     c. The start date and the end date,     d. The pre-survey URL and the post-survey URL     e. An option to “View N Students”,     f. An option to “Edit”,     g. An option to “Delete” an active course (expired courses will be not appear)                                                                                                                                                                |   1)Shivani Reddy Dodla   2)Anurag Kumar   3) Vyshnavi Yallamareddy                                                    |
+| 2.07 As an instructor, when I view my list of active courses, for each active course, I want to see:     a. The unique name,     b. The codeword set name with the calculated count of words,     c. The start date and the end date,     d. The pre-survey URL and the post-survey URL   e. An option to “Edit”,     f. An option to “Delete” an active course (expired courses will be not appear)                                                                                                                                                                |   1)Shivani Reddy Dodla   2)Anurag Kumar   3) Vyshnavi Yallamareddy                                                    |
 | 2.08 As an instructor, I want one codeword from the specified set to be randomly assigned to only one student and each student must have a unique codeword in that course and each codeword can only be issued once in each course (or not used at all) when a course is created.                                                                                                                                                                                                                                                                                                                       |   1) Vyshnavi Yallamareddy 2) Shivani Reddy Dodla 3) Naveen Chandaluri                                                          |
 |                                                                                                                                                                                                                                                                                                  MVP 3                                                                                                                                                                                                                                                                                                  |                                                             |
 | 3.01 As a student, I want to see my courses and see/acknowledge/get my random codeword for the respective course on my home page.                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |  1) Naveen Kumar Nuggu  2) Shivani Dodla  3)                                                       |  
@@ -19,12 +19,10 @@
 | 3.03 As an instructor, I want to be notified if the codeword set is too small. If the calculated count of codewords is less than the calculated count of students then I want to see a warning that says “You have n students, but the codeword set has only m words.                                                                                                                                                                         |  1)Naveen Chandaluri 2)Sravya Kancharla   3) Vyshnavi Yallamareddy                                                        |  
 | 3.04 As an instructor, I want the codewords confidential and must not know or be able to see the code word each student gets.                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |  1) Naveen Chandaluri 2) Sravya Kancharla 3) Anurag Kumar                                                           | 
 | 3.05 As a user, I want to navigate between multiple pages (Home (list of active courses), + New Course, View a Set of Codewords and Confirm Delete Course)                                                                                                                                                                                                                                                                                                                                                                                                                                              |  1) Naveen Chandaluri 2)Sravya Kancharla 3) Shivani Dodla                                                           | 
-| 3.06 As an instructor, I want to see the calculated count of students for codewords when I view a course.                                                                                                                                                                                                                                                                                                                                                                                                              |  1)Shivani Reddy Dodla 2)srimai Reddy Yanala 3) Vyshnavi Yallamareddy                                                        |  
-| 3.07 As an instructor, I want to delete an existing course once it is completed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | 1) Sravya Kancharla  2) Sreelekha Vijaya 3) Shivani Dodla                                                         |  
-| 3.08 As an instructor, I want the percentage of students who have accessed their codewords in that course                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | 1) srimai Reddy Yanala 2) Vyshnavi Yallamareddy   3)                                                      |  
-| 3.09 Instructors are limited to no more than 10 active courses. (Verified with client)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |   1) Shivani Reddy Dodla 2) Cherukuru Chaithanya                                                    |
-| 3.10 Each course is limited to no more than 1000 students.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |  1) Anurag Kumar 2)   3)                                                            |
-| 3.11 As an Instructor, while creating codeword set, If there is more than 1200 codewords in the file which is getting uploaded to create codeword set, Instructor should be notified with a pop up message that "Each codeword set has a limit of upto 1200 codewords".                                                                                                                                                                                                                                                                                                                                 | 1) Naveen Nuggu 2) Chaithanya Cherukuru 3) Ujjawal Kumar        |
+| 3.06 As an instructor, I want to delete an existing course once it is completed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | 1) Sravya Kancharla  2) Sreelekha Vijaya 3) Shivani Dodla                                                         |  
+| 3.07 As an instructor, I want the percentage of students who have accessed their codewords in that course                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | 1) srimai Reddy Yanala 2) Vyshnavi Yallamareddy   3)                                                      |                                             
+| 3.08 Each course is limited to no more than 1000 students.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |  1) Anurag Kumar 2)   3)                                                            |
+| 3.09 As an Instructor, while creating codeword set, If there is more than 1200 codewords in the file which is getting uploaded to create codeword set, Instructor should be notified with a pop up message that "Each codeword set has a limit of upto 1200 codewords".                                                                                                                                                                                                                                                                                                                                 | 1) Naveen Nuggu 2) Chaithanya Cherukuru 3) Ujjawal Kumar        |
 
 ## MVP 1:
 
@@ -32,26 +30,25 @@
 
 | Acceptance Criteria                                                                         | Yes/No | Comments |
 |---------------------------------------------------------------------------------------------|--------|----------|
-| The registration page is displayed                                                          |        |   V       |
-| User has entered the username, password and confirmed the password in the registration page |        |    V       |
-| If user is an instructor, the Instructor box is checked                                     |        |     V      |
-| User clicks on ‘Register Now’ button in the registration screen                             |        |     V     |
-| User should be able to redirect to the Login page                                           |        |   V       |
+| User has entered the username, password and confirmed the password in the registration page |  Yes      |    V       |
+| If user is an instructor, the Instructor box is checked                                     |  Yes      |     V      |
+| User clicks on ‘Register Now’ button in the registration screen                             |  Yes      |     V     |
+| User should be able to redirect to the Login page                                           |  Yes      |   V       |
 
 #### 1.02 As a user, I want to log in with my Email Id and password.
 
 | Acceptance Criteria                                                | Yes/No | Comments |
 |--------------------------------------------------------------------|--------|----------|
-| User has entered correct username and password in the login screen |        |    V     |
-| User click on ‘Sign in’ button in the login screen                 |        |    V     |
-| User should be able to see the home screen with codewords          |        |    V     |
+| User has entered correct username and password in the login screen |  Yes      |    V     |
+| User click on ‘Sign in’ button in the login screen                 |  Yes       |    V     |
+| User should be able to see the home screen with codewords          |  Yes      |    V     |
 
 #### 1.03 - As a user, if I forget the password, I want to retrieve my account by entering the registered Email ID and submit it. Later I can access my account with the temporary password provided.
 
 | Acceptance Criteria                                                                      | Yes/No | Comments |
 |------------------------------------------------------------------------------------------|--------|----------|
-| Invalid login results will display the error message as “Password wrong”                 |        |    V      |
-| User clicks on ‘Forget password’, is asked for email address to send password reset link |        |    V     |
+| Invalid login results will display the error message as “Password wrong”                 | Yes       |    V      |
+| User clicks on ‘Forget password’, is asked for email address to send password reset link | Yes       |    V     |
 
 ## MVP 2:
 
@@ -59,18 +56,18 @@
 
 | Acceptance Criteria                                                                         | Yes/No | Comments |
 |---------------------------------------------------------------------------------------------|--------|----------|
-| Should be able to View the Login page                                                       |        |    V      |
-| Should be able to Click on Sign Up/Register and should be able to view the Registration page|        |      V    |
-| Register himself/herself by filling information like Name, Email id, Password, Confirm password and checking the Instructor checkbox                                                                           |        |   V       |
-| After clicking on “Register Now” button, he/she should be able to view a message “Successfully Registered and Redirecting to Sign In page”                                                               |        |    V      |
+| Should be able to View the Login page                                                       |  Yes      |    V      |
+| Should be able to Click on Sign Up/Register and should be able to view the Registration page|  Yes      |      V    |
+| Register himself/herself by filling information like Name, Email id, Password, Confirm password and checking the Instructor checkbox                                                                           |  Yes      |   V       |
+| After clicking on “Register Now” button, he/she should be able to view a message “Successfully Registered and Redirecting to Sign In page”                                                               |  Yes      |    V      |
 
 #### 2.02 As an instructor, I want to see my list of active courses
 
 | Acceptance Criteria                                                                         | Yes/No | Comments |
 |---------------------------------------------------------------------------------------------|--------|----------|
-| After filling information in Sign In page and clicking on Sign In button, he/she should be able to view a message “Sign In successful. Redirecting to Instructor’s Dashboard”                                   |        |    V     |
-| After successful Sign In, he/she should be able to view Instructor’s dashboard where they can view all the courses he/she are added to along with list of active courses.                                                                                         |        |     V     |
-| After clicking on courses, instructor should be able to view course details like Course Name and Code-words assigned for respective course|        |     V     |
+| After filling information in Sign In page and clicking on Sign In button, he/she should be able to view a message “Sign In successful. Redirecting to Instructor’s Dashboard”                                   |  Yes      |    V     |
+| After successful Sign In, he/she should be able to view Instructor’s dashboard where they can view all the courses he/she are added to along with list of active courses.                                                                                         |  Yes      |     V     |
+| After clicking on courses, instructor should be able to view course details like Course Name and Code-words assigned for respective course|  Yes      |     V     |
 
 #### 2.03  As an instructor, I want to create a new set of code words by entering a unique name for the codeword set and uploading a plain text file that contains a new list of codewords.
 
@@ -116,11 +113,9 @@
 
     d. The pre-survey URL and the post-survey URL
 
-    e. An option to “View N Students”,
+    e. An option to “Edit”,
 
-    f. An option to “Edit”,
-
-    g. An option to “Delete” an active course (expired courses will be not appear)
+    f. An option to “Delete” an active course (expired courses will be not appear)
     
 |                                                   Acceptance Criteria                                                  | Yes/No | Comments |
 |:----------------------------------------------------------------------------------------------------------------------:|--------|----------|
@@ -129,14 +124,13 @@
 | User should also able to see the calculated count of words in the set by  selecting a code word set from dropdown box. |        |          |
 | User should be able to see the Start date and End date for courses                                                     |        |          |
 | User must be able to see pre-survey URL and the post-survey URL                                                        |        |          |
-| User must able to see the calculated count of the students in the  selected course                                     |        |          |
 | User must be able to see the edit option to edit the student names  and Email ID                                       |        |          |
 | User must be able to see delete option to delete an active course.                                                     |        |          |
 #### 2.08 As an instructor, I want one codeword from the specified set to be randomly assigned to only one student and each student must have a unique codeword in that course and each codeword can only be issued once in each course (or not used at all) when a course is created.
 |                                  Acceptance Criteria                                  | Yes/No | Comments |
 |:-------------------------------------------------------------------------------------:|--------|----------|
-| User should be able to see the unique codeword for each student in every course       |        |    V      |
-| when course is created user should be able to see the unique codeword in each course. |        |    V     |
+| User should be able to see the unique codeword for each student in every course       |  Yes      |    V      |
+| when course is created user should be able to see the unique codeword in each course. |  Yes      |    V     |
 
 
 # MVP 3 (Fri-9-Nov)
@@ -152,8 +146,8 @@
 
 |                       Acceptance Criteria                      | Yes/No | Comments |
 |:--------------------------------------------------------------:|--------|----------|
-| User should be able to see the list of his/her courses.        |        |    V      |
-| User should be able to see the courses which are active today. |        |    V      |
+| User should be able to see the list of his/her courses.        | Yes       |    V      |
+| User should be able to see the courses which are active today. | Yes       |    V      |
 
 #### 3.03 As an instructor, I want to be notified if the codeword set is too small. If the calculated count of codewords is less than the calculated count of students then I want to see a warning that says “You have n students, but the codeword set has only m words. 
 
@@ -178,20 +172,14 @@
 | When clicked on "View Students", it should redirect to the page where it has the course details and students assigned to that particular course. |        |          |
 | When clicked on "Delete course", user should get a pop up asking for a confirmation.                                                             |        |          |
 
-#### 3.06 As an instructor, I want to see the calculated count of students for codewords when I view a course.
-
-|                                                            Acceptance Criteria                                                           | Yes/No | Comments |
-|:----------------------------------------------------------------------------------------------------------------------------------------:|--------|----------|
-| When user view the course details page, he/she should be able to see the calculate count of students when acknowledged for the codeword. |        |          |
-
-#### 3.07 As an instructor, I want to delete an existing course once it is completed. 
+#### 3.06 As an instructor, I want to delete an existing course once it is completed. 
 
 |                        Acceptance Criteria                        | Yes/No | Comments |
 |:-----------------------------------------------------------------:|--------|----------|
-| User should be able see the delete button for each course.        |        |   V      |
-| When clicked on delete button, existing course should be deleted. |        |   V       |
+| User should be able see the delete button for each course.        |  Yes      |   V      |
+| When clicked on delete button, existing course should be deleted. |  Yes      |   V       |
 
-#### 3.08 As an instructor, I want the percentage of students who have accessed their codewords in that course.
+#### 3.07 As an instructor, I want the percentage of students who have accessed their codewords in that course.
 
 |                                   Acceptance Criteria                                   | Yes/No | Comments |
 |:---------------------------------------------------------------------------------------:|--------|----------|
@@ -200,11 +188,9 @@
 
 ## Additional Requirements
 
-#### 3.09 Instructors are limited to no more than 10 active courses. (Verified with client)
+#### 3.08 Each course is limited to no more than 1000 students.  (Verified with client)
 
-#### 3.10 Each course is limited to no more than 1000 students.  (Verified with client)
-
-#### 3.11  As an Instructor, while creating codeword set, If there is more than 1200 codewords in the file which is getting uploaded to create codeword set, Instructor should be notified with a pop up message that "Each codeword set has a limit of upto 1200 codewords".(Verified with client)
+#### 3.09  As an Instructor, while creating codeword set, If there is more than 1200 codewords in the file which is getting uploaded to create codeword set, Instructor should be notified with a pop up message that "Each codeword set has a limit of upto 1200 codewords".(Verified with client)
 
 | Acceptance Criteria                                                | Yes/No | Comments |
 |--------------------------------------------------------------------|--------|----------|
@@ -212,16 +198,18 @@
 | After clicking on Create Codeword Set button at the top left corner of the page and post filling the required fields for codewordset creation and post uploading the file containing codewordset, Instructor should be able to view actual count of codewords in the uploaded file                 |        |          |
 | After filling all the required fields and clicking on Create codeword set button, If there is more than 1200 codewords in the file which was uploaded, Instructor should be notified with a pop up message that "Each codeword set has a limit of upto 1200 codewords".           |        |          |
 
-#### 3.13 - Registration is limited to 25 teachers.  (Verified with client)
+#### 3.10 - Registration is limited to 25 teachers.  (Verified with client)
 
 ### GDP2
 
 #### Administrator Functionality
 
 1. As an administrator, I want to add new instructors, see the list of instructors and instructor surveys details. 
-2. As an administrator, I want to be able to add new sets of codewords. (Already provided above - can be deleted)
+2. As an administrator, I want to be able to add new sets of codewords.(Already provided above - can be deleted)
 3. As an administrator, I want the option to hide the Instructor checkbox when new users are registering.
 4. As an administrator, I want a set of instructions on how to deploy a new instance of the application (e.g. an administrator at another institution OR if each instructor has their own deployed version.)
+5. As an instructor, I want to see the calculated count of students for codewords when I view a course.  
+6. As an instructor ,i want to see less than 10 active courses. 
 5. As a User, I want to search the name of particular courses in a search bar.
 6. As a User, I want Email id to be auto-filled.
 

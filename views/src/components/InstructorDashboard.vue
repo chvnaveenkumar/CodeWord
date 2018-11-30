@@ -10,7 +10,7 @@
          <div class="card-header bg-info border-success" id = "boldforcourse"><h4>{{ course.courseNameKey }}</h4>
        <br>
        <div>
-         01/01/2019 &nbsp;&nbsp; 12/31/2019 
+         {{ course.Startdate }} &nbsp;&nbsp; {{ course.Enddate }} 
     </div>
          </div>
         <div class="card-body text-info">
@@ -33,7 +33,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Delete Course</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -41,7 +41,7 @@
         <h1> {{selectedCourse}} </h1>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primart" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primart" data-dismiss="modal">Cancel</button>
         <button type="button" class="btn btn-danger" @click="deleteCourseKey">Delete Course</button>
       </div>
     </div>
@@ -53,7 +53,7 @@
           <div class="modal-content" style= "width:fit-content">
             <div class="modal-header">
               <h5 class="modal-title" id="addcourseLabel">New Course Details</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
               <span aria-hidden="true">&times;</span></button>
             </div>
             <form @submit.prevent="CreateCourse">
@@ -63,8 +63,10 @@
               <input type="text" class="form-control" pattern=".{6,}" id="courseName" name="courseName" placeholder="Enter Course Name" data-toggle="tooltip"  title="Atleast 6 characters" required>
             </div>
             <div class="row">
-                <div class="col tooltip-test" title="Start Date"> Start Date:<input type="date" class="form-control" id="startDate" name="startDate" placeholder="Start Date" required/></div>
-                <div class="col tooltip-test" title="End Date"> End Date:<input type="date" class="form-control" id="endDate"  name="endDate" placeholder="End Date" required></div>
+              <!-- :value="startDate && startDate.toISOString().split('T')[0]" -->
+              <!--  v-model="startDate" -->
+                <div class="col tooltip-test" title="Start Date"> Start Date:<input type="date" name="startDate" class="form-control" v-model="startDate" placeholder="Start Date" required/></div>
+                <div class="col tooltip-test" title="End Date"> End Date:<input type="date" class="form-control" v-model="endDate"  name="endDate" :disabled=true  placeholder="End Date" required></div>
             </div>
             <div class="form-group">
                 <input type="file" ref="file" v-on:change="handleFileUpload()" class="form-control-file" id="file" style="margin-top:1em" required>
@@ -110,11 +112,21 @@ export default {
     }
   },
   created () {
+    this.startDate = new Date() && new Date().toISOString().split('T')[0]
     // fetch the data when the view is created and the data is
     // already being observed
+    // this.endDate = new Date()
+    // this.endDate.setMonth(this.endDate.getMonth() + 4)
+    this.endDate = new Date() && new Date(new Date().getMonth() + 4).toISOString().split('T')[0]
     this.fetchCourseList()
   },
   watch: {
+    startDate (value) {
+      let start = new Date(value)
+      this.startDate = new Date(start) && new Date(start).toISOString().split('T')[0]
+      console.log(start.getMonth())
+      this.endDate = new Date(start.setMonth(start.getMonth())) && new Date(start.setMonth(start.getMonth() + 4)).toISOString().split('T')[0]
+    },
     // call again the method if the route changes
     '$route': 'fetchCourseList'
   },
@@ -122,6 +134,7 @@ export default {
     CreateCourse () {
       let data = new FormData(document.querySelector('form'))
       this.courseName = data.get('courseName')
+      console.log(data.get('startDate'))
       this.startDate = data.get('startDate')
       this.endDate = data.get('endDate')
       this.startSurveyurldata = data.get('startSurveyurl')
