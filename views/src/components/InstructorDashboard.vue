@@ -73,7 +73,8 @@
                 Upload Student Details(Excel)
             </div>
             <div class="form-group" required>
-                <select class="form-control form-control-sm" v-model="CodeWordSetName" value ="Select codeword set">
+                <select class="form-control" v-model="CodeWordSetName" value ="Select codeword set">
+                  <option disabled value="">Please select CodeWordSet</option>
                   <option v-for="codewordset in codeWordSetData" :key="codewordset._id">{{ codewordset.CodeWordSetName }}</option>
                 </select>
             </div>
@@ -113,11 +114,8 @@ export default {
   },
   created () {
     this.startDate = new Date() && new Date().toISOString().split('T')[0]
-    // fetch the data when the view is created and the data is
-    // already being observed
-    // this.endDate = new Date()
-    // this.endDate.setMonth(this.endDate.getMonth() + 4)
     this.endDate = new Date() && new Date(new Date().getMonth() + 4).toISOString().split('T')[0]
+    console.log(this.endDate)
     this.fetchCourseList()
   },
   watch: {
@@ -127,59 +125,62 @@ export default {
       console.log(start.getMonth())
       this.endDate = new Date(start.setMonth(start.getMonth())) && new Date(start.setMonth(start.getMonth() + 4)).toISOString().split('T')[0]
     },
-    // call again the method if the route changes
     '$route': 'fetchCourseList'
   },
   methods: {
     CreateCourse () {
-      let data = new FormData(document.querySelector('form'))
-      this.courseName = data.get('courseName')
-      console.log(data.get('startDate'))
-      this.startDate = data.get('startDate')
-      this.endDate = data.get('endDate')
-      this.startSurveyurldata = data.get('startSurveyurl')
-      this.endSurveyurldata = data.get('endSurveyurl')
-      let formData = new FormData()
-      formData.append('CourseNameKey', this.courseName)
-      formData.append('CodeWordSetName', this.CodeWordSetName)
-      formData.append('file', this.file)
-      /* global axios $ */
-      axios({
-        method: 'post',
-        url: 'codeword/addnewCourse',
-        data: {
-          token: window.localStorage.getItem('token'),
-          courseNameKey: this.courseName,
-          codeWordSetName: this.CodeWordSetName,
-          startDate: this.startDate,
-          endDate: this.endDate,
-          preSurveyURL: this.startSurveyurldata,
-          postSurveyURL: this.endSurveyurldata
-        }
-      })
-        .then((response) => {
-          if (response) {
-            axios.post('codeword/addcoursestudent',
-              formData, {headers: {
-                'Content-Type': 'multipart/form-data',
-                token: window.localStorage.getItem('token')
-              }
-              }).then(response => {
-              console.log(response.data.message)
-              if (response.data.message === 'Course student successfully!') {
-                console.log('success')
-                $('#addcourse').modal('hide')
-                this.fetchCourseList()
-              } else {
-                swal('Less Codewords', response.data.message, 'error')
-              }
-            })
+      if (this.CodeWordSetName === '') {
+        swal('Please select codeword set!')
+      } else {
+        let data = new FormData(document.querySelector('form'))
+        this.courseName = data.get('courseName')
+        this.startDate = this.startDate
+        this.endDate = this.endDate
+        this.startSurveyurldata = data.get('startSurveyurl')
+        this.endSurveyurldata = data.get('endSurveyurl')
+        let formData = new FormData()
+        console.log(this.CodeWordSetName + 'testcode')
+        formData.append('CourseNameKey', this.courseName)
+        formData.append('CodeWordSetName', this.CodeWordSetName)
+        formData.append('file', this.file)
+        /* global axios $ */
+        axios({
+          method: 'post',
+          url: 'codeword/addnewCourse',
+          data: {
+            token: window.localStorage.getItem('token'),
+            courseNameKey: this.courseName,
+            codeWordSetName: this.CodeWordSetName,
+            startDate: this.startDate,
+            endDate: this.endDate,
+            preSurveyURL: this.startSurveyurldata,
+            postSurveyURL: this.endSurveyurldata
           }
         })
-        .catch(error => {
-          swal('Error Message', error.response.data.message, 'error')
-          console.log('Eoor' + error)
-        })
+          .then((response) => {
+            if (response) {
+              axios.post('codeword/addcoursestudent',
+                formData, {headers: {
+                  'Content-Type': 'multipart/form-data',
+                  token: window.localStorage.getItem('token')
+                }
+                }).then(response => {
+                console.log(response.data.message)
+                if (response.data.message === 'Course student successfully!') {
+                  console.log('success')
+                  $('#addcourse').modal('hide')
+                  this.fetchCourseList()
+                } else {
+                  swal('Less Codewords', response.data.message, 'error')
+                }
+              })
+            }
+          })
+          .catch(error => {
+            swal('Error Message', error.response.data.message, 'error')
+            console.log('Eoor' + error)
+          })
+      }
     },
     handleFileUpload () {
       this.file = this.$refs.file.files[0]
