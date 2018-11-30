@@ -74,9 +74,13 @@
 | Acceptance Criteria                                                                         | Yes/No | Comments |
 |---------------------------------------------------------------------------------------------|--------|----------|
 | After successfull login, he/she should be able to view his/her Email Id (used for signing in) on top right corner of navigation bar along with dropdown arrow symbol for change password and logout options          |        |          |
-| Once clicking on Code-word Set, he/she should be able to view “Create Code-word Set”                                                                |        |         |
-| Once clicking on Code-word Set, he/she should be able to view "Delete Code-word Set”                                                                |        |         |
-| After clicking on “Create Code-word Set” , he/she should be redirected to Code-Word set page where they should be able to set a unique name for that set and fill the data in that codeword set by uploading the list of codeword from Basic Small or Basic Large file from the dropdown                       |        |     V     |
+| Once clicking on Code-word Set in Navigation bar, he/she should be able to view “Create Code-word Set” page                                                                |        |         |
+| Instructor should be able to view 2 default Codewordset (Small & Large set) along with count of codewords in the sets                                                               |        |         |
+| Once clicking on Code-word Set button at top left corner of the page, he/she should be able to view "Create Code-word Set” modal                                                               |        |         |
+| Post filling Codeword set Name and uploading excel file containing codewords in it, Instructor should be able to view number of codewords present in the uploaded set.                                                               |        |         |
+| After filling all the required fields and clicking on Create Codewordset button, Instructor should be able to view the new created codeword set along with count of codewords and Show Details button in the codewordset list                                                                 |        |         |
+| Once clicking on Show details button, Instructor should be redirected to Codeword page.                                                               |        |         |
+
 
  #### 2.04 As an instructor, I want the app to always have my Basic small codeword set (with 90 unique codewords) and a second Large Codeword Set (with 200 unique codewords) and instructors are not allowed to delete them.
 
