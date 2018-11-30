@@ -48,14 +48,16 @@
                                 <p v-else>
                                     There are {{ count }} codewords in the Uploaded set.</p>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                                <button type="submit" class="btn btn-success" data-dismiss="modal" @click.prevent="saveCodeWordData" @click="showDetails">Create Codeword Set</button>
-                            </div>
+                           
 
                         </form>
 
                     </div>
+                    <!-- Modal Footer -->
+                     <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-success" data-dismiss="modal" @click.prevent="saveCodeWordData" @click="showDetails">Create Codeword Set</button>
+                            </div>
 
                 </div>
             </div>
@@ -63,15 +65,10 @@
     </div>
     <!-- class="table table-striped" -->
     <div class="table-responsive-sm"> 
-    <table class="table" id="codewordsetTable">
+    <!-- <table class="table" id="codewordsetTable">
         <thead>
             <tr>
-                <!-- <th scope="col">
-                    <h4>
-                        <u>ID</u>
-                    </h4>
-                </th> -->
-                
+                              
                 <th scope="col">
                     <h4>
                         <u>Codeword Set Name</u>
@@ -89,7 +86,7 @@
         </thead>
         <tbody>
             <tr v-for="(code,index) in codeWordSetData" :key="code._id">
-                 <!-- <th scope="row">{{ index + 1 }}</th> -->
+                
                 <td> {{ code.CodeWordSetName }} </td>
                  <td id="count">{{ codeWordSetCount[index] }}</td>
                 <td> <router-link to="/codeword"><button type="button" class="btn btn-info btn-sm">Show Details</button></router-link>
@@ -97,7 +94,29 @@
             </tr>
 
         </tbody>
-    </table>
+    </table> -->
+    <table class="table" id="codewordsetTable">
+                <thead class="thead-dark">
+                    <tr>
+                        
+                        <th scope="col">Codeword Set Name</th>
+                        <th scope="col">Count</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+            <tr v-for="(code,index) in codeWordSetData" :key="code._id">
+                
+                <td> {{ code.CodeWordSetName }} </td>
+                 <td id="count">{{ code.count }}</td>
+                <td> <router-link to="/codeword"><button type="button" class="btn btn-info btn-sm">Show Details</button></router-link>
+                    </td>
+            </tr>
+
+        </tbody>
+            </table>
+
+
     </div>
 </div>
 </template>
@@ -180,12 +199,15 @@ export default {
               CodeWordSetKey: this.codeWordSetData[i].CodeWordSetName
             }
           }).then(response => {
-            var name = response.data.data[0].CodeWordSetName
-            this.codeWordSetCount.push(response.data.count)
-            this.codeWordSetData.map(d => { if (d.CodeWordSetName === name) { d.count = response.data.count } })
-            console.log(this.codeWordSetData)
+            if (response.data.data && response.data.data && response.data.data.length) {
+              var name = response.data.data[0].CodeWordSetName
+              this.codeWordSetCount.push(response.data.count)
+              this.codeWordSetData.map(d => { if (d.CodeWordSetName === name) { d.count = response.data.count } })
+              console.log(this.codeWordSetData, this.codeWordSetCount)
+            }
           })
         }
+        this.$set(this.codeWordSetData)
       })
     }
   },
@@ -203,8 +225,8 @@ export default {
   #codewordsetTable {
     /* font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; */
     border-collapse: collapse;
-    width: 80%;
-    margin-left: 10%;
+    width: 90%;
+    margin-left: 3%;
     margin-top: 3%;
     margin-bottom: 10%;
     border: 1px solid black;
