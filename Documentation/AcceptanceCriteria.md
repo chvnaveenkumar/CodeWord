@@ -113,11 +113,9 @@
 
     d. The pre-survey URL and the post-survey URL
 
-    e. An option to “View N Students”,
+    e. An option to “Edit”,
 
-    f. An option to “Edit”,
-
-    g. An option to “Delete” an active course (expired courses will be not appear)
+    f. An option to “Delete” an active course (expired courses will be not appear)
     
 |                                                   Acceptance Criteria                                                  | Yes/No | Comments |
 |:----------------------------------------------------------------------------------------------------------------------:|--------|----------|
@@ -126,7 +124,6 @@
 | User should also able to see the calculated count of words in the set by  selecting a code word set from dropdown box. |        |          |
 | User should be able to see the Start date and End date for courses                                                     |        |          |
 | User must be able to see pre-survey URL and the post-survey URL                                                        |        |          |
-| User must able to see the calculated count of the students in the  selected course                                     |        |          |
 | User must be able to see the edit option to edit the student names  and Email ID                                       |        |          |
 | User must be able to see delete option to delete an active course.                                                     |        |          |
 #### 2.08 As an instructor, I want one codeword from the specified set to be randomly assigned to only one student and each student must have a unique codeword in that course and each codeword can only be issued once in each course (or not used at all) when a course is created.
