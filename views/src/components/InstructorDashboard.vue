@@ -73,7 +73,8 @@
                 Upload Student Details(Excel)
             </div>
             <div class="form-group" required>
-                <select class="form-control form-control-sm" v-model="CodeWordSetName" value ="Select codeword set">
+                <select class="form-control" v-model="CodeWordSetName" value ="Select codeword set">
+                  <option disabled value="">Please select CodeWordSet</option>
                   <option v-for="codewordset in codeWordSetData" :key="codewordset._id">{{ codewordset.CodeWordSetName }}</option>
                 </select>
             </div>
@@ -113,11 +114,8 @@ export default {
   },
   created () {
     this.startDate = new Date() && new Date().toISOString().split('T')[0]
-    // fetch the data when the view is created and the data is
-    // already being observed
-    // this.endDate = new Date()
-    // this.endDate.setMonth(this.endDate.getMonth() + 4)
     this.endDate = new Date() && new Date(new Date().getMonth() + 4).toISOString().split('T')[0]
+    console.log(this.endDate)
     this.fetchCourseList()
   },
   watch: {
@@ -127,16 +125,14 @@ export default {
       console.log(start.getMonth())
       this.endDate = new Date(start.setMonth(start.getMonth())) && new Date(start.setMonth(start.getMonth() + 4)).toISOString().split('T')[0]
     },
-    // call again the method if the route changes
     '$route': 'fetchCourseList'
   },
   methods: {
     CreateCourse () {
       let data = new FormData(document.querySelector('form'))
       this.courseName = data.get('courseName')
-      console.log(data.get('startDate'))
-      this.startDate = data.get('startDate')
-      this.endDate = data.get('endDate')
+      this.startDate = this.startDate
+      this.endDate = this.endDate
       this.startSurveyurldata = data.get('startSurveyurl')
       this.endSurveyurldata = data.get('endSurveyurl')
       let formData = new FormData()
