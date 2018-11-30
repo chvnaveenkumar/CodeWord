@@ -62,7 +62,7 @@
       <td scope="row">{{ courseStudent.EmailKey }}</td>
       <td>{{ courseStudent.StudentName }}</td>
        <td>{{ courseStudent.Codeword }}</td>
-      <a><button class="btn" data-toggle="modal" @click="selectStudent(courseNameData,courseStudent.EmailKey, courseStudent.StudentName)" data-target="#editStudent"><i class="fa fa-pencil fa-xs"></i></button></a>
+      <a><button class="btn" data-toggle="modal" @click="selectStudentInfo(courseStudent)" data-target="#editStudent"><i class="fa fa-pencil fa-xs"></i></button></a>
       <a><button class="btn" data-toggle="modal" @click="selectStudent(courseNameData, courseStudent.EmailKey, courseStudent.StudentName)" data-target="#deleteStudent"><i class="fa fa-trash fa-xs"></i></button></a>
     </tr>
   </tbody>
@@ -88,6 +88,8 @@
     </div>
   </div>
 </div>
+
+
 <!-- Modal Edit Student -->
 <div class="modal fade" id="editStudent" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -99,16 +101,19 @@
         </button>
       </div>
       <div class="modal-body">
-        <input type="text" v-model="studentName">
-        <input type="text" v-model="selectEmailKey">
+        <input type="text" v-model="editStudentName">
+        <input type="text" v-model="editStudentEmail">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primart" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-danger" @click="editStudent(selectCourseName, selectEmailKey, selectStudent)">Edit Student</button>
+        <button type="button" class="btn btn-danger" @click="editStudent(editStudentId, editStudentEmail, editStudentName)">Edit Student</button>
       </div>
     </div>
   </div>
 </div>
+
+
+
 <!-- Modal Edit Course -->
 <div class="modal fade" id="editCourse" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -161,13 +166,17 @@ export default {
       drCaseStudentData: [],
       selectCourseName: '',
       selectEmailKey: '',
-      studentName: '',
+      selectstudentName: '',
       selectedEmailKey: '',
       selectedStudentName: '',
       acknowledgedTotal: 0,
       acknowledgedTrue: 0,
       acknowledgedFalse: 0,
-      courseInfo: ''
+      courseInfo: '',
+      studentInfo: '',
+      editStudentName: '',
+      editStudentEmail: '',
+      editStudentId: ''
     }
   },
   created () {
@@ -250,7 +259,7 @@ export default {
         }
       })
     },
-    editStudent (selectCourseName, selectEmailKey, selectStudent) {
+    editStudent (studentId, selectEmailKey, selectStudent) {
       axios({
         method: 'post',
         url: 'codeword/updatecoursestudent',
@@ -258,9 +267,7 @@ export default {
           token: window.localStorage.getItem('token')
         },
         data: {
-          CourseNameKey: selectCourseName,
-          EmailKey: this.selectedEmailKey,
-          StudentName: this.studentName,
+          _id: studentId,
           NewEmailKey: selectEmailKey,
           Newstudentkey: selectStudent
         }
@@ -292,6 +299,11 @@ export default {
     },
     selectCourse (courseDetails) {
       this.courseInfo = courseDetails
+    },
+    selectStudentInfo (studentDetails) {
+      this.editStudentName = studentDetails.StudentName
+      this.editStudentEmail = studentDetails.EmailKey
+      this.editStudentId = studentDetails._id
     }
   }
 }
