@@ -6,6 +6,8 @@ const datacodeword = require('../data/data.codeword.json')
 const user = require('../data/data.user.json')
 const dataCodewordset = require('../data/data.codewordset.json')
 const dataCoursestudent = require('../data/data.coursestudent.json')
+const hootoriginal=require('../data/hootoriginal.json')
+const largeset=require('../data/largeset.json')
 const LOG = require('./logger.js')
 
 module.exports = (app) => {
@@ -13,14 +15,14 @@ module.exports = (app) => {
   const db = {}
 
 
-/*   users.forEach((user) => {
-    userController.newUser(user)
-  })
- */
-//USER
-  // db.datauser = new Datastore()
-  // db.datauser.loadDatabase()
-  // db.datauser.insert(datauser)
+//    users.forEach((user) => {
+//     userController.newUser(user)
+//   })
+ 
+// //USER
+//   db.datauser = new Datastore()
+//   db.datauser.loadDatabase()
+//   db.datauser.insert(datauser)
 
 //CODEWORDSET
   db.dataCodewordset = new Datastore()
@@ -46,7 +48,16 @@ module.exports = (app) => {
   db.dataCoursestudent.loadDatabase()
   db.dataCoursestudent.insert(dataCoursestudent)
 
+  //hootoriginal
+  db.hootoriginal = new Datastore()
+  db.hootoriginal.loadDatabase()
+  db.hootoriginal.insert(hootoriginal)
 
+  //largeset
+
+  db.largeset = new Datastore()
+  db.largeset.loadDatabase()
+  db.largeset.insert(largeset)
 
   // app.locals.datauser = db.datauser.find(datauser)
   // LOG.debug(`${app.locals.datauser.query.length} datauser seeded`)
@@ -66,6 +77,12 @@ module.exports = (app) => {
   app.locals.dataCoursestudent = db.dataCoursestudent.find(dataCoursestudent)
   LOG.debug(`${app.locals.dataCoursestudent.query.length} dataCoursestudent seeded`)
 
+  app.locals.hootoriginal = db.hootoriginal.find(hootoriginal)
+  LOG.debug(`${app.locals.hootoriginal.query.length} hootoriginal seeded`)
+
+  
+  app.locals.largeset = db.largeset.find(largeset)
+  LOG.debug(`${app.locals.largeset.query.length} largeset seeded`)
   
   LOG.info('END Seeder. Sample data read and verified.')
 }

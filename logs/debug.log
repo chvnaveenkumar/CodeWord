@@ -1,0 +1,19 @@
+2018-12-01T17:44:51.224Z - info: START seeder.
+2018-12-01T17:44:51.246Z - error: uncaughtException: users is not defined date=Sat Dec 01 2018 11:44:51 GMT-0600 (Central Standard Time), pid=9492, uid=null, gid=null, cwd=D:\SEMESTER-3\test\CodeWord, execPath=C:\Program Files\nodejs\node.exe, version=v8.9.4, argv=[C:\Program Files\nodejs\node.exe, D:\SEMESTER-3\test\CodeWord\bin\www], rss=97632256, heapTotal=80261120, heapUsed=55622104, external=23187017, loadavg=[0, 0, 0], uptime=3904872.9951106
+ReferenceError: users is not defined
+    at module.exports (D:\SEMESTER-3\test\CodeWord\utils\seeder.js:18:4)
+    at Object.<anonymous> (D:\SEMESTER-3\test\CodeWord\codeword.js:30:29)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)
+    at Module.load (module.js:556:32)
+    at tryModuleLoad (module.js:499:12)
+    at Function.Module._load (module.js:491:3)
+    at Module.require (module.js:587:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (D:\SEMESTER-3\test\CodeWord\bin\www:7:11)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)
+    at Module.load (module.js:556:32)
+    at tryModuleLoad (module.js:499:12)
+    at Function.Module._load (module.js:491:3)
+    at Function.Module.runMain (module.js:684:10)
