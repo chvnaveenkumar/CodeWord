@@ -1,0 +1,38 @@
+
+Team Members:
+Vyshnavi Yalamareddy
+Srimai reddy Yanala
+Sreelekha Vijaya
+Shivani Dodla
+
+MVP1:
+
+1.0As an instructor, I want the percentage of students who have accessed their codewords in that course (Srimai).
+1.1	As an instructor, I want the codewords confidential and must not know or be able to see the code word each student gets (Sreelekha).
+1.2	As an instructor, I want to see my list of courses, those are “active” today between the start and end date inclusively (Vyshnavi).
+1.3	As a student, I want to see my courses and see/acknowledge/get my random codeword for the respective course on my home page (Shivani).
+1.4	As an instructor, I want to add a student to an active course (e.g. when a new student transfers in) (Vyshnavi)
+    a. The unique name,
+    b. The codeword set name with the calculated count of words,
+    c. The start date and end date,
+    d. The pre-survey URL and the post-survey URLAs an instructor, I want to edit a course by clicking "Edit" on a course entry. I want to be able to modify:
+1.5	As a User, I want to search the name of particular courses in a search bar (Srimai).
+
+MVP 2:
+
+2.1	As an administrator, I want to add new instructors (Vyshnavi).
+2.2 As an administrator, I want to see the list of instructors and instructor surveys details (Srimai).
+2.3 As an administrator, I want the option to hide the Instructor checkbox when new users are registering (Shivani).
+2.4 As an administrator, I want a set of instructions on how to deploy a new instance of the application (e.g. an administrator at another institution OR if each instructor has their own deployed version.) (Sreelekha).
+
+MVP 3:
+
+3.1	As an Instructors, I want to see no more than 5 active courses in my dashboard (Vyshnavi). 
+3.2	As an administrator, I want to see no more than 200 students in each course (Srimai). 
+3.3	As an administrator, I want to see no more than 200 codewords in each codeword set (Shivani). 
+3.4	As an administrator, I want registration limited to 25 Instructors (Sreelekha). 
+
+
+
+
+
