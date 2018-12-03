@@ -73,10 +73,10 @@
 
 | Acceptance Criteria                                                                         | Yes/No | Comments |
 |---------------------------------------------------------------------------------------------|--------|----------|
-| After successfull login, he/she should be able to view his/her Email Id (used for signing in) on top right corner of navigation bar along with dropdown arrow symbol for change password and logout options          |        |     V    |
-| Once clicking on Code-word Set in Navigation bar, he/she should be able to view “Create Code-word Set” page                                                                |        |    V     |
-| Instructor should be able to view 2 default Codewordset (Small & Large set) along with count of codewords in the sets                                                               |        |    V     |
-| Once clicking on Code-word Set button at top left corner of the page, he/she should be able to view "Create Code-word Set” modal                                                               |        |    V     |
+| After successfull login, he/she should be able to view his/her Email Id (used for signing in) on top right corner of navigation bar along with dropdown arrow symbol for change password and logout options          |     Yes   |     V    |
+| Once clicking on Code-word Set in Navigation bar, he/she should be able to view “Create Code-word Set” page                                                                |  Yes      |    V     |
+| Instructor should be able to view 2 default Codewordset (Small & Large set) along with count of codewords in the sets                                                               |  Yes      |    V     |
+| Once clicking on Code-word Set button at top left corner of the page, he/she should be able to view "Create Code-word Set” modal                                                               |   Yes     |    V     |
 | Post filling Codeword set Name and uploading excel file containing codewords in it, Instructor should be able to view number of codewords present in the uploaded set.                                                               |        |    V     |
 | After filling all the required fields and clicking on Create Codewordset button, Instructor should be able to view the new created codeword set along with count of codewords and Show Details button in the codewordset list                                                                 |        |    V     |
 | Once clicking on Show details button, Instructor should be redirected to Codeword page.                                                               |        |    V     |
@@ -87,26 +87,26 @@
 | Acceptance Criteria                                                                         | Yes/No | Comments |
 |---------------------------------------------------------------------------------------------|--------|----------|
 | After logging In as Instructor, he/she should be able to have all the Instructor's privilages and view all the options related to Instructor's dashboard.                                   |        |          |
-| After successful Sign In of Instructor, he/she should be able to select the codeword set from the codeword set dropdown menu.                                                                 |        |          |
-| At the time of codeword selection, Instructor should be able to view Basic Small and Basic Large code-word sets in the dropdown list but they should not have any acces to delete those code-word sets                                                 |        |          |
+| After successful Sign In of Instructor, he/she should be able to select the codeword set from the codeword set dropdown menu.                                                                 |   Yes     |     V     |     
+| At the time of codeword selection, Instructor should be able to view Basic Small and Basic Large code-word sets in the dropdown list but they should not have any acces to delete those code-word sets                                                 |    Yes    |     V     | 
 
 #### 2.05 As an instructor, I want to create a new course by adding a list of students (containing one *.edu email & one name field for each student), selecting a codeword set from a drop-down that shows the name of the set with the calculated count in parenthesis, and setting the start date (default to today) and end date (defaulted to 4 Months after then start date) for the course, and a pre-survey URL, and a post-survey URL. Team: implement either cut & paste a tab or comma separated list of students OR offer to import by selecting a csv file or Excel file in the proper format). 
 
 |                             Acceptance Criteria                            | Yes/No | Comments |
 |:--------------------------------------------------------------------------:|--------|----------|
-| User should be able to add students lists by uploading names and Email Id. |        |          |
-| User should be able to select codeword set from dropdown list .            |        |          |
-| User should be able to add new course                                      |        |          |
-| And also able to set start date and end date for the course                |        |          |
-| User should able to enter Survey Start URL                                 |        |          |
-| User should able to enter Survey End URL                                   |        |          |
+| User should be able to add students lists by uploading names and Email Id. |  Yes      | V         |
+| User should be able to select codeword set from dropdown list .            |   Yes     | V         |
+| User should be able to add new course                                      |   Yes     |   V       |
+| And also able to set start date and end date for the course                | Yes       | V         |
+| User should able to enter Survey Start URL                                 |    Yes    |   V       |
+| User should able to enter Survey End URL                                   |    Yes    |  V        |
 
 #### 2.06 As an instructor, if I click on “View Students” I want to see a list of students for the selected course (emails and names) and want to see the calculated count of students in that course.
 |                                        Acceptance Criteria                                       | Yes/No | Comments |
 |:------------------------------------------------------------------------------------------------:|--------|----------|
-| If user clicks on “View Students”, list of students for the selected course should be displayed. |        |          |
-| Email address and names should be included while displaying the list of students.                |        |          |
-| User can see the calculated count of the students in the selected course.                        |        |          |
+| If user clicks on “View Students”, list of students for the selected course should be displayed. |    Yes    |   V       |
+| Email address and names should be included while displaying the list of students.                |   Yes     |   V       |
+| User can see the calculated count of the students in the selected course.                        |   Yes     |    V      |
 
 #### 2.07 As an instructor, when I view my list of active courses, for each active course, I want to see:
     a. The unique name,
@@ -123,13 +123,13 @@
     
 |                                                   Acceptance Criteria                                                  | Yes/No | Comments |
 |:----------------------------------------------------------------------------------------------------------------------:|--------|----------|
-| User should be able to see a unique name for the codeword set.                                                         |        |          |
-| User should be able to see the codeword set name which is selected from dropdown list.                                 |        |          |
-| User should also able to see the calculated count of words in the set by  selecting a code word set from dropdown box. |        |          |
-| User should be able to see the Start date and End date for courses                                                     |        |          |
-| User must be able to see pre-survey URL and the post-survey URL                                                        |        |          |
-| User must be able to see the edit option to edit the student names  and Email ID                                       |        |          |
-| User must be able to see delete option to delete an active course.                                                     |        |          |
+| User should be able to see a unique name for the codeword set.                                                         |     Yes   |      V    |
+| User should be able to see the codeword set name which is selected from dropdown list.                                 |     Yes   |    V      |
+| User should also able to see the calculated count of words in the set by  selecting a code word set from dropdown box. |    Yes    |   V       |
+| User should be able to see the Start date and End date for courses                                                     |   Yes     |   V       |
+| User must be able to see pre-survey URL and the post-survey URL                                                        |   Yes     |    V      |
+| User must be able to see the edit option to edit the student names  and Email ID                                       |    Yes    |    V      |
+| User must be able to see delete option to delete an active course.                                                     |   Yes     |   V       |
 #### 2.08 As an instructor, I want one codeword from the specified set to be randomly assigned to only one student and each student must have a unique codeword in that course and each codeword can only be issued once in each course (or not used at all) when a course is created.
 |                                  Acceptance Criteria                                  | Yes/No | Comments |
 |:-------------------------------------------------------------------------------------:|--------|----------|

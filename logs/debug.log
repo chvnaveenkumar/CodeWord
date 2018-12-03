@@ -17,3 +17,11 @@ ReferenceError: users is not defined
     at tryModuleLoad (module.js:499:12)
     at Function.Module._load (module.js:491:3)
     at Function.Module.runMain (module.js:684:10)
+2018-12-03T00:41:03.093Z - info: START seeder.
+2018-12-03T00:41:03.109Z - debug: 2 dataCodewordset seeded
+2018-12-03T00:41:03.109Z - debug: 292 datacodeword seeded
+2018-12-03T00:41:03.109Z - debug: 6 datacourse seeded
+2018-12-03T00:41:03.109Z - debug: 114 dataCoursestudent seeded
+2018-12-03T00:41:03.109Z - debug: 92 hootoriginal seeded
+2018-12-03T00:41:03.109Z - debug: 200 largeset seeded
+2018-12-03T00:41:03.109Z - info: END Seeder. Sample data read and verified.
