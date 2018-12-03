@@ -8,7 +8,7 @@
                 <h3 style="font-weight:bold;text-align:left"> Course Name: {{ courseNameData }} </h3>
             </div>
             <div class="col-md-6 col-lg-6 col-xs-0 col-sm-0">
-                <h3 style="font-weight:bold;text-align:right"> Acknowledged Status: {{ ( acknowledgedTrue / acknowledgedTotal )  * 100}} %</h3>
+                <h3 style="font-weight:bold;text-align:right"> Acknowledged Status: {{ ( acknowledgedTrue / acknowledgedTotal )  * 100}}% </h3>
             </div>
       </div>
  <div class="card">
@@ -307,17 +307,6 @@ export default {
     }
   }
 }
-
-    data: () => ({
-  valid: false,
-  name: '',
-      nameRules: [
-    v => !!v || 'Name is required',
-        v => v.length <= 10 || 'Name must be less than 10 characters'
-      ],
-  email: '',
-  emailRules: [v => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid']
-  })
 </script>
 
 <style>

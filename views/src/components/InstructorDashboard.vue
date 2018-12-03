@@ -120,9 +120,8 @@ export default {
   },
   watch: {
     startDate (value) {
-      let start = new Date(value)
+      let start = new Date()
       this.startDate = new Date(start) && new Date(start).toISOString().split('T')[0]
-      console.log(start.getMonth())
       this.endDate = new Date(start.setMonth(start.getMonth())) && new Date(start.setMonth(start.getMonth() + 4)).toISOString().split('T')[0]
     },
     '$route': 'fetchCourseList'

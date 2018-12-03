@@ -25,3 +25,19 @@ ReferenceError: users is not defined
 2018-12-03T00:41:03.109Z - debug: 92 hootoriginal seeded
 2018-12-03T00:41:03.109Z - debug: 200 largeset seeded
 2018-12-03T00:41:03.109Z - info: END Seeder. Sample data read and verified.
+2018-12-03T05:33:06.462Z - info: START seeder.
+2018-12-03T05:33:06.499Z - debug: 2 dataCodewordset seeded
+2018-12-03T05:33:06.500Z - debug: 292 datacodeword seeded
+2018-12-03T05:33:06.500Z - debug: 6 datacourse seeded
+2018-12-03T05:33:06.500Z - debug: 114 dataCoursestudent seeded
+2018-12-03T05:33:06.500Z - debug: 92 hootoriginal seeded
+2018-12-03T05:33:06.500Z - debug: 200 largeset seeded
+2018-12-03T05:33:06.500Z - info: END Seeder. Sample data read and verified.
+2018-12-03T05:49:51.797Z - info: START seeder.
+2018-12-03T05:49:51.866Z - debug: 2 dataCodewordset seeded
+2018-12-03T05:49:51.866Z - debug: 292 datacodeword seeded
+2018-12-03T05:49:51.866Z - debug: 6 datacourse seeded
+2018-12-03T05:49:51.867Z - debug: 114 dataCoursestudent seeded
+2018-12-03T05:49:51.867Z - debug: 92 hootoriginal seeded
+2018-12-03T05:49:51.867Z - debug: 200 largeset seeded
+2018-12-03T05:49:51.867Z - info: END Seeder. Sample data read and verified.
