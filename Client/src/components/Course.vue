@@ -170,6 +170,37 @@
             
             var countries = ["Object Oriented Programming","Mobile Computing"]
             autocomplete(document.getElementById("myInput"), countries);
+
+
+
+
+
+
+            let getcourse = (req, res) => {
+      var body = _.pick(req.body,['']);
+    var Course = new Codewordset({
+       course: body.course,
+       coursecreator: req.session.email
+    });
+    course.save().then((codes) => {
+        return res.json({ code: 200, data: codes });
+    }).catch((e) => {
+        console.log(e);
+        return res.json({ code: 400, message: e });
+    })
+}
+module.exports.addcodewordset = addcodewordset;
+
+let getcodewordset = (req, res) => {
+    Codewordset.find({ $or: [{CourseCreator: req.session.email}, {defaultRow: true},{CourseCreator: 'twosets' }] } ).then((codes) => {
+        if (codes)
+            return res.json({ code: 200, data: codes });
+    }).catch((e) => {
+        console.log(e);
+        return res.json({ code: 400, message: e });
+    })
+}
+module.exports.getcourse = getcourse;
             </script>
             
 
