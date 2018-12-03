@@ -266,48 +266,7 @@ background-color: white;
     margin-left: 80px;
 }
 </style>
- <script>
-        $("#endDate").change(function() {
-          var startDate = document.getElementById("startDate").value;
-           
-          var endDate = document.getElementById("endDate").value; 
-      
-          if ((Date.parse(endDate) <= Date.parse(startDate))) {
-            alert("End date should be greater than Start date");
-            var now = new Date();
-    var today = now.getFullYear() + '-' + (now.getMonth() +2) + '-' + (now.getDate());
-    
-    
-    $('#endDate').val(today);
-       
-          }
-        });
-        </script>
 
-<script>
-$(document).ready( function() {
-    var now = new Date();
-    var today = now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate();
-    
-    $('#startDate').val(today);
-    });
-  </script>
-
-
-  <script>
-
-  $(document).ready( function() {
-    var now = new Date();
-    var today = now.getFullYear() + '-' + (now.getMonth() +2) + '-' + (now.getDate());
-    
-    
-    $('#endDate').val(today);
-
-
- 
-});
-  
-  </script>
      <script>
      function autocomplete(inp, arr) {
                var currentFocus;
@@ -398,4 +357,24 @@ $(document).ready( function() {
             
             var countries = ["Object Oriented Programming","Mobile Computing"]
             autocomplete(document.getElementById("myInput"), countries);
+
+
+             created () {
+    this.startDate = new Date() && new Date().toISOString().split('T')[0]
+    this.endDate = new Date() && new Date(new Date().getMonth() + 4).toISOString().split('T')[0]
+    console.log(this.endDate)
+    this.fetchCourseList()
+  },
+  watch: {
+    startDate (value) {
+      let start = new Date(value)
+      this.startDate = new Date(start) && new Date(start).toISOString().split('T')[0]
+      console.log(start.getMonth())
+      this.endDate = new Date(start.setMonth(start.getMonth())) && new Date(start.setMonth(start.getMonth() + 4)).toISOString().split('T')[0]
+    },
+    '$route': 'fetchCourseList'
+     getStartDate () {
+      var today = new Date()
+      document.getElementById('startDate').value = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2)
+    },
      </script>
