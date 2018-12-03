@@ -1,9 +1,9 @@
 
-Team Members:
-Vyshnavi Yalamareddy
-Srimai reddy Yanala
-Sreelekha Vijaya
-Shivani Dodla
+# Team Members:
+- Vyshnavi Yalamareddy
+- Srimai reddy Yanala
+- Sreelekha Vijaya
+- Shivani Dodla
 
 |                                                                                                                                                                User Story                                                                                                                                                               | Responsible |
 |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|-------------|
